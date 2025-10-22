@@ -1,0 +1,2247 @@
+<style>
+    /* Instagram Reels Carousel - Compact Modern Design with Motion Graphics */
+    .instagram-reels-section {
+        padding: 20px 0 50px;
+        background: linear-gradient(135deg,
+            #0F172A 0%,
+            #1E293B 50%,
+            #0F172A 100%);
+        position: relative;
+        overflow: hidden;
+        margin-top: -40px;
+        opacity: 0;
+        transform: translateY(60px);
+        transition: opacity 1.2s cubic-bezier(0.16, 1, 0.3, 1),
+                    transform 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    /* Activate animations when scrolled into view */
+    .instagram-reels-section.reels-animate {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    /* Animated gradient background mesh */
+    .instagram-reels-section::before {
+        content: '';
+        position: absolute;
+        top: -50%;
+        left: -50%;
+        width: 200%;
+        height: 200%;
+        background: radial-gradient(circle at 30% 50%,
+            rgba(225, 48, 108, 0.15) 0%,
+            transparent 50%),
+            radial-gradient(circle at 70% 50%,
+            rgba(253, 29, 29, 0.1) 0%,
+            transparent 50%);
+        animation: instagram-mesh-float 25s ease-in-out infinite;
+        pointer-events: none;
+    }
+
+    @keyframes instagram-mesh-float {
+        0%, 100% { transform: translate(0, 0) rotate(0deg); }
+        50% { transform: translate(30px, -30px) rotate(180deg); }
+    }
+
+    .instagram-reels-container {
+        max-width: 1400px;
+        margin: 0 auto;
+        padding: 0 30px;
+        position: relative;
+        z-index: 2;
+    }
+
+    /* Header Section - Compact with Motion Graphics */
+    .instagram-reels-header {
+        text-align: center;
+        margin-bottom: 40px;
+    }
+
+    .instagram-badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        padding: 10px 20px;
+        background: linear-gradient(135deg,
+            rgba(225, 48, 108, 0.25),
+            rgba(253, 29, 29, 0.2),
+            rgba(245, 96, 64, 0.25));
+        border: 2px solid rgba(225, 48, 108, 0.4);
+        border-radius: 100px;
+        color: #FFFFFF;
+        font-size: 14px;
+        font-weight: 700;
+        margin-bottom: 16px;
+        box-shadow:
+            0 4px 16px rgba(225, 48, 108, 0.4),
+            inset 0 1px 0 rgba(255, 255, 255, 0.2);
+        backdrop-filter: blur(10px);
+        opacity: 0;
+        transform: translateY(-30px) scale(0.8);
+    }
+
+    /* Instagram Badge Animation */
+    .instagram-reels-section.reels-animate .instagram-badge {
+        animation: reelsBadgeDrop 0.8s cubic-bezier(0.34, 1.56, 0.64, 1) 0.2s forwards;
+    }
+
+    @keyframes reelsBadgeDrop {
+        0% {
+            opacity: 0;
+            transform: translateY(-30px) scale(0.8) rotate(-5deg);
+        }
+        70% {
+            transform: translateY(3px) scale(1.05) rotate(2deg);
+        }
+        100% {
+            opacity: 1;
+            transform: translateY(0) scale(1) rotate(0deg);
+        }
+    }
+
+    .instagram-badge i {
+        font-size: 18px;
+        background: linear-gradient(135deg, #E1306C, #FD1D1D, #F56040);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        filter: drop-shadow(0 0 10px rgba(225, 48, 108, 0.6));
+    }
+
+    .instagram-reels-title {
+        font-size: 2.5rem;
+        font-weight: 900;
+        margin: 0 0 12px 0;
+        line-height: 1.1;
+        color: #FFFFFF;
+        letter-spacing: -0.02em;
+        opacity: 0;
+        transform: translateX(-50px) rotateY(-20deg);
+        perspective: 1000px;
+        transform-style: preserve-3d;
+    }
+
+    /* Title 3D Slide Animation */
+    .instagram-reels-section.reels-animate .instagram-reels-title {
+        animation: reelsTitleSlide3D 1s cubic-bezier(0.16, 1, 0.3, 1) 0.4s forwards;
+    }
+
+    @keyframes reelsTitleSlide3D {
+        0% {
+            opacity: 0;
+            transform: translateX(-50px) rotateY(-20deg) scale(0.9);
+        }
+        60% {
+            transform: translateX(5px) rotateY(2deg) scale(1.02);
+        }
+        100% {
+            opacity: 1;
+            transform: translateX(0) rotateY(0deg) scale(1);
+        }
+    }
+
+    .instagram-reels-title .gradient-text {
+        background: linear-gradient(135deg,
+            #8b5cf6 0%,
+            #a855f7 20%,
+            #c084fc 35%,
+            #ec4899 50%,
+            #06b6d4 70%,
+            #10b981 85%,
+            #8b5cf6 100%);
+        background-size: 200% 200%;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        animation: gradientShift 8s ease-in-out infinite;
+        text-shadow: 0 0 80px rgba(139, 92, 246, 0.3);
+    }
+
+    @keyframes gradientShift {
+        0%, 100% { background-position: 0% 50%; }
+        50% { background-position: 100% 50%; }
+    }
+
+    .instagram-reels-subtitle {
+        font-size: 1rem;
+        color: rgba(226, 232, 240, 0.8);
+        max-width: 600px;
+        margin: 0 auto 20px;
+        line-height: 1.6;
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    /* Subtitle Fade Up Animation */
+    .instagram-reels-section.reels-animate .instagram-reels-subtitle {
+        animation: reelsSubtitleFade 0.9s cubic-bezier(0.16, 1, 0.3, 1) 0.6s forwards;
+    }
+
+    @keyframes reelsSubtitleFade {
+        0% {
+            opacity: 0;
+            transform: translateY(30px);
+        }
+        100% {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    .instagram-profile-link {
+        display: inline-flex;
+        align-items: center;
+        gap: 12px;
+        padding: 18px 42px;
+        background: linear-gradient(135deg,
+            #8b5cf6 0%,
+            #a855f7 20%,
+            #c084fc 35%,
+            #ec4899 50%,
+            #06b6d4 70%,
+            #10b981 85%,
+            #8b5cf6 100%);
+        background-size: 200% 200%;
+        color: white;
+        text-decoration: none;
+        border-radius: 100px;
+        font-weight: 800;
+        font-size: 17px;
+        letter-spacing: -0.01em;
+        box-shadow:
+            0 15px 40px rgba(139, 92, 246, 0.4),
+            0 8px 20px rgba(236, 72, 153, 0.3),
+            0 3px 10px rgba(168, 85, 247, 0.2),
+            inset 0 2px 0 rgba(255, 255, 255, 0.3);
+        transition: all 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+        position: relative;
+        overflow: hidden;
+        border: 2px solid rgba(255, 255, 255, 0.4);
+        animation: gradientShift 8s ease-in-out infinite;
+        opacity: 0;
+        transform: translateY(30px) scale(0.85);
+    }
+
+    /* Button Pop Animation */
+    .instagram-reels-section.reels-animate .instagram-profile-link {
+        animation: reelsButtonPop 0.8s cubic-bezier(0.34, 1.56, 0.64, 1) 0.8s forwards,
+                   gradientShift 8s ease-in-out infinite;
+    }
+
+    @keyframes reelsButtonPop {
+        0% {
+            opacity: 0;
+            transform: translateY(30px) scale(0.85);
+        }
+        70% {
+            transform: translateY(-5px) scale(1.08);
+        }
+        100% {
+            opacity: 1;
+            transform: translateY(0) scale(1);
+        }
+    }
+
+    /* Shimmer effect */
+    .instagram-profile-link::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(
+            90deg,
+            transparent,
+            rgba(255, 255, 255, 0.4),
+            transparent
+        );
+        transition: left 0.6s ease;
+    }
+
+    .instagram-profile-link:hover::before {
+        left: 100%;
+    }
+
+    .instagram-profile-link:hover {
+        transform: translateY(-5px) scale(1.05);
+        box-shadow:
+            0 20px 50px rgba(139, 92, 246, 0.5),
+            0 12px 30px rgba(236, 72, 153, 0.4),
+            0 6px 15px rgba(168, 85, 247, 0.3),
+            inset 0 2px 0 rgba(255, 255, 255, 0.4);
+        border-color: rgba(255, 255, 255, 0.6);
+    }
+
+    .instagram-profile-link:active {
+        transform: translateY(-2px) scale(1.02);
+        box-shadow:
+            0 14px 45px rgba(139, 92, 246, 0.4),
+            0 7px 22px rgba(236, 72, 153, 0.3),
+            inset 0 2px 0 rgba(255, 255, 255, 0.4);
+    }
+
+    .instagram-profile-link i {
+        font-size: 20px;
+        filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
+        transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .instagram-profile-link:hover i {
+        transform: rotate(15deg) scale(1.15);
+        animation: instagram-icon-pulse 0.6s ease-in-out;
+    }
+
+    @keyframes instagram-icon-pulse {
+        0%, 100% { transform: rotate(15deg) scale(1.15); }
+        50% { transform: rotate(15deg) scale(1.25); }
+    }
+
+    /* Ripple effect on click */
+    .instagram-profile-link::after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 0;
+        height: 0;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.5);
+        transform: translate(-50%, -50%);
+        transition: width 0.6s, height 0.6s;
+    }
+
+    .instagram-profile-link:active::after {
+        width: 300px;
+        height: 300px;
+    }
+
+    /* Carousel Container - Horizontal Tiles Layout */
+    .instagram-carousel {
+        position: relative;
+        margin-top: 40px;
+        max-width: 1200px;
+        margin-left: auto;
+        margin-right: auto;
+        width: 100%;
+    }
+
+    .instagram-carousel-wrapper {
+        position: relative;
+        overflow: hidden;
+        border-radius: 24px;
+        background: transparent;
+        padding: 0;
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .instagram-carousel-wrapper::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        border-radius: 24px;
+        overflow: hidden;
+        pointer-events: none;
+    }
+
+    .instagram-carousel-track {
+        display: flex;
+        gap: 20px;
+        transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        will-change: transform;
+        padding: 0;
+        width: 100%;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .instagram-reel-slide {
+        min-width: calc(33.333% - 14px);
+        max-width: calc(33.333% - 14px);
+        width: calc(33.333% - 14px);
+        flex: 0 0 calc(33.333% - 14px);
+        position: relative;
+        background: #0a0a0a;
+        border-radius: 20px;
+        overflow: hidden;
+        box-shadow:
+            0 12px 40px rgba(0, 0, 0, 0.5),
+            0 6px 20px rgba(225, 48, 108, 0.3);
+        border: 2px solid rgba(225, 48, 108, 0.3);
+        transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        opacity: 0;
+        transform: translateY(100px) rotateX(25deg) scale(0.8);
+        transform-style: preserve-3d;
+        perspective: 1000px;
+        box-sizing: border-box;
+    }
+
+    /* Ensure ALL slides have consistent dimensions - no exceptions */
+    .instagram-reel-slide:nth-child(n) {
+        min-width: calc(33.333% - 14px);
+        max-width: calc(33.333% - 14px);
+        width: calc(33.333% - 14px);
+        flex: 0 0 calc(33.333% - 14px);
+        box-sizing: border-box;
+    }
+
+    /* Staggered entrance animations for reel slides */
+    .instagram-reels-section.reels-animate .instagram-reel-slide:nth-child(1) {
+        animation: reelsSlideIn 1s cubic-bezier(0.16, 1, 0.3, 1) 1s forwards;
+    }
+
+    .instagram-reels-section.reels-animate .instagram-reel-slide:nth-child(2) {
+        animation: reelsSlideIn 1s cubic-bezier(0.16, 1, 0.3, 1) 1.15s forwards;
+    }
+
+    .instagram-reels-section.reels-animate .instagram-reel-slide:nth-child(3) {
+        animation: reelsSlideIn 1s cubic-bezier(0.16, 1, 0.3, 1) 1.3s forwards;
+    }
+
+    .instagram-reels-section.reels-animate .instagram-reel-slide:nth-child(4) {
+        animation: reelsSlideIn 1s cubic-bezier(0.16, 1, 0.3, 1) 1.45s forwards;
+    }
+
+    .instagram-reels-section.reels-animate .instagram-reel-slide:nth-child(5) {
+        animation: reelsSlideIn 1s cubic-bezier(0.16, 1, 0.3, 1) 1.6s forwards;
+    }
+
+    .instagram-reels-section.reels-animate .instagram-reel-slide:nth-child(6) {
+        animation: reelsSlideIn 1s cubic-bezier(0.16, 1, 0.3, 1) 1.75s forwards;
+    }
+
+    .instagram-reels-section.reels-animate .instagram-reel-slide:nth-child(7) {
+        animation: reelsSlideIn 1s cubic-bezier(0.16, 1, 0.3, 1) 1.9s forwards;
+    }
+
+    .instagram-reels-section.reels-animate .instagram-reel-slide:nth-child(8) {
+        animation: reelsSlideIn 1s cubic-bezier(0.16, 1, 0.3, 1) 2.05s forwards;
+    }
+
+    .instagram-reels-section.reels-animate .instagram-reel-slide:nth-child(9) {
+        animation: reelsSlideIn 1s cubic-bezier(0.16, 1, 0.3, 1) 2.2s forwards;
+    }
+
+    .instagram-reels-section.reels-animate .instagram-reel-slide:nth-child(10) {
+        animation: reelsSlideIn 1s cubic-bezier(0.16, 1, 0.3, 1) 2.35s forwards;
+    }
+
+    .instagram-reels-section.reels-animate .instagram-reel-slide:nth-child(11) {
+        animation: reelsSlideIn 1s cubic-bezier(0.16, 1, 0.3, 1) 2.5s forwards;
+    }
+
+    .instagram-reels-section.reels-animate .instagram-reel-slide:nth-child(12) {
+        animation: reelsSlideIn 1s cubic-bezier(0.16, 1, 0.3, 1) 2.65s forwards;
+    }
+
+    .instagram-reels-section.reels-animate .instagram-reel-slide:nth-child(13) {
+        animation: reelsSlideIn 1s cubic-bezier(0.16, 1, 0.3, 1) 2.8s forwards;
+    }
+
+    .instagram-reels-section.reels-animate .instagram-reel-slide:nth-child(14) {
+        animation: reelsSlideIn 1s cubic-bezier(0.16, 1, 0.3, 1) 2.95s forwards;
+    }
+
+    .instagram-reels-section.reels-animate .instagram-reel-slide:nth-child(15) {
+        animation: reelsSlideIn 1s cubic-bezier(0.16, 1, 0.3, 1) 3.1s forwards;
+    }
+
+    .instagram-reels-section.reels-animate .instagram-reel-slide:nth-child(16) {
+        animation: reelsSlideIn 1s cubic-bezier(0.16, 1, 0.3, 1) 3.25s forwards;
+    }
+
+    .instagram-reels-section.reels-animate .instagram-reel-slide:nth-child(17) {
+        animation: reelsSlideIn 1s cubic-bezier(0.16, 1, 0.3, 1) 3.4s forwards;
+    }
+
+    .instagram-reels-section.reels-animate .instagram-reel-slide:nth-child(18) {
+        animation: reelsSlideIn 1s cubic-bezier(0.16, 1, 0.3, 1) 3.55s forwards;
+    }
+
+    .instagram-reels-section.reels-animate .instagram-reel-slide:nth-child(19) {
+        animation: reelsSlideIn 1s cubic-bezier(0.16, 1, 0.3, 1) 3.7s forwards;
+    }
+
+    .instagram-reels-section.reels-animate .instagram-reel-slide:nth-child(20) {
+        animation: reelsSlideIn 1s cubic-bezier(0.16, 1, 0.3, 1) 3.85s forwards;
+    }
+
+    .instagram-reels-section.reels-animate .instagram-reel-slide:nth-child(21) {
+        animation: reelsSlideIn 1s cubic-bezier(0.16, 1, 0.3, 1) 4s forwards;
+    }
+
+    .instagram-reels-section.reels-animate .instagram-reel-slide:nth-child(22) {
+        animation: reelsSlideIn 1s cubic-bezier(0.16, 1, 0.3, 1) 4.15s forwards;
+    }
+
+    .instagram-reels-section.reels-animate .instagram-reel-slide:nth-child(23) {
+        animation: reelsSlideIn 1s cubic-bezier(0.16, 1, 0.3, 1) 4.3s forwards;
+    }
+
+    .instagram-reels-section.reels-animate .instagram-reel-slide:nth-child(24) {
+        animation: reelsSlideIn 1s cubic-bezier(0.16, 1, 0.3, 1) 4.45s forwards;
+    }
+
+    .instagram-reels-section.reels-animate .instagram-reel-slide:nth-child(25) {
+        animation: reelsSlideIn 1s cubic-bezier(0.16, 1, 0.3, 1) 4.6s forwards;
+    }
+
+    @keyframes reelsSlideIn {
+        0% {
+            opacity: 0;
+            transform: translateY(100px) rotateX(25deg) scale(0.8);
+        }
+        60% {
+            transform: translateY(-10px) rotateX(-3deg) scale(1.02);
+        }
+        100% {
+            opacity: 1;
+            transform: translateY(0) rotateX(0deg) scale(1);
+        }
+    }
+
+    .instagram-reel-slide:hover {
+        transform: translateY(-8px);
+        box-shadow:
+            0 20px 60px rgba(0, 0, 0, 0.6),
+            0 10px 30px rgba(225, 48, 108, 0.5);
+        border-color: rgba(225, 48, 108, 0.6);
+    }
+
+    /* Iframe container - Fully Responsive with Aspect Ratio */
+    .instagram-reel-embed {
+        position: relative;
+        width: 100%;
+        height: 0;
+        padding-bottom: 177.78%; /* 9:16 aspect ratio for Instagram Reels (16/9 * 100) */
+        background: transparent;
+        overflow: hidden;
+        box-sizing: border-box;
+    }
+
+    /* Modern browsers aspect ratio support */
+    @supports (aspect-ratio: 9 / 16) {
+        .instagram-reel-embed {
+            height: auto;
+            padding-bottom: 0;
+            aspect-ratio: 9 / 16;
+            min-height: 400px;
+            max-height: 650px;
+        }
+    }
+
+    /* Fallback for browsers without aspect-ratio support */
+    @supports not (aspect-ratio: 9 / 16) {
+        .instagram-reel-embed {
+            height: 500px;
+        }
+
+        @media (max-width: 768px) {
+            .instagram-reel-embed {
+                height: calc(100vw * 1.5);
+                max-height: 650px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .instagram-reel-embed {
+                height: calc(100vw * 1.6);
+                max-height: 600px;
+            }
+        }
+    }
+
+    /* Ensure ALL iframes have consistent dimensions */
+    .instagram-reel-slide:nth-child(n) .instagram-reel-embed {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    @supports (aspect-ratio: 9 / 16) {
+        .instagram-reel-slide:nth-child(n) .instagram-reel-embed {
+            aspect-ratio: 9 / 16;
+            min-height: 400px;
+            max-height: 650px;
+        }
+    }
+
+    /* Ensure iframe fills container responsively */
+    .instagram-reel-embed iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border: none;
+        background: transparent;
+        object-fit: contain;
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+        box-sizing: border-box;
+    }
+
+    /* Force consistent iframe dimensions for ALL slides */
+    .instagram-reel-slide:nth-child(n) .instagram-reel-embed iframe {
+        width: 100%;
+        height: 100%;
+    }
+
+    /* Loading State */
+    .instagram-reel-loading {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 16px;
+        background: linear-gradient(135deg,
+            rgba(225, 48, 108, 0.1),
+            rgba(245, 96, 64, 0.1));
+        z-index: 1;
+        backdrop-filter: blur(15px);
+    }
+
+    .instagram-reel-loading::after {
+        content: '';
+        width: 50px;
+        height: 50px;
+        border: 4px solid rgba(225, 48, 108, 0.3);
+        border-top-color: #E1306C;
+        border-right-color: #FD1D1D;
+        border-radius: 50%;
+        animation: instagram-spinner 1s linear infinite;
+    }
+
+    @keyframes instagram-spinner {
+        to { transform: rotate(360deg); }
+    }
+
+    .instagram-reel-loading::before {
+        content: 'Loading Reel...';
+        color: rgba(255, 255, 255, 0.7);
+        font-size: 14px;
+        font-weight: 600;
+    }
+
+    /* Navigation Arrows - Compact */
+    .carousel-arrow {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 56px;
+        height: 56px;
+        background: linear-gradient(135deg,
+            rgba(225, 48, 108, 0.95),
+            rgba(253, 29, 29, 0.95));
+        border: 2px solid rgba(255, 255, 255, 0.4);
+        border-radius: 50%;
+        color: white;
+        font-size: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        z-index: 1000;
+        box-shadow: 0 6px 24px rgba(225, 48, 108, 0.6);
+        backdrop-filter: blur(10px);
+        outline: none;
+        pointer-events: all;
+    }
+
+    .carousel-arrow:hover {
+        transform: translateY(-50%) scale(1.1);
+        background: linear-gradient(135deg,
+            rgba(225, 48, 108, 1),
+            rgba(253, 29, 29, 1));
+        box-shadow: 0 8px 32px rgba(225, 48, 108, 0.8);
+    }
+
+    .carousel-arrow:active {
+        transform: translateY(-50%) scale(1.05);
+    }
+
+    .carousel-arrow.prev {
+        left: -28px;
+    }
+
+    .carousel-arrow.next {
+        right: -28px;
+    }
+
+    /* Dots Navigation - Premium Modern Design */
+    .carousel-dots {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 8px;
+        margin-top: 40px;
+        padding: 12px 24px;
+        background: rgba(15, 23, 42, 0.6);
+        backdrop-filter: blur(12px);
+        border-radius: 50px;
+        width: fit-content;
+        margin-left: auto;
+        margin-right: auto;
+        box-shadow:
+            0 8px 24px rgba(0, 0, 0, 0.4),
+            inset 0 1px 0 rgba(255, 255, 255, 0.1);
+    }
+
+    .carousel-dot {
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background: rgba(226, 232, 240, 0.3);
+        border: none;
+        cursor: pointer;
+        transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        padding: 0;
+        outline: none;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .carousel-dot::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 0;
+        height: 100%;
+        background: linear-gradient(90deg, #E1306C 0%, #FD1D1D 50%, #F56040 100%);
+        border-radius: 6px;
+        transition: width 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .carousel-dot.active {
+        background: linear-gradient(90deg, #E1306C 0%, #FD1D1D 50%, #F56040 100%);
+        box-shadow:
+            0 0 20px rgba(225, 48, 108, 0.6),
+            0 0 40px rgba(225, 48, 108, 0.3);
+    }
+
+    .carousel-dot.active::before {
+        width: 100%;
+        animation: dot-progress 0.4s ease-out;
+    }
+
+    @keyframes dot-progress {
+        from { width: 0; }
+        to { width: 100%; }
+    }
+
+    .carousel-dot:hover:not(.active) {
+        background: rgba(226, 232, 240, 0.5);
+        transform: scaleY(1.3);
+    }
+
+    /* Add number indicators on hover for better UX */
+    .carousel-dot::after {
+        content: attr(data-index);
+        position: absolute;
+        top: -30px;
+        left: 50%;
+        transform: translateX(-50%);
+        background: rgba(15, 23, 42, 0.95);
+        color: #FFFFFF;
+        padding: 4px 10px;
+        border-radius: 8px;
+        font-size: 12px;
+        font-weight: 600;
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 0.3s ease;
+        white-space: nowrap;
+    }
+
+    .carousel-dot:hover::after {
+        opacity: 1;
+    }
+
+    /* Slide Counter - Compact */
+    .slide-counter {
+        position: absolute;
+        top: 16px;
+        right: 16px;
+        background: linear-gradient(135deg,
+            rgba(0, 0, 0, 0.85),
+            rgba(0, 0, 0, 0.7));
+        backdrop-filter: blur(12px);
+        padding: 8px 16px;
+        border-radius: 100px;
+        color: white;
+        font-size: 14px;
+        font-weight: 700;
+        z-index: 10;
+        border: 2px solid rgba(225, 48, 108, 0.4);
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+    }
+
+    /* Responsive Design - Optimized for All Devices */
+
+    /* Base Mobile Optimizations - Apply to All Devices */
+    .instagram-reels-section * {
+        -webkit-tap-highlight-color: transparent;
+        -webkit-touch-callout: none;
+    }
+
+    .instagram-carousel-wrapper,
+    .instagram-carousel-track,
+    .instagram-reel-slide {
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+        -webkit-transform-style: preserve-3d;
+        transform-style: preserve-3d;
+    }
+
+    /* Prevent horizontal scroll on mobile */
+    @media (max-width: 1023px) {
+        body {
+            overflow-x: hidden;
+        }
+
+        .instagram-reels-section {
+            overflow-x: hidden;
+            max-width: 100vw;
+        }
+
+        .instagram-carousel {
+            overflow: hidden;
+        }
+    }
+
+    /* Large Desktop (1440px and up) */
+    @media (min-width: 1440px) {
+        .instagram-reels-container {
+            max-width: 1600px;
+            padding: 0 40px;
+        }
+
+        .instagram-carousel {
+            max-width: 1400px;
+        }
+
+        @supports (aspect-ratio: 9 / 16) {
+            .instagram-reel-embed {
+                max-height: 700px;
+            }
+        }
+
+        .instagram-reels-title {
+            font-size: 3rem;
+        }
+
+        .instagram-profile-link {
+            padding: 20px 48px;
+            font-size: 18px;
+        }
+
+        .carousel-arrow {
+            width: 58px;
+            height: 58px;
+        }
+    }
+
+    /* Desktop (1200px - 1439px) */
+    @media (max-width: 1439px) and (min-width: 1200px) {
+        .instagram-carousel {
+            max-width: 1100px;
+        }
+
+        @supports (aspect-ratio: 9 / 16) {
+            .instagram-reel-embed {
+                max-height: 600px;
+            }
+        }
+    }
+
+    /* Laptop/Tablet Landscape (1024px - 1199px) */
+    @media (max-width: 1199px) and (min-width: 1024px) {
+        .instagram-carousel {
+            max-width: 950px;
+        }
+
+        .instagram-reel-slide {
+            min-width: calc(33.333% - 14px);
+            max-width: calc(33.333% - 14px);
+            width: calc(33.333% - 14px);
+            flex: 0 0 calc(33.333% - 14px);
+        }
+
+        @supports (aspect-ratio: 9 / 16) {
+            .instagram-reel-embed {
+                max-height: 580px;
+            }
+        }
+
+        .instagram-reels-title {
+            font-size: 2.25rem;
+        }
+
+        .carousel-arrow {
+            width: 52px;
+            height: 52px;
+        }
+
+        .carousel-arrow.prev {
+            left: -26px;
+        }
+
+        .carousel-arrow.next {
+            right: -26px;
+        }
+    }
+
+    /* Tablet Portrait (768px - 1023px) */
+    @media (max-width: 1023px) and (min-width: 768px) {
+        .instagram-reels-section {
+            padding: 45px 0;
+        }
+
+        .instagram-reels-container {
+            padding: 0 20px;
+            max-width: 100%;
+        }
+
+        .instagram-carousel {
+            max-width: 450px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .instagram-carousel-wrapper {
+            overflow: hidden;
+            max-width: 100%;
+        }
+
+        .instagram-reel-slide {
+            min-width: 100%;
+            max-width: 100%;
+            width: 100%;
+            flex: 0 0 100%;
+            box-sizing: border-box;
+        }
+
+        /* Force ALL slides uniform on tablet */
+        .instagram-reel-slide:nth-child(n) {
+            min-width: 100%;
+            max-width: 100%;
+            width: 100%;
+            flex: 0 0 100%;
+        }
+
+        .instagram-carousel-track {
+            gap: 0;
+        }
+
+        @supports (aspect-ratio: 9 / 16) {
+            .instagram-reel-embed {
+                max-height: 800px;
+                min-height: 600px;
+            }
+
+            /* Force ALL embeds uniform on tablet */
+            .instagram-reel-slide:nth-child(n) .instagram-reel-embed {
+                max-height: 800px;
+                min-height: 600px;
+                aspect-ratio: 9 / 16;
+            }
+        }
+
+        .instagram-reels-title {
+            font-size: 2rem;
+        }
+
+        .instagram-reels-subtitle {
+            font-size: 0.95rem;
+            max-width: 500px;
+        }
+
+        .instagram-profile-link {
+            padding: 16px 38px;
+            font-size: 16px;
+        }
+
+        .carousel-arrow {
+            width: 50px;
+            height: 50px;
+            font-size: 18px;
+        }
+
+        .carousel-arrow.prev {
+            left: -25px;
+        }
+
+        .carousel-arrow.next {
+            right: -25px;
+        }
+
+        .carousel-dots {
+            padding: 10px 20px;
+            gap: 6px;
+        }
+
+        .carousel-dot {
+            width: 7px;
+            height: 7px;
+        }
+    }
+
+    /* Mobile Landscape/Small Tablet (640px - 767px) */
+    @media (max-width: 767px) and (min-width: 640px) {
+        .instagram-reels-section {
+            padding: 40px 0;
+        }
+
+        .instagram-reels-container {
+            padding: 0 15px;
+            max-width: 100%;
+        }
+
+        .instagram-carousel {
+            max-width: 380px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .instagram-carousel-wrapper {
+            overflow: hidden;
+            max-width: 100%;
+        }
+
+        .instagram-reel-slide {
+            min-width: 100%;
+            max-width: 100%;
+            width: 100%;
+            flex: 0 0 100%;
+            box-sizing: border-box;
+        }
+
+        /* Force ALL slides uniform - mobile landscape */
+        .instagram-reel-slide:nth-child(n) {
+            min-width: 100%;
+            max-width: 100%;
+            width: 100%;
+            flex: 0 0 100%;
+        }
+
+        .instagram-carousel-track {
+            gap: 0;
+        }
+
+        @supports (aspect-ratio: 9 / 16) {
+            .instagram-reel-embed {
+                min-height: 550px;
+                max-height: 680px;
+            }
+
+            /* Force ALL embeds uniform - mobile landscape */
+            .instagram-reel-slide:nth-child(n) .instagram-reel-embed {
+                min-height: 550px;
+                max-height: 680px;
+                aspect-ratio: 9 / 16;
+            }
+        }
+
+        .instagram-reels-title {
+            font-size: 1.85rem;
+        }
+
+        .instagram-reels-subtitle {
+            font-size: 0.9rem;
+        }
+
+        .instagram-badge {
+            font-size: 13px;
+            padding: 9px 18px;
+        }
+
+        .instagram-profile-link {
+            padding: 15px 34px;
+            font-size: 15px;
+        }
+
+        .carousel-arrow {
+            width: 48px;
+            height: 48px;
+            font-size: 17px;
+        }
+
+        .carousel-arrow.prev {
+            left: 10px;
+        }
+
+        .carousel-arrow.next {
+            right: 10px;
+        }
+
+        .carousel-dots {
+            padding: 10px 18px;
+        }
+
+        .carousel-dot {
+            width: 7px;
+            height: 7px;
+        }
+    }
+
+    /* Mobile Portrait (480px - 639px) */
+    @media (max-width: 639px) and (min-width: 480px) {
+        .instagram-reels-section {
+            padding: 35px 0;
+        }
+
+        .instagram-reels-container {
+            padding: 0 15px;
+            max-width: 100%;
+        }
+
+        .instagram-carousel {
+            max-width: 340px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .instagram-carousel-wrapper {
+            overflow: hidden;
+            max-width: 100%;
+        }
+
+        .instagram-reel-slide {
+            min-width: 100%;
+            max-width: 100%;
+            width: 100%;
+            flex: 0 0 100%;
+            box-sizing: border-box;
+        }
+
+        /* Force ALL slides uniform - mobile portrait */
+        .instagram-reel-slide:nth-child(n) {
+            min-width: 100%;
+            max-width: 100%;
+            width: 100%;
+            flex: 0 0 100%;
+        }
+
+        .instagram-carousel-track {
+            gap: 0;
+        }
+
+        @supports (aspect-ratio: 9 / 16) {
+            .instagram-reel-embed {
+                min-height: 500px;
+                max-height: 610px;
+            }
+
+            /* Force ALL embeds uniform - mobile portrait */
+            .instagram-reel-slide:nth-child(n) .instagram-reel-embed {
+                min-height: 500px;
+                max-height: 610px;
+                aspect-ratio: 9 / 16;
+            }
+        }
+
+        .instagram-reels-title {
+            font-size: 1.75rem;
+            line-height: 1.15;
+        }
+
+        .instagram-reels-subtitle {
+            font-size: 0.9rem;
+            max-width: 90%;
+        }
+
+        .instagram-badge {
+            font-size: 12px;
+            padding: 8px 16px;
+        }
+
+        .instagram-profile-link {
+            padding: 14px 30px;
+            font-size: 15px;
+            gap: 10px;
+        }
+
+        .instagram-profile-link i {
+            font-size: 18px;
+        }
+
+        .carousel-arrow {
+            width: 44px;
+            height: 44px;
+            font-size: 16px;
+        }
+
+        .carousel-arrow.prev {
+            left: 8px;
+        }
+
+        .carousel-arrow.next {
+            right: 8px;
+        }
+
+        .carousel-dots {
+            padding: 8px 16px;
+            gap: 6px;
+        }
+
+        .carousel-dot {
+            width: 6px;
+            height: 6px;
+        }
+
+        .slide-counter {
+            padding: 7px 14px;
+            font-size: 13px;
+        }
+    }
+
+    /* Small Mobile (320px - 479px) */
+    @media (max-width: 479px) {
+        .instagram-reels-section {
+            padding: 30px 0;
+        }
+
+        .instagram-reels-container {
+            padding: 0 12px;
+            max-width: 100%;
+        }
+
+        .instagram-carousel {
+            max-width: 320px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .instagram-carousel-wrapper {
+            overflow: hidden;
+            border-radius: 16px;
+            max-width: 100%;
+        }
+
+        .instagram-reel-slide {
+            min-width: 100%;
+            max-width: 100%;
+            width: 100%;
+            flex: 0 0 100%;
+            border-radius: 16px;
+            box-sizing: border-box;
+        }
+
+        /* Force ALL slides uniform - small mobile */
+        .instagram-reel-slide:nth-child(n) {
+            min-width: 100%;
+            max-width: 100%;
+            width: 100%;
+            flex: 0 0 100%;
+        }
+
+        .instagram-carousel-track {
+            gap: 0;
+        }
+
+        @supports (aspect-ratio: 9 / 16) {
+            .instagram-reel-embed {
+                min-height: 480px;
+                max-height: 570px;
+            }
+
+            /* Force ALL embeds uniform - small mobile */
+            .instagram-reel-slide:nth-child(n) .instagram-reel-embed {
+                min-height: 480px;
+                max-height: 570px;
+                aspect-ratio: 9 / 16;
+            }
+        }
+
+        .instagram-reels-title {
+            font-size: 1.6rem;
+            line-height: 1.2;
+        }
+
+        .instagram-reels-subtitle {
+            font-size: 0.85rem;
+            max-width: 100%;
+            line-height: 1.5;
+        }
+
+        .instagram-badge {
+            font-size: 11px;
+            padding: 7px 14px;
+            gap: 6px;
+        }
+
+        .instagram-badge i {
+            font-size: 16px;
+        }
+
+        .instagram-profile-link {
+            padding: 13px 26px;
+            font-size: 14px;
+            gap: 9px;
+        }
+
+        .instagram-profile-link i {
+            font-size: 17px;
+        }
+
+        .carousel-arrow {
+            width: 40px;
+            height: 40px;
+            font-size: 15px;
+        }
+
+        .carousel-arrow.prev {
+            left: 6px;
+        }
+
+        .carousel-arrow.next {
+            right: 6px;
+        }
+
+        .carousel-dots {
+            padding: 8px 14px;
+            gap: 5px;
+            margin-top: 30px;
+        }
+
+        .carousel-dot {
+            width: 5px;
+            height: 5px;
+        }
+
+        .carousel-dot::after {
+            font-size: 11px;
+            top: -28px;
+            padding: 3px 8px;
+        }
+
+        .slide-counter {
+            padding: 6px 12px;
+            font-size: 12px;
+            top: 12px;
+            right: 12px;
+        }
+    }
+
+    /* Extra Small Mobile (less than 320px) */
+    @media (max-width: 319px) {
+        .instagram-reels-section {
+            padding: 25px 0;
+        }
+
+        .instagram-reels-container {
+            padding: 0 10px;
+            max-width: 100%;
+        }
+
+        .instagram-carousel {
+            max-width: 280px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .instagram-carousel-wrapper {
+            overflow: hidden;
+            max-width: 100%;
+        }
+
+        .instagram-reel-slide {
+            min-width: 100%;
+            max-width: 100%;
+            width: 100%;
+            flex: 0 0 100%;
+            box-sizing: border-box;
+        }
+
+        /* Force ALL slides uniform - extra small mobile */
+        .instagram-reel-slide:nth-child(n) {
+            min-width: 100%;
+            max-width: 100%;
+            width: 100%;
+            flex: 0 0 100%;
+        }
+
+        @supports (aspect-ratio: 9 / 16) {
+            .instagram-reel-embed {
+                min-height: 420px;
+                max-height: 500px;
+            }
+
+            /* Force ALL embeds uniform - extra small mobile */
+            .instagram-reel-slide:nth-child(n) .instagram-reel-embed {
+                min-height: 420px;
+                max-height: 500px;
+                aspect-ratio: 9 / 16;
+            }
+        }
+
+        .instagram-reels-title {
+            font-size: 1.4rem;
+        }
+
+        .instagram-reels-subtitle {
+            font-size: 0.8rem;
+        }
+
+        .instagram-profile-link {
+            padding: 12px 22px;
+            font-size: 13px;
+        }
+
+        .carousel-arrow {
+            width: 36px;
+            height: 36px;
+            font-size: 14px;
+        }
+
+        .carousel-dots {
+            padding: 6px 12px;
+        }
+
+        .carousel-dot {
+            width: 5px;
+            height: 5px;
+        }
+    }
+
+    /* Additional Mobile Fixes for All Devices */
+    @media (max-width: 1023px) {
+        /* Prevent horizontal scrolling */
+        .instagram-carousel-wrapper {
+            width: 100%;
+            max-width: 100%;
+            overflow-x: hidden;
+            overflow-y: hidden;
+        }
+
+        .instagram-carousel-track {
+            width: 100%;
+            display: flex;
+            align-items: flex-start;
+        }
+
+        .instagram-carousel {
+            width: 100%;
+            max-width: 100%;
+            overflow: hidden;
+            margin-top: 30px;
+        }
+
+        /* Ensure cards take EXACTLY full container width - no portion of next card visible */
+        .instagram-reel-slide {
+            min-width: 100%;
+            max-width: 100%;
+            width: 100%;
+            flex: 0 0 100%;
+            flex-shrink: 0;
+            margin-right: 0;
+            padding-right: 0;
+            box-sizing: border-box;
+        }
+
+        /* Force ALL slides to be same size on mobile - no exceptions */
+        .instagram-reel-slide:nth-child(n) {
+            min-width: 100%;
+            max-width: 100%;
+            width: 100%;
+            flex: 0 0 100%;
+            flex-shrink: 0;
+            box-sizing: border-box;
+        }
+
+        /* Fix aspect ratio container for mobile */
+        .instagram-reel-embed {
+            width: 100%;
+            max-width: 100%;
+            box-sizing: border-box;
+        }
+
+        /* Force ALL embeds to be same size on mobile */
+        .instagram-reel-slide:nth-child(n) .instagram-reel-embed {
+            width: 100%;
+            max-width: 100%;
+            box-sizing: border-box;
+        }
+
+        /* Better touch targets for mobile */
+        .carousel-dot {
+            min-width: 18px;
+            min-height: 18px;
+            padding: 4px;
+            cursor: pointer;
+        }
+
+        /* Improve button positioning on smaller screens */
+        .carousel-arrow {
+            z-index: 1000;
+            pointer-events: all;
+            touch-action: manipulation;
+        }
+
+        /* Improve text readability on mobile */
+        .instagram-reels-header {
+            padding: 0 10px;
+            text-align: center;
+        }
+
+        /* Optimize iframe for mobile performance */
+        .instagram-reel-embed iframe {
+            width: 100%;
+            height: 100%;
+            display: block;
+            box-sizing: border-box;
+        }
+
+        /* Force ALL iframes to be same size on mobile */
+        .instagram-reel-slide:nth-child(n) .instagram-reel-embed iframe {
+            width: 100%;
+            height: 100%;
+        }
+
+        /* Better button sizing for touch */
+        .instagram-profile-link {
+            touch-action: manipulation;
+            -webkit-tap-highlight-color: transparent;
+        }
+    }
+
+    /* Portrait orientation optimization */
+    @media (max-width: 768px) and (orientation: portrait) {
+        @supports (aspect-ratio: 9 / 16) {
+            .instagram-reel-embed {
+                min-height: calc(100vw * 1.2);
+                max-height: 650px;
+            }
+        }
+
+        .instagram-carousel-wrapper {
+            border-radius: 20px;
+        }
+
+        .instagram-reel-slide {
+            border-radius: 18px;
+        }
+    }
+
+    /* Landscape orientation optimization for phones */
+    @media (max-width: 768px) and (orientation: landscape) {
+        @supports (aspect-ratio: 9 / 16) {
+            .instagram-reel-embed {
+                min-height: 350px;
+                max-height: 450px;
+            }
+        }
+
+        .instagram-reels-section {
+            padding: 30px 0;
+        }
+
+        .instagram-carousel {
+            margin-top: 25px;
+        }
+    }
+
+    /* Prevent layout issues on very wide screens */
+    @media (min-width: 1920px) {
+        .instagram-carousel {
+            max-width: 1600px;
+        }
+
+        @supports (aspect-ratio: 9 / 16) {
+            .instagram-reel-embed {
+                max-height: 750px;
+            }
+        }
+
+        .instagram-reels-title {
+            font-size: 3.25rem;
+        }
+
+        .instagram-reels-container {
+            max-width: 1800px;
+        }
+    }
+
+    /* Tablet-specific optimizations */
+    @media (min-width: 768px) and (max-width: 1024px) {
+        /* Better spacing for tablets */
+        .instagram-reels-header {
+            margin-bottom: 35px;
+        }
+
+        /* Optimize card display for tablets */
+        .instagram-reel-slide {
+            border-radius: 18px;
+        }
+
+        .instagram-carousel-wrapper {
+            border-radius: 20px;
+        }
+    }
+
+    /* Intermediate screen sizes (900px - 1100px) */
+    @media (min-width: 900px) and (max-width: 1100px) {
+        .instagram-carousel {
+            max-width: 850px;
+        }
+
+        @supports (aspect-ratio: 9 / 16) {
+            .instagram-reel-embed {
+                max-height: 560px;
+            }
+        }
+
+        .instagram-reels-title {
+            font-size: 2.35rem;
+        }
+    }
+
+    /* Medium mobile devices (375px - 425px) - Common iPhone sizes */
+    @media (min-width: 375px) and (max-width: 425px) {
+        @supports (aspect-ratio: 9 / 16) {
+            .instagram-reel-embed {
+                min-height: 480px;
+                max-height: 640px;
+            }
+        }
+
+        .instagram-reels-section {
+            padding: 32px 0;
+        }
+
+        .instagram-reels-title {
+            font-size: 1.7rem;
+        }
+
+        .carousel-dots {
+            margin-top: 28px;
+        }
+    }
+
+    /* Enhanced touch support for all mobile devices */
+    @media (hover: none) and (pointer: coarse) {
+        .carousel-dot {
+            min-width: 20px;
+            min-height: 20px;
+        }
+
+        .carousel-arrow {
+            width: 48px;
+            height: 48px;
+        }
+
+        .instagram-profile-link {
+            padding: 16px 36px;
+            font-size: 16px;
+        }
+
+        /* Better tap targets */
+        .carousel-dot::before {
+            padding: 8px;
+        }
+    }
+
+    /* High DPI screens optimization */
+    @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+        .instagram-reel-slide {
+            border: 1.5px solid rgba(225, 48, 108, 0.3);
+        }
+
+        .instagram-badge {
+            border: 1.5px solid rgba(225, 48, 108, 0.4);
+        }
+    }
+
+</style>
+
+<!-- Instagram Reels Carousel Section -->
+<section class="instagram-reels-section">
+    <div class="instagram-reels-container">
+        <!-- Header -->
+        <div class="instagram-reels-header">
+            <div class="instagram-badge">
+                <i class="fab fa-instagram"></i>
+                <span>Follow Our Journey</span>
+            </div>
+            <h2 class="instagram-reels-title">
+                <span class="gradient-text">Latest From Bheem Academy</span>
+            </h2>
+            <p class="instagram-reels-subtitle">
+                Discover inspiring moments, success stories, and learning insights from our vibrant community
+            </p>
+            <a href="https://www.instagram.com/bheemacademy_?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+               target="_blank"
+               rel="noopener noreferrer"
+               class="instagram-profile-link">
+                <i class="fab fa-instagram"></i>
+                <span>Follow @bheemacademy_</span>
+            </a>
+        </div>
+
+        <!-- Carousel -->
+        <div class="instagram-carousel" id="instagramCarousel">
+            <!-- Navigation Arrows -->
+            <button class="carousel-arrow prev" id="prevArrow" aria-label="Previous slide">
+                <i class="fas fa-chevron-left"></i>
+            </button>
+            <button class="carousel-arrow next" id="nextArrow" aria-label="Next slide">
+                <i class="fas fa-chevron-right"></i>
+            </button>
+
+            <div class="instagram-carousel-wrapper">
+                <div class="instagram-carousel-track" id="carouselTrack">
+                    <!-- Slide 1 -->
+                    <div class="instagram-reel-slide">
+                        <div class="instagram-reel-embed">
+                            <div class="instagram-reel-loading"></div>
+                            <iframe
+                                src="https://www.instagram.com/reel/DPBnxQalXYO/embed/captioned"
+                                frameborder="0"
+                                scrolling="no"
+                                allowtransparency="true"
+                                allowfullscreen="true">
+                            </iframe>
+                        </div>
+                    </div>
+
+                    <!-- Slide 2 -->
+                    <div class="instagram-reel-slide">
+                        <div class="instagram-reel-embed">
+                            <div class="instagram-reel-loading"></div>
+                            <iframe
+                                src="https://www.instagram.com/reel/DPD81aDFMbl/embed/captioned"
+                                frameborder="0"
+                                scrolling="no"
+                                allowtransparency="true"
+                                allowfullscreen="true">
+                            </iframe>
+                        </div>
+                    </div>
+
+                    <!-- Slide 3 -->
+                    <div class="instagram-reel-slide">
+                        <div class="instagram-reel-embed">
+                            <div class="instagram-reel-loading"></div>
+                            <iframe
+                                src="https://www.instagram.com/reel/DO8gv1mCQss/embed/captioned"
+                                frameborder="0"
+                                scrolling="no"
+                                allowtransparency="true"
+                                allowfullscreen="true">
+                            </iframe>
+                        </div>
+                    </div>
+
+                    <!-- Slide 4 -->
+                    <div class="instagram-reel-slide">
+                        <div class="instagram-reel-embed">
+                            <div class="instagram-reel-loading"></div>
+                            <iframe
+                                src="https://www.instagram.com/reel/DO0yZIjAcYA/embed/captioned"
+                                frameborder="0"
+                                scrolling="no"
+                                allowtransparency="true"
+                                allowfullscreen="true">
+                            </iframe>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Dots Navigation -->
+            <div class="carousel-dots" id="carouselDots" role="tablist" aria-label="Carousel navigation"></div>
+        </div>
+    </div>
+</section>
+
+
+<script>
+(function() {
+    'use strict';
+
+    // Prevent duplicate initialization
+    if (window.instagramCarouselInitialized) {
+        console.log('⚠️ Instagram carousel already initialized, skipping...');
+        return;
+    }
+    window.instagramCarouselInitialized = true;
+
+    let carouselState = {
+        currentIndex: 0,
+        totalSlides: 0,
+        clonedSlides: 0,
+        isTransitioning: false,
+        slideOrder: [],
+        currentCycle: 0
+    };
+
+    function initInstagramCarousel() {
+        const track = document.getElementById('carouselTrack');
+        const dotsContainer = document.getElementById('carouselDots');
+        const currentSlideEl = document.getElementById('currentSlide');
+        const totalSlidesEl = document.getElementById('totalSlides');
+
+        if (!track || !dotsContainer) {
+            console.error('Instagram carousel elements not found');
+            return;
+        }
+
+        const originalSlides = track.querySelectorAll('.instagram-reel-slide');
+        carouselState.totalSlides = originalSlides.length;
+
+        if (carouselState.totalSlides === 0) {
+            console.error('No slides found');
+            return;
+        }
+
+        // Clone first 3 slides to ensure always 3 reels visible
+        // This enables true infinite scrolling
+        carouselState.clonedSlides = Math.min(3, carouselState.totalSlides);
+        for (let i = 0; i < carouselState.clonedSlides; i++) {
+            const clone = originalSlides[i].cloneNode(true);
+            clone.classList.add('cloned-slide');
+            clone.setAttribute('data-clone-of', i);
+            track.appendChild(clone);
+        }
+
+        // Get all slides including clones
+        const allSlides = track.querySelectorAll('.instagram-reel-slide');
+        console.log('✅ Created infinite loop: ' + carouselState.totalSlides + ' original slides + ' + carouselState.clonedSlides + ' clones = ' + allSlides.length + ' total');
+
+        // Ensure all slides (including clones) are visible in the carousel
+        // The entrance animation sets opacity: 0 initially, but we need all slides visible for carousel
+        setTimeout(function() {
+            allSlides.forEach(function(slide) {
+                slide.style.opacity = '1';
+                slide.style.transform = 'translateY(0) rotateX(0deg) scale(1)';
+            });
+            console.log('✅ All slides made visible for carousel operation');
+        }, 5600); // After all entrance animations complete (last one starts at 4.6s + 1s duration = 5.6s)
+
+        // Initialize slide order array with sequential order
+        carouselState.slideOrder = Array.from({length: carouselState.totalSlides}, (_, i) => i);
+        console.log('📋 Initial slide order:', carouselState.slideOrder);
+
+        // Fisher-Yates shuffle algorithm
+        function shuffleArray(array) {
+            const newArray = [...array];
+            for (let i = newArray.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [newArray[i], newArray[j]] = [newArray[j], newArray[i]];
+            }
+            return newArray;
+        }
+
+        // Function to randomize slide order for next cycle
+        function randomizeSlideOrder() {
+            carouselState.slideOrder = shuffleArray(carouselState.slideOrder);
+            carouselState.currentCycle++;
+            console.log('🔀 Cycle ' + carouselState.currentCycle + ' - New random order:', carouselState.slideOrder);
+        }
+
+        // Set total slides display
+        if (totalSlidesEl) {
+            totalSlidesEl.textContent = carouselState.totalSlides;
+        }
+
+        // Create navigation dots with enhanced data attributes
+        dotsContainer.innerHTML = '';
+        const dots = [];
+        for (let i = 0; i < carouselState.totalSlides; i++) {
+            const dot = document.createElement('button');
+            dot.className = 'carousel-dot' + (i === 0 ? ' active' : '');
+            dot.type = 'button';
+            dot.setAttribute('aria-label', 'Go to slide ' + (i + 1));
+            dot.setAttribute('data-slide-index', i);
+            dot.setAttribute('data-index', 'Reel ' + (i + 1));
+            dotsContainer.appendChild(dot);
+            dots.push(dot);
+        }
+
+        function updateCarousel(skipTransition) {
+            console.log('🔄 updateCarousel called, currentIndex:', carouselState.currentIndex, 'skipTransition:', skipTransition);
+
+            // Set transition lock
+            carouselState.isTransitioning = true;
+
+            // Calculate tile-based transform (3 tiles visible at once)
+            const slideWidth = allSlides[0].offsetWidth;
+            const gap = 20; // Gap between tiles
+            const moveDistance = (slideWidth + gap) * carouselState.currentIndex;
+            console.log('📍 Sliding to position', carouselState.currentIndex, 'with transform:', -moveDistance + 'px');
+
+            // If skipTransition is true, disable transition temporarily for instant jump
+            if (skipTransition) {
+                track.style.transition = 'none';
+            }
+
+            track.style.transform = 'translateX(-' + moveDistance + 'px)';
+
+            // Re-enable transition if it was disabled
+            if (skipTransition) {
+                setTimeout(function() {
+                    track.style.transition = 'transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94)';
+                }, 50);
+            }
+
+            // Update counter - use modulo to show correct slide number
+            const displayIndex = carouselState.currentIndex % carouselState.totalSlides;
+            if (currentSlideEl) {
+                currentSlideEl.textContent = displayIndex + 1;
+            }
+
+            // Update dots to show active slide (based on original slide position)
+            dots.forEach(function(dot, idx) {
+                if (idx === displayIndex) {
+                    dot.classList.add('active');
+                } else {
+                    dot.classList.remove('active');
+                }
+            });
+
+            // Release lock after transition completes (matches CSS transition time)
+            const delay = skipTransition ? 100 : 650;
+            setTimeout(function() {
+                carouselState.isTransitioning = false;
+                console.log('✅ Transition complete, ready for next action');
+
+                // After transition completes, check if we're on a cloned slide
+                // If so, instantly jump back to the corresponding original slide
+                if (!skipTransition && carouselState.currentIndex >= carouselState.totalSlides) {
+                    const originalIndex = carouselState.currentIndex - carouselState.totalSlides;
+                    console.log('🔄 On clone slide ' + carouselState.currentIndex + ' - instantly jumping to original slide ' + originalIndex);
+
+                    // Update index
+                    carouselState.currentIndex = originalIndex;
+
+                    // Perform instant jump without transition
+                    carouselState.isTransitioning = true;
+                    track.style.transition = 'none';
+
+                    const slideWidth = allSlides[0].offsetWidth;
+                    const gap = 20;
+                    const moveDistance = (slideWidth + gap) * originalIndex;
+                    track.style.transform = 'translateX(-' + moveDistance + 'px)';
+
+                    // Re-enable transition and release lock
+                    setTimeout(function() {
+                        track.style.transition = 'transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94)';
+                        carouselState.isTransitioning = false;
+                        console.log('✅ Reset to original position complete');
+                    }, 50);
+                }
+            }, delay);
+        }
+
+        function goToSlide(index, skipTransition) {
+            console.log('🎯 goToSlide called with index:', index, 'current:', carouselState.currentIndex, 'transitioning:', carouselState.isTransitioning);
+
+            if (carouselState.isTransitioning) {
+                console.log('⚠️ Carousel is transitioning, ignoring request');
+                return;
+            }
+
+            const maxIndex = carouselState.totalSlides + carouselState.clonedSlides - 1;
+
+            // If index exceeds max (e.g., trying to go from 8 to 9), the reset already happened
+            // Just continue from where we are after reset
+            if (index > maxIndex) {
+                console.log('🔄 Index ' + index + ' exceeds max, carousel should have reset already');
+                return;
+            }
+
+            if (index >= 0 && index <= maxIndex) {
+                if (index !== carouselState.currentIndex) {
+                    carouselState.currentIndex = index;
+                    updateCarousel(skipTransition);
+                } else {
+                    console.log('⚠️ Already on slide', index + 1);
+                }
+            } else {
+                console.error('❌ Invalid slide index:', index, '(max:', maxIndex + ')');
+            }
+        }
+
+        function nextSlide() {
+            console.log('➡️ nextSlide called, current:', carouselState.currentIndex, 'total:', carouselState.totalSlides);
+
+            const nextIndex = carouselState.currentIndex + 1;
+            console.log('➡️ Moving from', carouselState.currentIndex, 'to', nextIndex);
+            goToSlide(nextIndex);
+        }
+
+        function prevSlide() {
+            console.log('⬅️ prevSlide called, current:', carouselState.currentIndex);
+
+            // If we're at the beginning, jump to the last slide (which allows wrapping)
+            if (carouselState.currentIndex === 0) {
+                const lastIndex = carouselState.totalSlides - 1;
+                console.log('⬅️ At start, jumping to last slide', lastIndex);
+                goToSlide(lastIndex);
+            } else {
+                const newIndex = carouselState.currentIndex - 1;
+                console.log('⬅️ Moving from', carouselState.currentIndex, 'to', newIndex);
+                goToSlide(newIndex);
+            }
+        }
+
+        // Event listeners for dots
+        dots.forEach(function(dot, index) {
+            dot.addEventListener('click', function(e) {
+                e.preventDefault();
+                e.stopPropagation();
+                console.log('🔘 Dot clicked, going to slide:', index + 1);
+                goToSlide(index);
+            });
+        });
+
+        // Event listeners for navigation arrows
+        const prevArrow = document.getElementById('prevArrow');
+        const nextArrow = document.getElementById('nextArrow');
+
+        if (prevArrow) {
+            prevArrow.addEventListener('click', function(e) {
+                e.preventDefault();
+                e.stopPropagation();
+                console.log('⬅️ Previous arrow clicked');
+                prevSlide();
+            });
+        }
+
+        if (nextArrow) {
+            nextArrow.addEventListener('click', function(e) {
+                e.preventDefault();
+                e.stopPropagation();
+                console.log('➡️ Next arrow clicked');
+                nextSlide();
+            });
+        }
+
+        // Keyboard navigation
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'ArrowLeft') {
+                prevSlide();
+            } else if (e.key === 'ArrowRight') {
+                nextSlide();
+            }
+        });
+
+        // Touch/Swipe support
+        let touchStartX = 0;
+        track.addEventListener('touchstart', function(e) {
+            touchStartX = e.touches[0].clientX;
+        });
+
+        track.addEventListener('touchend', function(e) {
+            const touchEndX = e.changedTouches[0].clientX;
+            const diff = touchStartX - touchEndX;
+
+            if (Math.abs(diff) > 50) {
+                if (diff > 0) {
+                    nextSlide();
+                } else {
+                    prevSlide();
+                }
+            }
+        });
+
+        // Hide loading states
+        const iframes = track.querySelectorAll('iframe');
+        iframes.forEach(function(iframe) {
+            iframe.onload = function() {
+                const loader = this.previousElementSibling;
+                if (loader && loader.classList.contains('instagram-reel-loading')) {
+                    loader.style.display = 'none';
+                }
+            };
+
+            // Fallback timeout
+            setTimeout(function() {
+                const loader = iframe.previousElementSibling;
+                if (loader && loader.classList.contains('instagram-reel-loading')) {
+                    loader.style.display = 'none';
+                }
+            }, 4000);
+        });
+
+        // Test carousel initialization
+        console.log('✅ Instagram carousel initialized with', carouselState.totalSlides, 'slides');
+        console.log('🎯 Auto-slide will start in 2 seconds...');
+
+        // Initial carousel state
+        console.log('📊 Initial state:', {
+            currentIndex: carouselState.currentIndex,
+            totalSlides: carouselState.totalSlides,
+            trackTransform: track.style.transform
+        });
+
+        // Auto-slide functionality - Infinite loop
+        let autoSlideInterval = null;
+        const AUTO_SLIDE_DELAY = 2000; // 2 seconds between slides
+
+        function startAutoSlide() {
+            // Clear any existing interval to prevent duplicates
+            if (autoSlideInterval) {
+                clearInterval(autoSlideInterval);
+                console.log('🧹 Cleared existing auto-slide interval');
+            }
+
+            // Start infinite auto-sliding with setInterval
+            autoSlideInterval = setInterval(function() {
+                if (!carouselState.isTransitioning) {
+                    console.log('🔄 Auto-sliding to next slide... (slide ' + (carouselState.currentIndex + 1) + ' of ' + carouselState.totalSlides + ')');
+                    nextSlide(); // This will automatically loop back to 0 when reaching the end
+                } else {
+                    console.log('⏳ Waiting for transition to complete before next auto-slide...');
+                }
+            }, AUTO_SLIDE_DELAY);
+
+            console.log('▶️ Auto-slide started - will run infinitely (every ' + (AUTO_SLIDE_DELAY / 1000) + 's)');
+        }
+
+        function stopAutoSlide() {
+            if (autoSlideInterval) {
+                clearInterval(autoSlideInterval);
+                autoSlideInterval = null;
+                console.log('⏸️ Auto-slide paused');
+            }
+        }
+
+        function resetAutoSlide() {
+            stopAutoSlide();
+            startAutoSlide();
+            console.log('🔄 Auto-slide reset');
+        }
+
+        // Pause auto-slide on user interaction, restart after interaction
+        dots.forEach(function(dot) {
+            dot.addEventListener('click', resetAutoSlide);
+        });
+
+        // Reset auto-slide when arrows are clicked
+        if (prevArrow) {
+            prevArrow.addEventListener('click', resetAutoSlide);
+        }
+        if (nextArrow) {
+            nextArrow.addEventListener('click', resetAutoSlide);
+        }
+
+        // Pause on hover and listen to visibility events
+        const carouselWrapper = document.querySelector('.instagram-carousel-wrapper');
+        if (carouselWrapper) {
+            carouselWrapper.addEventListener('mouseenter', function() {
+                stopAutoSlide();
+                console.log('🖱️ Mouse entered - pausing auto-slide');
+            });
+
+            carouselWrapper.addEventListener('mouseleave', function() {
+                startAutoSlide();
+                console.log('🖱️ Mouse left - resuming auto-slide');
+            });
+
+            // Listen to carousel visibility events (Intersection Observer)
+            carouselWrapper.addEventListener('carouselHidden', function() {
+                stopAutoSlide();
+                console.log('👁️ Instagram carousel paused (not in viewport)');
+            });
+
+            carouselWrapper.addEventListener('carouselVisible', function() {
+                startAutoSlide();
+                console.log('👁️ Instagram carousel resumed (in viewport)');
+            });
+        }
+
+        // Pause when touch interaction starts
+        track.addEventListener('touchstart', function() {
+            stopAutoSlide();
+        });
+
+        // Resume after touch interaction ends
+        track.addEventListener('touchend', function() {
+            setTimeout(startAutoSlide, 1000); // Resume after 1 second
+        });
+
+        // Pause on keyboard navigation and restart
+        const originalKeyHandler = document.onkeydown;
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'ArrowLeft' || e.key === 'ArrowRight') {
+                resetAutoSlide();
+            }
+        });
+
+        // Listen to page visibility events
+        window.addEventListener('pageHidden', function() {
+            stopAutoSlide();
+            console.log('📴 Instagram carousel paused (page hidden)');
+        });
+
+        window.addEventListener('pageVisible', function() {
+            startAutoSlide();
+            console.log('📱 Instagram carousel resumed (page visible)');
+        });
+
+        // Start auto-slide initially
+        startAutoSlide();
+    }
+
+    // Initialize when DOM is ready
+    if (document.readyState === 'loading') {
+        console.log('⏳ Waiting for DOM to load...');
+        document.addEventListener('DOMContentLoaded', initInstagramCarousel);
+    } else {
+        console.log('✅ DOM already loaded, initializing carousel...');
+        initInstagramCarousel();
+    }
+})();
+
+// Scroll-triggered animation observer
+(function() {
+    'use strict';
+
+    function initScrollAnimations() {
+        const reelsSection = document.querySelector('.instagram-reels-section');
+
+        if (!reelsSection) {
+            console.log('⚠️ Instagram reels section not found for scroll animations');
+            return;
+        }
+
+        // Create intersection observer for scroll-triggered animations
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(function(entry) {
+                if (entry.isIntersecting && !entry.target.classList.contains('reels-animate')) {
+                    console.log('🎬 Instagram Reels section entered viewport - triggering animations');
+                    entry.target.classList.add('reels-animate');
+
+                    // Optional: unobserve after animation triggered (one-time animation)
+                    // observer.unobserve(entry.target);
+                }
+            });
+        }, {
+            threshold: 0.1,        // Trigger when 10% of section is visible
+            rootMargin: '-80px'    // Trigger slightly before section enters viewport
+        });
+
+        observer.observe(reelsSection);
+        console.log('✅ Scroll animation observer initialized for Instagram Reels section');
+    }
+
+    // Initialize scroll animations when DOM is ready
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', initScrollAnimations);
+    } else {
+        initScrollAnimations();
+    }
+})();
+</script>

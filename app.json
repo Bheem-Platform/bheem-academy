@@ -1,0 +1,39 @@
+{
+  "name": "Bheem Academy",
+  "description": "Complete Learning Management System with FastAPI backend and Vue.js frontend",
+  "repository": "https://github.com/yourusername/bheem-academy",
+  "keywords": ["lms", "moodle", "education", "fastapi", "vue"],
+  "env": {
+    "BHEEM_PASSPORT_URL": {
+      "description": "Bheem Passport authentication URL",
+      "value": "https://platform.bheem.co.uk"
+    },
+    "BHEEM_COMPANY_CODE": {
+      "description": "Company code for Academy",
+      "value": "BHM008"
+    },
+    "ERP_DATABASE_URL": {
+      "description": "ERP database connection string",
+      "required": true
+    },
+    "MOODLE_DATABASE_URL": {
+      "description": "Moodle database connection string",
+      "required": true
+    },
+    "CORS_ORIGINS": {
+      "description": "Allowed CORS origins",
+      "value": "https://newdesign.bheem.cloud,https://academy.bheem.cloud"
+    }
+  },
+  "formation": {
+    "web": {
+      "quantity": 1,
+      "size": "standard-1x"
+    }
+  },
+  "buildpacks": [
+    {
+      "url": "heroku/python"
+    }
+  ]
+}
