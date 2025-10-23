@@ -1,0 +1,104 @@
+/* ================================================
+   DROPDOWN WHITE BACKGROUND FIX - Force White Background
+   Removes all dark backgrounds from dropdowns
+   ================================================ */
+
+/* CRITICAL: Force white background on all dropdown menus */
+.navbar .dropdown-menu,
+.navbar-nav .dropdown-menu,
+header .dropdown-menu,
+#page-header .dropdown-menu,
+.nav .dropdown-menu,
+.navbar-light .dropdown-menu,
+.navbar-dark .dropdown-menu,
+body .navbar .dropdown-menu,
+body header .dropdown-menu {
+  background: #ffffff !important;
+  background-color: #ffffff !important;
+  background-image: none !important;
+}
+
+/* Override any dark theme dropdown backgrounds */
+.dropdown-menu,
+.popover-region-container,
+.usermenu .dropdown-menu,
+.langmenu .dropdown-menu,
+.navbar .usermenu .dropdown-menu {
+  background: #ffffff !important;
+  background-color: #ffffff !important;
+  background-image: none !important;
+}
+
+/* Remove any inherited dark backgrounds */
+body.theme-dark .dropdown-menu,
+body.dark-mode .dropdown-menu,
+[data-theme="dark"] .dropdown-menu {
+  background: #ffffff !important;
+  background-color: #ffffff !important;
+  background-image: none !important;
+}
+
+/* Ensure dropdown items have white background */
+.navbar .dropdown-item,
+.navbar .dropdown-menu .dropdown-item,
+.dropdown-menu a,
+.dropdown-menu li {
+  background: transparent !important;
+  background-color: transparent !important;
+}
+
+/* Hover state - light background */
+.navbar .dropdown-item:hover,
+.dropdown-menu a:hover,
+.dropdown-menu .dropdown-item:hover {
+  background: rgba(139, 92, 246, 0.08) !important;
+  background-color: rgba(139, 92, 246, 0.08) !important;
+}
+
+/* Active state - light background */
+.navbar .dropdown-item.active,
+.dropdown-menu a.active,
+.dropdown-menu .dropdown-item.active {
+  background: rgba(139, 92, 246, 0.1) !important;
+  background-color: rgba(139, 92, 246, 0.1) !important;
+}
+
+/* Remove any box shadows that might look dark */
+.navbar .dropdown-menu {
+  box-shadow:
+    0 10px 25px rgba(0, 0, 0, 0.08),
+    0 5px 10px rgba(0, 0, 0, 0.05) !important;
+}
+
+/* Ensure text is dark on white background */
+.navbar .dropdown-menu,
+.navbar .dropdown-menu *,
+.navbar .dropdown-item,
+.dropdown-menu a {
+  color: #1f2937 !important;
+}
+
+/* Override Bootstrap dark theme if present */
+.navbar-dark .dropdown-menu,
+.navbar-inverse .dropdown-menu,
+.bg-dark .dropdown-menu {
+  background: #ffffff !important;
+  background-color: #ffffff !important;
+}
+
+/* Override any theme-specific dark dropdowns */
+[class*="theme"] .dropdown-menu,
+[class*="dark"] .dropdown-menu,
+[class*="navbar"] .dropdown-menu {
+  background: #ffffff !important;
+  background-color: #ffffff !important;
+}
+
+/* Force override with maximum specificity */
+body #page header .navbar .dropdown-menu,
+body #page-header .navbar .dropdown-menu,
+html body .navbar .dropdown-menu {
+  background: #ffffff !important;
+  background-color: #ffffff !important;
+  background-image: none !important;
+}

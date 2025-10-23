@@ -1,0 +1,3461 @@
+/* ================================================
+   CLONED HOMEPAGE - CUSTOM STYLING 2025
+   Specific styles for the cloned homepage that allow independent customization
+   ================================================ */
+
+/* ================================================
+   CLONED HOMEPAGE IDENTIFICATION
+   ================================================ */
+
+/* Cloned Homepage Banner */
+.cloned-homepage-banner {
+    border-left: 5px solid #007bff !important;
+    background: linear-gradient(135deg,
+        rgba(0, 123, 255, 0.05) 0%,
+        rgba(40, 167, 69, 0.05) 100%) !important;
+    border-radius: 10px !important;
+    box-shadow: 0 2px 15px rgba(0, 123, 255, 0.1) !important;
+    animation: clonedBannerPulse 3s ease-in-out infinite !important;
+}
+
+@keyframes clonedBannerPulse {
+    0%, 100% {
+        box-shadow: 0 2px 15px rgba(0, 123, 255, 0.1);
+    }
+    50% {
+        box-shadow: 0 2px 20px rgba(0, 123, 255, 0.2);
+    }
+}
+
+/* Cloned Homepage Footer */
+.cloned-homepage-footer {
+    border-top: 3px solid #28a745 !important;
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%) !important;
+    border-radius: 10px !important;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.05) !important;
+}
+
+/* ================================================
+   NAVIGATION MODIFICATIONS FOR CLONED VERSION
+   ================================================ */
+
+/* Add visual identifier to navbar */
+.cloned-homepage-layout .navbar {
+    border-bottom: 3px solid #007bff !important;
+    position: relative !important;
+}
+
+/* Add "CLONE" identifier to navbar brand */
+.cloned-homepage-layout .navbar-brand::after {
+    content: " 📋 CLONE" !important;
+    font-size: 0.7em !important;
+    color: #007bff !important;
+    font-weight: bold !important;
+    background: rgba(0, 123, 255, 0.1) !important;
+    padding: 2px 6px !important;
+    border-radius: 4px !important;
+    margin-left: 8px !important;
+    animation: cloneIdentifierBlink 2s ease infinite !important;
+}
+
+@keyframes cloneIdentifierBlink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.7; }
+}
+
+/* Add clone indicator to page wrapper */
+.cloned-homepage-layout::before {
+    content: "DEVELOPMENT CLONE" !important;
+    position: fixed !important;
+    top: 10px !important;
+    right: 10px !important;
+    background: linear-gradient(135deg, #007bff, #0056b3) !important;
+    color: white !important;
+    padding: 5px 12px !important;
+    border-radius: 15px !important;
+    font-size: 0.75rem !important;
+    font-weight: bold !important;
+    z-index: 1080 !important; /* Fixed: Using proper debug z-index (was 9999) */
+    box-shadow: 0 2px 10px rgba(0, 123, 255, 0.3) !important;
+    animation: cloneIndicatorFloat 4s ease-in-out infinite !important;
+}
+
+@keyframes cloneIndicatorFloat {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-5px); }
+}
+
+/* ================================================
+   CONTENT MODIFICATIONS FOR CLONED VERSION
+   ================================================ */
+
+/* Style the main content area to show it's a clone */
+.cloned-homepage-layout #region-main {
+    position: relative !important;
+}
+
+/* Add subtle background pattern to distinguish from original */
+.cloned-homepage-layout #page-content {
+    background-image:
+        repeating-linear-gradient(
+            45deg,
+            transparent,
+            transparent 50px,
+            rgba(0, 123, 255, 0.01) 50px,
+            rgba(0, 123, 255, 0.01) 52px
+        ) !important;
+}
+
+/* ================================================
+   INTERACTIVE ELEMENTS FOR CLONED VERSION
+   ================================================ */
+
+/* Enhanced buttons for cloned homepage */
+.cloned-homepage-layout .btn-primary {
+    background: linear-gradient(135deg, #007bff, #0056b3) !important;
+    border: none !important;
+    box-shadow: 0 4px 15px rgba(0, 123, 255, 0.3) !important;
+    transition: all 0.3s ease !important;
+}
+
+.cloned-homepage-layout .btn-primary:hover {
+    transform: translateY(-2px) !important;
+    box-shadow: 0 6px 20px rgba(0, 123, 255, 0.4) !important;
+}
+
+/* Clone-specific carousel enhancements */
+.cloned-homepage-layout .carousel {
+    border: 2px dashed rgba(0, 123, 255, 0.3) !important;
+    border-radius: 10px !important;
+    position: relative !important;
+}
+
+.cloned-homepage-layout .carousel::before {
+    content: "🎨 CLONE: Customize this independently from main homepage" !important;
+    position: absolute !important;
+    top: 10px !important;
+    left: 20px !important;
+    background: rgba(0, 123, 255, 0.9) !important;
+    color: white !important;
+    padding: 5px 10px !important;
+    border-radius: 5px !important;
+    font-size: 0.8rem !important;
+    z-index: 100 !important;
+    font-weight: 500 !important;
+}
+
+/* ================================================
+   DEVELOPMENT TOOLS FOR CLONED VERSION
+   ================================================ */
+
+/* Development info panel */
+.cloned-homepage-dev-info {
+    position: fixed !important;
+    bottom: 20px !important;
+    left: 20px !important;
+    background: rgba(0, 0, 0, 0.8) !important;
+    color: white !important;
+    padding: 10px 15px !important;
+    border-radius: 10px !important;
+    font-size: 0.75rem !important;
+    max-width: 300px !important;
+    z-index: 1080 !important; /* Fixed: Using proper debug z-index (was 9998) */
+    transition: all 0.3s ease !important;
+    opacity: 0.7 !important;
+}
+
+.cloned-homepage-dev-info:hover {
+    opacity: 1 !important;
+    transform: scale(1.05) !important;
+}
+
+/* Quick action buttons for development */
+.cloned-homepage-actions {
+    position: fixed !important;
+    top: 60px !important;
+    right: 10px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 5px !important;
+    z-index: 1080 !important; /* Fixed: Using proper debug z-index (was 9997) */
+}
+
+.cloned-homepage-actions .btn {
+    font-size: 0.7rem !important;
+    padding: 4px 8px !important;
+    border-radius: 5px !important;
+    min-width: 80px !important;
+}
+
+/* ================================================
+   MOBILE RESPONSIVENESS FOR CLONED VERSION
+   ================================================ */
+
+@media (max-width: 768px) {
+    .cloned-homepage-layout::before {
+        top: 5px !important;
+        right: 5px !important;
+        font-size: 0.65rem !important;
+        padding: 3px 8px !important;
+    }
+
+    .cloned-homepage-banner {
+        margin: 10px 0 !important;
+    }
+
+    .cloned-homepage-footer {
+        margin: 20px 0 0 0 !important;
+    }
+
+    .cloned-homepage-dev-info {
+        bottom: 10px !important;
+        left: 10px !important;
+        right: 10px !important;
+        max-width: none !important;
+    }
+
+    .cloned-homepage-actions {
+        flex-direction: row !important;
+        top: 35px !important;
+        right: 5px !important;
+        left: 5px !important;
+        justify-content: center !important;
+    }
+
+    .cloned-homepage-layout .carousel::before {
+        font-size: 0.7rem !important;
+        left: 10px !important;
+        top: 5px !important;
+        padding: 3px 8px !important;
+    }
+}
+
+/* ================================================
+   SPECIAL EFFECTS FOR CLONED VERSION
+   ================================================ */
+
+/* Subtle animation for cloned content */
+.cloned-homepage-layout .main-inner {
+    animation: clonedPageFadeIn 1s ease-out !important;
+}
+
+@keyframes clonedPageFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Highlight effect for editable areas in cloned version */
+.cloned-homepage-layout .block:hover {
+    box-shadow: 0 0 15px rgba(0, 123, 255, 0.2) !important;
+    transition: box-shadow 0.3s ease !important;
+}
+
+/* Custom scrollbar for cloned homepage */
+.cloned-homepage-layout::-webkit-scrollbar {
+    width: 8px !important;
+}
+
+.cloned-homepage-layout::-webkit-scrollbar-track {
+    background: #f1f1f1 !important;
+    border-radius: 4px !important;
+}
+
+.cloned-homepage-layout::-webkit-scrollbar-thumb {
+    background: linear-gradient(135deg, #007bff, #0056b3) !important;
+    border-radius: 4px !important;
+}
+
+.cloned-homepage-layout::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(135deg, #0056b3, #004085) !important;
+}
+
+/* ================================================
+   FEATURES AREA BLOCK - REVERTED TO ORIGINAL STATE
+   ================================================ */
+
+/* Features Area block styling has been removed to return to original state */
+
+/* ===============================================
+   MASTER AI TOOLS TEXT BLOCK TITLE STYLING
+   =============================================== */
+
+/* SIMPLE styling for "Master the AI Tools ! Shape the Future!" on cloned homepage */
+.cloned-homepage-layout .block_html h3,
+.cloned-homepage-layout .no-overflow h3,
+.cloned-homepage-layout .card-body h3,
+.cloned-homepage-layout #inst40 h3,
+.cloned-homepage-layout [id*="inst"] h3,
+.cloned-homepage-layout .partner-bg h3,
+.cloned-homepage-layout h3 {
+    /* FORCE VISIBILITY - Single appearance only */
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    position: relative !important;
+    z-index: 50 !important;
+
+    /* Simple clean typography for Cloned Homepage - Smaller Size */
+    margin: 20px auto 30px auto !important;
+    padding: 10px 20px !important;
+    font-size: clamp(18px, 3vw, 24px) !important;
+    line-height: 1.3 !important;
+    font-weight: 600 !important;
+    letter-spacing: -0.01em !important;
+    text-align: center !important;
+    font-family: 'Sora', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif !important;
+    text-transform: none !important;
+    width: 100% !important;
+    max-width: 800px !important;
+
+    /* Clean appearance - no complex effects */
+    color: #333333 !important;
+    background: transparent !important;
+    background-color: transparent !important;
+    background-image: none !important;
+    -webkit-background-clip: initial !important;
+    -webkit-text-fill-color: initial !important;
+    background-clip: initial !important;
+    animation: none !important;
+    filter: none !important;
+    text-shadow: none !important;
+    transform: none !important;
+    will-change: auto !important;
+    border: none !important;
+    outline: none !important;
+}
+
+/* No animation keyframes needed - keeping it simple */
+
+/* FALLBACK STYLING - Solid color for browsers that don't support background-clip */
+@supports not (-webkit-background-clip: text) {
+    .cloned-homepage-layout .block_html h3,
+    .cloned-homepage-layout .no-overflow h3,
+    .cloned-homepage-layout .card-body h3,
+    .cloned-homepage-layout #inst40 h3,
+    .cloned-homepage-layout [id*="inst"] h3,
+    .cloned-homepage-layout .partner-bg h3,
+    .cloned-homepage-layout h3 {
+        background: none !important;
+        color: #667eea !important;
+        -webkit-text-fill-color: #667eea !important;
+    }
+}
+
+/* Text block container styling for cloned homepage */
+.cloned-homepage-layout .no-overflow,
+.cloned-homepage-layout .block_html .no-overflow,
+.cloned-homepage-layout .card-body,
+.cloned-homepage-layout .block_html {
+    position: relative !important;
+    text-align: center !important;
+    padding: 25px 15px !important;
+    background: transparent !important;
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    z-index: 50 !important;
+    width: 100% !important;
+    min-height: 80px !important;
+    overflow: visible !important;
+}
+
+/* Partner section styling for cloned homepage - No Background Box */
+.cloned-homepage-layout .partner-bg {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    background: transparent !important;
+    background-color: transparent !important;
+    background-image: none !important;
+    border: none !important;
+    border-radius: 0 !important;
+    padding: 20px 0 !important;
+    margin: 20px 0 !important;
+    box-shadow: none !important;
+    position: relative !important;
+    z-index: 20 !important;
+    width: 100% !important;
+    max-width: 1200px !important;
+}
+
+/* Block HTML container visibility for cloned homepage */
+.cloned-homepage-layout .block_html,
+.cloned-homepage-layout #inst40,
+.cloned-homepage-layout [id*="inst"] {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    position: relative !important;
+    z-index: 30 !important;
+    width: 100% !important;
+    margin: 20px 0 !important;
+    background: transparent !important;
+}
+
+/* FORCE SHOW ANY HIDDEN ELEMENTS */
+.cloned-homepage-layout .block_html *,
+.cloned-homepage-layout .no-overflow *,
+.cloned-homepage-layout .partner-bg * {
+    visibility: visible !important;
+    opacity: 1 !important;
+}
+
+/* Specific targeting for common Moodle block classes */
+.cloned-homepage-layout .block.block_html,
+.cloned-homepage-layout .card.block_html,
+.cloned-homepage-layout .block-region .block_html {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+}
+
+/* Responsive adjustments for cloned homepage */
+@media (max-width: 992px) {
+    .cloned-homepage-layout .block_html h3,
+    .cloned-homepage-layout .no-overflow h3,
+    .cloned-homepage-layout .card-body h3,
+    .cloned-homepage-layout #inst40 h3,
+    .cloned-homepage-layout h3 {
+        font-size: 2.2rem !important;
+        margin: 15px auto 20px auto !important;
+        padding: 8px 15px !important;
+    }
+
+    .cloned-homepage-layout .partner-bg {
+        padding: 30px 20px !important;
+        margin: 20px auto !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .cloned-homepage-layout .block_html h3,
+    .cloned-homepage-layout .no-overflow h3,
+    .cloned-homepage-layout .card-body h3,
+    .cloned-homepage-layout #inst40 h3,
+    .cloned-homepage-layout h3 {
+        font-size: 1.8rem !important;
+        margin: 12px auto 18px auto !important;
+        letter-spacing: -0.5px !important;
+        padding: 6px 12px !important;
+    }
+
+    .cloned-homepage-layout .partner-bg {
+        padding: 25px 15px !important;
+        margin: 15px auto !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .cloned-homepage-layout .block_html h3,
+    .cloned-homepage-layout .no-overflow h3,
+    .cloned-homepage-layout .card-body h3,
+    .cloned-homepage-layout #inst40 h3,
+    .cloned-homepage-layout h3 {
+        font-size: 1.5rem !important;
+        margin: 10px auto 15px auto !important;
+        padding: 5px 10px !important;
+        letter-spacing: -0.3px !important;
+    }
+
+    .cloned-homepage-layout .partner-bg {
+        padding: 20px 10px !important;
+        margin: 10px auto !important;
+    }
+}
+
+/* Small mobile devices - enhanced structure */
+
+/* ================================================
+   PRINT STYLES FOR CLONED VERSION
+   ================================================ */
+
+/* ================================================
+   EDOO CTA BUTTON - WHITE TEXT FIX FOR CLONED HOMEPAGE
+   ================================================ */
+
+/* ★ SPECTACULAR MODERN CTA BUTTON - ULTIMATE DESIGN ★ */
+.cloned-homepage-layout .journey-area .btn.text-success,
+.cloned-homepage-layout .journey-content .btn.text-success,
+.cloned-homepage-layout .btn.btn-primary.bg-secondary.text-success,
+.cloned-homepage-layout .journey-area .btn,
+.cloned-homepage-layout .journey-content .btn {
+    /* PROFESSIONAL MODERN BUTTON BACKGROUND */
+    background: linear-gradient(135deg, #007bff 0%, #0056b3 100%) !important;
+    background-size: 100% 100% !important;
+
+    /* STANDARD PROFESSIONAL STYLING */
+    color: #ffffff !important;
+    text-decoration: none !important;
+    border: none !important;
+    border-radius: 8px !important;
+    padding: 12px 24px !important;
+
+    /* CLEAN TYPOGRAPHY */
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+    font-weight: 600 !important;
+    font-size: 16px !important;
+    letter-spacing: normal !important;
+    text-transform: none !important;
+    line-height: 1.5 !important;
+    text-align: center !important;
+
+    /* STANDARD PROFESSIONAL EFFECTS */
+    box-shadow: 0 2px 8px rgba(0, 123, 255, 0.25) !important;
+
+    /* SMOOTH MODERN TRANSITION */
+    transition: all 0.3s ease !important;
+    position: relative !important;
+    cursor: pointer !important;
+}
+
+/* ★ MAGNIFICENT BUTTON HOVER EFFECTS ★ */
+.cloned-homepage-layout .journey-area .btn.text-success:hover,
+.cloned-homepage-layout .journey-content .btn.text-success:hover,
+.cloned-homepage-layout .btn.btn-primary.bg-secondary.text-success:hover,
+.cloned-homepage-layout .journey-area .btn:hover,
+.cloned-homepage-layout .journey-content .btn:hover {
+    /* ATTRACTIVE HOVER BACKGROUND */
+    background: linear-gradient(135deg, #28a745 0%, #20c997 50%, #17a2b8 100%) !important;
+
+    /* CLEAN TEXT STYLING */
+    color: #ffffff !important;
+    text-decoration: none !important;
+
+    /* ENGAGING HOVER EFFECT */
+    transform: translateY(-3px) scale(1.02) !important;
+
+    /* ENHANCED ATTRACTIVE SHADOW */
+    box-shadow: 0 6px 20px rgba(40, 167, 69, 0.4) !important;
+}
+
+/* FOCUS STATE */
+.cloned-homepage-layout .journey-area .btn.text-success:focus,
+.cloned-homepage-layout .journey-content .btn.text-success:focus,
+.cloned-homepage-layout .btn.btn-primary.bg-secondary.text-success:focus,
+.cloned-homepage-layout .journey-area .btn:focus,
+.cloned-homepage-layout .journey-content .btn:focus {
+    color: #ffffff !important;
+    text-decoration: none !important;
+    outline: 3px solid rgba(102, 126, 234, 0.5) !important;
+    outline-offset: 4px !important;
+    box-shadow:
+        0 12px 40px rgba(102, 126, 234, 0.6),
+        0 6px 20px rgba(118, 75, 162, 0.4) !important;
+}
+
+/* ACTIVE STATE */
+.cloned-homepage-layout .journey-area .btn.text-success:active,
+.cloned-homepage-layout .journey-content .btn.text-success:active,
+.cloned-homepage-layout .btn.btn-primary.bg-secondary.text-success:active,
+.cloned-homepage-layout .journey-area .btn:active,
+.cloned-homepage-layout .journey-content .btn:active {
+    color: #ffffff !important;
+    text-decoration: none !important;
+    transform: translateY(-2px) scale(1.02) !important;
+    box-shadow:
+        0 8px 24px rgba(102, 126, 234, 0.4),
+        0 4px 12px rgba(118, 75, 162, 0.3) !important;
+}
+
+/* VISITED STATE */
+.cloned-homepage-layout .journey-area .btn.text-success:visited,
+.cloned-homepage-layout .journey-content .btn.text-success:visited,
+.cloned-homepage-layout .btn.btn-primary.bg-secondary.text-success:visited,
+.cloned-homepage-layout .journey-area .btn:visited,
+.cloned-homepage-layout .journey-content .btn:visited {
+    color: #ffffff !important;
+    text-decoration: none !important;
+}
+
+/* STUNNING BUTTON ICONS */
+.cloned-homepage-layout .journey-area .btn i,
+.cloned-homepage-layout .journey-content .btn i,
+.cloned-homepage-layout .btn.text-success i {
+    color: #ffffff !important;
+    margin-left: 8px !important;
+    font-size: 14px !important;
+    transition: transform 0.3s ease !important;
+}
+
+/* ICON HOVER ANIMATION */
+.cloned-homepage-layout .journey-area .btn:hover i,
+.cloned-homepage-layout .journey-content .btn:hover i,
+.cloned-homepage-layout .btn.text-success:hover i {
+    transform: translateX(4px) !important;
+}
+
+/* OVERRIDE BOOTSTRAP CLASSES */
+.cloned-homepage-layout .btn.text-success,
+.cloned-homepage-layout .btn .text-success {
+    color: #ffffff !important;
+}
+
+/* GRADIENT ANIMATION KEYFRAMES */
+@keyframes gradientShift {
+    0% { background-position: 0% 50%; }
+    25% { background-position: 100% 0%; }
+    50% { background-position: 100% 100%; }
+    75% { background-position: 0% 100%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* RESPONSIVE BUTTON DESIGN */
+@media (max-width: 768px) {
+    .cloned-homepage-layout .journey-area .btn,
+    .cloned-homepage-layout .journey-content .btn {
+        padding: 14px 28px !important;
+        font-size: 15px !important;
+        border-radius: 40px !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .cloned-homepage-layout .journey-area .btn,
+    .cloned-homepage-layout .journey-content .btn {
+        padding: 12px 24px !important;
+        font-size: 14px !important;
+        border-radius: 30px !important;
+    }
+}
+
+/* ================================================
+   EDOO CTA AREA - STUNNING NEW BACKGROUND FOR CLONED HOMEPAGE
+   ================================================ */
+
+/* ★ STUNNING MODERN CTA BACKGROUND - VIBRANT 2025 GRADIENTS ★ */
+.cloned-homepage-layout .journey-area .bg-success,
+.cloned-homepage-layout .journey-area .bg-success.rounded-2,
+.cloned-homepage-layout .bg-success.rounded-2.position-relative {
+    /* GORGEOUS MULTI-LAYER GRADIENT BACKGROUND */
+    background:
+        conic-gradient(from 180deg at 50% 50%,
+            #ff6b6b 0deg,
+            #4ecdc4 72deg,
+            #45b7d1 144deg,
+            #96ceb4 216deg,
+            #feca57 288deg,
+            #ff6b6b 360deg),
+        linear-gradient(135deg,
+            rgba(255, 107, 107, 0.9) 0%,
+            rgba(78, 205, 196, 0.8) 25%,
+            rgba(69, 183, 209, 0.7) 50%,
+            rgba(150, 206, 180, 0.8) 75%,
+            rgba(254, 202, 87, 0.9) 100%),
+        radial-gradient(ellipse at top, rgba(255, 255, 255, 0.1) 0%, transparent 70%) !important;
+    background-size: 300% 300%, 200% 200%, 100% 100% !important;
+    animation: vibrantGradientFlow 15s ease infinite !important;
+
+    /* STUNNING VISUAL EFFECTS */
+    border-radius: 28px !important;
+    border: 2px solid rgba(255, 255, 255, 0.3) !important;
+    backdrop-filter: blur(20px) saturate(150%) !important;
+    -webkit-backdrop-filter: blur(20px) saturate(150%) !important;
+
+    /* BREATHTAKING SHADOW SYSTEM */
+    box-shadow:
+        0 30px 60px -10px rgba(255, 107, 107, 0.3),
+        0 20px 40px -8px rgba(78, 205, 196, 0.25),
+        0 10px 20px -5px rgba(69, 183, 209, 0.2),
+        inset 0 2px 0 rgba(255, 255, 255, 0.4),
+        inset 0 -2px 0 rgba(0, 0, 0, 0.1) !important;
+
+    /* PREMIUM LAYOUT */
+    position: relative !important;
+    overflow: hidden !important;
+    transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1) !important;
+    transform: translateZ(0) !important;
+}
+
+/* MAGICAL FLOATING PARTICLES */
+.cloned-homepage-layout .journey-area .bg-success::after {
+    content: '' !important;
+    position: absolute !important;
+    top: -20px !important;
+    left: -20px !important;
+    right: -20px !important;
+    bottom: -20px !important;
+    background:
+        radial-gradient(circle at 20% 30%, rgba(255, 255, 255, 0.3) 1px, transparent 1px),
+        radial-gradient(circle at 80% 60%, rgba(255, 255, 255, 0.25) 1px, transparent 1px),
+        radial-gradient(circle at 60% 20%, rgba(255, 255, 255, 0.2) 1px, transparent 1px),
+        radial-gradient(circle at 30% 80%, rgba(255, 255, 255, 0.35) 1px, transparent 1px) !important;
+    background-size: 50px 50px, 80px 80px, 60px 60px, 70px 70px !important;
+    animation: floatingParticles 20s linear infinite !important;
+    pointer-events: none !important;
+    z-index: 1 !important;
+    opacity: 0.6 !important;
+}
+
+/* STUNNING GRADIENT BORDER GLOW */
+.cloned-homepage-layout .journey-area .bg-success::before {
+    content: '' !important;
+    position: absolute !important;
+    inset: -3px !important;
+    border-radius: 31px !important;
+    padding: 3px !important;
+    background: conic-gradient(from 0deg,
+        #ff6b6b,
+        #4ecdc4,
+        #45b7d1,
+        #96ceb4,
+        #feca57,
+        #ff6b6b) !important;
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0) !important;
+    -webkit-mask-composite: xor !important;
+    mask-composite: exclude !important;
+    animation: rotateBorder 8s linear infinite !important;
+    z-index: -1 !important;
+}
+
+/* MAGNIFICENT HOVER EFFECT */
+.cloned-homepage-layout .journey-area .bg-success:hover {
+    transform: translateY(-8px) scale(1.02) !important;
+    box-shadow:
+        0 40px 80px -15px rgba(255, 107, 107, 0.4),
+        0 25px 50px -10px rgba(78, 205, 196, 0.3),
+        0 15px 30px -8px rgba(69, 183, 209, 0.25),
+        inset 0 3px 0 rgba(255, 255, 255, 0.5),
+        inset 0 -3px 0 rgba(0, 0, 0, 0.15) !important;
+    border-color: rgba(255, 255, 255, 0.5) !important;
+}
+
+.cloned-homepage-layout .journey-area .bg-success:hover::before {
+    animation-duration: 4s !important;
+}
+
+.cloned-homepage-layout .journey-area .bg-success:hover::after {
+    animation-duration: 10s !important;
+    opacity: 0.8 !important;
+}
+
+/* STUNNING GRADIENT ANIMATIONS */
+@keyframes vibrantGradientFlow {
+    0% {
+        background-position: 0% 50%, 0% 50%, 50% 50%;
+        filter: hue-rotate(0deg) saturate(1);
+    }
+    25% {
+        background-position: 100% 0%, 50% 100%, 50% 50%;
+        filter: hue-rotate(10deg) saturate(1.1);
+    }
+    50% {
+        background-position: 100% 100%, 100% 50%, 50% 50%;
+        filter: hue-rotate(0deg) saturate(1.2);
+    }
+    75% {
+        background-position: 0% 100%, 50% 0%, 50% 50%;
+        filter: hue-rotate(-10deg) saturate(1.1);
+    }
+    100% {
+        background-position: 0% 50%, 0% 50%, 50% 50%;
+        filter: hue-rotate(0deg) saturate(1);
+    }
+}
+
+@keyframes rotateBorder {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+@keyframes floatingParticles {
+    0% { transform: translateX(0) translateY(0); }
+    25% { transform: translateX(-10px) translateY(-5px); }
+    50% { transform: translateX(10px) translateY(-10px); }
+    75% { transform: translateX(-5px) translateY(5px); }
+    100% { transform: translateX(0) translateY(0); }
+}
+
+@keyframes shimmerText {
+    0% {
+        background-position: -200% center, center;
+        filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.2));
+    }
+    50% {
+        background-position: 200% center, center;
+        filter: drop-shadow(0 0 12px rgba(255, 255, 255, 0.4));
+    }
+    100% {
+        background-position: -200% center, center;
+        filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.2));
+    }
+}
+
+@keyframes buttonGradientFlow {
+    0% {
+        background-position: 0% 50%, 0% 0%;
+        transform: translateZ(0);
+    }
+    25% {
+        background-position: 100% 0%, 25% 25%;
+        transform: translateZ(0) scale(1.01);
+    }
+    50% {
+        background-position: 100% 100%, 50% 50%;
+        transform: translateZ(0);
+    }
+    75% {
+        background-position: 0% 100%, 75% 75%;
+        transform: translateZ(0) scale(1.01);
+    }
+    100% {
+        background-position: 0% 50%, 0% 0%;
+        transform: translateZ(0);
+    }
+}
+
+/* ★ BEAUTIFUL TYPOGRAPHY WITH ORIGINAL LEFT ALIGNMENT ★ */
+.cloned-homepage-layout .journey-area .bg-success h2,
+.cloned-homepage-layout .journey-content h2 {
+    /* GORGEOUS GRADIENT TEXT WITH ORIGINAL STYLING */
+    background:
+        linear-gradient(135deg,
+            #ffffff 0%,
+            #f8f9fa 25%,
+            #ffffff 50%,
+            #e9ecef 75%,
+            #ffffff 100%) !important;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+    background-clip: text !important;
+    background-size: 200% 200% !important;
+    animation: shimmerText 4s ease-in-out infinite !important;
+
+    /* KEEP ORIGINAL FONT SETTINGS */
+    font-weight: 700 !important;
+    font-size: clamp(28px, 4vw, 42px) !important;
+    line-height: 1.2 !important;
+    letter-spacing: -0.02em !important;
+
+    /* ENHANCED VISUAL EFFECTS */
+    text-shadow:
+        0 4px 8px rgba(0, 0, 0, 0.3),
+        0 2px 4px rgba(255, 255, 255, 0.1) !important;
+    filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.2)) !important;
+
+    /* RESTORE ORIGINAL LEFT ALIGNMENT */
+    text-align: left !important;
+    position: relative !important;
+    z-index: 2 !important;
+}
+
+.cloned-homepage-layout .journey-area .bg-success p,
+.cloned-homepage-layout .journey-content p {
+    /* ENHANCED COLOR WITH ORIGINAL STRUCTURE */
+    color: rgba(255, 255, 255, 0.95) !important;
+
+    /* KEEP ORIGINAL FONT SETTINGS - FIX SPACING */
+    font-size: clamp(16px, 2vw, 18px) !important;
+    line-height: 1.4 !important; /* Reduced from 1.6 to fix gaps */
+    font-weight: 400 !important;
+
+    /* ENHANCED VISUAL EFFECTS */
+    text-shadow:
+        0 2px 4px rgba(0, 0, 0, 0.3),
+        0 1px 2px rgba(0, 0, 0, 0.2) !important;
+    filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.1)) !important;
+
+    /* RESTORE ORIGINAL LEFT ALIGNMENT - FIX SPACING */
+    text-align: left !important;
+    position: relative !important;
+    z-index: 2 !important;
+    margin: 0 0 12px 0 !important; /* Add proper margin instead of line-height gaps */
+    padding: 0 !important; /* Remove extra padding */
+}
+
+/* FIX LIST SPACING - BULLET POINTS AND TEXT ALIGNMENT */
+.cloned-homepage-layout .journey-area .bg-success ul,
+.cloned-homepage-layout .journey-content ul {
+    margin: 0 0 12px 0 !important;
+    padding: 0 0 0 20px !important; /* Standard list indentation */
+    text-align: left !important;
+}
+
+.cloned-homepage-layout .journey-area .bg-success li,
+.cloned-homepage-layout .journey-content li {
+    margin: 0 0 6px 0 !important; /* Compact spacing between list items */
+    padding: 0 !important; /* No extra padding */
+    line-height: 1.4 !important; /* Match paragraph line-height */
+    text-align: left !important;
+    list-style-position: outside !important; /* Bullet points outside content area */
+    color: rgba(255, 255, 255, 0.95) !important;
+    font-size: clamp(16px, 2vw, 18px) !important;
+    font-weight: 400 !important;
+    text-shadow:
+        0 2px 4px rgba(0, 0, 0, 0.3),
+        0 1px 2px rgba(0, 0, 0, 0.2) !important;
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 768px) {
+    .cloned-homepage-layout .journey-area .bg-success {
+        border-radius: 20px !important;
+        box-shadow:
+            0 20px 40px -8px rgba(0, 0, 0, 0.3),
+            0 0 0 1px rgba(255, 255, 255, 0.08),
+            inset 0 1px 0 rgba(255, 255, 255, 0.1) !important;
+    }
+
+    .cloned-homepage-layout .journey-area .bg-success::before {
+        width: 4px !important;
+        height: 4px !important;
+        top: 16px !important;
+        right: 16px !important;
+    }
+}
+
+@media print {
+    .cloned-homepage-banner,
+    .cloned-homepage-footer,
+    .cloned-homepage-dev-info,
+    .cloned-homepage-actions,
+    .cloned-homepage-layout::before {
+        display: none !important;
+    }
+
+    .cloned-homepage-layout .navbar-brand::after {
+        display: none !important;
+    }
+
+    .cloned-homepage-layout .journey-area .btn {
+        color: #000000 !important;
+    }
+
+    .cloned-homepage-layout .journey-area .bg-success {
+        background: #f8f9fa !important;
+        box-shadow: none !important;
+        border: 1px solid #dee2e6 !important;
+    }
+
+    .cloned-homepage-layout .journey-area .bg-success::before,
+    .cloned-homepage-layout .journey-area .bg-success::after {
+        display: none !important;
+    }
+}
+
+/* ================================================
+   MODERN PARTNERS BLOCK - CLONED HOMEPAGE ONLY
+   Beautiful, attractive design with best practices
+   ================================================ */
+
+/* Section Container - Modern Professional Look - NO BACKGROUND */
+.cloned-homepage-layout .partner-logo-area,
+body.cloned-homepage .partner-logo-area,
+body.cloned-homepage-layout .partner-logo-area,
+#page-site-index.cloned-homepage .partner-logo-area {
+    padding: 80px 0 !important;
+    margin: 0 !important;
+    background: transparent !important;
+    background-color: transparent !important;
+    background-image: none !important;
+    position: relative !important;
+    overflow: visible !important;
+}
+
+/* Remove all background pseudo-elements */
+.cloned-homepage-layout .partner-logo-area::before,
+body.cloned-homepage .partner-logo-area::before,
+body.cloned-homepage-layout .partner-logo-area::before,
+#page-site-index.cloned-homepage .partner-logo-area::before,
+.cloned-homepage-layout .partner-logo-area::after,
+body.cloned-homepage .partner-logo-area::after,
+body.cloned-homepage-layout .partner-logo-area::after,
+#page-site-index.cloned-homepage .partner-logo-area::after {
+    display: none !important;
+    content: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+    background: none !important;
+    background-image: none !important;
+}
+
+/* Modern Container */
+.cloned-homepage-layout .partner-logo-area .container {
+    position: relative !important;
+    z-index: 2 !important;
+    max-width: 1200px !important;
+    margin: 0 auto !important;
+    padding: 0 20px !important;
+}
+
+/* Beautiful Card Design - No Background */
+.cloned-homepage-layout .partner-bg {
+    background: transparent !important;
+    background-color: transparent !important;
+    background-image: none !important;
+    border: none !important;
+    border-radius: 0 !important;
+    padding: 20px 0 !important;
+    position: relative !important;
+    overflow: visible !important;
+
+    /* No shadows */
+    box-shadow: none !important;
+
+    /* No transitions */
+    transition: none !important;
+}
+
+.cloned-homepage-layout .partner-bg:hover {
+    transform: none !important;
+    box-shadow: none !important;
+    background: transparent !important;
+    border: none !important;
+}
+
+/* No accent decoration */
+.cloned-homepage-layout .partner-bg::before {
+    display: none !important;
+    content: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+}
+
+@keyframes partnerAccentGlow {
+    0%, 100% { opacity: 0.7; transform: scaleX(1); }
+    50% { opacity: 1; transform: scaleX(1.02); }
+}
+
+/* Modern Carousel Container - Transparent Background */
+.cloned-homepage-layout .partner-slide {
+    padding: 20px 0 !important;
+    position: relative !important;
+    overflow: hidden !important;
+    background: transparent !important;
+    background-color: transparent !important;
+    background-image: none !important;
+}
+
+/* Enhanced Swiper Wrapper - Auto-scroll Configuration - Transparent */
+.cloned-homepage-layout .partner-slide .swiper-wrapper {
+    align-items: center !important;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1) !important;
+    animation: partnerAutoScroll 20s linear infinite !important;
+    background: transparent !important;
+    background-color: transparent !important;
+    background-image: none !important;
+}
+
+/* Auto-scroll Animation */
+@keyframes partnerAutoScroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
+
+/* Pause on hover */
+.cloned-homepage-layout .partner-slide:hover .swiper-wrapper {
+    animation-play-state: paused !important;
+}
+
+/* Beautiful Logo Containers - Fixed for Carousel - No Background */
+.cloned-homepage-layout .partner-slide .swiper-slide {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    padding: 15px !important;
+    height: auto !important;
+    min-height: 80px !important;
+    position: relative !important;
+    flex-shrink: 0 !important;
+    width: auto !important;
+
+    /* Completely transparent background */
+    background: transparent !important;
+    background-color: transparent !important;
+    background-image: none !important;
+
+    /* Modern hover background */
+    border-radius: 8px !important;
+    transition: all 0.3s ease !important;
+    cursor: pointer !important;
+}
+
+.cloned-homepage-layout .partner-slide .swiper-slide:hover {
+    background: transparent !important;
+    transform: none !important;
+}
+
+/* Premium Logo Styling - Larger Size - No Background */
+.cloned-homepage-layout .partner-slide .swiper-slide img {
+    max-width: 160px !important;
+    max-height: 80px !important;
+    width: auto !important;
+    height: auto !important;
+    object-fit: contain !important;
+    display: block !important;
+    margin: 0 auto !important;
+
+    /* Ensure visibility - Remove heavy filters */
+    filter: none !important;
+    opacity: 1 !important;
+
+    /* Completely transparent background */
+    background: transparent !important;
+    background-color: transparent !important;
+    background-image: none !important;
+
+    /* Smooth transitions */
+    transition: all 0.3s ease !important;
+
+    /* Modern rendering */
+    image-rendering: auto !important;
+    backface-visibility: hidden !important;
+}
+
+.cloned-homepage-layout .partner-slide .swiper-slide:hover img {
+    filter: brightness(1.1) !important;
+    opacity: 1 !important;
+    transform: scale(1.05) !important;
+}
+
+/* Logo Separator Lines */
+.cloned-homepage-layout .partner-slide .swiper-slide:not(:last-child)::after {
+    content: '' !important;
+    position: absolute !important;
+    right: 0 !important;
+    top: 25% !important;
+    bottom: 25% !important;
+    width: 1px !important;
+    background: linear-gradient(to bottom,
+        transparent 0%,
+        rgba(0, 0, 0, 0.1) 50%,
+        transparent 100%) !important;
+    transition: opacity 0.3s ease !important;
+}
+
+.cloned-homepage-layout .partner-slide .swiper-slide:hover::after,
+.cloned-homepage-layout .partner-slide .swiper-slide:hover + .swiper-slide::after {
+    opacity: 0 !important;
+}
+
+/* Section Title Enhancement */
+.cloned-homepage-layout .partner-logo-area .section-title {
+    text-align: center !important;
+    margin-bottom: 50px !important;
+    position: relative !important;
+}
+
+.cloned-homepage-layout .partner-logo-area .section-title h2 {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif !important;
+    font-size: clamp(24px, 3vw, 32px) !important;
+    font-weight: 700 !important;
+    color: #1f2937 !important;
+    margin-bottom: 16px !important;
+    line-height: 1.3 !important;
+    letter-spacing: -0.02em !important;
+}
+
+.cloned-homepage-layout .partner-logo-area .section-title p {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif !important;
+    font-size: clamp(16px, 2vw, 18px) !important;
+    color: #6b7280 !important;
+    max-width: 600px !important;
+    margin: 0 auto !important;
+    line-height: 1.6 !important;
+}
+
+/* Ensure images are visible in carousel */
+.cloned-homepage-layout .partner-slide .swiper-slide {
+    opacity: 1 !important;
+    transform: none !important;
+    animation: none !important;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .cloned-homepage-layout .partner-logo-area {
+        padding: 60px 0 !important;
+    }
+
+    .cloned-homepage-layout .partner-bg {
+        padding: 30px 15px !important;
+        border-radius: 16px !important;
+    }
+
+    .cloned-homepage-layout .partner-slide .swiper-slide img {
+        max-width: 140px !important;
+        max-height: 70px !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .cloned-homepage-layout .partner-logo-area {
+        padding: 40px 0 !important;
+    }
+
+    .cloned-homepage-layout .partner-bg {
+        padding: 25px 15px !important;
+        border-radius: 12px !important;
+    }
+
+    .cloned-homepage-layout .partner-slide .swiper-slide {
+        height: 80px !important;
+        padding: 10px !important;
+    }
+
+    .cloned-homepage-layout .partner-slide .swiper-slide img {
+        max-width: 120px !important;
+        max-height: 60px !important;
+    }
+
+    .cloned-homepage-layout .partner-slide .swiper-slide:not(:last-child)::after {
+        display: none !important;
+    }
+}
+
+/* Remove Duplicate Partners - Hide Extra Blocks */
+.cloned-homepage-layout .partner-logo-area:not(:first-of-type) {
+    display: none !important;
+}
+
+/* Override any conflicting background styles */
+.cloned-homepage-layout .partner-bg.bg-success {
+    background: #ffffff !important;
+}
+
+.cloned-homepage-layout .partner-bg.bg-success.rounded-2 {
+    background: #ffffff !important;
+    border-radius: 20px !important;
+}
+
+
+/* Accessibility Support */
+@media (prefers-reduced-motion: reduce) {
+    .cloned-homepage-layout .partner-slide .swiper-slide,
+    .cloned-homepage-layout .partner-slide .swiper-slide img,
+    .cloned-homepage-layout .partner-bg {
+        animation: none !important;
+        transition: none !important;
+    }
+
+    .cloned-homepage-layout .partner-slide .swiper-slide:hover {
+        transform: none !important;
+    }
+}
+
+
+
+
+/* ================================================
+   SCROLL TO TOP BUTTON - MOVE FROM LEFT TO RIGHT
+   Position scroll-to-top button on right side
+   ================================================ */
+
+/* Move all scroll-to-top buttons to right side */
+.cloned-homepage-layout #backtotop,
+.cloned-homepage-layout .modern-backtotop,
+.cloned-homepage-layout .premium-backtop,
+.cloned-homepage-layout .advanced-backtop,
+.cloned-homepage-layout .compact-backtop,
+.cloned-homepage-layout .modern-backtop-opt,
+.cloned-homepage-layout [class*="backtotop"],
+.cloned-homepage-layout [class*="backtop"],
+.cloned-homepage-layout [class*="back-to-top"],
+.cloned-homepage-layout [class*="scroll-to-top"] {
+    /* Position on right side */
+    right: 30px !important;
+    left: auto !important;
+
+    /* Remove any left positioning */
+    margin-left: 0 !important;
+    transform: translateY(-100%) !important;
+}
+
+/* Ensure proper positioning for fixed elements */
+.cloned-homepage-layout #backtotop {
+    position: fixed !important;
+    bottom: 30px !important;
+    right: 30px !important;
+    left: auto !important;
+    z-index: 200 !important; /* Fixed: Using proper drawer z-index (was 999) */
+}
+
+.cloned-homepage-layout .modern-backtotop {
+    position: fixed !important;
+    bottom: 30px !important;
+    right: 30px !important;
+    left: auto !important;
+    z-index: 200 !important; /* Fixed: Using proper drawer z-index (was 999) */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .cloned-homepage-layout #backtotop,
+    .cloned-homepage-layout .modern-backtotop,
+    .cloned-homepage-layout [class*="backtotop"],
+    .cloned-homepage-layout [class*="backtop"] {
+        right: 20px !important;
+        left: auto !important;
+        bottom: 20px !important;
+    }
+}
+
+
+/* ================================================
+   [EDOO] FEATURED AREA BLOCK - PREMIUM ENHANCEMENT
+   Beautiful section with enhanced title, button and card styling
+   ================================================ */
+
+/* Featured Area Container - Modern Background - CLONED HOMEPAGE ONLY */
+body[class*="clone"] .all-classes-area,
+.cloned-homepage-layout .all-classes-area,
+#page-local-cloned-homepage .all-classes-area,
+[data-page="cloned-homepage"] .all-classes-area {
+    background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%) !important;
+    padding: 80px 0 100px 0 !important;
+    margin: 60px 0 !important;
+    border-radius: 32px !important;
+    position: relative !important;
+    overflow: hidden !important;
+}
+
+/* Subtle Background Pattern */
+body[class*="clone"] .all-classes-area::before,
+.cloned-homepage-layout .all-classes-area::before,
+#page-local-cloned-homepage .all-classes-area::before,
+[data-page="cloned-homepage"] .all-classes-area::before {
+    content: '' !important;
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    background:
+        radial-gradient(circle at 20% 20%, rgba(59, 130, 246, 0.05) 0%, transparent 50%),
+        radial-gradient(circle at 80% 80%, rgba(16, 185, 129, 0.05) 0%, transparent 50%) !important;
+    pointer-events: none !important;
+}
+
+/* Section Title Enhancement */
+body[class*="clone"] .all-classes-area .section-title,
+.cloned-homepage-layout .all-classes-area .section-title,
+#page-local-cloned-homepage .all-classes-area .section-title,
+[data-page="cloned-homepage"] .all-classes-area .section-title {
+    text-align: center !important;
+    margin-bottom: 60px !important;
+    position: relative !important;
+    z-index: 2 !important;
+}
+
+/* Main Title - Stunning Typography */
+body[class*="clone"] .all-classes-area .section-title h2,
+.cloned-homepage-layout .all-classes-area .section-title h2,
+#page-local-cloned-homepage .all-classes-area .section-title h2,
+[data-page="cloned-homepage"] .all-classes-area .section-title h2 {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif !important;
+    font-size: clamp(32px, 4vw, 48px) !important;
+    font-weight: 700 !important;
+    line-height: 1.2 !important;
+    margin-bottom: 20px !important;
+    letter-spacing: -0.02em !important;
+
+    /* Beautiful gradient text */
+    background: linear-gradient(135deg, #1f2937 0%, #3b82f6 50%, #1f2937 100%) !important;
+    background-size: 200% 200% !important;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+    background-clip: text !important;
+    animation: titleShimmer 3s ease-in-out infinite !important;
+}
+
+@keyframes titleShimmer {
+    0%, 100% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+}
+
+/* Section Description */
+body[class*="clone"] .all-classes-area .section-title p,
+.cloned-homepage-layout .all-classes-area .section-title p,
+#page-local-cloned-homepage .all-classes-area .section-title p,
+[data-page="cloned-homepage"] .all-classes-area .section-title p {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif !important;
+    font-size: clamp(16px, 2vw, 20px) !important;
+    font-weight: 500 !important;
+    line-height: 1.6 !important;
+    color: #64748b !important;
+    max-width: 600px !important;
+    margin: 0 auto 40px auto !important;
+}
+
+/* Enhanced CTA Button */
+body[class*="clone"] .all-classes-area .section-title .btn,
+body[class*="clone"] .all-classes-area .btn,
+.cloned-homepage-layout .all-classes-area .section-title .btn,
+.cloned-homepage-layout .all-classes-area .btn,
+#page-local-cloned-homepage .all-classes-area .section-title .btn,
+#page-local-cloned-homepage .all-classes-area .btn,
+[data-page="cloned-homepage"] .all-classes-area .section-title .btn,
+[data-page="cloned-homepage"] .all-classes-area .btn {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif !important;
+    font-size: 16px !important;
+    font-weight: 600 !important;
+    padding: 16px 32px !important;
+    border-radius: 12px !important;
+    border: none !important;
+    color: #ffffff !important;
+    text-decoration: none !important;
+    position: relative !important;
+    overflow: hidden !important;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 8px !important;
+
+    /* Modern gradient background */
+    background: linear-gradient(135deg, #3b82f6, #1d4ed8) !important;
+    box-shadow:
+        0 4px 14px rgba(59, 130, 246, 0.3),
+        0 2px 6px rgba(0, 0, 0, 0.1) !important;
+}
+
+body[class*="clone"] .all-classes-area .btn:hover,
+.cloned-homepage-layout .all-classes-area .btn:hover,
+#page-local-cloned-homepage .all-classes-area .btn:hover,
+[data-page="cloned-homepage"] .all-classes-area .btn:hover {
+    transform: translateY(-2px) scale(1.02) !important;
+    box-shadow:
+        0 8px 25px rgba(59, 130, 246, 0.4),
+        0 4px 12px rgba(0, 0, 0, 0.15) !important;
+    color: #ffffff !important;
+}
+
+body[class*="clone"] .all-classes-area .btn:active,
+.cloned-homepage-layout .all-classes-area .btn:active,
+#page-local-cloned-homepage .all-classes-area .btn:active,
+[data-page="cloned-homepage"] .all-classes-area .btn:active {
+    transform: translateY(0) scale(0.98) !important;
+}
+
+/* Course Cards Container */
+body[class*="clone"] .all-classes-area .row,
+.cloned-homepage-layout .all-classes-area .row,
+#page-local-cloned-homepage .all-classes-area .row,
+[data-page="cloned-homepage"] .all-classes-area .row {
+    gap: 24px !important;
+    margin: 0 !important;
+    justify-content: center !important;
+}
+
+/* Individual Course Cards - ENHANCED PREMIUM DESIGN - CLONED HOMEPAGE ONLY */
+body[class*="clone"] .all-classes-area .single-all-classes-item,
+.cloned-homepage-layout .all-classes-area .single-all-classes-item,
+#page-local-cloned-homepage .all-classes-area .single-all-classes-item,
+[data-page="cloned-homepage"] .all-classes-area .single-all-classes-item {
+    background: #ffffff !important;
+    border: 1px solid rgba(0, 0, 0, 0.04) !important;
+    border-radius: 24px !important;
+    padding: 0 !important;
+    margin: 0 0 32px 0 !important;
+    transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) !important;
+    position: relative !important;
+    overflow: hidden !important;
+    cursor: pointer !important;
+
+    /* Ultra-premium shadow system */
+    box-shadow:
+        0 12px 40px rgba(0, 0, 0, 0.06),
+        0 4px 16px rgba(0, 0, 0, 0.03),
+        0 1px 4px rgba(0, 0, 0, 0.02) !important;
+
+    /* Perfect structure alignment */
+    display: flex !important;
+    flex-direction: column !important;
+    min-height: 420px !important;
+    max-width: 100% !important;
+    width: 100% !important;
+}
+
+body[class*="clone"] .all-classes-area .single-all-classes-item:hover,
+.cloned-homepage-layout .all-classes-area .single-all-classes-item:hover,
+#page-local-cloned-homepage .all-classes-area .single-all-classes-item:hover,
+[data-page="cloned-homepage"] .all-classes-area .single-all-classes-item:hover {
+    transform: translateY(-12px) scale(1.02) !important;
+    border-color: rgba(59, 130, 246, 0.15) !important;
+    box-shadow:
+        0 32px 80px rgba(59, 130, 246, 0.12),
+        0 16px 48px rgba(0, 0, 0, 0.08),
+        0 8px 24px rgba(59, 130, 246, 0.06) !important;
+}
+
+/* Card Top Accent - Enhanced */
+body[class*="clone"] .all-classes-area .single-all-classes-item::before,
+.cloned-homepage-layout .all-classes-area .single-all-classes-item::before,
+#page-local-cloned-homepage .all-classes-area .single-all-classes-item::before,
+[data-page="cloned-homepage"] .all-classes-area .single-all-classes-item::before {
+    content: '' !important;
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    height: 4px !important;
+    background: linear-gradient(90deg, #667eea 0%, #764ba2 25%, #f093fb 50%, #f5576c 75%, #4facfe 100%) !important;
+    opacity: 0 !important;
+    transition: all 0.4s ease !important;
+    z-index: 2 !important;
+    border-radius: 24px 24px 0 0 !important;
+}
+
+body[class*="clone"] .all-classes-area .single-all-classes-item:hover::before,
+.cloned-homepage-layout .all-classes-area .single-all-classes-item:hover::before,
+#page-local-cloned-homepage .all-classes-area .single-all-classes-item:hover::before,
+[data-page="cloned-homepage"] .all-classes-area .single-all-classes-item:hover::before {
+    opacity: 1 !important;
+    height: 5px !important;
+}
+
+/* Card Glow Effect */
+body[class*="clone"] .all-classes-area .single-all-classes-item::after,
+.cloned-homepage-layout .all-classes-area .single-all-classes-item::after,
+#page-local-cloned-homepage .all-classes-area .single-all-classes-item::after,
+[data-page="cloned-homepage"] .all-classes-area .single-all-classes-item::after {
+    content: '' !important;
+    position: absolute !important;
+    top: -2px !important;
+    left: -2px !important;
+    right: -2px !important;
+    bottom: -2px !important;
+    background: linear-gradient(45deg, #667eea, #764ba2, #f093fb, #f5576c, #4facfe) !important;
+    border-radius: 26px !important;
+    opacity: 0 !important;
+    z-index: -1 !important;
+    transition: opacity 0.4s ease !important;
+    filter: blur(8px) !important;
+}
+
+body[class*="clone"] .all-classes-area .single-all-classes-item:hover::after,
+.cloned-homepage-layout .all-classes-area .single-all-classes-item:hover::after,
+#page-local-cloned-homepage .all-classes-area .single-all-classes-item:hover::after,
+[data-page="cloned-homepage"] .all-classes-area .single-all-classes-item:hover::after {
+    opacity: 0.3 !important;
+}
+
+/* Course Image Enhancement - ULTRA PREMIUM */
+body[class*="clone"] .all-classes-area .classes-img,
+.cloned-homepage-layout .all-classes-area .classes-img,
+#page-local-cloned-homepage .all-classes-area .classes-img,
+[data-page="cloned-homepage"] .all-classes-area .classes-img {
+    border-radius: 24px 24px 0 0 !important;
+    overflow: hidden !important;
+    position: relative !important;
+    margin: 0 !important;
+    height: 220px !important;
+    flex-shrink: 0 !important;
+}
+
+/* Image overlay gradient */
+body[class*="clone"] .all-classes-area .classes-img::before,
+.cloned-homepage-layout .all-classes-area .classes-img::before,
+#page-local-cloned-homepage .all-classes-area .classes-img::before,
+[data-page="cloned-homepage"] .all-classes-area .classes-img::before {
+    content: '' !important;
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    background: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0) 0%,
+        rgba(0, 0, 0, 0.02) 50%,
+        rgba(0, 0, 0, 0.08) 100%
+    ) !important;
+    opacity: 0 !important;
+    transition: opacity 0.4s ease !important;
+    z-index: 1 !important;
+}
+
+body[class*="clone"] .all-classes-area .single-all-classes-item:hover .classes-img::before,
+.cloned-homepage-layout .all-classes-area .single-all-classes-item:hover .classes-img::before,
+#page-local-cloned-homepage .all-classes-area .single-all-classes-item:hover .classes-img::before,
+[data-page="cloned-homepage"] .all-classes-area .single-all-classes-item:hover .classes-img::before {
+    opacity: 1 !important;
+}
+
+body[class*="clone"] .all-classes-area .classes-img img,
+.cloned-homepage-layout .all-classes-area .classes-img img,
+#page-local-cloned-homepage .all-classes-area .classes-img img,
+[data-page="cloned-homepage"] .all-classes-area .classes-img img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    transition: all 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) !important;
+    filter: brightness(1) contrast(1.05) saturate(1.1) !important;
+}
+
+body[class*="clone"] .all-classes-area .single-all-classes-item:hover .classes-img img,
+.cloned-homepage-layout .all-classes-area .single-all-classes-item:hover .classes-img img,
+#page-local-cloned-homepage .all-classes-area .single-all-classes-item:hover .classes-img img,
+[data-page="cloned-homepage"] .all-classes-area .single-all-classes-item:hover .classes-img img {
+    transform: scale(1.08) rotate(1deg) !important;
+    filter: brightness(1.1) contrast(1.1) saturate(1.2) !important;
+}
+
+/* Price/Category Badge - Enhanced Glass Morphism */
+body[class*="clone"] .all-classes-area .classes-img .count,
+.cloned-homepage-layout .all-classes-area .classes-img .count,
+#page-local-cloned-homepage .all-classes-area .classes-img .count,
+[data-page="cloned-homepage"] .all-classes-area .classes-img .count {
+    position: absolute !important;
+    top: 20px !important;
+    right: 20px !important;
+    background: rgba(255, 255, 255, 0.90) !important;
+    backdrop-filter: blur(20px) !important;
+    -webkit-backdrop-filter: blur(20px) !important;
+    border: 1px solid rgba(255, 255, 255, 0.3) !important;
+    border-radius: 12px !important;
+    padding: 8px 16px !important;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif !important;
+    font-size: 12px !important;
+    font-weight: 700 !important;
+    color: #1f2937 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.5px !important;
+    box-shadow:
+        0 8px 32px rgba(0, 0, 0, 0.12),
+        0 4px 16px rgba(255, 255, 255, 0.1) inset !important;
+    transition: all 0.3s ease !important;
+    z-index: 3 !important;
+}
+
+body[class*="clone"] .all-classes-area .single-all-classes-item:hover .classes-img .count,
+.cloned-homepage-layout .all-classes-area .single-all-classes-item:hover .classes-img .count,
+#page-local-cloned-homepage .all-classes-area .single-all-classes-item:hover .classes-img .count,
+[data-page="cloned-homepage"] .all-classes-area .single-all-classes-item:hover .classes-img .count {
+    transform: translateY(-2px) scale(1.05) !important;
+    background: rgba(255, 255, 255, 0.95) !important;
+    box-shadow:
+        0 12px 40px rgba(0, 0, 0, 0.15),
+        0 6px 20px rgba(255, 255, 255, 0.15) inset !important;
+}
+
+/* Card Content Area - Perfect Structure */
+body[class*="clone"] .all-classes-area .classes-content,
+.cloned-homepage-layout .all-classes-area .classes-content,
+#page-local-cloned-homepage .all-classes-area .classes-content,
+[data-page="cloned-homepage"] .all-classes-area .classes-content {
+    padding: 28px 24px 24px 24px !important;
+    position: relative !important;
+    flex-grow: 1 !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: space-between !important;
+}
+
+/* Course Title - Enhanced Typography */
+body[class*="clone"] .all-classes-area .classes-content h3,
+.cloned-homepage-layout .all-classes-area .classes-content h3,
+#page-local-cloned-homepage .all-classes-area .classes-content h3,
+[data-page="cloned-homepage"] .all-classes-area .classes-content h3 {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif !important;
+    font-size: 22px !important;
+    font-weight: 700 !important;
+    line-height: 1.25 !important;
+    margin: 0 0 16px 0 !important;
+    color: #1f2937 !important;
+    transition: all 0.3s ease !important;
+    letter-spacing: -0.01em !important;
+    overflow: hidden !important;
+    display: -webkit-box !important;
+    -webkit-line-clamp: 2 !important;
+    -webkit-box-orient: vertical !important;
+}
+
+body[class*="clone"] .all-classes-area .classes-content h3 a,
+.cloned-homepage-layout .all-classes-area .classes-content h3 a,
+#page-local-cloned-homepage .all-classes-area .classes-content h3 a,
+[data-page="cloned-homepage"] .all-classes-area .classes-content h3 a {
+    color: #1f2937 !important;
+    text-decoration: none !important;
+    transition: all 0.3s ease !important;
+    background: linear-gradient(135deg, #1f2937 0%, #3b82f6 100%) !important;
+    background-size: 200% 200% !important;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+    background-clip: text !important;
+    background-position: 0% 50% !important;
+}
+
+body[class*="clone"] .all-classes-area .single-all-classes-item:hover .classes-content h3 a,
+.cloned-homepage-layout .all-classes-area .single-all-classes-item:hover .classes-content h3 a,
+#page-local-cloned-homepage .all-classes-area .single-all-classes-item:hover .classes-content h3 a,
+[data-page="cloned-homepage"] .all-classes-area .single-all-classes-item:hover .classes-content h3 a {
+    background-position: 100% 50% !important;
+    transform: translateY(-1px) !important;
+}
+
+/* Course Description - Enhanced Readability */
+body[class*="clone"] .all-classes-area .classes-content p,
+.cloned-homepage-layout .all-classes-area .classes-content p,
+#page-local-cloned-homepage .all-classes-area .classes-content p,
+[data-page="cloned-homepage"] .all-classes-area .classes-content p {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif !important;
+    font-size: 15px !important;
+    font-weight: 400 !important;
+    line-height: 1.65 !important;
+    color: #64748b !important;
+    margin: 0 0 20px 0 !important;
+    overflow: hidden !important;
+    display: -webkit-box !important;
+    -webkit-line-clamp: 3 !important;
+    -webkit-box-orient: vertical !important;
+    opacity: 0.9 !important;
+    transition: opacity 0.3s ease !important;
+}
+
+body[class*="clone"] .all-classes-area .single-all-classes-item:hover .classes-content p,
+.cloned-homepage-layout .all-classes-area .single-all-classes-item:hover .classes-content p,
+#page-local-cloned-homepage .all-classes-area .single-all-classes-item:hover .classes-content p,
+[data-page="cloned-homepage"] .all-classes-area .single-all-classes-item:hover .classes-content p {
+    opacity: 1 !important;
+}
+
+/* Course Meta Information - Enhanced Layout */
+body[class*="clone"] .all-classes-area .classes-content ul,
+.cloned-homepage-layout .all-classes-area .classes-content ul,
+#page-local-cloned-homepage .all-classes-area .classes-content ul,
+[data-page="cloned-homepage"] .all-classes-area .classes-content ul {
+    padding: 16px 0 0 0 !important;
+    margin: 0 !important;
+    list-style: none !important;
+    display: flex !important;
+    flex-wrap: wrap !important;
+    gap: 16px !important;
+    border-top: 1px solid rgba(0, 0, 0, 0.06) !important;
+    margin-top: auto !important;
+}
+
+body[class*="clone"] .all-classes-area .classes-content ul li,
+.cloned-homepage-layout .all-classes-area .classes-content ul li,
+#page-local-cloned-homepage .all-classes-area .classes-content ul li,
+[data-page="cloned-homepage"] .all-classes-area .classes-content ul li {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif !important;
+    font-size: 13px !important;
+    font-weight: 600 !important;
+    color: #64748b !important;
+    display: flex !important;
+    align-items: center !important;
+    gap: 8px !important;
+    background: rgba(59, 130, 246, 0.05) !important;
+    padding: 6px 12px !important;
+    border-radius: 20px !important;
+    transition: all 0.3s ease !important;
+    white-space: nowrap !important;
+}
+
+body[class*="clone"] .all-classes-area .single-all-classes-item:hover .classes-content ul li,
+.cloned-homepage-layout .all-classes-area .single-all-classes-item:hover .classes-content ul li,
+#page-local-cloned-homepage .all-classes-area .single-all-classes-item:hover .classes-content ul li,
+[data-page="cloned-homepage"] .all-classes-area .single-all-classes-item:hover .classes-content ul li {
+    background: rgba(59, 130, 246, 0.1) !important;
+    transform: translateY(-1px) !important;
+}
+
+body[class*="clone"] .all-classes-area .classes-content ul li i,
+.cloned-homepage-layout .all-classes-area .classes-content ul li i,
+#page-local-cloned-homepage .all-classes-area .classes-content ul li i,
+[data-page="cloned-homepage"] .all-classes-area .classes-content ul li i {
+    font-size: 12px !important;
+    color: #3b82f6 !important;
+    transition: transform 0.3s ease !important;
+}
+
+body[class*="clone"] .all-classes-area .single-all-classes-item:hover .classes-content ul li i,
+.cloned-homepage-layout .all-classes-area .single-all-classes-item:hover .classes-content ul li i,
+#page-local-cloned-homepage .all-classes-area .single-all-classes-item:hover .classes-content ul li i,
+[data-page="cloned-homepage"] .all-classes-area .single-all-classes-item:hover .classes-content ul li i {
+    transform: scale(1.1) !important;
+}
+
+/* Enhanced Responsive Design */
+@media (max-width: 1200px) {
+    body[class*="clone"] .all-classes-area,
+    .cloned-homepage-layout .all-classes-area,
+    #page-local-cloned-homepage .all-classes-area,
+    [data-page="cloned-homepage"] .all-classes-area {
+        padding: 60px 0 80px 0 !important;
+        margin: 40px 0 !important;
+        border-radius: 24px !important;
+    }
+
+    body[class*="clone"] .all-classes-area .single-all-classes-item,
+    .cloned-homepage-layout .all-classes-area .single-all-classes-item,
+    #page-local-cloned-homepage .all-classes-area .single-all-classes-item,
+    [data-page="cloned-homepage"] .all-classes-area .single-all-classes-item {
+        min-height: 400px !important;
+    }
+
+    body[class*="clone"] .all-classes-area .classes-img,
+    .cloned-homepage-layout .all-classes-area .classes-img,
+    #page-local-cloned-homepage .all-classes-area .classes-img,
+    [data-page="cloned-homepage"] .all-classes-area .classes-img {
+        height: 200px !important;
+    }
+}
+
+@media (max-width: 768px) {
+    body[class*="clone"] .all-classes-area,
+    .cloned-homepage-layout .all-classes-area,
+    #page-local-cloned-homepage .all-classes-area,
+    [data-page="cloned-homepage"] .all-classes-area {
+        padding: 40px 0 60px 0 !important;
+        margin: 20px 0 !important;
+        border-radius: 16px !important;
+    }
+
+    .cloned-homepage-layout .all-classes-area .section-title {
+        margin-bottom: 40px !important;
+    }
+
+    body[class*="clone"] .all-classes-area .single-all-classes-item,
+    .cloned-homepage-layout .all-classes-area .single-all-classes-item,
+    #page-local-cloned-homepage .all-classes-area .single-all-classes-item,
+    [data-page="cloned-homepage"] .all-classes-area .single-all-classes-item {
+        min-height: 380px !important;
+        margin: 0 0 24px 0 !important;
+        border-radius: 20px !important;
+    }
+
+    body[class*="clone"] .all-classes-area .classes-img,
+    .cloned-homepage-layout .all-classes-area .classes-img,
+    #page-local-cloned-homepage .all-classes-area .classes-img,
+    [data-page="cloned-homepage"] .all-classes-area .classes-img {
+        height: 180px !important;
+        border-radius: 20px 20px 0 0 !important;
+    }
+
+    body[class*="clone"] .all-classes-area .classes-content,
+    .cloned-homepage-layout .all-classes-area .classes-content,
+    #page-local-cloned-homepage .all-classes-area .classes-content,
+    [data-page="cloned-homepage"] .all-classes-area .classes-content {
+        padding: 24px 20px 20px 20px !important;
+    }
+
+    body[class*="clone"] .all-classes-area .classes-content h3,
+    .cloned-homepage-layout .all-classes-area .classes-content h3,
+    #page-local-cloned-homepage .all-classes-area .classes-content h3,
+    [data-page="cloned-homepage"] .all-classes-area .classes-content h3 {
+        font-size: 20px !important;
+    }
+
+    body[class*="clone"] .all-classes-area .classes-content p,
+    .cloned-homepage-layout .all-classes-area .classes-content p,
+    #page-local-cloned-homepage .all-classes-area .classes-content p,
+    [data-page="cloned-homepage"] .all-classes-area .classes-content p {
+        font-size: 14px !important;
+    }
+
+    body[class*="clone"] .all-classes-area .classes-content ul li,
+    .cloned-homepage-layout .all-classes-area .classes-content ul li,
+    #page-local-cloned-homepage .all-classes-area .classes-content ul li,
+    [data-page="cloned-homepage"] .all-classes-area .classes-content ul li {
+        font-size: 12px !important;
+        padding: 5px 10px !important;
+    }
+}
+
+/* Grid Layout Enhancement */
+body[class*="clone"] .all-classes-area .row,
+.cloned-homepage-layout .all-classes-area .row,
+#page-local-cloned-homepage .all-classes-area .row,
+[data-page="cloned-homepage"] .all-classes-area .row {
+    display: grid !important;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)) !important;
+    gap: 32px !important;
+    align-items: stretch !important;
+}
+
+@media (max-width: 768px) {
+    body[class*="clone"] .all-classes-area .row,
+    .cloned-homepage-layout .all-classes-area .row,
+    #page-local-cloned-homepage .all-classes-area .row,
+    [data-page="cloned-homepage"] .all-classes-area .row {
+        grid-template-columns: 1fr !important;
+        gap: 24px !important;
+    }
+}
+
+/* High Contrast Support */
+@media (prefers-contrast: high) {
+    .cloned-homepage-layout .partner-bg {
+        border: 2px solid #000000 !important;
+        background: #ffffff !important;
+    }
+
+    .cloned-homepage-layout .partner-slide .swiper-slide img {
+        filter: contrast(2) !important;
+    }
+
+    .cloned-homepage-layout .single-features-item .flex-shrink-0 {
+        background: #000000 !important;
+        border: 2px solid #ffffff !important;
+    }
+
+    .cloned-homepage-layout #backtotop,
+    .cloned-homepage-layout .modern-backtotop {
+        border: 2px solid #ffffff !important;
+        right: 20px !important;
+        left: auto !important;
+    }
+
+    .cloned-homepage-layout .all-classes-area {
+        background: #ffffff !important;
+        border: 2px solid #000000 !important;
+    }
+
+    .cloned-homepage-layout .all-classes-area .section-title h2 {
+        background: none !important;
+        -webkit-text-fill-color: #000000 !important;
+        color: #000000 !important;
+    }
+
+    .cloned-homepage-layout .all-classes-area .single-all-classes-item {
+        border: 2px solid #000000 !important;
+    }
+}
+
+/* ================================================
+   [EDOO] ABOUT THREE BLOCK LIST ITEMS - LEFT ALIGNMENT
+   Left-align NUMBER, TITLE, LIST CONTENT in About section
+   ================================================ */
+
+/* About Section Container - Left Alignment */
+body[class*="clone"] .about-area,
+body[class*="clone"] .about-section,
+body[class*="clone"] .why-choose,
+body[class*="clone"] .why-choose-area,
+.cloned-homepage-layout .about-area,
+.cloned-homepage-layout .about-section,
+.cloned-homepage-layout .why-choose,
+.cloned-homepage-layout .why-choose-area,
+#page-local-cloned-homepage .about-area,
+#page-local-cloned-homepage .about-section,
+#page-local-cloned-homepage .why-choose,
+#page-local-cloned-homepage .why-choose-area,
+[data-page="cloned-homepage"] .about-area,
+[data-page="cloned-homepage"] .about-section,
+[data-page="cloned-homepage"] .why-choose,
+[data-page="cloned-homepage"] .why-choose-area {
+    text-align: left !important;
+}
+
+/* About List Items - General Left Alignment */
+body[class*="clone"] .about-area .single-item,
+body[class*="clone"] .about-area .about-item,
+body[class*="clone"] .about-area .list-item,
+body[class*="clone"] .about-section .single-item,
+body[class*="clone"] .about-section .about-item,
+body[class*="clone"] .about-section .list-item,
+body[class*="clone"] .why-choose .single-item,
+body[class*="clone"] .why-choose .about-item,
+body[class*="clone"] .why-choose .list-item,
+.cloned-homepage-layout .about-area .single-item,
+.cloned-homepage-layout .about-area .about-item,
+.cloned-homepage-layout .about-area .list-item,
+.cloned-homepage-layout .about-section .single-item,
+.cloned-homepage-layout .about-section .about-item,
+.cloned-homepage-layout .about-section .list-item,
+.cloned-homepage-layout .why-choose .single-item,
+.cloned-homepage-layout .why-choose .about-item,
+.cloned-homepage-layout .why-choose .list-item,
+#page-local-cloned-homepage .about-area .single-item,
+#page-local-cloned-homepage .about-area .about-item,
+#page-local-cloned-homepage .about-area .list-item,
+#page-local-cloned-homepage .about-section .single-item,
+#page-local-cloned-homepage .about-section .about-item,
+#page-local-cloned-homepage .about-section .list-item,
+#page-local-cloned-homepage .why-choose .single-item,
+#page-local-cloned-homepage .why-choose .about-item,
+#page-local-cloned-homepage .why-choose .list-item,
+[data-page="cloned-homepage"] .about-area .single-item,
+[data-page="cloned-homepage"] .about-area .about-item,
+[data-page="cloned-homepage"] .about-area .list-item,
+[data-page="cloned-homepage"] .about-section .single-item,
+[data-page="cloned-homepage"] .about-section .about-item,
+[data-page="cloned-homepage"] .about-section .list-item,
+[data-page="cloned-homepage"] .why-choose .single-item,
+[data-page="cloned-homepage"] .why-choose .about-item,
+[data-page="cloned-homepage"] .why-choose .list-item {
+    text-align: left !important;
+    justify-content: flex-start !important;
+    align-items: flex-start !important;
+}
+
+/* Numbers - Left Aligned */
+body[class*="clone"] .about-area .number,
+body[class*="clone"] .about-area .count,
+body[class*="clone"] .about-area .step-number,
+body[class*="clone"] .about-area .counter,
+body[class*="clone"] .about-section .number,
+body[class*="clone"] .about-section .count,
+body[class*="clone"] .about-section .step-number,
+body[class*="clone"] .about-section .counter,
+body[class*="clone"] .why-choose .number,
+body[class*="clone"] .why-choose .count,
+body[class*="clone"] .why-choose .step-number,
+body[class*="clone"] .why-choose .counter,
+.cloned-homepage-layout .about-area .number,
+.cloned-homepage-layout .about-area .count,
+.cloned-homepage-layout .about-area .step-number,
+.cloned-homepage-layout .about-area .counter,
+.cloned-homepage-layout .about-section .number,
+.cloned-homepage-layout .about-section .count,
+.cloned-homepage-layout .about-section .step-number,
+.cloned-homepage-layout .about-section .counter,
+.cloned-homepage-layout .why-choose .number,
+.cloned-homepage-layout .why-choose .count,
+.cloned-homepage-layout .why-choose .step-number,
+.cloned-homepage-layout .why-choose .counter,
+#page-local-cloned-homepage .about-area .number,
+#page-local-cloned-homepage .about-area .count,
+#page-local-cloned-homepage .about-area .step-number,
+#page-local-cloned-homepage .about-area .counter,
+#page-local-cloned-homepage .about-section .number,
+#page-local-cloned-homepage .about-section .count,
+#page-local-cloned-homepage .about-section .step-number,
+#page-local-cloned-homepage .about-section .counter,
+#page-local-cloned-homepage .why-choose .number,
+#page-local-cloned-homepage .why-choose .count,
+#page-local-cloned-homepage .why-choose .step-number,
+#page-local-cloned-homepage .why-choose .counter,
+[data-page="cloned-homepage"] .about-area .number,
+[data-page="cloned-homepage"] .about-area .count,
+[data-page="cloned-homepage"] .about-area .step-number,
+[data-page="cloned-homepage"] .about-area .counter,
+[data-page="cloned-homepage"] .about-section .number,
+[data-page="cloned-homepage"] .about-section .count,
+[data-page="cloned-homepage"] .about-section .step-number,
+[data-page="cloned-homepage"] .about-section .counter,
+[data-page="cloned-homepage"] .why-choose .number,
+[data-page="cloned-homepage"] .why-choose .count,
+[data-page="cloned-homepage"] .why-choose .step-number,
+[data-page="cloned-homepage"] .why-choose .counter {
+    text-align: left !important;
+    justify-content: flex-start !important;
+    align-self: flex-start !important;
+    margin-left: 0 !important;
+    margin-right: auto !important;
+}
+
+/* Titles - Left Aligned */
+body[class*="clone"] .about-area h3,
+body[class*="clone"] .about-area h4,
+body[class*="clone"] .about-area h5,
+body[class*="clone"] .about-area .title,
+body[class*="clone"] .about-section h3,
+body[class*="clone"] .about-section h4,
+body[class*="clone"] .about-section h5,
+body[class*="clone"] .about-section .title,
+body[class*="clone"] .why-choose h3,
+body[class*="clone"] .why-choose h4,
+body[class*="clone"] .why-choose h5,
+body[class*="clone"] .why-choose .title,
+.cloned-homepage-layout .about-area h3,
+.cloned-homepage-layout .about-area h4,
+.cloned-homepage-layout .about-area h5,
+.cloned-homepage-layout .about-area .title,
+.cloned-homepage-layout .about-section h3,
+.cloned-homepage-layout .about-section h4,
+.cloned-homepage-layout .about-section h5,
+.cloned-homepage-layout .about-section .title,
+.cloned-homepage-layout .why-choose h3,
+.cloned-homepage-layout .why-choose h4,
+.cloned-homepage-layout .why-choose h5,
+.cloned-homepage-layout .why-choose .title,
+#page-local-cloned-homepage .about-area h3,
+#page-local-cloned-homepage .about-area h4,
+#page-local-cloned-homepage .about-area h5,
+#page-local-cloned-homepage .about-area .title,
+#page-local-cloned-homepage .about-section h3,
+#page-local-cloned-homepage .about-section h4,
+#page-local-cloned-homepage .about-section h5,
+#page-local-cloned-homepage .about-section .title,
+#page-local-cloned-homepage .why-choose h3,
+#page-local-cloned-homepage .why-choose h4,
+#page-local-cloned-homepage .why-choose h5,
+#page-local-cloned-homepage .why-choose .title,
+[data-page="cloned-homepage"] .about-area h3,
+[data-page="cloned-homepage"] .about-area h4,
+[data-page="cloned-homepage"] .about-area h5,
+[data-page="cloned-homepage"] .about-area .title,
+[data-page="cloned-homepage"] .about-section h3,
+[data-page="cloned-homepage"] .about-section h4,
+[data-page="cloned-homepage"] .about-section h5,
+[data-page="cloned-homepage"] .about-section .title,
+[data-page="cloned-homepage"] .why-choose h3,
+[data-page="cloned-homepage"] .why-choose h4,
+[data-page="cloned-homepage"] .why-choose h5,
+[data-page="cloned-homepage"] .why-choose .title {
+    text-align: left !important;
+    justify-content: flex-start !important;
+    align-self: flex-start !important;
+    margin-left: 0 !important;
+}
+
+/* List Content - Left Aligned */
+body[class*="clone"] .about-area p,
+body[class*="clone"] .about-area .content,
+body[class*="clone"] .about-area .description,
+body[class*="clone"] .about-area ul,
+body[class*="clone"] .about-area ol,
+body[class*="clone"] .about-area li,
+body[class*="clone"] .about-section p,
+body[class*="clone"] .about-section .content,
+body[class*="clone"] .about-section .description,
+body[class*="clone"] .about-section ul,
+body[class*="clone"] .about-section ol,
+body[class*="clone"] .about-section li,
+body[class*="clone"] .why-choose p,
+body[class*="clone"] .why-choose .content,
+body[class*="clone"] .why-choose .description,
+body[class*="clone"] .why-choose ul,
+body[class*="clone"] .why-choose ol,
+body[class*="clone"] .why-choose li,
+.cloned-homepage-layout .about-area p,
+.cloned-homepage-layout .about-area .content,
+.cloned-homepage-layout .about-area .description,
+.cloned-homepage-layout .about-area ul,
+.cloned-homepage-layout .about-area ol,
+.cloned-homepage-layout .about-area li,
+.cloned-homepage-layout .about-section p,
+.cloned-homepage-layout .about-section .content,
+.cloned-homepage-layout .about-section .description,
+.cloned-homepage-layout .about-section ul,
+.cloned-homepage-layout .about-section ol,
+.cloned-homepage-layout .about-section li,
+.cloned-homepage-layout .why-choose p,
+.cloned-homepage-layout .why-choose .content,
+.cloned-homepage-layout .why-choose .description,
+.cloned-homepage-layout .why-choose ul,
+.cloned-homepage-layout .why-choose ol,
+.cloned-homepage-layout .why-choose li,
+#page-local-cloned-homepage .about-area p,
+#page-local-cloned-homepage .about-area .content,
+#page-local-cloned-homepage .about-area .description,
+#page-local-cloned-homepage .about-area ul,
+#page-local-cloned-homepage .about-area ol,
+#page-local-cloned-homepage .about-area li,
+#page-local-cloned-homepage .about-section p,
+#page-local-cloned-homepage .about-section .content,
+#page-local-cloned-homepage .about-section .description,
+#page-local-cloned-homepage .about-section ul,
+#page-local-cloned-homepage .about-section ol,
+#page-local-cloned-homepage .about-section li,
+#page-local-cloned-homepage .why-choose p,
+#page-local-cloned-homepage .why-choose .content,
+#page-local-cloned-homepage .why-choose .description,
+#page-local-cloned-homepage .why-choose ul,
+#page-local-cloned-homepage .why-choose ol,
+#page-local-cloned-homepage .why-choose li,
+[data-page="cloned-homepage"] .about-area p,
+[data-page="cloned-homepage"] .about-area .content,
+[data-page="cloned-homepage"] .about-area .description,
+[data-page="cloned-homepage"] .about-area ul,
+[data-page="cloned-homepage"] .about-area ol,
+[data-page="cloned-homepage"] .about-area li,
+[data-page="cloned-homepage"] .about-section p,
+[data-page="cloned-homepage"] .about-section .content,
+[data-page="cloned-homepage"] .about-section .description,
+[data-page="cloned-homepage"] .about-section ul,
+[data-page="cloned-homepage"] .about-section ol,
+[data-page="cloned-homepage"] .about-section li,
+[data-page="cloned-homepage"] .why-choose p,
+[data-page="cloned-homepage"] .why-choose .content,
+[data-page="cloned-homepage"] .why-choose .description,
+[data-page="cloned-homepage"] .why-choose ul,
+[data-page="cloned-homepage"] .why-choose ol,
+[data-page="cloned-homepage"] .why-choose li {
+    text-align: left !important;
+    justify-content: flex-start !important;
+    align-self: flex-start !important;
+    margin-left: 0 !important;
+}
+
+/* Flex Layout Adjustments - Left Aligned */
+body[class*="clone"] .about-area .d-flex,
+body[class*="clone"] .about-area .flex,
+body[class*="clone"] .about-section .d-flex,
+body[class*="clone"] .about-section .flex,
+body[class*="clone"] .why-choose .d-flex,
+body[class*="clone"] .why-choose .flex,
+.cloned-homepage-layout .about-area .d-flex,
+.cloned-homepage-layout .about-area .flex,
+.cloned-homepage-layout .about-section .d-flex,
+.cloned-homepage-layout .about-section .flex,
+.cloned-homepage-layout .why-choose .d-flex,
+.cloned-homepage-layout .why-choose .flex,
+#page-local-cloned-homepage .about-area .d-flex,
+#page-local-cloned-homepage .about-area .flex,
+#page-local-cloned-homepage .about-section .d-flex,
+#page-local-cloned-homepage .about-section .flex,
+#page-local-cloned-homepage .why-choose .d-flex,
+#page-local-cloned-homepage .why-choose .flex,
+[data-page="cloned-homepage"] .about-area .d-flex,
+[data-page="cloned-homepage"] .about-area .flex,
+[data-page="cloned-homepage"] .about-section .d-flex,
+[data-page="cloned-homepage"] .about-section .flex,
+[data-page="cloned-homepage"] .why-choose .d-flex,
+[data-page="cloned-homepage"] .why-choose .flex {
+    justify-content: flex-start !important;
+    align-items: flex-start !important;
+    text-align: left !important;
+}
+
+/* Row and Column Containers - Left Aligned */
+body[class*="clone"] .about-area .row,
+body[class*="clone"] .about-area .col,
+body[class*="clone"] .about-area [class*="col-"],
+body[class*="clone"] .about-section .row,
+body[class*="clone"] .about-section .col,
+body[class*="clone"] .about-section [class*="col-"],
+body[class*="clone"] .why-choose .row,
+body[class*="clone"] .why-choose .col,
+body[class*="clone"] .why-choose [class*="col-"],
+.cloned-homepage-layout .about-area .row,
+.cloned-homepage-layout .about-area .col,
+.cloned-homepage-layout .about-area [class*="col-"],
+.cloned-homepage-layout .about-section .row,
+.cloned-homepage-layout .about-section .col,
+.cloned-homepage-layout .about-section [class*="col-"],
+.cloned-homepage-layout .why-choose .row,
+.cloned-homepage-layout .why-choose .col,
+.cloned-homepage-layout .why-choose [class*="col-"],
+#page-local-cloned-homepage .about-area .row,
+#page-local-cloned-homepage .about-area .col,
+#page-local-cloned-homepage .about-area [class*="col-"],
+#page-local-cloned-homepage .about-section .row,
+#page-local-cloned-homepage .about-section .col,
+#page-local-cloned-homepage .about-section [class*="col-"],
+#page-local-cloned-homepage .why-choose .row,
+#page-local-cloned-homepage .why-choose .col,
+#page-local-cloned-homepage .why-choose [class*="col-"],
+[data-page="cloned-homepage"] .about-area .row,
+[data-page="cloned-homepage"] .about-area .col,
+[data-page="cloned-homepage"] .about-area [class*="col-"],
+[data-page="cloned-homepage"] .about-section .row,
+[data-page="cloned-homepage"] .about-section .col,
+[data-page="cloned-homepage"] .about-section [class*="col-"],
+[data-page="cloned-homepage"] .why-choose .row,
+[data-page="cloned-homepage"] .why-choose .col,
+[data-page="cloned-homepage"] .why-choose [class*="col-"] {
+    justify-content: flex-start !important;
+    align-items: flex-start !important;
+    text-align: left !important;
+}
+
+/* Responsive adjustments for About section left alignment */
+@media (max-width: 768px) {
+    body[class*="clone"] .about-area,
+    body[class*="clone"] .about-section,
+    body[class*="clone"] .why-choose,
+    .cloned-homepage-layout .about-area,
+    .cloned-homepage-layout .about-section,
+    .cloned-homepage-layout .why-choose,
+    #page-local-cloned-homepage .about-area,
+    #page-local-cloned-homepage .about-section,
+    #page-local-cloned-homepage .why-choose,
+    [data-page="cloned-homepage"] .about-area,
+    [data-page="cloned-homepage"] .about-section,
+    [data-page="cloned-homepage"] .why-choose {
+        text-align: left !important;
+        padding-left: 15px !important;
+        padding-right: 15px !important;
+    }
+}
+
+/* ================================================
+   [EDOO] ABOUT FOUR BLOCK - BUTTON TEXT COLOR FIX
+   Ensure button text is white in About section
+   ================================================ */
+
+/* About Four Block Button - Force White Text */
+.cloned-homepage-layout .about-area .btn,
+.cloned-homepage-layout .about-area .btn-primary,
+.cloned-homepage-layout .about-area .btn-secondary,
+.cloned-homepage-layout .about-section .btn,
+.cloned-homepage-layout .about-section .btn-primary,
+.cloned-homepage-layout .about-section .btn-secondary,
+.cloned-homepage-layout [class*="about"] .btn,
+.cloned-homepage-layout [class*="about"] .btn-primary,
+.cloned-homepage-layout [class*="about"] .btn-secondary,
+.cloned-homepage-layout .why-choose .btn,
+.cloned-homepage-layout .why-choose .btn-primary,
+.cloned-homepage-layout .why-choose .btn-secondary {
+    color: #ffffff !important;
+    text-decoration: none !important;
+}
+
+/* Ensure white text in all button states */
+.cloned-homepage-layout .about-area .btn:hover,
+.cloned-homepage-layout .about-area .btn-primary:hover,
+.cloned-homepage-layout .about-area .btn-secondary:hover,
+.cloned-homepage-layout .about-section .btn:hover,
+.cloned-homepage-layout .about-section .btn-primary:hover,
+.cloned-homepage-layout .about-section .btn-secondary:hover,
+.cloned-homepage-layout [class*="about"] .btn:hover,
+.cloned-homepage-layout [class*="about"] .btn-primary:hover,
+.cloned-homepage-layout [class*="about"] .btn-secondary:hover,
+.cloned-homepage-layout .why-choose .btn:hover,
+.cloned-homepage-layout .why-choose .btn-primary:hover,
+.cloned-homepage-layout .why-choose .btn-secondary:hover {
+    color: #ffffff !important;
+    text-decoration: none !important;
+}
+
+.cloned-homepage-layout .about-area .btn:focus,
+.cloned-homepage-layout .about-area .btn-primary:focus,
+.cloned-homepage-layout .about-area .btn-secondary:focus,
+.cloned-homepage-layout .about-section .btn:focus,
+.cloned-homepage-layout .about-section .btn-primary:focus,
+.cloned-homepage-layout .about-section .btn-secondary:focus,
+.cloned-homepage-layout [class*="about"] .btn:focus,
+.cloned-homepage-layout [class*="about"] .btn-primary:focus,
+.cloned-homepage-layout [class*="about"] .btn-secondary:focus,
+.cloned-homepage-layout .why-choose .btn:focus,
+.cloned-homepage-layout .why-choose .btn-primary:focus,
+.cloned-homepage-layout .why-choose .btn-secondary:focus {
+    color: #ffffff !important;
+    text-decoration: none !important;
+}
+
+.cloned-homepage-layout .about-area .btn:active,
+.cloned-homepage-layout .about-area .btn-primary:active,
+.cloned-homepage-layout .about-area .btn-secondary:active,
+.cloned-homepage-layout .about-section .btn:active,
+.cloned-homepage-layout .about-section .btn-primary:active,
+.cloned-homepage-layout .about-section .btn-secondary:active,
+.cloned-homepage-layout [class*="about"] .btn:active,
+.cloned-homepage-layout [class*="about"] .btn-primary:active,
+.cloned-homepage-layout [class*="about"] .btn-secondary:active,
+.cloned-homepage-layout .why-choose .btn:active,
+.cloned-homepage-layout .why-choose .btn-primary:active,
+.cloned-homepage-layout .why-choose .btn-secondary:active {
+    color: #ffffff !important;
+    text-decoration: none !important;
+}
+
+/* Force white text for any button content */
+.cloned-homepage-layout .about-area .btn *,
+.cloned-homepage-layout .about-area .btn-primary *,
+.cloned-homepage-layout .about-area .btn-secondary *,
+.cloned-homepage-layout .about-section .btn *,
+.cloned-homepage-layout .about-section .btn-primary *,
+.cloned-homepage-layout .about-section .btn-secondary *,
+.cloned-homepage-layout [class*="about"] .btn *,
+.cloned-homepage-layout [class*="about"] .btn-primary *,
+.cloned-homepage-layout [class*="about"] .btn-secondary *,
+.cloned-homepage-layout .why-choose .btn *,
+.cloned-homepage-layout .why-choose .btn-primary *,
+.cloned-homepage-layout .why-choose .btn-secondary * {
+    color: #ffffff !important;
+}
+
+/* ================================================
+   [EDOO] ABOUT THREE BLOCK - LEFT ALIGN TITLE & CONTENT
+   Left-align TITLE and LIST CONTENT in About three block
+   ================================================ */
+
+/* About Three Block - Title Left Alignment */
+body[class*="clone"] .about-area h3,
+body[class*="clone"] .about-area h4,
+body[class*="clone"] .about-area h5,
+body[class*="clone"] .about-area .title,
+body[class*="clone"] .about-section h3,
+body[class*="clone"] .about-section h4,
+body[class*="clone"] .about-section h5,
+body[class*="clone"] .about-section .title,
+body[class*="clone"] .why-choose h3,
+body[class*="clone"] .why-choose h4,
+body[class*="clone"] .why-choose h5,
+body[class*="clone"] .why-choose .title,
+body[class*="clone"] .journey-area h3,
+body[class*="clone"] .journey-area h4,
+body[class*="clone"] .journey-area h5,
+body[class*="clone"] .journey-area .title,
+body[class*="clone"] .journey-content h3,
+body[class*="clone"] .journey-content h4,
+body[class*="clone"] .journey-content h5,
+body[class*="clone"] .journey-content .title,
+.cloned-homepage-layout .about-area h3,
+.cloned-homepage-layout .about-area h4,
+.cloned-homepage-layout .about-area h5,
+.cloned-homepage-layout .about-area .title,
+.cloned-homepage-layout .about-section h3,
+.cloned-homepage-layout .about-section h4,
+.cloned-homepage-layout .about-section h5,
+.cloned-homepage-layout .about-section .title,
+.cloned-homepage-layout .why-choose h3,
+.cloned-homepage-layout .why-choose h4,
+.cloned-homepage-layout .why-choose h5,
+.cloned-homepage-layout .why-choose .title,
+.cloned-homepage-layout .journey-area h3,
+.cloned-homepage-layout .journey-area h4,
+.cloned-homepage-layout .journey-area h5,
+.cloned-homepage-layout .journey-area .title,
+.cloned-homepage-layout .journey-content h3,
+.cloned-homepage-layout .journey-content h4,
+.cloned-homepage-layout .journey-content h5,
+.cloned-homepage-layout .journey-content .title,
+#page-local-cloned-homepage .about-area h3,
+#page-local-cloned-homepage .about-area h4,
+#page-local-cloned-homepage .about-area h5,
+#page-local-cloned-homepage .about-area .title,
+#page-local-cloned-homepage .about-section h3,
+#page-local-cloned-homepage .about-section h4,
+#page-local-cloned-homepage .about-section h5,
+#page-local-cloned-homepage .about-section .title,
+#page-local-cloned-homepage .why-choose h3,
+#page-local-cloned-homepage .why-choose h4,
+#page-local-cloned-homepage .why-choose h5,
+#page-local-cloned-homepage .why-choose .title,
+#page-local-cloned-homepage .journey-area h3,
+#page-local-cloned-homepage .journey-area h4,
+#page-local-cloned-homepage .journey-area h5,
+#page-local-cloned-homepage .journey-area .title,
+#page-local-cloned-homepage .journey-content h3,
+#page-local-cloned-homepage .journey-content h4,
+#page-local-cloned-homepage .journey-content h5,
+#page-local-cloned-homepage .journey-content .title,
+[data-page="cloned-homepage"] .about-area h3,
+[data-page="cloned-homepage"] .about-area h4,
+[data-page="cloned-homepage"] .about-area h5,
+[data-page="cloned-homepage"] .about-area .title,
+[data-page="cloned-homepage"] .about-section h3,
+[data-page="cloned-homepage"] .about-section h4,
+[data-page="cloned-homepage"] .about-section h5,
+[data-page="cloned-homepage"] .about-section .title,
+[data-page="cloned-homepage"] .why-choose h3,
+[data-page="cloned-homepage"] .why-choose h4,
+[data-page="cloned-homepage"] .why-choose h5,
+[data-page="cloned-homepage"] .why-choose .title,
+[data-page="cloned-homepage"] .journey-area h3,
+[data-page="cloned-homepage"] .journey-area h4,
+[data-page="cloned-homepage"] .journey-area h5,
+[data-page="cloned-homepage"] .journey-area .title,
+[data-page="cloned-homepage"] .journey-content h3,
+[data-page="cloned-homepage"] .journey-content h4,
+[data-page="cloned-homepage"] .journey-content h5,
+[data-page="cloned-homepage"] .journey-content .title {
+    text-align: left !important;
+    justify-content: flex-start !important;
+    align-self: flex-start !important;
+    margin-left: 0 !important;
+}
+
+/* About Three Block - List Content Left Alignment */
+body[class*="clone"] .about-area p,
+body[class*="clone"] .about-area .content,
+body[class*="clone"] .about-area .description,
+body[class*="clone"] .about-area ul,
+body[class*="clone"] .about-area ol,
+body[class*="clone"] .about-area li,
+body[class*="clone"] .about-section p,
+body[class*="clone"] .about-section .content,
+body[class*="clone"] .about-section .description,
+body[class*="clone"] .about-section ul,
+body[class*="clone"] .about-section ol,
+body[class*="clone"] .about-section li,
+body[class*="clone"] .why-choose p,
+body[class*="clone"] .why-choose .content,
+body[class*="clone"] .why-choose .description,
+body[class*="clone"] .why-choose ul,
+body[class*="clone"] .why-choose ol,
+body[class*="clone"] .why-choose li,
+body[class*="clone"] .journey-area p,
+body[class*="clone"] .journey-area .content,
+body[class*="clone"] .journey-area .description,
+body[class*="clone"] .journey-area ul,
+body[class*="clone"] .journey-area ol,
+body[class*="clone"] .journey-area li,
+body[class*="clone"] .journey-content p,
+body[class*="clone"] .journey-content .content,
+body[class*="clone"] .journey-content .description,
+body[class*="clone"] .journey-content ul,
+body[class*="clone"] .journey-content ol,
+body[class*="clone"] .journey-content li,
+.cloned-homepage-layout .about-area p,
+.cloned-homepage-layout .about-area .content,
+.cloned-homepage-layout .about-area .description,
+.cloned-homepage-layout .about-area ul,
+.cloned-homepage-layout .about-area ol,
+.cloned-homepage-layout .about-area li,
+.cloned-homepage-layout .about-section p,
+.cloned-homepage-layout .about-section .content,
+.cloned-homepage-layout .about-section .description,
+.cloned-homepage-layout .about-section ul,
+.cloned-homepage-layout .about-section ol,
+.cloned-homepage-layout .about-section li,
+.cloned-homepage-layout .why-choose p,
+.cloned-homepage-layout .why-choose .content,
+.cloned-homepage-layout .why-choose .description,
+.cloned-homepage-layout .why-choose ul,
+.cloned-homepage-layout .why-choose ol,
+.cloned-homepage-layout .why-choose li,
+.cloned-homepage-layout .journey-area p,
+.cloned-homepage-layout .journey-area .content,
+.cloned-homepage-layout .journey-area .description,
+.cloned-homepage-layout .journey-area ul,
+.cloned-homepage-layout .journey-area ol,
+.cloned-homepage-layout .journey-area li,
+.cloned-homepage-layout .journey-content p,
+.cloned-homepage-layout .journey-content .content,
+.cloned-homepage-layout .journey-content .description,
+.cloned-homepage-layout .journey-content ul,
+.cloned-homepage-layout .journey-content ol,
+.cloned-homepage-layout .journey-content li,
+#page-local-cloned-homepage .about-area p,
+#page-local-cloned-homepage .about-area .content,
+#page-local-cloned-homepage .about-area .description,
+#page-local-cloned-homepage .about-area ul,
+#page-local-cloned-homepage .about-area ol,
+#page-local-cloned-homepage .about-area li,
+#page-local-cloned-homepage .about-section p,
+#page-local-cloned-homepage .about-section .content,
+#page-local-cloned-homepage .about-section .description,
+#page-local-cloned-homepage .about-section ul,
+#page-local-cloned-homepage .about-section ol,
+#page-local-cloned-homepage .about-section li,
+#page-local-cloned-homepage .why-choose p,
+#page-local-cloned-homepage .why-choose .content,
+#page-local-cloned-homepage .why-choose .description,
+#page-local-cloned-homepage .why-choose ul,
+#page-local-cloned-homepage .why-choose ol,
+#page-local-cloned-homepage .why-choose li,
+#page-local-cloned-homepage .journey-area p,
+#page-local-cloned-homepage .journey-area .content,
+#page-local-cloned-homepage .journey-area .description,
+#page-local-cloned-homepage .journey-area ul,
+#page-local-cloned-homepage .journey-area ol,
+#page-local-cloned-homepage .journey-area li,
+#page-local-cloned-homepage .journey-content p,
+#page-local-cloned-homepage .journey-content .content,
+#page-local-cloned-homepage .journey-content .description,
+#page-local-cloned-homepage .journey-content ul,
+#page-local-cloned-homepage .journey-content ol,
+#page-local-cloned-homepage .journey-content li,
+[data-page="cloned-homepage"] .about-area p,
+[data-page="cloned-homepage"] .about-area .content,
+[data-page="cloned-homepage"] .about-area .description,
+[data-page="cloned-homepage"] .about-area ul,
+[data-page="cloned-homepage"] .about-area ol,
+[data-page="cloned-homepage"] .about-area li,
+[data-page="cloned-homepage"] .about-section p,
+[data-page="cloned-homepage"] .about-section .content,
+[data-page="cloned-homepage"] .about-section .description,
+[data-page="cloned-homepage"] .about-section ul,
+[data-page="cloned-homepage"] .about-section ol,
+[data-page="cloned-homepage"] .about-section li,
+[data-page="cloned-homepage"] .why-choose p,
+[data-page="cloned-homepage"] .why-choose .content,
+[data-page="cloned-homepage"] .why-choose .description,
+[data-page="cloned-homepage"] .why-choose ul,
+[data-page="cloned-homepage"] .why-choose ol,
+[data-page="cloned-homepage"] .why-choose li,
+[data-page="cloned-homepage"] .journey-area p,
+[data-page="cloned-homepage"] .journey-area .content,
+[data-page="cloned-homepage"] .journey-area .description,
+[data-page="cloned-homepage"] .journey-area ul,
+[data-page="cloned-homepage"] .journey-area ol,
+[data-page="cloned-homepage"] .journey-area li,
+[data-page="cloned-homepage"] .journey-content p,
+[data-page="cloned-homepage"] .journey-content .content,
+[data-page="cloned-homepage"] .journey-content .description,
+[data-page="cloned-homepage"] .journey-content ul,
+[data-page="cloned-homepage"] .journey-content ol,
+[data-page="cloned-homepage"] .journey-content li {
+    text-align: left !important;
+    justify-content: flex-start !important;
+    align-self: flex-start !important;
+    margin-left: 0 !important;
+}
+
+/* About Three Block - Container Alignment */
+body[class*="clone"] .about-area .d-flex,
+body[class*="clone"] .about-area .flex,
+body[class*="clone"] .about-section .d-flex,
+body[class*="clone"] .about-section .flex,
+body[class*="clone"] .why-choose .d-flex,
+body[class*="clone"] .why-choose .flex,
+body[class*="clone"] .journey-area .d-flex,
+body[class*="clone"] .journey-area .flex,
+body[class*="clone"] .journey-content .d-flex,
+body[class*="clone"] .journey-content .flex,
+.cloned-homepage-layout .about-area .d-flex,
+.cloned-homepage-layout .about-area .flex,
+.cloned-homepage-layout .about-section .d-flex,
+.cloned-homepage-layout .about-section .flex,
+.cloned-homepage-layout .why-choose .d-flex,
+.cloned-homepage-layout .why-choose .flex,
+.cloned-homepage-layout .journey-area .d-flex,
+.cloned-homepage-layout .journey-area .flex,
+.cloned-homepage-layout .journey-content .d-flex,
+.cloned-homepage-layout .journey-content .flex,
+#page-local-cloned-homepage .about-area .d-flex,
+#page-local-cloned-homepage .about-area .flex,
+#page-local-cloned-homepage .about-section .d-flex,
+#page-local-cloned-homepage .about-section .flex,
+#page-local-cloned-homepage .why-choose .d-flex,
+#page-local-cloned-homepage .why-choose .flex,
+#page-local-cloned-homepage .journey-area .d-flex,
+#page-local-cloned-homepage .journey-area .flex,
+#page-local-cloned-homepage .journey-content .d-flex,
+#page-local-cloned-homepage .journey-content .flex,
+[data-page="cloned-homepage"] .about-area .d-flex,
+[data-page="cloned-homepage"] .about-area .flex,
+[data-page="cloned-homepage"] .about-section .d-flex,
+[data-page="cloned-homepage"] .about-section .flex,
+[data-page="cloned-homepage"] .why-choose .d-flex,
+[data-page="cloned-homepage"] .why-choose .flex,
+[data-page="cloned-homepage"] .journey-area .d-flex,
+[data-page="cloned-homepage"] .journey-area .flex,
+[data-page="cloned-homepage"] .journey-content .d-flex,
+[data-page="cloned-homepage"] .journey-content .flex {
+    justify-content: flex-start !important;
+    align-items: flex-start !important;
+    text-align: left !important;
+}
+
+/* ================================================
+   [EDOO] ABOUT THREE BLOCK - ENHANCED LIST ITEMS
+   Left align list item numbers, titles, and content
+   ================================================ */
+
+/* List Item Number Left Alignment */
+body[class*="clone"] .about-area li::marker,
+body[class*="clone"] .about-section li::marker,
+body[class*="clone"] .why-choose li::marker,
+body[class*="clone"] .journey-area li::marker,
+body[class*="clone"] .journey-content li::marker,
+.cloned-homepage-layout .about-area li::marker,
+.cloned-homepage-layout .about-section li::marker,
+.cloned-homepage-layout .why-choose li::marker,
+.cloned-homepage-layout .journey-area li::marker,
+.cloned-homepage-layout .journey-content li::marker,
+#page-local-cloned-homepage .about-area li::marker,
+#page-local-cloned-homepage .about-section li::marker,
+#page-local-cloned-homepage .why-choose li::marker,
+#page-local-cloned-homepage .journey-area li::marker,
+#page-local-cloned-homepage .journey-content li::marker,
+[data-page="cloned-homepage"] .about-area li::marker,
+[data-page="cloned-homepage"] .about-section li::marker,
+[data-page="cloned-homepage"] .why-choose li::marker,
+[data-page="cloned-homepage"] .journey-area li::marker,
+[data-page="cloned-homepage"] .journey-content li::marker {
+    text-align: left !important;
+}
+
+/* Enhanced List Item Structure */
+body[class*="clone"] .about-area ol,
+body[class*="clone"] .about-area ul,
+body[class*="clone"] .about-section ol,
+body[class*="clone"] .about-section ul,
+body[class*="clone"] .why-choose ol,
+body[class*="clone"] .why-choose ul,
+body[class*="clone"] .journey-area ol,
+body[class*="clone"] .journey-area ul,
+body[class*="clone"] .journey-content ol,
+body[class*="clone"] .journey-content ul,
+.cloned-homepage-layout .about-area ol,
+.cloned-homepage-layout .about-area ul,
+.cloned-homepage-layout .about-section ol,
+.cloned-homepage-layout .about-section ul,
+.cloned-homepage-layout .why-choose ol,
+.cloned-homepage-layout .why-choose ul,
+.cloned-homepage-layout .journey-area ol,
+.cloned-homepage-layout .journey-area ul,
+.cloned-homepage-layout .journey-content ol,
+.cloned-homepage-layout .journey-content ul,
+#page-local-cloned-homepage .about-area ol,
+#page-local-cloned-homepage .about-area ul,
+#page-local-cloned-homepage .about-section ol,
+#page-local-cloned-homepage .about-section ul,
+#page-local-cloned-homepage .why-choose ol,
+#page-local-cloned-homepage .why-choose ul,
+#page-local-cloned-homepage .journey-area ol,
+#page-local-cloned-homepage .journey-area ul,
+#page-local-cloned-homepage .journey-content ol,
+#page-local-cloned-homepage .journey-content ul,
+[data-page="cloned-homepage"] .about-area ol,
+[data-page="cloned-homepage"] .about-area ul,
+[data-page="cloned-homepage"] .about-section ol,
+[data-page="cloned-homepage"] .about-section ul,
+[data-page="cloned-homepage"] .why-choose ol,
+[data-page="cloned-homepage"] .why-choose ul,
+[data-page="cloned-homepage"] .journey-area ol,
+[data-page="cloned-homepage"] .journey-area ul,
+[data-page="cloned-homepage"] .journey-content ol,
+[data-page="cloned-homepage"] .journey-content ul {
+    text-align: left !important;
+    padding-left: 0 !important;
+    margin-left: 0 !important;
+    list-style-position: outside !important;
+}
+
+/* Enhanced List Item Text Alignment */
+body[class*="clone"] .about-area li,
+body[class*="clone"] .about-section li,
+body[class*="clone"] .why-choose li,
+body[class*="clone"] .journey-area li,
+body[class*="clone"] .journey-content li,
+.cloned-homepage-layout .about-area li,
+.cloned-homepage-layout .about-section li,
+.cloned-homepage-layout .why-choose li,
+.cloned-homepage-layout .journey-area li,
+.cloned-homepage-layout .journey-content li,
+#page-local-cloned-homepage .about-area li,
+#page-local-cloned-homepage .about-section li,
+#page-local-cloned-homepage .why-choose li,
+#page-local-cloned-homepage .journey-area li,
+#page-local-cloned-homepage .journey-content li,
+[data-page="cloned-homepage"] .about-area li,
+[data-page="cloned-homepage"] .about-section li,
+[data-page="cloned-homepage"] .why-choose li,
+[data-page="cloned-homepage"] .journey-area li,
+[data-page="cloned-homepage"] .journey-content li {
+    text-align: left !important;
+    display: list-item !important;
+    margin-left: 20px !important;
+    padding-left: 5px !important;
+}
+
+/* List Item Titles and Content */
+body[class*="clone"] .about-area li h4,
+body[class*="clone"] .about-area li h5,
+body[class*="clone"] .about-area li .title,
+body[class*="clone"] .about-section li h4,
+body[class*="clone"] .about-section li h5,
+body[class*="clone"] .about-section li .title,
+body[class*="clone"] .why-choose li h4,
+body[class*="clone"] .why-choose li h5,
+body[class*="clone"] .why-choose li .title,
+body[class*="clone"] .journey-area li h4,
+body[class*="clone"] .journey-area li h5,
+body[class*="clone"] .journey-area li .title,
+body[class*="clone"] .journey-content li h4,
+body[class*="clone"] .journey-content li h5,
+body[class*="clone"] .journey-content li .title,
+.cloned-homepage-layout .about-area li h4,
+.cloned-homepage-layout .about-area li h5,
+.cloned-homepage-layout .about-area li .title,
+.cloned-homepage-layout .about-section li h4,
+.cloned-homepage-layout .about-section li h5,
+.cloned-homepage-layout .about-section li .title,
+.cloned-homepage-layout .why-choose li h4,
+.cloned-homepage-layout .why-choose li h5,
+.cloned-homepage-layout .why-choose li .title,
+.cloned-homepage-layout .journey-area li h4,
+.cloned-homepage-layout .journey-area li h5,
+.cloned-homepage-layout .journey-area li .title,
+.cloned-homepage-layout .journey-content li h4,
+.cloned-homepage-layout .journey-content li h5,
+.cloned-homepage-layout .journey-content li .title,
+#page-local-cloned-homepage .about-area li h4,
+#page-local-cloned-homepage .about-area li h5,
+#page-local-cloned-homepage .about-area li .title,
+#page-local-cloned-homepage .about-section li h4,
+#page-local-cloned-homepage .about-section li h5,
+#page-local-cloned-homepage .about-section li .title,
+#page-local-cloned-homepage .why-choose li h4,
+#page-local-cloned-homepage .why-choose li h5,
+#page-local-cloned-homepage .why-choose li .title,
+#page-local-cloned-homepage .journey-area li h4,
+#page-local-cloned-homepage .journey-area li h5,
+#page-local-cloned-homepage .journey-area li .title,
+#page-local-cloned-homepage .journey-content li h4,
+#page-local-cloned-homepage .journey-content li h5,
+#page-local-cloned-homepage .journey-content li .title,
+[data-page="cloned-homepage"] .about-area li h4,
+[data-page="cloned-homepage"] .about-area li h5,
+[data-page="cloned-homepage"] .about-area li .title,
+[data-page="cloned-homepage"] .about-section li h4,
+[data-page="cloned-homepage"] .about-section li h5,
+[data-page="cloned-homepage"] .about-section li .title,
+[data-page="cloned-homepage"] .why-choose li h4,
+[data-page="cloned-homepage"] .why-choose li h5,
+[data-page="cloned-homepage"] .why-choose li .title,
+[data-page="cloned-homepage"] .journey-area li h4,
+[data-page="cloned-homepage"] .journey-area li h5,
+[data-page="cloned-homepage"] .journey-area li .title,
+[data-page="cloned-homepage"] .journey-content li h4,
+[data-page="cloned-homepage"] .journey-content li h5,
+[data-page="cloned-homepage"] .journey-content li .title {
+    text-align: left !important;
+    margin-left: 0 !important;
+    padding-left: 0 !important;
+}
+
+/* ================================================
+   REMOVE DUPLICATE TEXT TITLE BLOCK ONLY
+   Hide only the duplicate title text, keep content
+   ================================================ */
+
+/* Hide Second Text Title Block Only - Keep Partner Content */
+body[class*="clone"] .no-overflow:nth-of-type(2),
+body[class*="clone"] .card-body:has(.no-overflow):nth-of-type(2),
+body[class*="clone"] h3:contains("Master the AI Tools"):nth-of-type(2),
+body[class*="clone"] h3:contains("Shape the Future"):nth-of-type(2),
+.cloned-homepage-layout .no-overflow:nth-of-type(2),
+.cloned-homepage-layout .card-body:has(.no-overflow):nth-of-type(2),
+.cloned-homepage-layout h3:contains("Master the AI Tools"):nth-of-type(2),
+.cloned-homepage-layout h3:contains("Shape the Future"):nth-of-type(2),
+#page-local-cloned-homepage .no-overflow:nth-of-type(2),
+#page-local-cloned-homepage .card-body:has(.no-overflow):nth-of-type(2),
+#page-local-cloned-homepage h3:contains("Master the AI Tools"):nth-of-type(2),
+#page-local-cloned-homepage h3:contains("Shape the Future"):nth-of-type(2),
+[data-page="cloned-homepage"] .no-overflow:nth-of-type(2),
+[data-page="cloned-homepage"] .card-body:has(.no-overflow):nth-of-type(2),
+[data-page="cloned-homepage"] h3:contains("Master the AI Tools"):nth-of-type(2),
+[data-page="cloned-homepage"] h3:contains("Shape the Future"):nth-of-type(2) {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+    height: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    overflow: hidden !important;
+}
+
+/* Target Specific Duplicate Title Containers */
+body[class*="clone"] .block_html:has(.no-overflow):nth-of-type(2) .no-overflow,
+body[class*="clone"] .card:has(.no-overflow):nth-of-type(2) .no-overflow,
+.cloned-homepage-layout .block_html:has(.no-overflow):nth-of-type(2) .no-overflow,
+.cloned-homepage-layout .card:has(.no-overflow):nth-of-type(2) .no-overflow,
+#page-local-cloned-homepage .block_html:has(.no-overflow):nth-of-type(2) .no-overflow,
+#page-local-cloned-homepage .card:has(.no-overflow):nth-of-type(2) .no-overflow,
+[data-page="cloned-homepage"] .block_html:has(.no-overflow):nth-of-type(2) .no-overflow,
+[data-page="cloned-homepage"] .card:has(.no-overflow):nth-of-type(2) .no-overflow {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+    height: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+/* ================================================
+   [EDOO] FEATURES AREA BLOCK - CONSISTENT HEIGHT STYLING
+   Clean design with consistent height for all 3 cards
+   ================================================ */
+
+/* Features container styling for cloned homepage */
+body.cloned-homepage .single-features-item,
+body.cloned-homepage-layout .single-features-item,
+#page-site-index.cloned-homepage .single-features-item,
+.cloned-homepage-layout .single-features-item {
+    display: block !important;
+    padding: 20px !important;
+    margin-bottom: 20px !important;
+    background: #ffffff !important;
+    border-radius: 8px !important;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1) !important;
+    transition: all 0.3s ease !important;
+    text-align: left !important;
+
+    /* Consistent height for all cards */
+    height: 250px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: space-between !important;
+}
+
+/* Feature card hover effects */
+body.cloned-homepage .single-features-item:hover,
+body.cloned-homepage-layout .single-features-item:hover,
+#page-site-index.cloned-homepage .single-features-item:hover,
+.cloned-homepage-layout .single-features-item:hover {
+    transform: translateY(-2px) !important;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15) !important;
+}
+
+/* Feature card flex layout */
+body.cloned-homepage .single-features-item .d-flex,
+body.cloned-homepage-layout .single-features-item .d-flex,
+#page-site-index.cloned-homepage .single-features-item .d-flex,
+.cloned-homepage-layout .single-features-item .d-flex {
+    display: flex !important;
+    align-items: flex-start !important;
+    gap: 15px !important;
+}
+
+/* Icon container styling */
+body.cloned-homepage .single-features-item .flex-shrink-0,
+body.cloned-homepage-layout .single-features-item .flex-shrink-0,
+#page-site-index.cloned-homepage .single-features-item .flex-shrink-0,
+.cloned-homepage-layout .single-features-item .flex-shrink-0 {
+    width: 60px !important;
+    height: 60px !important;
+    border-radius: 12px !important;
+    background: #007bff !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    margin-bottom: 15px !important;
+    flex-shrink: 0 !important;
+}
+
+/* Icon styling */
+body.cloned-homepage .single-features-item [class*="flaticon-"],
+body.cloned-homepage .single-features-item i,
+body.cloned-homepage-layout .single-features-item [class*="flaticon-"],
+body.cloned-homepage-layout .single-features-item i,
+#page-site-index.cloned-homepage .single-features-item [class*="flaticon-"],
+#page-site-index.cloned-homepage .single-features-item i,
+.cloned-homepage-layout .single-features-item [class*="flaticon-"],
+.cloned-homepage-layout .single-features-item i {
+    font-size: 24px !important;
+    color: #ffffff !important;
+}
+
+/* Feature title styling */
+body.cloned-homepage .single-features-item h4,
+body.cloned-homepage-layout .single-features-item h4,
+#page-site-index.cloned-homepage .single-features-item h4,
+.cloned-homepage-layout .single-features-item h4 {
+    font-size: 18px !important;
+    font-weight: 600 !important;
+    margin-bottom: 10px !important;
+    color: #333333 !important;
+    text-align: left !important;
+}
+
+/* Feature description styling */
+body.cloned-homepage .single-features-item p,
+body.cloned-homepage-layout .single-features-item p,
+#page-site-index.cloned-homepage .single-features-item p,
+.cloned-homepage-layout .single-features-item p {
+    font-size: 14px !important;
+    line-height: 1.5 !important;
+    color: #666666 !important;
+    margin: 0 !important;
+    text-align: left !important;
+}
+
+/* Content area adjustments for consistent layout */
+body.cloned-homepage .single-features-item .d-flex > div:last-child,
+body.cloned-homepage-layout .single-features-item .d-flex > div:last-child,
+#page-site-index.cloned-homepage .single-features-item .d-flex > div:last-child,
+.cloned-homepage-layout .single-features-item .d-flex > div:last-child {
+    flex-grow: 1 !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: flex-start !important;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    body.cloned-homepage .single-features-item,
+    body.cloned-homepage-layout .single-features-item,
+    #page-site-index.cloned-homepage .single-features-item,
+    .cloned-homepage-layout .single-features-item {
+        padding: 15px !important;
+        height: auto !important; /* Allow flexible height on mobile */
+        min-height: 200px !important;
+    }
+
+    body.cloned-homepage .single-features-item .d-flex,
+    body.cloned-homepage-layout .single-features-item .d-flex,
+    #page-site-index.cloned-homepage .single-features-item .d-flex,
+    .cloned-homepage-layout .single-features-item .d-flex {
+        gap: 10px !important;
+    }
+
+    body.cloned-homepage .single-features-item h4,
+    body.cloned-homepage-layout .single-features-item h4,
+    #page-site-index.cloned-homepage .single-features-item h4,
+    .cloned-homepage-layout .single-features-item h4 {
+        font-size: 16px !important;
+    }
+
+    body.cloned-homepage .single-features-item p,
+    body.cloned-homepage-layout .single-features-item p,
+    #page-site-index.cloned-homepage .single-features-item p,
+    .cloned-homepage-layout .single-features-item p {
+        font-size: 13px !important;
+    }
+
+    body.cloned-homepage .single-features-item .flex-shrink-0,
+    body.cloned-homepage-layout .single-features-item .flex-shrink-0,
+    #page-site-index.cloned-homepage .single-features-item .flex-shrink-0,
+    .cloned-homepage-layout .single-features-item .flex-shrink-0 {
+        width: 50px !important;
+        height: 50px !important;
+    }
+
+    body.cloned-homepage .single-features-item i,
+    body.cloned-homepage-layout .single-features-item i,
+    #page-site-index.cloned-homepage .single-features-item i,
+    .cloned-homepage-layout .single-features-item i {
+        font-size: 20px !important;
+    }
+}
+
+/* ================================================
+   [EDOO] ABOUT FOUR BLOCK - PROFESSIONAL REDESIGN
+   Modern statistics/counter section with 4 columns
+   Attractive, efficient, and professional design
+   ================================================ */
+
+/* About Four Block Container - Clean Professional Layout */
+body.cloned-homepage .about-four-area,
+body.cloned-homepage-layout .about-four-area,
+#page-site-index.cloned-homepage .about-four-area,
+.cloned-homepage-layout .about-four-area,
+body.cloned-homepage .counter-area,
+body.cloned-homepage-layout .counter-area,
+#page-site-index.cloned-homepage .counter-area,
+.cloned-homepage-layout .counter-area,
+body.cloned-homepage .stats-area,
+body.cloned-homepage-layout .stats-area,
+#page-site-index.cloned-homepage .stats-area,
+.cloned-homepage-layout .stats-area {
+    background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%) !important;
+    padding: 80px 0 !important;
+    margin: 60px 0 !important;
+    position: relative !important;
+    overflow: hidden !important;
+    border-radius: 0 !important;
+}
+
+/* About Four Block Background Pattern */
+body.cloned-homepage .about-four-area::before,
+body.cloned-homepage-layout .about-four-area::before,
+#page-site-index.cloned-homepage .about-four-area::before,
+.cloned-homepage-layout .about-four-area::before,
+body.cloned-homepage .counter-area::before,
+body.cloned-homepage-layout .counter-area::before,
+#page-site-index.cloned-homepage .counter-area::before,
+.cloned-homepage-layout .counter-area::before {
+    content: '' !important;
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    background-image:
+        radial-gradient(circle at 25% 25%, rgba(59, 130, 246, 0.1) 0%, transparent 70%),
+        radial-gradient(circle at 75% 75%, rgba(139, 92, 246, 0.1) 0%, transparent 70%) !important;
+    pointer-events: none !important;
+    z-index: 1 !important;
+}
+
+/* About Four Block Row - Grid Layout */
+body.cloned-homepage .about-four-area .row,
+body.cloned-homepage-layout .about-four-area .row,
+#page-site-index.cloned-homepage .about-four-area .row,
+.cloned-homepage-layout .about-four-area .row,
+body.cloned-homepage .counter-area .row,
+body.cloned-homepage-layout .counter-area .row,
+#page-site-index.cloned-homepage .counter-area .row,
+.cloned-homepage-layout .counter-area .row {
+    display: grid !important;
+    grid-template-columns: repeat(4, 1fr) !important;
+    gap: 40px !important;
+    align-items: center !important;
+    position: relative !important;
+    z-index: 2 !important;
+    margin: 0 !important;
+}
+
+/* Individual Counter Item - Modern Card Design */
+body.cloned-homepage .about-four-area .counter-item,
+body.cloned-homepage-layout .about-four-area .counter-item,
+#page-site-index.cloned-homepage .about-four-area .counter-item,
+.cloned-homepage-layout .about-four-area .counter-item,
+body.cloned-homepage .counter-area .counter-item,
+body.cloned-homepage-layout .counter-area .counter-item,
+#page-site-index.cloned-homepage .counter-area .counter-item,
+.cloned-homepage-layout .counter-area .counter-item,
+body.cloned-homepage .stats-item,
+body.cloned-homepage-layout .stats-item,
+#page-site-index.cloned-homepage .stats-item,
+.cloned-homepage-layout .stats-item,
+body.cloned-homepage .single-counter,
+body.cloned-homepage-layout .single-counter,
+#page-site-index.cloned-homepage .single-counter,
+.cloned-homepage-layout .single-counter {
+    background: rgba(255, 255, 255, 0.9) !important;
+    backdrop-filter: blur(10px) !important;
+    -webkit-backdrop-filter: blur(10px) !important;
+    border: 1px solid rgba(255, 255, 255, 0.3) !important;
+    border-radius: 20px !important;
+    padding: 40px 30px !important;
+    text-align: center !important;
+    position: relative !important;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1) !important;
+    box-shadow:
+        0 8px 32px rgba(0, 0, 0, 0.08),
+        0 4px 16px rgba(0, 0, 0, 0.04) !important;
+    overflow: hidden !important;
+    cursor: pointer !important;
+}
+
+/* Counter Item Hover Effects */
+body.cloned-homepage .about-four-area .counter-item:hover,
+body.cloned-homepage-layout .about-four-area .counter-item:hover,
+#page-site-index.cloned-homepage .about-four-area .counter-item:hover,
+.cloned-homepage-layout .about-four-area .counter-item:hover,
+body.cloned-homepage .counter-area .counter-item:hover,
+body.cloned-homepage-layout .counter-area .counter-item:hover,
+#page-site-index.cloned-homepage .counter-area .counter-item:hover,
+.cloned-homepage-layout .counter-area .counter-item:hover,
+body.cloned-homepage .stats-item:hover,
+body.cloned-homepage-layout .stats-item:hover,
+#page-site-index.cloned-homepage .stats-item:hover,
+.cloned-homepage-layout .stats-item:hover,
+body.cloned-homepage .single-counter:hover,
+body.cloned-homepage-layout .single-counter:hover,
+#page-site-index.cloned-homepage .single-counter:hover,
+.cloned-homepage-layout .single-counter:hover {
+    transform: translateY(-8px) scale(1.02) !important;
+    background: rgba(255, 255, 255, 0.95) !important;
+    border-color: rgba(59, 130, 246, 0.3) !important;
+    box-shadow:
+        0 20px 60px rgba(59, 130, 246, 0.15),
+        0 8px 32px rgba(0, 0, 0, 0.12) !important;
+}
+
+/* Counter Icon Container */
+body.cloned-homepage .about-four-area .counter-icon,
+body.cloned-homepage-layout .about-four-area .counter-icon,
+#page-site-index.cloned-homepage .about-four-area .counter-icon,
+.cloned-homepage-layout .about-four-area .counter-icon,
+body.cloned-homepage .counter-area .counter-icon,
+body.cloned-homepage-layout .counter-area .counter-icon,
+#page-site-index.cloned-homepage .counter-area .counter-icon,
+.cloned-homepage-layout .counter-area .counter-icon,
+body.cloned-homepage .stats-icon,
+body.cloned-homepage-layout .stats-icon,
+#page-site-index.cloned-homepage .stats-icon,
+.cloned-homepage-layout .stats-icon {
+    width: 80px !important;
+    height: 80px !important;
+    margin: 0 auto 24px auto !important;
+    background: linear-gradient(135deg, #3b82f6, #8b5cf6) !important;
+    border-radius: 50% !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    position: relative !important;
+    box-shadow: 0 8px 32px rgba(59, 130, 246, 0.3) !important;
+    transition: all 0.3s ease !important;
+}
+
+/* Counter Icon - Modern Styling */
+body.cloned-homepage .about-four-area .counter-icon i,
+body.cloned-homepage-layout .about-four-area .counter-icon i,
+#page-site-index.cloned-homepage .about-four-area .counter-icon i,
+.cloned-homepage-layout .about-four-area .counter-icon i,
+body.cloned-homepage .counter-area .counter-icon i,
+body.cloned-homepage-layout .counter-area .counter-icon i,
+#page-site-index.cloned-homepage .counter-area .counter-icon i,
+.cloned-homepage-layout .counter-area .counter-icon i,
+body.cloned-homepage .stats-icon i,
+body.cloned-homepage-layout .stats-icon i,
+#page-site-index.cloned-homepage .stats-icon i,
+.cloned-homepage-layout .stats-icon i {
+    font-size: 32px !important;
+    color: #ffffff !important;
+    transition: transform 0.3s ease !important;
+}
+
+/* Counter Icon Hover Effect */
+body.cloned-homepage .about-four-area .counter-item:hover .counter-icon,
+body.cloned-homepage-layout .about-four-area .counter-item:hover .counter-icon,
+#page-site-index.cloned-homepage .about-four-area .counter-item:hover .counter-icon,
+.cloned-homepage-layout .about-four-area .counter-item:hover .counter-icon,
+body.cloned-homepage .counter-area .counter-item:hover .counter-icon,
+body.cloned-homepage-layout .counter-area .counter-item:hover .counter-icon,
+#page-site-index.cloned-homepage .counter-area .counter-item:hover .counter-icon,
+.cloned-homepage-layout .counter-area .counter-item:hover .counter-icon {
+    transform: scale(1.1) rotate(5deg) !important;
+    box-shadow: 0 12px 40px rgba(59, 130, 246, 0.4) !important;
+}
+
+body.cloned-homepage .about-four-area .counter-item:hover .counter-icon i,
+body.cloned-homepage-layout .about-four-area .counter-item:hover .counter-icon i,
+#page-site-index.cloned-homepage .about-four-area .counter-item:hover .counter-icon i,
+.cloned-homepage-layout .about-four-area .counter-item:hover .counter-icon i {
+    transform: scale(1.1) !important;
+}
+
+/* Counter Number - Bold Typography */
+body.cloned-homepage .about-four-area .counter-number,
+body.cloned-homepage-layout .about-four-area .counter-number,
+#page-site-index.cloned-homepage .about-four-area .counter-number,
+.cloned-homepage-layout .about-four-area .counter-number,
+body.cloned-homepage .counter-area .counter-number,
+body.cloned-homepage-layout .counter-area .counter-number,
+#page-site-index.cloned-homepage .counter-area .counter-number,
+.cloned-homepage-layout .counter-area .counter-number,
+body.cloned-homepage .stats-number,
+body.cloned-homepage-layout .stats-number,
+#page-site-index.cloned-homepage .stats-number,
+.cloned-homepage-layout .stats-number,
+body.cloned-homepage .counter-item h3,
+body.cloned-homepage-layout .counter-item h3,
+#page-site-index.cloned-homepage .counter-item h3,
+.cloned-homepage-layout .counter-item h3 {
+    font-family: 'Inter', -apple-system, sans-serif !important;
+    font-size: clamp(32px, 4vw, 48px) !important;
+    font-weight: 700 !important;
+    line-height: 1.2 !important;
+    color: #1f2937 !important;
+    margin-bottom: 12px !important;
+    background: linear-gradient(135deg, #3b82f6, #8b5cf6) !important;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+    background-clip: text !important;
+    transition: all 0.3s ease !important;
+}
+
+/* Counter Label - Clean Typography */
+body.cloned-homepage .about-four-area .counter-label,
+body.cloned-homepage-layout .about-four-area .counter-label,
+#page-site-index.cloned-homepage .about-four-area .counter-label,
+.cloned-homepage-layout .about-four-area .counter-label,
+body.cloned-homepage .counter-area .counter-label,
+body.cloned-homepage-layout .counter-area .counter-label,
+#page-site-index.cloned-homepage .counter-area .counter-label,
+.cloned-homepage-layout .counter-area .counter-label,
+body.cloned-homepage .stats-label,
+body.cloned-homepage-layout .stats-label,
+#page-site-index.cloned-homepage .stats-label,
+.cloned-homepage-layout .stats-label,
+body.cloned-homepage .counter-item p,
+body.cloned-homepage-layout .counter-item p,
+#page-site-index.cloned-homepage .counter-item p,
+.cloned-homepage-layout .counter-item p {
+    font-family: 'Inter', -apple-system, sans-serif !important;
+    font-size: 16px !important;
+    font-weight: 500 !important;
+    line-height: 1.5 !important;
+    color: #64748b !important;
+    margin: 0 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.5px !important;
+    transition: color 0.3s ease !important;
+}
+
+/* Counter Label Hover Effect */
+body.cloned-homepage .about-four-area .counter-item:hover .counter-label,
+body.cloned-homepage-layout .about-four-area .counter-item:hover .counter-label,
+#page-site-index.cloned-homepage .about-four-area .counter-item:hover .counter-label,
+.cloned-homepage-layout .about-four-area .counter-item:hover .counter-label,
+body.cloned-homepage .counter-area .counter-item:hover .counter-label,
+body.cloned-homepage-layout .counter-area .counter-item:hover .counter-label,
+#page-site-index.cloned-homepage .counter-area .counter-item:hover .counter-label,
+.cloned-homepage-layout .counter-area .counter-item:hover .counter-label,
+body.cloned-homepage .counter-item:hover p,
+body.cloned-homepage-layout .counter-item:hover p,
+#page-site-index.cloned-homepage .counter-item:hover p,
+.cloned-homepage-layout .counter-item:hover p {
+    color: #3b82f6 !important;
+}
+
+/* Section Title Enhancement */
+body.cloned-homepage .about-four-area .section-title,
+body.cloned-homepage-layout .about-four-area .section-title,
+#page-site-index.cloned-homepage .about-four-area .section-title,
+.cloned-homepage-layout .about-four-area .section-title,
+body.cloned-homepage .counter-area .section-title,
+body.cloned-homepage-layout .counter-area .section-title,
+#page-site-index.cloned-homepage .counter-area .section-title,
+.cloned-homepage-layout .counter-area .section-title {
+    text-align: center !important;
+    margin-bottom: 60px !important;
+    position: relative !important;
+    z-index: 2 !important;
+}
+
+body.cloned-homepage .about-four-area .section-title h2,
+body.cloned-homepage-layout .about-four-area .section-title h2,
+#page-site-index.cloned-homepage .about-four-area .section-title h2,
+.cloned-homepage-layout .about-four-area .section-title h2,
+body.cloned-homepage .counter-area .section-title h2,
+body.cloned-homepage-layout .counter-area .section-title h2,
+#page-site-index.cloned-homepage .counter-area .section-title h2,
+.cloned-homepage-layout .counter-area .section-title h2 {
+    font-family: 'Inter', -apple-system, sans-serif !important;
+    font-size: clamp(28px, 4vw, 42px) !important;
+    font-weight: 700 !important;
+    line-height: 1.2 !important;
+    color: #1f2937 !important;
+    margin-bottom: 16px !important;
+    letter-spacing: -0.02em !important;
+}
+
+body.cloned-homepage .about-four-area .section-title p,
+body.cloned-homepage-layout .about-four-area .section-title p,
+#page-site-index.cloned-homepage .about-four-area .section-title p,
+.cloned-homepage-layout .about-four-area .section-title p,
+body.cloned-homepage .counter-area .section-title p,
+body.cloned-homepage-layout .counter-area .section-title p,
+#page-site-index.cloned-homepage .counter-area .section-title p,
+.cloned-homepage-layout .counter-area .section-title p {
+    font-family: 'Inter', -apple-system, sans-serif !important;
+    font-size: 18px !important;
+    font-weight: 400 !important;
+    line-height: 1.6 !important;
+    color: #64748b !important;
+    max-width: 600px !important;
+    margin: 0 auto !important;
+}
+
+/* Responsive Design - Tablet */
+@media (max-width: 992px) {
+    body.cloned-homepage .about-four-area .row,
+    body.cloned-homepage-layout .about-four-area .row,
+    #page-site-index.cloned-homepage .about-four-area .row,
+    .cloned-homepage-layout .about-four-area .row,
+    body.cloned-homepage .counter-area .row,
+    body.cloned-homepage-layout .counter-area .row,
+    #page-site-index.cloned-homepage .counter-area .row,
+    .cloned-homepage-layout .counter-area .row {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 30px !important;
+    }
+
+    body.cloned-homepage .about-four-area,
+    body.cloned-homepage-layout .about-four-area,
+    #page-site-index.cloned-homepage .about-four-area,
+    .cloned-homepage-layout .about-four-area,
+    body.cloned-homepage .counter-area,
+    body.cloned-homepage-layout .counter-area,
+    #page-site-index.cloned-homepage .counter-area,
+    .cloned-homepage-layout .counter-area {
+        padding: 60px 0 !important;
+    }
+}
+
+/* Responsive Design - Mobile */
+@media (max-width: 768px) {
+    body.cloned-homepage .about-four-area .row,
+    body.cloned-homepage-layout .about-four-area .row,
+    #page-site-index.cloned-homepage .about-four-area .row,
+    .cloned-homepage-layout .about-four-area .row,
+    body.cloned-homepage .counter-area .row,
+    body.cloned-homepage-layout .counter-area .row,
+    #page-site-index.cloned-homepage .counter-area .row,
+    .cloned-homepage-layout .counter-area .row {
+        grid-template-columns: 1fr !important;
+        gap: 24px !important;
+    }
+
+    body.cloned-homepage .about-four-area,
+    body.cloned-homepage-layout .about-four-area,
+    #page-site-index.cloned-homepage .about-four-area,
+    .cloned-homepage-layout .about-four-area,
+    body.cloned-homepage .counter-area,
+    body.cloned-homepage-layout .counter-area,
+    #page-site-index.cloned-homepage .counter-area,
+    .cloned-homepage-layout .counter-area {
+        padding: 50px 0 !important;
+        margin: 40px 0 !important;
+    }
+
+    body.cloned-homepage .about-four-area .counter-item,
+    body.cloned-homepage-layout .about-four-area .counter-item,
+    #page-site-index.cloned-homepage .about-four-area .counter-item,
+    .cloned-homepage-layout .about-four-area .counter-item,
+    body.cloned-homepage .counter-area .counter-item,
+    body.cloned-homepage-layout .counter-area .counter-item,
+    #page-site-index.cloned-homepage .counter-area .counter-item,
+    .cloned-homepage-layout .counter-area .counter-item {
+        padding: 32px 24px !important;
+    }
+
+    body.cloned-homepage .about-four-area .counter-icon,
+    body.cloned-homepage-layout .about-four-area .counter-icon,
+    #page-site-index.cloned-homepage .about-four-area .counter-icon,
+    .cloned-homepage-layout .about-four-area .counter-icon,
+    body.cloned-homepage .counter-area .counter-icon,
+    body.cloned-homepage-layout .counter-area .counter-icon,
+    #page-site-index.cloned-homepage .counter-area .counter-icon,
+    .cloned-homepage-layout .counter-area .counter-icon {
+        width: 60px !important;
+        height: 60px !important;
+        margin-bottom: 20px !important;
+    }
+
+    body.cloned-homepage .about-four-area .counter-icon i,
+    body.cloned-homepage-layout .about-four-area .counter-icon i,
+    #page-site-index.cloned-homepage .about-four-area .counter-icon i,
+    .cloned-homepage-layout .about-four-area .counter-icon i,
+    body.cloned-homepage .counter-area .counter-icon i,
+    body.cloned-homepage-layout .counter-area .counter-icon i,
+    #page-site-index.cloned-homepage .counter-area .counter-icon i,
+    .cloned-homepage-layout .counter-area .counter-icon i {
+        font-size: 24px !important;
+    }
+}
+
+/* Accessibility Enhancements */
+@media (prefers-reduced-motion: reduce) {
+    body.cloned-homepage .about-four-area .counter-item,
+    body.cloned-homepage-layout .about-four-area .counter-item,
+    #page-site-index.cloned-homepage .about-four-area .counter-item,
+    .cloned-homepage-layout .about-four-area .counter-item,
+    body.cloned-homepage .counter-area .counter-item,
+    body.cloned-homepage-layout .counter-area .counter-item,
+    #page-site-index.cloned-homepage .counter-area .counter-item,
+    .cloned-homepage-layout .counter-area .counter-item {
+        transition: none !important;
+    }
+
+    body.cloned-homepage .about-four-area .counter-icon,
+    body.cloned-homepage-layout .about-four-area .counter-icon,
+    #page-site-index.cloned-homepage .about-four-area .counter-icon,
+    .cloned-homepage-layout .about-four-area .counter-icon,
+    body.cloned-homepage .counter-area .counter-icon,
+    body.cloned-homepage-layout .counter-area .counter-icon,
+    #page-site-index.cloned-homepage .counter-area .counter-icon,
+    .cloned-homepage-layout .counter-area .counter-icon {
+        transition: none !important;
+    }
+}
+
+/* High Contrast Support */
+@media (prefers-contrast: high) {
+    body.cloned-homepage .about-four-area,
+    body.cloned-homepage-layout .about-four-area,
+    #page-site-index.cloned-homepage .about-four-area,
+    .cloned-homepage-layout .about-four-area,
+    body.cloned-homepage .counter-area,
+    body.cloned-homepage-layout .counter-area,
+    #page-site-index.cloned-homepage .counter-area,
+    .cloned-homepage-layout .counter-area {
+        background: #ffffff !important;
+        border: 2px solid #000000 !important;
+    }
+
+    body.cloned-homepage .about-four-area .counter-item,
+    body.cloned-homepage-layout .about-four-area .counter-item,
+    #page-site-index.cloned-homepage .about-four-area .counter-item,
+    .cloned-homepage-layout .about-four-area .counter-item,
+    body.cloned-homepage .counter-area .counter-item,
+    body.cloned-homepage-layout .counter-area .counter-item,
+    #page-site-index.cloned-homepage .counter-area .counter-item,
+    .cloned-homepage-layout .counter-area .counter-item {
+        background: #ffffff !important;
+        border: 2px solid #000000 !important;
+    }
+
+    body.cloned-homepage .about-four-area .counter-icon,
+    body.cloned-homepage-layout .about-four-area .counter-icon,
+    #page-site-index.cloned-homepage .about-four-area .counter-icon,
+    .cloned-homepage-layout .about-four-area .counter-icon,
+    body.cloned-homepage .counter-area .counter-icon,
+    body.cloned-homepage-layout .counter-area .counter-icon,
+    #page-site-index.cloned-homepage .counter-area .counter-icon,
+    .cloned-homepage-layout .counter-area .counter-icon {
+        background: #000000 !important;
+        border: 2px solid #ffffff !important;
+    }
+}
+
+

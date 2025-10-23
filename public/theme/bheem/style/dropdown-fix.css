@@ -1,0 +1,312 @@
+/* CRITICAL DROPDOWN FIX - Ensure Proper Display */
+/* This file fixes all dropdown visibility issues */
+
+/* ============================================
+   REMOVE CONFLICTING STYLES
+   ============================================ */
+.navbar .dropdown-menu {
+  /* Reset any hiding properties */
+  display: none;
+  opacity: 1 !important;
+  visibility: visible !important;
+  pointer-events: auto !important;
+}
+
+/* ============================================
+   DROPDOWN TRIGGER STATES
+   ============================================ */
+/* Show dropdown on hover */
+.navbar .dropdown:hover > .dropdown-menu,
+.navbar .nav-item.dropdown:hover > .dropdown-menu,
+.navbar-nav .dropdown:hover > .dropdown-menu {
+  display: block !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+  animation: fadeInDropdown 0.3s ease-in-out !important;
+}
+
+/* Show dropdown on click/active */
+.navbar .dropdown.show > .dropdown-menu,
+.navbar .nav-item.dropdown.show > .dropdown-menu,
+.navbar .dropdown-menu.show {
+  display: block !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+
+/* ============================================
+   DROPDOWN MENU POSITIONING & STYLING
+   ============================================ */
+.navbar .dropdown-menu,
+.navbar-nav .dropdown-menu {
+  /* Positioning */
+  position: absolute !important;
+  top: 100% !important;
+  left: 0 !important;
+  margin-top: 5px !important;
+
+  /* High Visibility Background */
+  background: #ffffff !important;
+  background: linear-gradient(180deg,
+    #ffffff 0%,
+    #f9fafb 100%) !important;
+
+  /* Strong shadows for visibility */
+  box-shadow:
+    0 10px 40px rgba(0, 0, 0, 0.15),
+    0 4px 6px rgba(0, 0, 0, 0.1),
+    0 0 0 1px rgba(0, 0, 0, 0.05) !important;
+
+  /* Clear borders */
+  border: 1px solid rgba(0, 0, 0, 0.1) !important;
+  border-radius: 12px !important;
+
+  /* Spacing and sizing */
+  padding: 8px !important;
+  min-width: 220px !important;
+  max-width: 300px !important;
+
+  /* Ensure it's on top */
+  z-index: 1010 !important; /* Fixed: Using proper dropdown z-index (was 99999) */
+
+  /* Smooth appearance */
+  transform-origin: top center !important;
+  overflow: visible !important;
+}
+
+/* Animation for dropdown appearance */
+@keyframes fadeInDropdown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ============================================
+   DROPDOWN ITEMS
+   ============================================ */
+.navbar .dropdown-item,
+.navbar-nav .dropdown-item {
+  /* Text styling for readability */
+  color: #1f2937 !important;
+  font-size: 14px !important;
+  font-weight: 500 !important;
+  line-height: 1.5 !important;
+
+  /* Spacing */
+  padding: 10px 16px !important;
+  margin: 2px 0 !important;
+
+  /* Background */
+  background-color: transparent !important;
+  border-radius: 8px !important;
+
+  /* Transitions */
+  transition: all 0.2s ease !important;
+
+  /* Ensure clickability */
+  cursor: pointer !important;
+  display: block !important;
+  width: 100% !important;
+  text-align: left !important;
+  white-space: nowrap !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+  text-decoration: none !important;
+}
+
+/* Dropdown item hover state */
+.navbar .dropdown-item:hover,
+.navbar-nav .dropdown-item:hover,
+.navbar .dropdown-item:focus {
+  background-color: #f3f4f6 !important;
+  color: #7c3aed !important;
+  text-decoration: none !important;
+  padding-left: 20px !important;
+}
+
+/* Active dropdown item */
+.navbar .dropdown-item.active,
+.navbar .dropdown-item:active {
+  background-color: #ede9fe !important;
+  color: #7c3aed !important;
+}
+
+/* ============================================
+   DROPDOWN ARROW/CARET
+   ============================================ */
+.navbar .dropdown-toggle::after {
+  display: inline-block !important;
+  margin-left: 5px !important;
+  vertical-align: middle !important;
+  content: "" !important;
+  border-top: 4px solid !important;
+  border-right: 4px solid transparent !important;
+  border-bottom: 0 !important;
+  border-left: 4px solid transparent !important;
+  transition: transform 0.3s ease !important;
+}
+
+.navbar .dropdown.show .dropdown-toggle::after {
+  transform: rotate(180deg) !important;
+}
+
+/* ============================================
+   NESTED DROPDOWNS (SUBMENUS)
+   ============================================ */
+.navbar .dropdown-menu .dropdown-menu {
+  position: absolute !important;
+  top: 0 !important;
+  left: 100% !important;
+  margin-left: 5px !important;
+  margin-top: 0 !important;
+}
+
+.navbar .dropdown-submenu:hover > .dropdown-menu {
+  display: block !important;
+}
+
+/* ============================================
+   MOBILE RESPONSIVE DROPDOWNS
+   ============================================ */
+@media (max-width: 991px) {
+  .navbar .dropdown-menu {
+    position: static !important;
+    float: none !important;
+    width: auto !important;
+    margin-top: 0 !important;
+    background-color: #ffffff !important;
+    border: 0 !important;
+    box-shadow: none !important;
+    padding-left: 20px !important;
+  }
+
+  .navbar .dropdown-menu.show {
+    display: block !important;
+  }
+
+  /* Mobile dropdown items */
+  .navbar .dropdown-item {
+    padding: 8px 16px !important;
+  }
+
+  /* Remove hover effect on mobile */
+  .navbar .dropdown:hover > .dropdown-menu {
+    display: none;
+  }
+
+  /* Only show on click for mobile */
+  .navbar .dropdown.show > .dropdown-menu {
+    display: block !important;
+  }
+}
+
+/* ============================================
+   SPECIFIC MOODLE DROPDOWN FIXES
+   ============================================ */
+/* User menu dropdown */
+.usermenu .dropdown-menu {
+  right: 0 !important;
+  left: auto !important;
+}
+
+/* Language menu dropdown */
+.langmenu .dropdown-menu {
+  min-width: 150px !important;
+}
+
+/* Course menu dropdown */
+.navbar .dropdown-menu.course-menu {
+  min-width: 280px !important;
+  max-height: 400px !important;
+  overflow-y: auto !important;
+}
+
+/* ============================================
+   Z-INDEX HIERARCHY
+   ============================================ */
+.navbar {
+  z-index: 1030 !important;
+}
+
+.navbar .dropdown {
+  z-index: 1031 !important;
+}
+
+.navbar .dropdown-menu {
+  z-index: 1032 !important;
+}
+
+.navbar .dropdown-item {
+  z-index: auto !important;
+}
+
+/* ============================================
+   OVERFLOW FIXES
+   ============================================ */
+.navbar,
+.navbar .container,
+.navbar .container-fluid,
+.navbar-collapse {
+  overflow: visible !important;
+}
+
+/* ============================================
+   JAVASCRIPT FALLBACK CLASSES
+   ============================================ */
+/* If JavaScript is handling dropdowns */
+.navbar .dropdown-menu.active,
+.navbar .dropdown-menu.open,
+.navbar .dropdown.open > .dropdown-menu {
+  display: block !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+
+/* ============================================
+   ENSURE DROPDOWNS WORK WITH EXISTING STYLES
+   ============================================ */
+/* Override any conflicting theme styles */
+.theme-edoo .navbar .dropdown-menu,
+.edoo-theme .navbar .dropdown-menu,
+#page .navbar .dropdown-menu {
+  display: none;
+}
+
+.theme-edoo .navbar .dropdown:hover > .dropdown-menu,
+.edoo-theme .navbar .dropdown:hover > .dropdown-menu,
+#page .navbar .dropdown:hover > .dropdown-menu,
+.theme-edoo .navbar .dropdown.show > .dropdown-menu,
+.edoo-theme .navbar .dropdown.show > .dropdown-menu,
+#page .navbar .dropdown.show > .dropdown-menu {
+  display: block !important;
+}
+
+/* ============================================
+   DEBUG HELPERS (Remove in production)
+   ============================================ */
+/* Temporary: Make dropdowns always visible for testing */
+/*
+.navbar .dropdown-menu {
+  display: block !important;
+  opacity: 0.9 !important;
+  background: yellow !important;
+}
+*/
+
+/* ============================================
+   FINAL OVERRIDE - HIGHEST PRIORITY
+   ============================================ */
+.navbar .nav-item.dropdown:hover .dropdown-menu,
+.navbar .nav-item.dropdown.show .dropdown-menu,
+.navbar-nav li.dropdown:hover .dropdown-menu,
+.navbar-nav li.dropdown.show .dropdown-menu {
+  display: block !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+  pointer-events: auto !important;
+}

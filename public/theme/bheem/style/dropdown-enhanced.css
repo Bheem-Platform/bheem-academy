@@ -1,0 +1,557 @@
+/* ================================================
+   ENHANCED DROPDOWN SYSTEM - Modern Best Practices
+   ================================================ */
+
+/* Import Modern Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap');
+
+/* ================================================
+   DROPDOWN CONTAINER RESET & BASE STYLES
+   ================================================ */
+.navbar .dropdown-menu {
+  /* Initial hidden state */
+  visibility: hidden !important;
+  opacity: 0 !important;
+  display: block !important;
+  pointer-events: none !important;
+
+  /* Smooth transitions for open/close */
+  transition:
+    opacity 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+    visibility 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+    transform 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+
+  /* Initial transform state */
+  transform: translateY(-10px) scale(0.95) !important;
+  transform-origin: top center !important;
+}
+
+/* ================================================
+   DROPDOWN TRIGGER STATES - SMOOTH OPEN/CLOSE
+   ================================================ */
+/* Hover state - smooth opening */
+.navbar .dropdown:hover > .dropdown-menu,
+.navbar .nav-item.dropdown:hover > .dropdown-menu,
+.navbar-nav .dropdown:hover > .dropdown-menu {
+  visibility: visible !important;
+  opacity: 1 !important;
+  pointer-events: auto !important;
+  transform: translateY(0) scale(1) !important;
+  transition-delay: 0.1s !important; /* Slight delay for better UX */
+}
+
+/* Active/Show state */
+.navbar .dropdown.show > .dropdown-menu,
+.navbar .nav-item.dropdown.show > .dropdown-menu,
+.navbar .dropdown-menu.show {
+  visibility: visible !important;
+  opacity: 1 !important;
+  pointer-events: auto !important;
+  transform: translateY(0) scale(1) !important;
+}
+
+/* ================================================
+   DROPDOWN MENU STRUCTURE & DESIGN
+   ================================================ */
+.navbar .dropdown-menu,
+.navbar-nav .dropdown-menu {
+  /* Positioning */
+  position: absolute !important;
+  top: calc(100% + 8px) !important;
+  left: 50% !important;
+  transform-origin: top center !important;
+
+  /* Modern Card Design */
+  background: linear-gradient(180deg,
+    rgba(255, 255, 255, 0.98) 0%,
+    rgba(251, 251, 254, 0.98) 100%) !important;
+  backdrop-filter: blur(20px) saturate(180%) !important;
+  -webkit-backdrop-filter: blur(20px) saturate(180%) !important;
+
+  /* Beautiful Shadows */
+  box-shadow:
+    0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -1px rgba(0, 0, 0, 0.06),
+    0 20px 25px -5px rgba(0, 0, 0, 0.1),
+    0 10px 10px -5px rgba(0, 0, 0, 0.04),
+    inset 0 1px 0 rgba(255, 255, 255, 0.9) !important;
+
+  /* Modern Border */
+  border: 1px solid rgba(0, 0, 0, 0.08) !important;
+  border-radius: 16px !important;
+
+  /* Spacing & Sizing */
+  padding: 8px !important;
+  min-width: 240px !important;
+  max-width: 320px !important;
+  margin: 0 !important;
+
+  /* Ensure visibility */
+  z-index: 1010 !important; /* Fixed: Using proper dropdown z-index (was 99999) */
+
+  /* Overflow handling */
+  overflow: hidden !important;
+  max-height: calc(100vh - 120px) !important;
+}
+
+/* Inner scrollable container */
+.navbar .dropdown-menu-inner {
+  max-height: 400px !important;
+  overflow-y: auto !important;
+  overflow-x: hidden !important;
+  padding-right: 5px !important;
+}
+
+/* Custom Scrollbar */
+.navbar .dropdown-menu::-webkit-scrollbar,
+.navbar .dropdown-menu-inner::-webkit-scrollbar {
+  width: 6px !important;
+}
+
+.navbar .dropdown-menu::-webkit-scrollbar-track,
+.navbar .dropdown-menu-inner::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.05) !important;
+  border-radius: 3px !important;
+}
+
+.navbar .dropdown-menu::-webkit-scrollbar-thumb,
+.navbar .dropdown-menu-inner::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.2) !important;
+  border-radius: 3px !important;
+}
+
+.navbar .dropdown-menu::-webkit-scrollbar-thumb:hover,
+.navbar .dropdown-menu-inner::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 0, 0, 0.3) !important;
+}
+
+/* ================================================
+   DROPDOWN ITEMS - MODERN TYPOGRAPHY & SPACING
+   ================================================ */
+.navbar .dropdown-item,
+.navbar-nav .dropdown-item {
+  /* Modern Typography */
+  font-family: 'Inter', 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif !important;
+  font-size: 14px !important;
+  font-weight: 500 !important;
+  line-height: 1.6 !important;
+  letter-spacing: -0.01em !important;
+
+  /* Colors */
+  color: #1f2937 !important;
+  text-decoration: none !important;
+
+  /* Spacing & Layout */
+  padding: 10px 16px !important;
+  margin: 2px 0 !important;
+  display: flex !important;
+  align-items: center !important;
+  gap: 12px !important;
+
+  /* Background & Border */
+  background: transparent !important;
+  border-radius: 12px !important;
+  border: 2px solid transparent !important;
+
+  /* Smooth Transitions */
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1) !important;
+
+  /* Interaction */
+  cursor: pointer !important;
+  position: relative !important;
+  overflow: hidden !important;
+  white-space: nowrap !important;
+  text-overflow: ellipsis !important;
+}
+
+/* Dropdown item icons */
+.navbar .dropdown-item i,
+.navbar .dropdown-item .icon {
+  font-size: 16px !important;
+  width: 20px !important;
+  text-align: center !important;
+  color: #6b7280 !important;
+  transition: all 0.2s ease !important;
+}
+
+/* Hover state with smooth animation */
+.navbar .dropdown-item:hover,
+.navbar-nav .dropdown-item:hover {
+  color: #7c3aed !important;
+  background: linear-gradient(135deg,
+    rgba(139, 92, 246, 0.08) 0%,
+    rgba(124, 58, 237, 0.08) 100%) !important;
+  border-color: rgba(139, 92, 246, 0.2) !important;
+  padding-left: 20px !important;
+
+  /* Subtle glow effect */
+  box-shadow:
+    inset 0 1px 3px rgba(139, 92, 246, 0.1),
+    inset 0 0 0 1px rgba(139, 92, 246, 0.1) !important;
+}
+
+/* Hover icon color */
+.navbar .dropdown-item:hover i,
+.navbar .dropdown-item:hover .icon {
+  color: #8b5cf6 !important;
+  transform: translateX(2px) !important;
+}
+
+/* Active/Selected state */
+.navbar .dropdown-item.active,
+.navbar .dropdown-item:active {
+  color: #7c3aed !important;
+  background: linear-gradient(135deg,
+    rgba(139, 92, 246, 0.12) 0%,
+    rgba(124, 58, 237, 0.12) 100%) !important;
+  border-color: rgba(139, 92, 246, 0.3) !important;
+  font-weight: 600 !important;
+}
+
+/* Disabled state */
+.navbar .dropdown-item.disabled,
+.navbar .dropdown-item:disabled {
+  opacity: 0.5 !important;
+  cursor: not-allowed !important;
+  pointer-events: none !important;
+}
+
+/* ================================================
+   DROPDOWN SECTIONS & ORGANIZATION
+   ================================================ */
+/* Section Headers */
+.navbar .dropdown-header {
+  font-family: 'Plus Jakarta Sans', sans-serif !important;
+  font-size: 11px !important;
+  font-weight: 700 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.05em !important;
+  color: #9ca3af !important;
+  padding: 8px 16px 4px !important;
+  margin: 8px 0 4px !important;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06) !important;
+}
+
+/* Dividers */
+.navbar .dropdown-divider {
+  margin: 8px 12px !important;
+  border: none !important;
+  height: 1px !important;
+  background: linear-gradient(90deg,
+    transparent 0%,
+    rgba(0, 0, 0, 0.08) 20%,
+    rgba(0, 0, 0, 0.08) 80%,
+    transparent 100%) !important;
+}
+
+/* ================================================
+   DROPDOWN ARROW/CARET STYLING
+   ================================================ */
+.navbar .dropdown-toggle {
+  position: relative !important;
+  padding-right: 24px !important;
+}
+
+.navbar .dropdown-toggle::after {
+  position: absolute !important;
+  right: 8px !important;
+  top: 50% !important;
+  transform: translateY(-50%) !important;
+
+  /* Modern arrow style */
+  content: '' !important;
+  width: 8px !important;
+  height: 8px !important;
+  border-right: 2px solid currentColor !important;
+  border-bottom: 2px solid currentColor !important;
+  transform: translateY(-65%) rotate(45deg) !important;
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+/* Rotate arrow when open */
+.navbar .dropdown.show .dropdown-toggle::after,
+.navbar .dropdown:hover .dropdown-toggle::after {
+  transform: translateY(-35%) rotate(225deg) !important;
+}
+
+/* ================================================
+   CENTER ALIGNMENT FIX
+   ================================================ */
+/* Center-aligned dropdowns */
+.navbar .dropdown-menu.dropdown-menu-center {
+  left: 50% !important;
+  transform: translateX(-50%) !important;
+  transform-origin: top center !important;
+}
+
+/* When visible */
+.navbar .dropdown:hover > .dropdown-menu.dropdown-menu-center {
+  transform: translateX(-50%) translateY(0) scale(1) !important;
+}
+
+/* Right-aligned dropdowns */
+.navbar .dropdown-menu-right,
+.navbar .dropdown-menu-end {
+  left: auto !important;
+  right: 0 !important;
+  transform-origin: top right !important;
+}
+
+/* Left-aligned dropdowns */
+.navbar .dropdown-menu-left,
+.navbar .dropdown-menu-start {
+  left: 0 !important;
+  right: auto !important;
+  transform-origin: top left !important;
+}
+
+/* ================================================
+   NESTED DROPDOWNS (SUBMENUS)
+   ================================================ */
+.navbar .dropdown-submenu {
+  position: relative !important;
+}
+
+.navbar .dropdown-submenu > .dropdown-menu {
+  top: 0 !important;
+  left: 100% !important;
+  margin-left: 8px !important;
+  margin-top: -8px !important;
+}
+
+.navbar .dropdown-submenu:hover > .dropdown-menu {
+  visibility: visible !important;
+  opacity: 1 !important;
+  transform: translateY(0) scale(1) !important;
+}
+
+/* Submenu arrow */
+.navbar .dropdown-submenu > .dropdown-item::after {
+  content: '›' !important;
+  position: absolute !important;
+  right: 16px !important;
+  font-size: 18px !important;
+  line-height: 1 !important;
+  font-weight: 600 !important;
+  color: #9ca3af !important;
+}
+
+/* ================================================
+   SPECIAL DROPDOWN TYPES
+   ================================================ */
+/* User Menu Dropdown */
+.navbar .usermenu .dropdown-menu {
+  min-width: 280px !important;
+  padding: 12px !important;
+}
+
+.navbar .usermenu .dropdown-item {
+  padding: 12px 16px !important;
+  border-radius: 12px !important;
+}
+
+/* Language Selector */
+.navbar .langmenu .dropdown-menu {
+  min-width: 180px !important;
+}
+
+.navbar .langmenu .dropdown-item {
+  padding: 10px 16px !important;
+  display: flex !important;
+  align-items: center !important;
+  gap: 12px !important;
+}
+
+/* Flag icons in language menu */
+.navbar .langmenu .dropdown-item img,
+.navbar .langmenu .dropdown-item .flag {
+  width: 20px !important;
+  height: 14px !important;
+  object-fit: cover !important;
+  border-radius: 2px !important;
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1) !important;
+}
+
+/* Notification Dropdown */
+.navbar .notification-dropdown .dropdown-menu {
+  min-width: 360px !important;
+  max-width: 400px !important;
+}
+
+.navbar .notification-item {
+  padding: 12px 16px !important;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06) !important;
+  transition: all 0.2s ease !important;
+}
+
+.navbar .notification-item:last-child {
+  border-bottom: none !important;
+}
+
+.navbar .notification-item:hover {
+  background: rgba(0, 0, 0, 0.02) !important;
+}
+
+/* ================================================
+   MEGA MENU SUPPORT
+   ================================================ */
+.navbar .dropdown-menu-mega {
+  width: 100% !important;
+  max-width: 800px !important;
+  left: 50% !important;
+  transform: translateX(-50%) !important;
+  padding: 20px !important;
+}
+
+.navbar .dropdown-menu-mega .row {
+  margin: 0 !important;
+}
+
+.navbar .dropdown-menu-mega .col {
+  padding: 0 15px !important;
+}
+
+/* ================================================
+   MOBILE RESPONSIVE
+   ================================================ */
+@media (max-width: 991px) {
+  .navbar .dropdown-menu {
+    position: static !important;
+    float: none !important;
+    width: 100% !important;
+    margin: 0 !important;
+    transform: none !important;
+    box-shadow: none !important;
+    border: none !important;
+    border-radius: 0 !important;
+    background: transparent !important;
+    padding-left: 20px !important;
+  }
+
+  .navbar .dropdown-menu.show {
+    visibility: visible !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+
+  .navbar .dropdown-item {
+    padding: 8px 16px !important;
+    font-size: 14px !important;
+  }
+
+  .navbar .dropdown-toggle::after {
+    position: static !important;
+    margin-left: 8px !important;
+  }
+
+  /* No hover effect on mobile */
+  .navbar .dropdown:hover > .dropdown-menu {
+    visibility: hidden !important;
+    opacity: 0 !important;
+  }
+
+  /* Only show on click */
+  .navbar .dropdown.show > .dropdown-menu {
+    visibility: visible !important;
+    opacity: 1 !important;
+  }
+}
+
+/* ================================================
+   ANIMATION KEYFRAMES
+   ================================================ */
+@keyframes dropdownFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes dropdownFadeOut {
+  from {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(-10px) scale(0.95);
+  }
+}
+
+/* ================================================
+   ACCESSIBILITY ENHANCEMENTS
+   ================================================ */
+.navbar .dropdown-item:focus {
+  outline: 2px solid rgba(139, 92, 246, 0.4) !important;
+  outline-offset: -2px !important;
+  background: rgba(139, 92, 246, 0.05) !important;
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  .navbar .dropdown-menu {
+    border: 2px solid #000 !important;
+  }
+
+  .navbar .dropdown-item {
+    border: 1px solid transparent !important;
+  }
+
+  .navbar .dropdown-item:hover,
+  .navbar .dropdown-item:focus {
+    border-color: #000 !important;
+  }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  .navbar .dropdown-menu,
+  .navbar .dropdown-item,
+  .navbar .dropdown-toggle::after {
+    transition: none !important;
+    animation: none !important;
+  }
+}
+
+/* ================================================
+   PERFORMANCE OPTIMIZATIONS
+   ================================================ */
+.navbar .dropdown-menu {
+  will-change: opacity, transform, visibility !important;
+  contain: layout style !important;
+}
+
+.navbar .dropdown-item {
+  will-change: background-color, padding-left !important;
+}
+
+/* ================================================
+   FINAL OVERRIDES - ENSURE PROPER BEHAVIOR
+   ================================================ */
+/* Ensure dropdowns work properly */
+.navbar .dropdown {
+  position: relative !important;
+}
+
+.navbar .dropdown-menu {
+  position: absolute !important;
+  top: 100% !important;
+}
+
+/* Fix for Bootstrap conflicts */
+.navbar .dropdown-menu.show {
+  display: block !important;
+}
+
+/* Ensure proper layering */
+.navbar {
+  z-index: 1030 !important;
+}
+
+.navbar .dropdown-menu {
+  z-index: 1040 !important;
+}

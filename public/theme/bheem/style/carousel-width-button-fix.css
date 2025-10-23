@@ -1,0 +1,315 @@
+/* ================================================
+   CAROUSEL WIDTH & BUTTON IMPROVEMENTS
+   Proper width implementation + button styling
+   White text + Perfect arrows + Button dimensions
+   ================================================ */
+
+/* ================================================
+   CAROUSEL WIDTH - PROPER IMPLEMENTATION
+   ================================================ */
+
+/* Increase carousel container width properly */
+.banner-area {
+  width: 100% !important;
+  max-width: none !important;
+  margin: 0 !important;
+}
+
+.banner-bg {
+  width: 100% !important;
+  max-width: none !important;
+  margin: 0 !important;
+}
+
+/* Swiper container proper width */
+.swiper.banner-slide {
+  width: 100% !important;
+  max-width: none !important;
+  margin: 0 !important;
+}
+
+/* Individual slides proper width */
+.swiper-slide {
+  width: 100% !important;
+  max-width: none !important;
+}
+
+/* Carousel containers - exclude from global restrictions */
+.banner-area .container,
+.banner-bg .container,
+.swiper.banner-slide .container {
+  max-width: none !important;
+  width: 100% !important;
+  padding: 0 15px !important;
+  margin: 0 !important;
+}
+
+/* ================================================
+   ALL CAROUSEL TEXT - WHITE COLOR
+   ================================================ */
+
+/* Main headlines - white */
+.banner-content h1,
+.banner-content h2,
+.banner-content h3,
+.banner-content h4,
+.banner-content h5,
+.banner-content h6 {
+  color: #ffffff !important;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3) !important;
+}
+
+/* Paragraph text - white */
+.banner-content p {
+  color: #ffffff !important;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2) !important;
+}
+
+/* All other text elements - white */
+.banner-content span,
+.banner-content div,
+.banner-content small,
+.banner-content strong,
+.banner-content em,
+.banner-content a:not(.btn),
+.banner-content li,
+.banner-area .text-gray,
+.banner-content .lato-font {
+  color: #ffffff !important;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2) !important;
+}
+
+/* ================================================
+   BUTTON STYLING - REDUCED WIDTH, INCREASED HEIGHT
+   ================================================ */
+
+/* Carousel buttons - improved dimensions and styling */
+.banner-content .btn,
+.banner-content .btn-primary,
+.banner-content .btn-secondary,
+.banner-content a.btn,
+.banner-content button {
+  border-radius: 26px !important; /* Nice rounded buttons */
+  color: #ffffff !important; /* White text inside button */
+
+  /* Reduced width, increased height */
+  padding: 16px 28px !important; /* Increased height (16px vs default), reduced width (28px vs default) */
+  min-height: 52px !important; /* Ensure consistent height */
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+
+  /* Improved button styling */
+  font-weight: 600 !important;
+  font-size: 15px !important;
+  letter-spacing: 0.5px !important;
+  transition: all 0.3s ease !important;
+}
+
+/* Button hover states */
+.banner-content .btn:hover,
+.banner-content .btn-primary:hover,
+.banner-content .btn-secondary:hover,
+.banner-content a.btn:hover,
+.banner-content button:hover {
+  color: #ffffff !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2) !important;
+}
+
+/* Button focus state */
+.banner-content .btn:focus,
+.banner-content .btn-primary:focus,
+.banner-content .btn-secondary:focus,
+.banner-content a.btn:focus,
+.banner-content button:focus {
+  color: #ffffff !important;
+  outline: none !important;
+}
+
+/* ================================================
+   PERFECT ARROW ICONS DESIGN
+   ================================================ */
+
+/* Navigation arrows container */
+.banner-controller,
+.swiper-navigation {
+  position: absolute !important;
+  top: 50% !important;
+  transform: translateY(-50%) !important;
+  width: 100% !important;
+  display: flex !important;
+  justify-content: space-between !important;
+  padding: 0 30px !important;
+  pointer-events: none !important;
+  z-index: 10 !important;
+}
+
+/* Arrow icons - perfect design */
+.controller-icon,
+.swiper-button-prev,
+.swiper-button-next,
+.carousel-nav-btn {
+  width: 54px !important;
+  height: 54px !important;
+  border-radius: 50% !important;
+  background: rgba(255, 255, 255, 0.9) !important;
+  backdrop-filter: blur(10px) !important;
+  border: 2px solid rgba(255, 255, 255, 0.3) !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  cursor: pointer !important;
+  pointer-events: all !important;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+
+  /* Perfect shadow */
+  box-shadow:
+    0 4px 15px rgba(0, 0, 0, 0.1),
+    0 2px 6px rgba(0, 0, 0, 0.05) !important;
+}
+
+/* Arrow icons hover effect */
+.controller-icon:hover,
+.swiper-button-prev:hover,
+.swiper-button-next:hover,
+.carousel-nav-btn:hover {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+  border-color: #667eea !important;
+  transform: scale(1.1) translateY(-2px) !important;
+  box-shadow:
+    0 8px 25px rgba(102, 126, 234, 0.3),
+    0 4px 12px rgba(118, 75, 162, 0.2) !important;
+}
+
+/* Arrow icon symbols */
+.controller-icon i,
+.swiper-button-prev::after,
+.swiper-button-next::after,
+.carousel-nav-btn i {
+  font-size: 20px !important;
+  color: #667eea !important;
+  font-weight: 700 !important;
+  transition: all 0.3s ease !important;
+}
+
+/* Arrow symbols on hover */
+.controller-icon:hover i,
+.swiper-button-prev:hover::after,
+.swiper-button-next:hover::after,
+.carousel-nav-btn:hover i {
+  color: #ffffff !important;
+  transform: scale(1.1) !important;
+}
+
+/* Custom arrow symbols for better design */
+.swiper-button-prev::after {
+  content: '‹' !important;
+  font-family: 'Arial', sans-serif !important;
+  font-size: 28px !important;
+  font-weight: bold !important;
+}
+
+.swiper-button-next::after {
+  content: '›' !important;
+  font-family: 'Arial', sans-serif !important;
+  font-size: 28px !important;
+  font-weight: bold !important;
+}
+
+/* Position arrows properly */
+.swiper-button-prev {
+  left: 30px !important;
+  right: auto !important;
+}
+
+.swiper-button-next {
+  right: 30px !important;
+  left: auto !important;
+}
+
+/* ================================================
+   RESPONSIVE WIDTH BEHAVIOR
+   ================================================ */
+
+/* Large screens */
+@media (min-width: 1200px) {
+  .banner-area,
+  .banner-bg,
+  .swiper.banner-slide {
+    width: 100% !important;
+    max-width: none !important;
+  }
+
+  .banner-area .container,
+  .banner-bg .container {
+    max-width: none !important;
+    width: 100% !important;
+  }
+}
+
+/* Medium screens */
+@media (max-width: 1199px) {
+  .banner-area,
+  .banner-bg,
+  .swiper.banner-slide {
+    width: 100% !important;
+    max-width: none !important;
+  }
+}
+
+/* Tablet screens */
+@media (max-width: 768px) {
+  .banner-area,
+  .banner-bg,
+  .swiper.banner-slide {
+    width: 100% !important;
+    max-width: none !important;
+  }
+
+  /* Ensure buttons maintain border radius on mobile */
+  .banner-content .btn,
+  .banner-content .btn-primary {
+    border-radius: 20px !important;
+  }
+}
+
+/* Mobile screens */
+@media (max-width: 480px) {
+  .banner-content .btn,
+  .banner-content .btn-primary {
+    border-radius: 18px !important;
+  }
+}
+
+/* ================================================
+   HIGH SPECIFICITY OVERRIDES
+   ================================================ */
+
+/* Ensure carousel width takes precedence over global container rules */
+html body .banner-area {
+  width: 100% !important;
+  max-width: none !important;
+}
+
+html body .banner-bg {
+  width: 100% !important;
+  max-width: none !important;
+}
+
+html body .swiper.banner-slide {
+  width: 100% !important;
+  max-width: none !important;
+}
+
+/* Ensure button styles take precedence */
+html body .banner-content .btn,
+html body .banner-content .btn-primary {
+  border-radius: 25px !important;
+  color: #ffffff !important;
+}
+
+html body .banner-content .btn:hover,
+html body .banner-content .btn-primary:hover {
+  color: #ffffff !important;
+}

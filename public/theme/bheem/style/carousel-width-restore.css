@@ -1,0 +1,194 @@
+/* ================================================
+   CAROUSEL WIDTH RESTORATION FIX
+   Restores original carousel width by excluding it from
+   global container restrictions
+   ================================================ */
+
+/* ================================================
+   BANNER/CAROUSEL CONTAINER EXEMPTION
+   Restore original full-width behavior for homepage carousel
+   ================================================ */
+
+/* Exclude banner containers from global container width restrictions */
+.banner-area .container,
+.banner-bg .container,
+.swiper.banner-slide .container,
+.banner-content .container {
+  max-width: none !important;
+  width: 100% !important;
+  padding: 0 15px !important;
+  margin: 0 !important;
+}
+
+/* Ensure banner area itself maintains full width */
+.banner-area {
+  width: 100% !important;
+  max-width: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+/* Banner background should be full width */
+.banner-bg {
+  width: 100% !important;
+  max-width: none !important;
+  margin: 0 !important;
+}
+
+/* Swiper container full width */
+.swiper.banner-slide {
+  width: 100% !important;
+  max-width: none !important;
+  margin: 0 !important;
+}
+
+/* Individual slides should maintain full width */
+.swiper-slide {
+  width: 100% !important;
+  max-width: none !important;
+}
+
+/* Banner content container - restore original behavior */
+.banner-content {
+  width: 100% !important;
+  max-width: 800px !important; /* Keep content readable but allow full banner width */
+  margin: 0 !important;
+  padding: 0 20px !important;
+}
+
+/* ================================================
+   HOMEPAGE-SPECIFIC CONTAINER OVERRIDES
+   ================================================ */
+
+/* Only apply container restrictions to non-banner elements on homepage */
+body.path-site .container:not(.banner-area .container):not(.banner-bg .container):not(.banner-slide .container) {
+  max-width: 1320px !important;
+  margin: 0 auto !important;
+  padding-left: 24px !important;
+  padding-right: 24px !important;
+}
+
+/* Ensure homepage banner containers are never restricted */
+body.path-site .banner-area,
+body.path-site .banner-area .container,
+body.path-site .banner-bg,
+body.path-site .banner-bg .container,
+body.path-site .swiper.banner-slide,
+body.path-site .swiper.banner-slide .container {
+  max-width: none !important;
+  width: 100% !important;
+}
+
+/* ================================================
+   RESPONSIVE CAROUSEL BEHAVIOR
+   ================================================ */
+
+/* Maintain full width on all screen sizes for carousel */
+@media (max-width: 1200px) {
+  .banner-area,
+  .banner-bg,
+  .swiper.banner-slide {
+    width: 100% !important;
+    max-width: none !important;
+    margin: 0 !important;
+  }
+
+  .banner-area .container,
+  .banner-bg .container,
+  .swiper.banner-slide .container {
+    max-width: none !important;
+    width: 100% !important;
+    padding: 0 15px !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .banner-area,
+  .banner-bg,
+  .swiper.banner-slide {
+    width: 100% !important;
+    max-width: none !important;
+  }
+
+  .banner-content {
+    padding: 0 20px !important;
+    max-width: none !important;
+    width: 100% !important;
+  }
+}
+
+/* ================================================
+   ADDITIONAL CAROUSEL ELEMENTS
+   ================================================ */
+
+/* Ensure any carousel-related containers maintain full width */
+.carousel-container,
+.slider-container,
+.hero-banner,
+.hero-section {
+  width: 100% !important;
+  max-width: none !important;
+  margin: 0 !important;
+}
+
+.carousel-container .container,
+.slider-container .container,
+.hero-banner .container,
+.hero-section .container {
+  max-width: none !important;
+  width: 100% !important;
+  padding: 0 15px !important;
+}
+
+/* ================================================
+   CAROUSEL NAVIGATION AND CONTROLS
+   ================================================ */
+
+/* Ensure navigation controls work with full-width carousel */
+.banner-controller {
+  width: 100% !important;
+  max-width: none !important;
+  padding: 0 40px !important;
+}
+
+/* Swiper navigation buttons */
+.swiper-button-prev,
+.swiper-button-next {
+  position: absolute !important;
+  top: 50% !important;
+  z-index: 20 !important;
+}
+
+.swiper-button-prev {
+  left: 20px !important;
+}
+
+.swiper-button-next {
+  right: 20px !important;
+}
+
+/* ================================================
+   PERFORMANCE AND SPECIFICITY
+   ================================================ */
+
+/* High specificity to ensure these rules override global container rules */
+html body .banner-area,
+html body .banner-area .container,
+html body .banner-bg,
+html body .banner-bg .container,
+html body .swiper.banner-slide,
+html body .swiper.banner-slide .container {
+  max-width: none !important;
+  width: 100% !important;
+}
+
+/* Ensure carousel wrapper maintains full viewport width */
+.carousel-wrapper,
+.banner-wrapper,
+.hero-wrapper {
+  width: 100% !important;
+  max-width: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  overflow: hidden !important;
+}

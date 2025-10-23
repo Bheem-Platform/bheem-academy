@@ -1,0 +1,551 @@
+/* Ultra-Modern Attractive Navbar Background - Latest 2024 Design Trends */
+/* Keeping Original Content - Only Changing Background Aesthetics */
+
+/* ============================================
+   MAIN NAVBAR - STUNNING BACKGROUND DESIGN
+   ============================================ */
+.navbar,
+#page-header .navbar,
+header.navbar,
+.navbar-light,
+.navbar-dark,
+.fixed-top,
+nav.navbar {
+  /* Mesh Gradient Background - 2024 Trend */
+  background:
+    linear-gradient(135deg,
+      rgba(168, 85, 247, 0.95) 0%,
+      rgba(59, 130, 246, 0.92) 25%,
+      rgba(34, 197, 94, 0.90) 50%,
+      rgba(251, 146, 60, 0.92) 75%,
+      rgba(239, 68, 68, 0.95) 100%) !important;
+  background-size: 400% 400% !important;
+  animation: meshGradientFlow 20s ease infinite !important;
+
+  /* Advanced Glass Morphism */
+  backdrop-filter: blur(16px) saturate(200%) !important;
+  -webkit-backdrop-filter: blur(16px) saturate(200%) !important;
+
+  /* Multi-layer Shadow for Depth */
+  box-shadow:
+    0 10px 40px rgba(168, 85, 247, 0.3),
+    0 2px 10px rgba(0, 0, 0, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2),
+    inset 0 -1px 0 rgba(0, 0, 0, 0.1) !important;
+
+  /* Modern Border with Gradient */
+  border-bottom: 2px solid transparent !important;
+  border-image: linear-gradient(90deg,
+    #a855f7 0%,
+    #3b82f6 25%,
+    #22c55e 50%,
+    #fb923c 75%,
+    #ef4444 100%) !important;
+  border-image-slice: 1 !important;
+
+  padding: 20px 0 !important;
+  position: relative !important;
+  z-index: 1000 !important; /* Fixed: Using proper navbar z-index (was 9999) */
+  overflow: visible !important;
+  transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55) !important;
+}
+
+/* Animated Mesh Gradient */
+@keyframes meshGradientFlow {
+  0% {
+    background-position: 0% 50%;
+    filter: hue-rotate(0deg);
+  }
+  25% {
+    background-position: 50% 25%;
+    filter: hue-rotate(20deg);
+  }
+  50% {
+    background-position: 100% 50%;
+    filter: hue-rotate(40deg);
+  }
+  75% {
+    background-position: 50% 75%;
+    filter: hue-rotate(20deg);
+  }
+  100% {
+    background-position: 0% 50%;
+    filter: hue-rotate(0deg);
+  }
+}
+
+/* Floating Orbs Background Effect */
+.navbar::before,
+.navbar::after {
+  content: '';
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(40px);
+  opacity: 0.6;
+  animation: floatOrb 15s infinite ease-in-out;
+  pointer-events: none;
+}
+
+.navbar::before {
+  width: 300px;
+  height: 300px;
+  background: radial-gradient(circle, rgba(168, 85, 247, 0.8), transparent);
+  top: -100px;
+  left: -100px;
+}
+
+.navbar::after {
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(59, 130, 246, 0.8), transparent);
+  bottom: -150px;
+  right: -150px;
+  animation-delay: 7.5s;
+}
+
+@keyframes floatOrb {
+  0%, 100% {
+    transform: translate(0, 0) scale(1);
+  }
+  33% {
+    transform: translate(30px, -30px) scale(1.1);
+  }
+  66% {
+    transform: translate(-20px, 20px) scale(0.9);
+  }
+}
+
+/* Holographic Shimmer Overlay */
+.navbar > .container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.1) 25%,
+    rgba(255, 255, 255, 0.3) 50%,
+    rgba(255, 255, 255, 0.1) 75%,
+    transparent 100%);
+  animation: holographicShimmer 4s infinite;
+  pointer-events: none;
+  z-index: 1;
+}
+
+@keyframes holographicShimmer {
+  0% {
+    left: -100%;
+  }
+  100% {
+    left: 100%;
+  }
+}
+
+/* Noise Texture Overlay for Modern Look */
+.navbar > .container {
+  position: relative;
+  z-index: 2;
+}
+
+.navbar > .container::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.03;
+  pointer-events: none;
+  background-image:
+    repeating-linear-gradient(45deg, transparent, transparent 35px, rgba(255,255,255,.1) 35px, rgba(255,255,255,.1) 70px);
+}
+
+/* ============================================
+   DROPDOWN MENUS - ENHANCED VISIBILITY
+   ============================================ */
+.navbar .dropdown-menu,
+.navbar-nav .dropdown-menu {
+  /* High Visibility Background */
+  background: linear-gradient(135deg,
+    rgba(255, 255, 255, 0.98) 0%,
+    rgba(249, 250, 251, 0.98) 100%) !important;
+
+  /* Strong Glass Effect */
+  backdrop-filter: blur(20px) saturate(180%) !important;
+  -webkit-backdrop-filter: blur(20px) saturate(180%) !important;
+
+  /* Prominent Shadow for Better Visibility */
+  box-shadow:
+    0 20px 60px rgba(0, 0, 0, 0.3),
+    0 10px 20px rgba(0, 0, 0, 0.2),
+    0 0 0 1px rgba(255, 255, 255, 0.5) inset !important;
+
+  /* Clear Borders */
+  border: 2px solid rgba(168, 85, 247, 0.2) !important;
+  border-radius: 16px !important;
+
+  /* Proper Spacing */
+  margin-top: 10px !important;
+  padding: 12px !important;
+
+  /* Ensure Visibility */
+  opacity: 1 !important;
+  visibility: visible !important;
+  display: block !important;
+  z-index: 1010 !important; /* Fixed: Using proper dropdown z-index (was 99999) */
+
+  /* Smooth Animation */
+  animation: dropdownSlideIn 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55) !important;
+  transform-origin: top center !important;
+
+  /* Minimum Size */
+  min-width: 250px !important;
+  max-height: 80vh !important;
+  overflow-y: auto !important;
+}
+
+/* Dropdown Animation */
+@keyframes dropdownSlideIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px) scaleY(0.9);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scaleY(1);
+  }
+}
+
+/* Initially Hide Dropdowns */
+.navbar .dropdown-menu {
+  display: none !important;
+}
+
+/* Show on Hover */
+.navbar .dropdown:hover .dropdown-menu,
+.navbar .nav-item:hover .dropdown-menu,
+.navbar .dropdown.show .dropdown-menu {
+  display: block !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+
+/* Dropdown Items - High Contrast */
+.navbar .dropdown-item {
+  color: #1f2937 !important;
+  background: transparent !important;
+  padding: 12px 20px !important;
+  border-radius: 12px !important;
+  font-size: 15px !important;
+  font-weight: 500 !important;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  position: relative !important;
+  margin: 4px 0 !important;
+  overflow: hidden !important;
+}
+
+/* Dropdown Item Hover Effect */
+.navbar .dropdown-item::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg,
+    transparent,
+    rgba(168, 85, 247, 0.1),
+    rgba(59, 130, 246, 0.1),
+    transparent);
+  transition: left 0.5s ease;
+}
+
+.navbar .dropdown-item:hover {
+  color: #7c3aed !important;
+  background: linear-gradient(135deg,
+    rgba(168, 85, 247, 0.1) 0%,
+    rgba(59, 130, 246, 0.1) 100%) !important;
+  transform: translateX(5px) !important;
+  padding-left: 25px !important;
+}
+
+.navbar .dropdown-item:hover::before {
+  left: 100%;
+}
+
+/* Dropdown Divider */
+.navbar .dropdown-divider {
+  margin: 8px 0 !important;
+  border-color: rgba(168, 85, 247, 0.2) !important;
+}
+
+/* ============================================
+   NAVIGATION LINKS - VISIBLE ON GRADIENT BG
+   ============================================ */
+.navbar-nav .nav-link,
+.navbar .nav-item a {
+  color: #ffffff !important;
+  font-weight: 600 !important;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2) !important;
+  padding: 12px 20px !important;
+  border-radius: 12px !important;
+  background: rgba(255, 255, 255, 0.1) !important;
+  backdrop-filter: blur(10px) !important;
+  border: 1px solid rgba(255, 255, 255, 0.2) !important;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  margin: 0 5px !important;
+  position: relative !important;
+  overflow: hidden !important;
+}
+
+/* Nav Link Hover State */
+.navbar-nav .nav-link:hover {
+  color: #ffffff !important;
+  background: rgba(255, 255, 255, 0.2) !important;
+  border-color: rgba(255, 255, 255, 0.4) !important;
+  transform: translateY(-2px) !important;
+  box-shadow:
+    0 10px 20px rgba(0, 0, 0, 0.2),
+    0 4px 8px rgba(0, 0, 0, 0.1) !important;
+}
+
+/* Active Link State */
+.navbar-nav .nav-link.active,
+.navbar-nav .nav-item.active .nav-link {
+  color: #1f2937 !important;
+  background: rgba(255, 255, 255, 0.9) !important;
+  box-shadow:
+    0 4px 12px rgba(255, 255, 255, 0.3),
+    inset 0 1px 0 rgba(255, 255, 255, 0.5) !important;
+  font-weight: 700 !important;
+}
+
+/* Dropdown Toggle Arrow */
+.navbar .dropdown-toggle::after {
+  border-color: #ffffff !important;
+  margin-left: 8px !important;
+  transition: transform 0.3s ease !important;
+}
+
+.navbar .dropdown.show .dropdown-toggle::after {
+  transform: rotate(180deg) !important;
+}
+
+/* ============================================
+   STICKY/SCROLLED NAVBAR STATE
+   ============================================ */
+.navbar.sticky,
+.navbar.scrolled {
+  background:
+    linear-gradient(135deg,
+      rgba(168, 85, 247, 0.98) 0%,
+      rgba(59, 130, 246, 0.95) 50%,
+      rgba(34, 197, 94, 0.93) 100%) !important;
+  box-shadow:
+    0 15px 50px rgba(0, 0, 0, 0.3),
+    0 5px 15px rgba(0, 0, 0, 0.2) !important;
+  padding: 15px 0 !important;
+}
+
+/* ============================================
+   LOGO/BRAND STYLING
+   ============================================ */
+.navbar-brand,
+.navbar .logo {
+  color: #ffffff !important;
+  font-weight: 800 !important;
+  font-size: 26px !important;
+  text-shadow:
+    0 2px 4px rgba(0, 0, 0, 0.2),
+    0 4px 8px rgba(0, 0, 0, 0.1) !important;
+  transition: all 0.3s ease !important;
+}
+
+.navbar-brand:hover {
+  transform: scale(1.05) translateY(-1px) !important;
+  text-shadow:
+    0 4px 8px rgba(0, 0, 0, 0.3),
+    0 8px 16px rgba(0, 0, 0, 0.2) !important;
+}
+
+.navbar-brand img {
+  filter: brightness(1.1) drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3)) !important;
+}
+
+/* ============================================
+   SEARCH BOX STYLING
+   ============================================ */
+.navbar .form-control,
+.navbar input[type="search"] {
+  background: rgba(255, 255, 255, 0.9) !important;
+  border: 2px solid rgba(255, 255, 255, 0.3) !important;
+  color: #1f2937 !important;
+  border-radius: 25px !important;
+  padding: 10px 20px !important;
+  font-weight: 500 !important;
+}
+
+.navbar .form-control::placeholder {
+  color: rgba(31, 41, 55, 0.6) !important;
+}
+
+.navbar .form-control:focus {
+  background: rgba(255, 255, 255, 0.95) !important;
+  border-color: rgba(255, 255, 255, 0.5) !important;
+  box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.2) !important;
+}
+
+/* ============================================
+   BUTTONS STYLING
+   ============================================ */
+.navbar .btn,
+.navbar button:not(.navbar-toggler) {
+  background: rgba(255, 255, 255, 0.2) !important;
+  border: 2px solid rgba(255, 255, 255, 0.3) !important;
+  color: #ffffff !important;
+  font-weight: 600 !important;
+  border-radius: 25px !important;
+  padding: 10px 25px !important;
+  transition: all 0.3s ease !important;
+}
+
+.navbar .btn:hover {
+  background: rgba(255, 255, 255, 0.3) !important;
+  border-color: rgba(255, 255, 255, 0.5) !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 5px 15px rgba(255, 255, 255, 0.3) !important;
+}
+
+/* ============================================
+   USER MENU STYLING
+   ============================================ */
+.usermenu .dropdown-toggle {
+  background: rgba(255, 255, 255, 0.2) !important;
+  border: 2px solid rgba(255, 255, 255, 0.3) !important;
+  border-radius: 25px !important;
+  padding: 8px 16px !important;
+  color: #ffffff !important;
+}
+
+.usermenu .dropdown-toggle:hover {
+  background: rgba(255, 255, 255, 0.3) !important;
+  border-color: rgba(255, 255, 255, 0.4) !important;
+}
+
+/* ============================================
+   MOBILE MENU TOGGLE
+   ============================================ */
+.navbar-toggler {
+  background: rgba(255, 255, 255, 0.2) !important;
+  border: 2px solid rgba(255, 255, 255, 0.3) !important;
+  padding: 8px 12px !important;
+  border-radius: 8px !important;
+}
+
+.navbar-toggler span,
+.navbar-toggler-icon::before,
+.navbar-toggler-icon::after {
+  background-color: #ffffff !important;
+  height: 3px !important;
+  border-radius: 3px !important;
+}
+
+/* ============================================
+   NOTIFICATION BADGES
+   ============================================ */
+.navbar .badge,
+.count-container {
+  background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%) !important;
+  color: #ffffff !important;
+  border: 2px solid rgba(255, 255, 255, 0.5) !important;
+  box-shadow: 0 2px 8px rgba(239, 68, 68, 0.5) !important;
+  font-weight: 700 !important;
+}
+
+/* ============================================
+   BREADCRUMBS
+   ============================================ */
+.navbar-area .breadcrumb {
+  background: transparent !important;
+}
+
+.navbar-area .breadcrumb-item {
+  color: rgba(255, 255, 255, 0.8) !important;
+}
+
+.navbar-area .breadcrumb-item.active {
+  color: #ffffff !important;
+  font-weight: 600 !important;
+}
+
+/* ============================================
+   PERFORMANCE OPTIMIZATIONS
+   ============================================ */
+.navbar,
+.navbar * {
+  -webkit-font-smoothing: antialiased !important;
+  -moz-osx-font-smoothing: grayscale !important;
+}
+
+/* Hardware Acceleration */
+.navbar,
+.dropdown-menu {
+  transform: translateZ(0) !important;
+  will-change: transform, opacity !important;
+}
+
+/* ============================================
+   RESPONSIVE ADJUSTMENTS
+   ============================================ */
+@media (max-width: 991px) {
+  .navbar {
+    padding: 15px 0 !important;
+  }
+
+  .navbar-collapse {
+    background: rgba(255, 255, 255, 0.98) !important;
+    backdrop-filter: blur(20px) !important;
+    border-radius: 16px !important;
+    padding: 20px !important;
+    margin-top: 15px !important;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2) !important;
+  }
+
+  .navbar-nav .nav-link {
+    color: #1f2937 !important;
+    background: transparent !important;
+    border: none !important;
+    text-shadow: none !important;
+  }
+
+  .navbar-nav .nav-link:hover {
+    background: rgba(168, 85, 247, 0.1) !important;
+  }
+
+  .navbar .dropdown-menu {
+    position: static !important;
+    float: none !important;
+    width: 100% !important;
+    margin-top: 0 !important;
+    background: rgba(249, 250, 251, 0.98) !important;
+    box-shadow: none !important;
+    border: 1px solid rgba(0, 0, 0, 0.05) !important;
+  }
+}
+
+/* ============================================
+   Z-INDEX HIERARCHY FIX
+   ============================================ */
+.navbar {
+  z-index: 1030 !important;
+}
+
+.navbar .dropdown-menu {
+  z-index: 1031 !important;
+}
+
+.navbar .dropdown-item {
+  z-index: 1032 !important;
+}

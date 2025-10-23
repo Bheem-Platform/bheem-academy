@@ -1,0 +1,414 @@
+/* ================================================
+   CONTENT DIV WIDTH ENHANCEMENT
+   Increase width of .content div for common desktop screen sizes
+   ================================================ */
+
+/* ================================================
+   DESKTOP SCREEN SIZES - CONTENT WIDTH OPTIMIZATION
+   ================================================ */
+
+/* Common Desktop Resolutions:
+   - 1920x1080 (Full HD)
+   - 1680x1050 (WSXGA+)
+   - 1600x900 (HD+)
+   - 1440x900 (WXGA+)
+   - 1366x768 (WXGA)
+   - 1280x1024 (SXGA)
+*/
+
+/* Enhanced width for content divs on desktop screens */
+@media screen and (min-width: 1024px) {
+  /* Target the main content div */
+  .content {
+    width: 100% !important;
+    max-width: none !important;
+    margin: 0 auto !important;
+    padding: 0 20px !important;
+  }
+
+  /* Course category page main container */
+  #page-content .container,
+  #page-course-index-category .container {
+    max-width: 1400px !important;
+    width: 95% !important;
+  }
+
+  /* Main content region */
+  #region-main {
+    width: 100% !important;
+    max-width: none !important;
+  }
+
+  /* Course listing container */
+  .courses.row.courses_container {
+    width: 100% !important;
+    max-width: none !important;
+    margin: 0 -15px !important;
+  }
+}
+
+/* Large Desktop Screens (1440px and above) */
+@media screen and (min-width: 1440px) {
+  .content {
+    padding: 0 30px !important;
+  }
+
+  #page-content .container,
+  #page-course-index-category .container {
+    max-width: 1600px !important;
+    width: 90% !important;
+  }
+}
+
+/* Extra Large Desktop Screens (1680px and above) */
+@media screen and (min-width: 1680px) {
+  .content {
+    padding: 0 40px !important;
+  }
+
+  #page-content .container,
+  #page-course-index-category .container {
+    max-width: 1800px !important;
+    width: 85% !important;
+  }
+}
+
+/* Ultra Wide Screens (1920px and above) */
+@media screen and (min-width: 1920px) {
+  .content {
+    padding: 0 50px !important;
+  }
+
+  #page-content .container,
+  #page-course-index-category .container {
+    max-width: 2000px !important;
+    width: 80% !important;
+  }
+}
+
+/* ================================================
+   SPECIFIC CONTENT CONTAINERS
+   ================================================ */
+
+/* Course card content areas */
+.coursebox .content,
+.single-onlin-class-three .content {
+  width: 100% !important;
+  max-width: none !important;
+}
+
+/* Category content areas */
+.category .content {
+  width: 100% !important;
+  max-width: none !important;
+  padding: 20px !important;
+}
+
+/* ================================================
+   COURSE CONTAINER DIV BLOCKS - ENHANCED WIDTH
+   ================================================ */
+
+/* Individual course card containers */
+@media screen and (min-width: 1024px) {
+  /* Course card columns - make them wider */
+  .courses.row.courses_container .col-lg-4 {
+    flex: 0 0 30% !important;
+    max-width: 30% !important;
+    width: 30% !important;
+  }
+
+  .courses.row.courses_container .col-md-6 {
+    flex: 0 0 45% !important;
+    max-width: 45% !important;
+    width: 45% !important;
+  }
+
+  /* Main course card container */
+  .single-onlin-class-three {
+    width: 100% !important;
+    max-width: none !important;
+    margin-bottom: 20px !important;
+    padding: 20px !important;
+  }
+
+  /* Course listing grid container */
+  .courses.row.courses_container {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    gap: 20px !important;
+    justify-content: flex-start !important;
+  }
+
+  /* Individual course card wrapper */
+  .courses.row.courses_container > div {
+    flex: 0 0 calc(30% - 14px) !important;
+    max-width: calc(30% - 14px) !important;
+    width: calc(30% - 14px) !important;
+  }
+}
+
+/* Large Desktop - 2 columns for better width utilization */
+@media screen and (min-width: 1440px) {
+  .courses.row.courses_container .col-lg-4,
+  .courses.row.courses_container .col-md-6 {
+    flex: 0 0 48% !important;
+    max-width: 48% !important;
+    width: 48% !important;
+  }
+
+  .courses.row.courses_container > div {
+    flex: 0 0 calc(48% - 10px) !important;
+    max-width: calc(48% - 10px) !important;
+    width: calc(48% - 10px) !important;
+  }
+
+  .single-onlin-class-three {
+    padding: 25px !important;
+    min-height: 400px !important;
+  }
+}
+
+/* Extra Large Desktop - Single column for maximum width */
+@media screen and (min-width: 1680px) {
+  .courses.row.courses_container .col-lg-4,
+  .courses.row.courses_container .col-md-6 {
+    flex: 0 0 100% !important;
+    max-width: 100% !important;
+    width: 100% !important;
+  }
+
+  .courses.row.courses_container > div {
+    flex: 0 0 100% !important;
+    max-width: 100% !important;
+    width: 100% !important;
+  }
+
+  .single-onlin-class-three {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: flex-start !important;
+    padding: 30px !important;
+    min-height: 300px !important;
+  }
+
+  /* Image takes fixed width on the left */
+  .single-onlin-class-three > a {
+    flex: 0 0 300px !important;
+    margin-right: 30px !important;
+    margin-bottom: 0 !important;
+  }
+
+  /* Content takes remaining space */
+  .single-onlin-class-three .course-content-wrapper {
+    flex: 1 !important;
+    display: flex !important;
+    flex-direction: column !important;
+  }
+}
+
+/* Ultra Wide - Optimized horizontal layout */
+@media screen and (min-width: 1920px) {
+  .single-onlin-class-three {
+    padding: 35px !important;
+  }
+
+  .single-onlin-class-three > a {
+    flex: 0 0 350px !important;
+    margin-right: 40px !important;
+  }
+}
+
+/* ================================================
+   PAGE LAYOUT ADJUSTMENTS
+   ================================================ */
+
+/* Ensure proper spacing for wider content */
+@media screen and (min-width: 1024px) {
+  /* Main page wrapper */
+  #page {
+    width: 100% !important;
+    max-width: none !important;
+  }
+
+  /* Bottom region main box */
+  .bottom-region-main-box {
+    width: 100% !important;
+    max-width: none !important;
+    padding: 0 !important;
+  }
+
+  /* Region main box */
+  #region-main-box {
+    width: 100% !important;
+    max-width: none !important;
+  }
+
+  /* Grid row adjustments */
+  #region-main-box .row {
+    margin: 0 -15px !important;
+    width: calc(100% + 30px) !important;
+  }
+
+  /* Column adjustments */
+  #region-main-box .col-lg-8,
+  #region-main-box .col-lg-12 {
+    padding: 0 15px !important;
+  }
+}
+
+/* ================================================
+   COURSE CARD CONTENT OPTIMIZATION
+   ================================================ */
+
+/* Ensure course card images scale properly */
+@media screen and (min-width: 1024px) {
+  .single-onlin-class-three .img-whp {
+    width: 100% !important;
+    height: 240px !important;
+    object-fit: cover !important;
+  }
+
+  /* Course title and content spacing */
+  .single-onlin-class-three h4.fs-4 {
+    font-size: clamp(18px, 2vw, 24px) !important;
+    line-height: 1.3 !important;
+    margin-bottom: 15px !important;
+  }
+
+  /* Course meta information */
+  .single-onlin-class-three .d-flex {
+    margin-bottom: 12px !important;
+  }
+
+  /* Price and date badges */
+  .single-onlin-class-three .count {
+    font-size: 13px !important;
+    padding: 8px 14px !important;
+    border-radius: 15px !important;
+  }
+}
+
+/* Large desktop enhancements */
+@media screen and (min-width: 1440px) {
+  .single-onlin-class-three .img-whp {
+    height: 280px !important;
+  }
+
+  .single-onlin-class-three h4.fs-4 {
+    font-size: clamp(20px, 2.5vw, 26px) !important;
+    margin-bottom: 18px !important;
+  }
+}
+
+/* Extra large desktop - horizontal layout adjustments */
+@media screen and (min-width: 1680px) {
+  .single-onlin-class-three .img-whp {
+    height: 250px !important;
+    width: 100% !important;
+  }
+
+  /* Wrap content in a flex container for horizontal layout */
+  .single-onlin-class-three h4.fs-4,
+  .single-onlin-class-three .d-flex {
+    margin-left: 0 !important;
+    padding-left: 0 !important;
+  }
+}
+
+/* ================================================
+   ENHANCED SPACING AND ALIGNMENT
+   ================================================ */
+
+/* Better spacing between course cards */
+@media screen and (min-width: 1024px) {
+  .courses.row.courses_container {
+    margin-left: -10px !important;
+    margin-right: -10px !important;
+  }
+
+  .courses.row.courses_container > div {
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .courses.row.courses_container {
+    margin-left: -15px !important;
+    margin-right: -15px !important;
+  }
+
+  .courses.row.courses_container > div {
+    padding-left: 15px !important;
+    padding-right: 15px !important;
+  }
+}
+
+/* ================================================
+   RESPONSIVE CONSIDERATIONS
+   ================================================ */
+
+/* Tablet adjustments (768px - 1023px) */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .content {
+    width: 100% !important;
+    padding: 0 15px !important;
+  }
+
+  #page-content .container,
+  #page-course-index-category .container {
+    max-width: 100% !important;
+    width: 95% !important;
+  }
+}
+
+/* Mobile considerations (maintain existing behavior) */
+@media screen and (max-width: 767px) {
+  .content {
+    width: 100% !important;
+    padding: 0 10px !important;
+  }
+
+  #page-content .container,
+  #page-course-index-category .container {
+    max-width: 100% !important;
+    width: 100% !important;
+    padding: 0 15px !important;
+  }
+}
+
+/* ================================================
+   OVERFLOW AND SCROLLING ADJUSTMENTS
+   ================================================ */
+
+/* Prevent horizontal overflow */
+.content {
+  overflow-x: hidden !important;
+  box-sizing: border-box !important;
+}
+
+/* Ensure content fits within viewport */
+body {
+  overflow-x: hidden !important;
+}
+
+#wrapper {
+  overflow-x: hidden !important;
+}
+
+/* ================================================
+   PRINT STYLES - MAINTAIN READABILITY
+   ================================================ */
+@media print {
+  .content {
+    width: 100% !important;
+    max-width: none !important;
+    padding: 0 !important;
+  }
+
+  #page-content .container,
+  #page-course-index-category .container {
+    max-width: none !important;
+    width: 100% !important;
+  }
+}

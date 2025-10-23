@@ -1,0 +1,489 @@
+/* ================================================
+   COURSE CATEGORY PAGE - BEAUTIFUL STRUCTURE 2025
+   Professional, efficient, and standard layout
+   Cards, Images, Search Bar, Dropdown, Icons
+   ================================================ */
+
+/* Import Modern Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap');
+
+/* ================================================
+   PAGE FOUNDATION - Clean Base
+   ================================================ */
+#page-course-index-category,
+.path-course-index {
+  background: #f8fafc !important;
+  min-height: 100vh !important;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif !important;
+}
+
+/* ================================================
+   MAIN CONTAINER - Perfect Width Management
+   ================================================ */
+#page-course-index-category .container,
+#page-course-index-category .container-fluid {
+  max-width: 1320px !important;
+  margin: 0 auto !important;
+  padding: 0 24px !important;
+}
+
+/* ================================================
+   PAGE HEADER - Clean Title Section
+   ================================================ */
+.page-header,
+#page-course-index-category .page-header {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+  padding: 48px 0 32px 0 !important;
+  margin-bottom: 32px !important;
+  border-radius: 0 0 24px 24px !important;
+  position: relative !important;
+  overflow: hidden !important;
+}
+
+.page-header::before {
+  content: '' !important;
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  bottom: 0 !important;
+  background: url('data:image/svg+xml,<svg width="40" height="40" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg"><g fill="white" fill-opacity="0.03"><circle cx="20" cy="20" r="3"/></g></svg>') !important;
+  opacity: 1 !important;
+}
+
+.page-header h1,
+.page-header-headings h1 {
+  font-family: 'Plus Jakarta Sans', sans-serif !important;
+  font-size: clamp(28px, 4vw, 42px) !important;
+  font-weight: 700 !important;
+  color: #ffffff !important;
+  text-align: center !important;
+  margin-bottom: 0 !important;
+  position: relative !important;
+  z-index: 2 !important;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.15) !important;
+}
+
+/* ================================================
+   SEARCH AND FILTER BAR - Modern Design
+   ================================================ */
+.course-search-container,
+.search-filters-container {
+  background: #ffffff !important;
+  border-radius: 16px !important;
+  padding: 24px !important;
+  margin-bottom: 32px !important;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06) !important;
+  border: 1px solid #e5e7eb !important;
+  display: flex !important;
+  gap: 16px !important;
+  align-items: center !important;
+  flex-wrap: wrap !important;
+}
+
+/* Search Input with Icon */
+.search-input-wrapper {
+  position: relative !important;
+  flex: 1 !important;
+  min-width: 300px !important;
+}
+
+.search-input,
+input[type="search"] {
+  width: 100% !important;
+  padding: 14px 20px 14px 50px !important;
+  border: 2px solid #e5e7eb !important;
+  border-radius: 12px !important;
+  font-size: 16px !important;
+  font-weight: 400 !important;
+  color: #374151 !important;
+  background: #ffffff !important;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+.search-input:focus,
+input[type="search"]:focus {
+  outline: none !important;
+  border-color: #667eea !important;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1) !important;
+  background: #ffffff !important;
+}
+
+.search-input::placeholder,
+input[type="search"]::placeholder {
+  color: #9ca3af !important;
+  font-weight: 400 !important;
+}
+
+/* Search Icon */
+.search-input-wrapper::before,
+.search-icon {
+  content: '🔍' !important;
+  position: absolute !important;
+  left: 18px !important;
+  top: 50% !important;
+  transform: translateY(-50%) !important;
+  font-size: 16px !important;
+  color: #6b7280 !important;
+  pointer-events: none !important;
+  z-index: 2 !important;
+}
+
+/* Filter Dropdowns */
+.filter-dropdown,
+select.form-control {
+  padding: 12px 40px 12px 16px !important;
+  border: 2px solid #e5e7eb !important;
+  border-radius: 12px !important;
+  background: #ffffff !important;
+  font-size: 15px !important;
+  font-weight: 500 !important;
+  color: #374151 !important;
+  cursor: pointer !important;
+  min-width: 160px !important;
+  appearance: none !important;
+  background-image: url('data:image/svg+xml;charset=US-ASCII,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 4 5"><path fill="%23666" d="M2 0L0 2h4zm0 5L0 3h4z"/></svg>') !important;
+  background-repeat: no-repeat !important;
+  background-position: right 12px center !important;
+  background-size: 12px !important;
+  transition: all 0.3s ease !important;
+}
+
+.filter-dropdown:focus,
+select.form-control:focus {
+  outline: none !important;
+  border-color: #667eea !important;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1) !important;
+}
+
+.filter-dropdown:hover,
+select.form-control:hover {
+  border-color: #d1d5db !important;
+}
+
+/* ================================================
+   COURSE CARDS GRID - Perfect Layout
+   ================================================ */
+.courses-container,
+.course-listing,
+#page-content .course-listing {
+  display: grid !important;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)) !important;
+  gap: 28px !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+/* ================================================
+   INDIVIDUAL COURSE CARDS - Premium Design
+   ================================================ */
+.coursebox,
+.course-item,
+.course-card,
+.category-item {
+  background: #ffffff !important;
+  border-radius: 20px !important;
+  box-shadow: 0 2px 16px rgba(0, 0, 0, 0.08) !important;
+  border: 1px solid #f1f5f9 !important;
+  overflow: hidden !important;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  position: relative !important;
+  margin: 0 !important;
+  display: flex !important;
+  flex-direction: column !important;
+  height: auto !important;
+}
+
+.coursebox:hover,
+.course-item:hover,
+.course-card:hover,
+.category-item:hover {
+  transform: translateY(-6px) !important;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12) !important;
+  border-color: #e2e8f0 !important;
+}
+
+/* Course Card Image Container */
+.coursebox-image,
+.course-image,
+.coursebox .course-image,
+.course-item-image,
+.category-image {
+  position: relative !important;
+  width: 100% !important;
+  height: 220px !important;
+  overflow: hidden !important;
+  background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%) !important;
+}
+
+.coursebox-image img,
+.course-image img,
+.coursebox .course-image img,
+.course-item-image img,
+.category-image img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+.coursebox:hover .coursebox-image img,
+.course-item:hover .course-image img,
+.category-item:hover .category-image img {
+  transform: scale(1.08) !important;
+}
+
+/* Course Content Area */
+.coursebox-content,
+.course-item-content,
+.course-content,
+.category-content {
+  padding: 24px !important;
+  flex: 1 !important;
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 12px !important;
+}
+
+/* Course Title */
+.coursebox-content h3,
+.course-item h3,
+.course-title,
+.category-title {
+  font-family: 'Plus Jakarta Sans', sans-serif !important;
+  font-size: 18px !important;
+  font-weight: 600 !important;
+  color: #1f2937 !important;
+  line-height: 1.4 !important;
+  margin: 0 0 8px 0 !important;
+  display: -webkit-box !important;
+  -webkit-line-clamp: 2 !important;
+  -webkit-box-orient: vertical !important;
+  overflow: hidden !important;
+}
+
+.coursebox-content h3 a,
+.course-item h3 a,
+.course-title a,
+.category-title a {
+  color: #1f2937 !important;
+  text-decoration: none !important;
+  transition: color 0.3s ease !important;
+}
+
+.coursebox:hover h3 a,
+.course-item:hover h3 a,
+.category-item:hover .category-title a {
+  color: #667eea !important;
+}
+
+/* Course Description */
+.course-description,
+.course-summary,
+.category-description {
+  color: #6b7280 !important;
+  font-size: 14px !important;
+  line-height: 1.5 !important;
+  margin-bottom: 16px !important;
+  display: -webkit-box !important;
+  -webkit-line-clamp: 2 !important;
+  -webkit-box-orient: vertical !important;
+  overflow: hidden !important;
+}
+
+/* Course Meta Information */
+.course-meta,
+.coursebox-meta,
+.category-meta {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  margin-top: auto !important;
+  padding-top: 16px !important;
+  border-top: 1px solid #f3f4f6 !important;
+  font-size: 13px !important;
+  font-weight: 500 !important;
+  color: #6b7280 !important;
+}
+
+.course-meta-item,
+.meta-item {
+  display: flex !important;
+  align-items: center !important;
+  gap: 6px !important;
+}
+
+.course-meta-item i,
+.meta-item i {
+  color: #667eea !important;
+  font-size: 14px !important;
+}
+
+/* Course Count Badge */
+.course-count,
+.courses-count {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+  color: #ffffff !important;
+  padding: 6px 12px !important;
+  border-radius: 12px !important;
+  font-size: 12px !important;
+  font-weight: 600 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.5px !important;
+}
+
+/* ================================================
+   RESPONSIVE DESIGN - Mobile Excellence
+   ================================================ */
+@media (max-width: 768px) {
+  #page-course-index-category .container {
+    padding: 0 16px !important;
+  }
+
+  .course-search-container,
+  .search-filters-container {
+    flex-direction: column !important;
+    align-items: stretch !important;
+    gap: 12px !important;
+    padding: 20px !important;
+  }
+
+  .search-input-wrapper {
+    min-width: auto !important;
+    width: 100% !important;
+  }
+
+  .filter-dropdown,
+  select.form-control {
+    min-width: auto !important;
+    width: 100% !important;
+  }
+
+  .courses-container,
+  .course-listing {
+    grid-template-columns: 1fr !important;
+    gap: 20px !important;
+  }
+
+  .coursebox-image,
+  .course-image,
+  .category-image {
+    height: 180px !important;
+  }
+
+  .coursebox-content,
+  .course-item-content,
+  .category-content {
+    padding: 20px !important;
+  }
+
+  .page-header {
+    border-radius: 0 !important;
+    padding: 32px 0 24px 0 !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .coursebox-image,
+  .course-image,
+  .category-image {
+    height: 160px !important;
+  }
+
+  .coursebox-content,
+  .course-item-content,
+  .category-content {
+    padding: 16px !important;
+  }
+
+  .course-search-container,
+  .search-filters-container {
+    padding: 16px !important;
+  }
+}
+
+/* ================================================
+   LOADING ANIMATIONS - Smooth Appearance
+   ================================================ */
+.coursebox,
+.course-item,
+.category-item {
+  opacity: 0 !important;
+  transform: translateY(20px) !important;
+  animation: courseCardFadeIn 0.6s ease-out forwards !important;
+}
+
+.coursebox:nth-child(1) { animation-delay: 0.1s !important; }
+.coursebox:nth-child(2) { animation-delay: 0.2s !important; }
+.coursebox:nth-child(3) { animation-delay: 0.3s !important; }
+.coursebox:nth-child(4) { animation-delay: 0.4s !important; }
+.coursebox:nth-child(5) { animation-delay: 0.5s !important; }
+.coursebox:nth-child(6) { animation-delay: 0.6s !important; }
+
+@keyframes courseCardFadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ================================================
+   ACCESSIBILITY - Perfect Focus States
+   ================================================ */
+.coursebox:focus-within,
+.course-item:focus-within,
+.search-input:focus,
+.filter-dropdown:focus {
+  outline: 2px solid #667eea !important;
+  outline-offset: 2px !important;
+}
+
+/* ================================================
+   PERFORMANCE OPTIMIZATIONS
+   ================================================ */
+.coursebox-image,
+.course-image,
+.category-image {
+  contain: layout style paint !important;
+}
+
+.coursebox,
+.course-item,
+.category-item {
+  will-change: transform, box-shadow !important;
+}
+
+/* High contrast support */
+@media (prefers-contrast: high) {
+  .coursebox,
+  .course-item,
+  .category-item {
+    border: 2px solid #000000 !important;
+  }
+
+  .coursebox-content h3 a,
+  .course-title a,
+  .category-title a {
+    color: #000000 !important;
+  }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  .coursebox:hover,
+  .course-item:hover,
+  .category-item:hover {
+    transform: none !important;
+  }
+
+  .coursebox:hover .coursebox-image img,
+  .course-item:hover .course-image img {
+    transform: none !important;
+  }
+}

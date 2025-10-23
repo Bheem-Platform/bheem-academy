@@ -1,0 +1,77 @@
+/* ================================================
+   THREE COLUMNS SECTION - Original Design
+   Restored to prevent main site impact
+   ================================================ */
+
+/* Basic styling to maintain functionality without affecting main site */
+.single-features-item {
+    /* Keep basic structure only */
+    display: block;
+    padding: 20px;
+    margin-bottom: 20px;
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.single-features-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+.single-features-item .d-flex {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+}
+
+.single-features-item .flex-shrink-0 {
+    width: 50px;
+    height: 50px;
+    border-radius: 8px;
+    background: #007bff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.single-features-item [class*="flaticon-"],
+.single-features-item i {
+    font-size: 20px;
+    color: #ffffff;
+}
+
+.single-features-item h4 {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: #333333;
+}
+
+.single-features-item p {
+    font-size: 14px;
+    line-height: 1.5;
+    color: #666666;
+    margin: 0;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .single-features-item {
+        padding: 15px;
+    }
+
+    .single-features-item .d-flex {
+        gap: 10px;
+    }
+
+    .single-features-item h4 {
+        font-size: 16px;
+    }
+
+    .single-features-item p {
+        font-size: 13px;
+    }
+}

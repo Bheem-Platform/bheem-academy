@@ -1,0 +1,93 @@
+<!-- Start Top Footer Area -->
+<div class="top-footer-area pt-130 bg-gray4">
+    <div class="container">
+        <div class="border-bottom pb-5">
+            <div class="d-sm-flex align-items-center justify-content-center text-center">
+                {{#footer_logo_visibility}}
+                    <a class="d-block" href="{{{ config.wwwroot }}}/">
+                        {{#main_footer_logo}}
+                            <img src="{{main_footer_logo}}" alt="{{sitename}}"  {{#footer_logo_styles}} style="{{{footer_logo_styles}}}" {{/footer_logo_styles}}>
+                        {{/main_footer_logo}}
+
+                        {{^ main_footer_logo }}
+                            <h2  {{#footer_logo_styles}} style="{{{footer_logo_styles}}}" {{/footer_logo_styles}}>{{sitename}}</h2>
+                        {{/main_footer_logo}}
+                    </a>
+                {{/footer_logo_visibility}}
+
+                <ul class="mb-0 list-unstyled d-flex gap-3 social-link border-start ps-sm-5 ms-sm-5 mt-4 mt-sm-0 justify-content-center justify-content-sm-start">
+                    {{> theme_edoo/edoo_social_icons }}
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End Top Footer Area -->
+
+<!-- Start Footer Area -->
+<div class="footer-area pt-5 pb-105 bg-gray4">
+    <div class="container">
+        <div class="row justify-content-between">
+            {{#footer_column_1}}
+                <div class="{{{footer_col_1_class}}} col-lg-3 col-sm-6">
+                    <div class="single-footer-widget">
+
+                        {{#footer_col_1_title}}
+                            <h3 class="fs-3 mb-4">{{{ footer_col_1_title }}}</h3>
+                        {{/footer_col_1_title}}
+
+                        {{#footer_col_1_body}}
+                            {{{footer_col_1_body}}}
+                        {{/footer_col_1_body}}
+                    </div>
+                </div>
+            {{/footer_column_1}}
+            {{#footer_column_2}}
+                <div class="{{{footer_col_2_class}}} col-lg-3 col-sm-6">
+                    <div class="single-footer-widget pl-1">
+                        <h3 class="fs-3 mb-4">{{{ footer_col_2_title }}}</h3>
+                        {{{ footer_col_2_body }}}
+                    </div>
+                </div>
+            {{/footer_column_2}}
+            {{#footer_column_3}}
+                <div class="{{{footer_col_3_class}}} col-lg-3 col-sm-6">
+                    <div class="single-footer-widget pl-1">
+                        <h3 class="fs-3 mb-4">{{{ footer_col_3_title }}}</h3>
+                        {{{ footer_col_3_body }}}
+                    </div>
+                </div>
+            {{/footer_column_3}}
+            {{#footer_column_4}}
+                <div class="{{{footer_col_4_class}}} col-lg-3 col-sm-6">
+                    <div class="single-footer-widget">
+                        <h3 class="fs-3 mb-4">{{{ footer_col_4_title }}}</h3>
+                        {{{ footer_col_4_body }}}
+                    </div>
+                </div>
+            {{/footer_column_4}}
+            {{#footer_column_5}}
+                <div class="{{{footer_col_5_class}}} col-lg-3 col-sm-6">
+                    <div class="single-footer-widget">
+                        <h3 class="fs-3 mb-4">{{{ footer_col_5_title }}}</h3>
+                        {{{ footer_col_5_body }}}
+                    </div>
+                </div>
+            {{/footer_column_5}}
+        </div>
+    </div>
+</div>
+<!-- End Footer Area -->
+
+<!-- Copyright Area -->
+{{{ output.get_footer_bottom }}}
+
+{{#back_to_top}}
+    <!-- Start Go Top Area -->
+    <button type="button" id="backtotop">
+        <i class="ri-upload-line"></i>
+    </button>
+    <!-- End Go Top Area -->
+{{/back_to_top}}
+
+{{{ output.standard_end_of_body_html }}}

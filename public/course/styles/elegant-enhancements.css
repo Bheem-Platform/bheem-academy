@@ -1,0 +1,2368 @@
+/**
+ * Bheem Academy - Elegant Course Page Enhancements
+ * Professional styling with glassmorphism, futuristic fonts, and refined animations
+ *
+ * Date: October 18, 2025
+ * Features: Cyan palette, backdrop-filter, elegant transitions
+ */
+
+/* ========================================
+   ELEGANT CARD HOVER EFFECTS
+   ======================================== */
+
+.tool-card-hover,
+.mentor-card-hover,
+.project-card-hover {
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    will-change: transform, box-shadow;
+}
+
+.tool-card-hover:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 16px 48px rgba(102, 126, 234, 0.25),
+                0 0 0 1px rgba(102, 126, 234, 0.1) !important;
+    border-color: rgba(102, 126, 234, 0.4) !important;
+    backdrop-filter: blur(20px) !important;
+    -webkit-backdrop-filter: blur(20px) !important;
+}
+
+.mentor-card-hover:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 16px 48px rgba(240, 147, 251, 0.25),
+                0 0 0 1px rgba(240, 147, 251, 0.1) !important;
+    backdrop-filter: blur(20px) !important;
+    -webkit-backdrop-filter: blur(20px) !important;
+}
+
+.project-card-hover:hover {
+    transform: translateY(-8px) scale(1.01);
+    box-shadow: 0 16px 48px rgba(52, 211, 153, 0.25),
+                0 0 0 1px rgba(52, 211, 153, 0.1) !important;
+    backdrop-filter: blur(20px) !important;
+    -webkit-backdrop-filter: blur(20px) !important;
+}
+
+/* ========================================
+   HERO SECTION ELEGANT ENHANCEMENTS
+   ======================================== */
+
+.hero-banner {
+    backdrop-filter: blur(30px) !important;
+    -webkit-backdrop-filter: blur(30px) !important;
+}
+
+.hero-title h1 {
+    font-family: 'Orbitron', 'Exo 2', sans-serif !important;
+    letter-spacing: -1px !important;
+}
+
+.hero-subtitle {
+    font-family: 'Exo 2', 'Inter', sans-serif !important;
+    color: rgba(6, 182, 212, 0.95) !important;
+    text-shadow: 0 2px 20px rgba(6, 182, 212, 0.3) !important;
+}
+
+/* ========================================
+   TAB HEADINGS WITH FUTURISTIC FONT
+   ======================================== */
+
+.tab-panel h2 {
+    font-family: 'Orbitron', sans-serif !important;
+    letter-spacing: -0.5px !important;
+}
+
+.tab-panel h3 {
+    font-family: 'Exo 2', sans-serif !important;
+}
+
+/* ========================================
+   GLASSMORPHISM CARD BACKGROUNDS
+   ======================================== */
+
+.tab-panel [style*="background: linear-gradient"][style*="rgba"] {
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+}
+
+/* Community Stats Cards */
+.tab-panel#community-panel [style*="text-align: center"][style*="padding: 2rem"] {
+    backdrop-filter: blur(12px) !important;
+    -webkit-backdrop-filter: blur(12px) !important;
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.15) !important;
+}
+
+/* Marketplace Stats Cards */
+.tab-panel#marketplace-panel [style*="text-align: center"][style*="padding: 2rem"] {
+    backdrop-filter: blur(12px) !important;
+    -webkit-backdrop-filter: blur(12px) !important;
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.15) !important;
+}
+
+/* ========================================
+   ELEGANT BUTTON STYLES
+   ======================================== */
+
+button[style*="linear-gradient"] {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+}
+
+button[style*="linear-gradient"]:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.25) !important;
+}
+
+button[style*="linear-gradient"]::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.5s ease;
+}
+
+button[style*="linear-gradient"]:hover::before {
+    left: 100%;
+}
+
+/* ========================================
+   MICROCOPY TAGLINE
+   ======================================== */
+
+.hero-tagline {
+    font-family: 'Exo 2', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: rgba(6, 182, 212, 0.9);
+    text-align: center;
+    margin-top: 1rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    animation: pulseGlow 3s ease-in-out infinite;
+}
+
+@keyframes pulseGlow {
+    0%, 100% {
+        text-shadow: 0 0 10px rgba(6, 182, 212, 0.3);
+    }
+    50% {
+        text-shadow: 0 0 20px rgba(6, 182, 212, 0.6),
+                     0 0 30px rgba(6, 182, 212, 0.4);
+    }
+}
+
+/* ========================================
+   MANAGE BADGE STYLING
+   ======================================== */
+
+.manage-badge {
+    display: inline-block;
+    padding: 0.5rem 1.5rem;
+    background: linear-gradient(135deg, rgba(139, 92, 246, 0.2) 0%, rgba(124, 58, 237, 0.2) 100%);
+    border-radius: 50px;
+    margin-bottom: 1rem;
+    border: 1px solid rgba(139, 92, 246, 0.3);
+    font-family: 'Exo 2', sans-serif;
+    font-weight: 700;
+    color: #8b5cf6;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+/* ========================================
+   REFINED ANIMATIONS
+   ======================================== */
+
+@keyframes elegantFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.tab-panel {
+    animation: elegantFadeIn 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ========================================
+   ENHANCED SCARCITY BADGES
+   ======================================== */
+
+.scarcity-badge {
+    backdrop-filter: blur(15px) !important;
+    -webkit-backdrop-filter: blur(15px) !important;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.scarcity-badge:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 24px rgba(102, 126, 234, 0.3) !important;
+}
+
+/* ========================================
+   ELEGANT SCROLLBAR - PURPLE-PINK THEME
+   ======================================== */
+
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: rgba(15, 23, 42, 0.3);
+    backdrop-filter: blur(10px);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--gradient-purple-magenta);
+    border-radius: 10px;
+    border: 2px solid rgba(15, 23, 42, 0.3);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--gradient-purple-elegant);
+}
+
+/* ========================================
+   RESPONSIVE REFINEMENTS
+   ======================================== */
+
+@media (max-width: 768px) {
+    .tool-card-hover:hover,
+    .mentor-card-hover:hover,
+    .project-card-hover:hover {
+        transform: translateY(-4px);
+    }
+
+    .hero-tagline {
+        font-size: 0.9rem;
+    }
+}
+
+/* ========================================
+   ACCESSIBILITY ENHANCEMENTS - PURPLE-PINK THEME
+   ======================================== */
+
+.tab-chip:focus-visible {
+    outline: 2px solid var(--magenta-bright);
+    outline-offset: 2px;
+    box-shadow: 0 0 0 4px rgba(192, 38, 211, 0.3);
+}
+
+button:focus-visible {
+    outline: 2px solid var(--magenta-bright);
+    outline-offset: 2px;
+}
+
+/* ========================================
+   ELEGANT TESTIMONIAL CARDS
+   ======================================== */
+
+[style*="font-style: italic"] {
+    font-family: 'Inter', serif !important;
+}
+
+/* ========================================
+   PERFORMANCE OPTIMIZATIONS
+   ======================================== */
+
+* {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+img {
+    image-rendering: -webkit-optimize-contrast;
+}
+
+/* ========================================
+   PURPLE-PINK COLOR SYSTEM OVERRIDE
+   ======================================== */
+
+:root {
+    /* Primary Purple-Pink Palette */
+    --purple-deep: #8b5cf6;
+    --purple-main: #a855f7;
+    --purple-dark: #7c3aed;
+    --purple-light: #c084fc;
+
+    /* Magenta Spectrum */
+    --magenta-bright: #c026d3;
+    --magenta-main: #d946ef;
+    --magenta-light: #e879f9;
+
+    /* Pink Spectrum */
+    --pink-hot: #ec4899;
+    --pink-main: #f472b6;
+    --pink-soft: #f093fb;
+    --pink-light: #fbcfe8;
+
+    /* Fuchsia Accent */
+    --fuchsia-main: #d946ef;
+    --fuchsia-light: #e879f9;
+
+    /* Purple-Pink Gradients */
+    --gradient-purple-pink: linear-gradient(135deg, #8b5cf6 0%, #ec4899 100%);
+    --gradient-purple-magenta: linear-gradient(135deg, #8b5cf6 0%, #c026d3 50%, #ec4899 100%);
+    --gradient-purple-fuchsia: linear-gradient(135deg, #7c3aed 0%, #d946ef 50%, #f472b6 100%);
+    --gradient-purple-elegant: linear-gradient(135deg, #8b5cf6 0%, #a855f7 30%, #d946ef 60%, #ec4899 100%);
+    --gradient-pink-glow: linear-gradient(135deg, #c084fc 0%, #e879f9 50%, #f093fb 100%);
+
+    /* Glassmorphic Purple-Pink */
+    --glass-purple: rgba(139, 92, 246, 0.1);
+    --glass-magenta: rgba(192, 38, 211, 0.1);
+    --glass-pink: rgba(236, 72, 153, 0.1);
+    --glass-fuchsia: rgba(217, 70, 239, 0.1);
+
+    /* Text Colors */
+    --text-purple: #8b5cf6;
+    --text-magenta: #c026d3;
+    --text-pink: #ec4899;
+
+    /* Border Colors */
+    --border-purple: rgba(139, 92, 246, 0.2);
+    --border-magenta: rgba(192, 38, 211, 0.2);
+    --border-pink: rgba(236, 72, 153, 0.2);
+
+    /* Shadow Colors */
+    --shadow-purple: rgba(139, 92, 246, 0.25);
+    --shadow-magenta: rgba(192, 38, 211, 0.25);
+    --shadow-pink: rgba(236, 72, 153, 0.25);
+}
+
+/* Override Indigo/Cyan with Purple/Pink */
+.hero-subtitle {
+    color: var(--magenta-bright) !important;
+    text-shadow: 0 2px 20px rgba(192, 38, 211, 0.4) !important;
+}
+
+.hero-tagline {
+    color: var(--pink-hot) !important;
+}
+
+/* Override company motto banner - COMPACT SIZE */
+.company-motto-banner {
+    margin-bottom: 1rem !important;
+}
+
+.motto-banner-inner {
+    padding: 0.75rem 1.25rem !important;
+    gap: 1rem !important;
+    border-radius: 12px !important;
+}
+
+.company-motto-text {
+    font-size: 0.9rem !important;
+    background: var(--gradient-purple-elegant) !important;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+    background-clip: text !important;
+    letter-spacing: 0.3px !important;
+}
+
+.motto-icons {
+    gap: 1rem !important;
+}
+
+.motto-icon-item {
+    font-size: 0.75rem !important;
+    gap: 0.4rem !important;
+}
+
+.motto-icon-item i {
+    font-size: 1rem !important;
+}
+
+/* Mobile - even more compact */
+@media (max-width: 768px) {
+    .motto-banner-inner {
+        padding: 0.6rem 1rem !important;
+        gap: 0.75rem !important;
+    }
+
+    .company-motto-text {
+        font-size: 0.85rem !important;
+    }
+
+    .motto-icon-item {
+        font-size: 0.7rem !important;
+    }
+}
+
+/* ========================================
+   RESTRUCTURED TAB NAVIGATION
+   ======================================== */
+
+/* Tab Pills Single Row Layout */
+.tab-pills {
+    display: flex !important;
+    flex-wrap: nowrap !important;
+    flex-direction: row !important;
+    justify-content: flex-start !important;
+    gap: 6px !important;
+    padding: 0 4px 4px 4px !important;
+    align-items: center !important;
+    overflow-x: auto !important;
+    overflow-y: hidden !important;
+    scrollbar-width: thin !important;
+    scrollbar-color: rgba(139, 92, 246, 0.3) rgba(139, 92, 246, 0.05) !important;
+    scroll-behavior: smooth !important;
+}
+
+/* Tab Chip - Compact Professional Style */
+.tab-chip {
+    padding: 7px 11px !important;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.9) 0%, rgba(248, 250, 252, 0.9) 100%) !important;
+    border: 2px solid rgba(139, 92, 246, 0.15) !important;
+    border-radius: 10px !important;
+    font-family: 'Exo 2', sans-serif !important;
+    font-weight: 600 !important;
+    font-size: 12px !important;
+    cursor: pointer !important;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+    white-space: nowrap !important;
+    color: var(--text-secondary) !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 6px !important;
+    min-height: auto !important;
+    position: relative !important;
+    line-height: 1.2 !important;
+    overflow: hidden !important;
+    backdrop-filter: blur(10px) !important;
+    -webkit-backdrop-filter: blur(10px) !important;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04) !important;
+    will-change: transform, box-shadow !important;
+    flex: 0 0 auto !important;
+}
+
+/* Tab Chip Hover State */
+.tab-chip:not(.LockedTabChip):not(.active):hover {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 1) 0%, rgba(249, 250, 251, 1) 100%) !important;
+    color: #8B5CF6 !important;
+    border-color: rgba(139, 92, 246, 0.3) !important;
+    transform: translateY(-2px) !important;
+    box-shadow: 0 6px 20px rgba(139, 92, 246, 0.12) !important;
+}
+
+/* Active Tab State - Purple-Pink Glassmorphic */
+.tab-chip.active {
+    background: linear-gradient(135deg, #8B5CF6 0%, #A78BFA 50%, #EC4899 100%) !important;
+    color: white !important;
+    border-color: transparent !important;
+    box-shadow: 0 8px 24px rgba(139, 92, 246, 0.3),
+                0 0 0 3px rgba(255, 255, 255, 0.2) inset !important;
+    transform: translateY(-2px) !important;
+    backdrop-filter: blur(10px) !important;
+    -webkit-backdrop-filter: blur(10px) !important;
+}
+
+/* Icon wrapper - compact */
+.tab-icon-wrapper {
+    width: 24px !important;
+    height: 24px !important;
+    min-width: 24px !important;
+    background: linear-gradient(135deg, rgba(139, 92, 246, 0.12) 0%, rgba(236, 72, 153, 0.1) 100%) !important;
+    border-radius: 7px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+    position: relative !important;
+    z-index: 1 !important;
+}
+
+.tab-icon-wrapper i {
+    font-size: 12px !important;
+    background: linear-gradient(135deg, #8B5CF6 0%, #EC4899 100%) !important;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+    background-clip: text !important;
+    transition: all 0.3s ease !important;
+}
+
+/* Text content wrapper */
+.tab-content-wrapper {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 2px !important;
+    position: relative !important;
+    z-index: 1 !important;
+}
+
+.tab-title {
+    font-size: 12px !important;
+    font-weight: 700 !important;
+    color: var(--text-primary) !important;
+    transition: all 0.3s ease !important;
+    line-height: 1.2 !important;
+}
+
+.tab-subtitle {
+    display: none !important;
+}
+
+/* Hide indicator */
+.tab-indicator {
+    display: none !important;
+}
+
+/* Hover effects for nested elements */
+.tab-chip:not(.LockedTabChip):not(.active):hover .tab-icon-wrapper {
+    background: linear-gradient(135deg, rgba(139, 92, 246, 0.18) 0%, rgba(236, 72, 153, 0.15) 100%) !important;
+    transform: scale(1.05) !important;
+}
+
+.tab-chip:not(.LockedTabChip):not(.active):hover .tab-icon-wrapper i {
+    transform: scale(1.1) !important;
+}
+
+.tab-chip:not(.LockedTabChip):not(.active):hover .tab-title {
+    color: #8B5CF6 !important;
+}
+
+/* Active tab nested elements */
+.tab-chip.active .tab-icon-wrapper {
+    background: rgba(255, 255, 255, 0.25) !important;
+    transform: scale(1.05) !important;
+}
+
+.tab-chip.active .tab-icon-wrapper i {
+    background: white !important;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+    background-clip: text !important;
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2)) !important;
+    transform: scale(1.05) !important;
+}
+
+.tab-chip.active .tab-title {
+    color: white !important;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.15) !important;
+}
+
+/* Custom scrollbar for webkit browsers */
+.tab-pills::-webkit-scrollbar {
+    height: 6px !important;
+}
+
+.tab-pills::-webkit-scrollbar-track {
+    background: rgba(139, 92, 246, 0.05) !important;
+    border-radius: 10px !important;
+}
+
+.tab-pills::-webkit-scrollbar-thumb {
+    background: linear-gradient(90deg, rgba(139, 92, 246, 0.4), rgba(236, 72, 153, 0.4)) !important;
+    border-radius: 10px !important;
+}
+
+.tab-pills::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(90deg, rgba(139, 92, 246, 0.6), rgba(236, 72, 153, 0.6)) !important;
+}
+
+/* Responsive adjustments for tabs */
+@media (max-width: 768px) {
+    .tab-pills {
+        gap: 6px !important;
+    }
+
+    .tab-chip {
+        padding: 8px 12px !important;
+        font-size: 12px !important;
+        gap: 7px !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .tab-pills {
+        gap: 5px !important;
+    }
+
+    .tab-chip {
+        padding: 7px 10px !important;
+        font-size: 11px !important;
+        gap: 6px !important;
+    }
+}
+
+/* ========================================
+   CTA CARD OPTIMIZATION - REDUCED LENGTH
+   ======================================== */
+
+/* Reduce CTA card padding - LANDSCAPE MODE */
+.cta-card {
+    padding: 14px !important;
+}
+
+/* Compact CTA card header */
+.cta-card .card-header {
+    padding: 6px 12px !important;
+    font-size: 0.85rem !important;
+    margin-bottom: 8px !important;
+}
+
+/* Reduce price section margin */
+.cta-price {
+    margin-bottom: 10px !important;
+}
+
+/* Compact CTA buttons */
+.cta-card .cta-button {
+    padding: 8px 12px !important;
+    font-size: 0.85rem !important;
+    margin-bottom: 6px !important;
+}
+
+/* Features list - 2 column grid for compact layout */
+.features-list {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 6px 6px !important;
+    margin-top: 10px !important;
+}
+
+/* Compact feature items */
+.feature-item {
+    font-size: 0.75rem !important;
+    padding: 4px 6px !important;
+    background: rgba(139, 92, 246, 0.05) !important;
+    border-radius: 6px !important;
+    display: flex !important;
+    align-items: center !important;
+    gap: 4px !important;
+}
+
+.feature-icon {
+    font-size: 0.8rem !important;
+    flex-shrink: 0 !important;
+}
+
+/* Responsive: mobile keeps 1 column */
+@media (max-width: 480px) {
+    .features-list {
+        grid-template-columns: 1fr !important;
+    }
+}
+
+/* ========================================
+   INFO CARD OPTIMIZATION - REDUCED LENGTH
+   ======================================== */
+
+/* Reduce info card padding - LANDSCAPE MODE */
+.info-card {
+    padding: 12px !important;
+}
+
+/* Compact header */
+.info-card .card-header {
+    padding: 6px 10px !important;
+    font-size: 0.85rem !important;
+    margin-bottom: 8px !important;
+}
+
+/* Compact info items */
+.info-item {
+    padding: 6px 0 !important;
+    gap: 8px !important;
+}
+
+/* Reduce icon size */
+.info-icon {
+    width: 32px !important;
+    height: 32px !important;
+    font-size: 0.85rem !important;
+}
+
+/* Compact text sizing */
+.info-label {
+    font-size: 0.7rem !important;
+    margin-bottom: 1px !important;
+}
+
+.info-value {
+    font-size: 0.85rem !important;
+    font-weight: 700 !important;
+}
+
+/* Reduce hover translation for tighter layout */
+.info-item:hover {
+    transform: translateX(6px) scale(1.01) !important;
+    padding-left: 4px !important;
+}
+
+/* ========================================
+   GAMIFICATION CARD OPTIMIZATION
+   ======================================== */
+
+/* Reduce gamification card padding - LANDSCAPE MODE */
+.gamification-card {
+    padding: 12px !important;
+}
+
+/* Compact gamification header */
+.gamification-card .card-header {
+    padding: 6px 10px !important;
+    font-size: 0.85rem !important;
+    margin-bottom: 8px !important;
+}
+
+/* Compact level display */
+.level-display {
+    padding: 10px !important;
+    margin-bottom: 8px !important;
+}
+
+.level-number {
+    font-size: 1.5rem !important;
+    margin: 4px 0 !important;
+}
+
+.xp-text {
+    font-size: 0.7rem !important;
+    margin-top: 4px !important;
+}
+
+/* Compact achievement items */
+.achievement {
+    padding: 8px 6px !important;
+}
+
+.achievement-icon {
+    font-size: 1.3rem !important;
+    margin-bottom: 2px !important;
+}
+
+.achievement-name {
+    font-size: 0.65rem !important;
+}
+
+/* Reduce achievements grid gap */
+.achievements-grid {
+    gap: 6px !important;
+}
+
+/* ========================================
+   LIVE ACTIVITY FEED OPTIMIZATION
+   ======================================== */
+
+/* Reduce activity feed padding - LANDSCAPE MODE */
+.live-activity-feed {
+    padding: 12px !important;
+    margin-top: 12px !important;
+}
+
+/* Compact feed header */
+.live-activity-feed .card-header {
+    margin-bottom: 8px !important;
+}
+
+.feed-title {
+    font-size: 0.85rem !important;
+}
+
+/* Compact activity items */
+.activity-item {
+    padding: 6px !important;
+    margin-bottom: 4px !important;
+    gap: 6px !important;
+}
+
+.activity-avatar {
+    width: 26px !important;
+    height: 26px !important;
+    font-size: 0.7rem !important;
+}
+
+.activity-text {
+    font-size: 0.75rem !important;
+    line-height: 1.2 !important;
+}
+
+.activity-name {
+    font-size: 0.75rem !important;
+}
+
+.activity-time {
+    font-size: 0.65rem !important;
+}
+
+/* ========================================
+   RIGHT PANEL PROMOTIONAL CARDS - PURPLE-PINK THEME
+   ======================================== */
+
+/* Override Buzz Central to Purple gradient */
+.buzz-central-card {
+    background: linear-gradient(135deg, rgba(139, 92, 246, 0.08) 0%, rgba(168, 85, 247, 0.12) 100%) !important;
+    border: 1px solid var(--border-purple) !important;
+}
+
+.buzz-central-card h3 {
+    background: var(--gradient-purple-pink) !important;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+    background-clip: text !important;
+}
+
+.buzz-central-card .buzz-cta-button {
+    background: var(--gradient-purple-pink) !important;
+}
+
+.buzz-central-card .buzz-cta-button:hover {
+    box-shadow: 0 8px 24px var(--shadow-purple) !important;
+}
+
+/* Override Marketplace to Magenta-Pink gradient */
+.marketplace-card {
+    background: linear-gradient(135deg, rgba(192, 38, 211, 0.08) 0%, rgba(236, 72, 153, 0.12) 100%) !important;
+    border: 1px solid var(--border-magenta) !important;
+}
+
+.marketplace-card h3 {
+    background: var(--gradient-purple-fuchsia) !important;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+    background-clip: text !important;
+}
+
+.marketplace-card .marketplace-cta-button {
+    background: var(--gradient-purple-fuchsia) !important;
+}
+
+.marketplace-card .marketplace-cta-button:hover {
+    box-shadow: 0 8px 24px var(--shadow-magenta) !important;
+}
+
+/* Compact promotional cards - LANDSCAPE MODE */
+.promo-card {
+    padding: 0.8rem !important;
+}
+
+/* Compact promo badges */
+.promo-card > div > div:first-child {
+    padding: 0.2rem 0.6rem !important;
+    font-size: 0.65rem !important;
+    margin-bottom: 0.5rem !important;
+}
+
+/* Compact promo titles */
+.promo-card h3 {
+    font-size: 1.1rem !important;
+    margin-bottom: 0.4rem !important;
+}
+
+/* Compact promo descriptions */
+.promo-card p {
+    font-size: 0.75rem !important;
+    margin-bottom: 0.6rem !important;
+    line-height: 1.3 !important;
+}
+
+/* Compact stats grid */
+.promo-card > div > div[style*="grid-template-columns"] {
+    gap: 0.4rem !important;
+    margin-bottom: 0.6rem !important;
+}
+
+.promo-card > div > div[style*="grid-template-columns"] > div {
+    padding: 0.4rem !important;
+}
+
+.promo-card > div > div[style*="grid-template-columns"] > div > div:first-child {
+    font-size: 1.1rem !important;
+    margin-bottom: 0.1rem !important;
+}
+
+.promo-card > div > div[style*="grid-template-columns"] > div > div:last-child {
+    font-size: 0.65rem !important;
+}
+
+/* Compact CTA buttons in promo cards */
+.buzz-cta-button,
+.marketplace-cta-button {
+    padding: 0.6rem !important;
+    font-size: 0.8rem !important;
+}
+
+/* Compact trending badge */
+.promo-card > div > div:last-child {
+    margin-top: 0.5rem !important;
+    padding: 0.3rem !important;
+}
+
+.promo-card > div > div:last-child span {
+    font-size: 0.7rem !important;
+}
+
+/* Buzz Central Card Hover Effects - Purple Theme */
+.buzz-central-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 16px 48px var(--shadow-purple) !important;
+    border-color: rgba(139, 92, 246, 0.4) !important;
+}
+
+/* Marketplace Card Hover Effects - Magenta-Pink Theme */
+.marketplace-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 16px 48px var(--shadow-magenta) !important;
+    border-color: rgba(236, 72, 153, 0.4) !important;
+}
+
+/* BheemFlow Card Hover Effects - Purple Theme */
+.bheemflow-card {
+    background: linear-gradient(135deg, rgba(139, 92, 246, 0.08) 0%, rgba(124, 58, 237, 0.12) 100%) !important;
+    border: 1px solid rgba(139, 92, 246, 0.2) !important;
+}
+
+.bheemflow-card h3 {
+    background: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%) !important;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+    background-clip: text !important;
+}
+
+.bheemflow-card .bheemflow-cta-button {
+    background: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%) !important;
+}
+
+.bheemflow-card .bheemflow-cta-button:hover {
+    box-shadow: 0 8px 24px var(--shadow-purple) !important;
+}
+
+.bheemflow-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 16px 48px var(--shadow-purple) !important;
+    border-color: rgba(139, 92, 246, 0.4) !important;
+}
+
+/* CTA Button Hover Effects */
+.buzz-cta-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(59, 130, 246, 0.4) !important;
+}
+
+.marketplace-cta-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(245, 158, 11, 0.4) !important;
+}
+
+.bheemflow-cta-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(139, 92, 246, 0.4) !important;
+}
+
+/* Shimmer effect for CTA buttons */
+.buzz-cta-button::before,
+.marketplace-cta-button::before,
+.bheemflow-cta-button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+    transition: left 0.6s ease;
+}
+
+.buzz-cta-button:hover::before,
+.marketplace-cta-button:hover::before,
+.bheemflow-cta-button:hover::before {
+    left: 100%;
+}
+
+/* Floating orb animation */
+@keyframes floatOrb {
+    0%, 100% {
+        transform: translate(0, 0) scale(1);
+    }
+    33% {
+        transform: translate(30px, -30px) scale(1.1);
+    }
+    66% {
+        transform: translate(-20px, 20px) scale(0.9);
+    }
+}
+
+/* Promo cards general styling */
+.promo-card {
+    will-change: transform, box-shadow;
+}
+
+/* Responsive adjustments for promo cards */
+@media (max-width: 768px) {
+    .buzz-central-card:hover,
+    .marketplace-card:hover,
+    .bheemflow-card:hover {
+        transform: translateY(-3px);
+    }
+}
+
+/* ========================================
+   COMPREHENSIVE COMPONENT ANIMATIONS & STYLING
+   ======================================== */
+
+/* 1. HERO SECTION ENHANCEMENTS */
+.hero-banner {
+    animation: heroFadeIn 1s ease-out !important;
+    transform-origin: center !important;
+}
+
+@keyframes heroFadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.hero-title h1 {
+    animation: titleSlideIn 0.8s cubic-bezier(0.4, 0, 0.2, 1) 0.2s backwards !important;
+}
+
+@keyframes titleSlideIn {
+    0% {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.hero-subtitle {
+    animation: subtitleFadeIn 0.8s ease-out 0.4s backwards !important;
+}
+
+@keyframes subtitleFadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.hero-tagline {
+    animation: taglinePulseIn 1s ease-out 0.6s backwards !important;
+}
+
+@keyframes taglinePulseIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* 2. CARD REVEAL ANIMATIONS */
+.reveal {
+    opacity: 0;
+    animation: cardReveal 0.6s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+@keyframes cardReveal {
+    0% {
+        opacity: 0;
+        transform: translateY(30px) scale(0.95);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+/* Stagger card animations - DISABLED for info-card and gamification-card */
+.info-card.reveal,
+.info-card {
+    animation: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+}
+
+.gamification-card.reveal,
+.gamification-card {
+    animation: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+}
+
+/* Disable hover animations */
+.info-card:hover,
+.gamification-card:hover {
+    transform: none !important;
+}
+
+/* Disable icon float animation inside these cards */
+.info-card .info-icon,
+.gamification-card .info-icon,
+.gamification-card .achievement-icon {
+    animation: none !important;
+}
+
+/* Disable floating orb animations on pseudo-elements */
+.info-card::after,
+.gamification-card::after {
+    animation: none !important;
+    display: none !important;
+}
+
+.live-activity-feed {
+    animation: cardReveal 0.6s cubic-bezier(0.4, 0, 0.2, 1) 0.3s backwards;
+}
+
+.cta-card.reveal {
+    animation-delay: 0.1s;
+}
+
+.bheemflow-card.reveal {
+    animation-delay: 0.2s;
+}
+
+.buzz-central-card.reveal {
+    animation-delay: 0.3s;
+}
+
+.marketplace-card.reveal {
+    animation-delay: 0.4s;
+}
+
+/* 3. TAB PANEL TRANSITIONS */
+.tab-panel {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s cubic-bezier(0.4, 0, 0.2, 1),
+                transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.tab-panel.active {
+    opacity: 1;
+    transform: translateY(0);
+    animation: tabPanelSlideIn 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@keyframes tabPanelSlideIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* 4. BUTTON ENHANCEMENTS */
+button,
+.cta-button,
+.buzz-cta-button,
+.marketplace-cta-button {
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+button:active,
+.cta-button:active,
+.buzz-cta-button:active,
+.marketplace-cta-button:active {
+    transform: scale(0.98) !important;
+}
+
+/* Ripple effect on click */
+@keyframes ripple {
+    0% {
+        transform: scale(0);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(4);
+        opacity: 0;
+    }
+}
+
+/* 5. FOMO STATS GRID ANIMATION */
+.fomo-stats-grid {
+    animation: statsGridFadeIn 0.8s ease-out 0.5s backwards !important;
+}
+
+@keyframes statsGridFadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fomo-stat-card {
+    animation: statCardPop 0.5s cubic-bezier(0.34, 1.56, 0.64, 1) backwards;
+}
+
+.fomo-stat-card:nth-child(1) { animation-delay: 0.6s; }
+.fomo-stat-card:nth-child(2) { animation-delay: 0.7s; }
+.fomo-stat-card:nth-child(3) { animation-delay: 0.8s; }
+.fomo-stat-card:nth-child(4) { animation-delay: 0.9s; }
+
+@keyframes statCardPop {
+    0% {
+        opacity: 0;
+        transform: scale(0.8) translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+}
+
+/* 6. COURSE TAB BAR ANIMATION */
+.CourseTabBar {
+    animation: tabBarSlideDown 0.6s cubic-bezier(0.4, 0, 0.2, 1) 0.8s backwards !important;
+}
+
+@keyframes tabBarSlideDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* 7. ACTIVITY FEED ITEMS ANIMATION */
+.activity-item {
+    animation: activityItemSlide 0.4s ease-out backwards;
+}
+
+.activity-item:nth-child(1) { animation-delay: 0.1s; }
+.activity-item:nth-child(2) { animation-delay: 0.2s; }
+.activity-item:nth-child(3) { animation-delay: 0.3s; }
+.activity-item:nth-child(4) { animation-delay: 0.4s; }
+.activity-item:nth-child(5) { animation-delay: 0.5s; }
+
+@keyframes activityItemSlide {
+    0% {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* 8. ACHIEVEMENT BADGES ANIMATION */
+.achievement {
+    animation: achievementPop 0.5s cubic-bezier(0.34, 1.56, 0.64, 1) backwards;
+}
+
+.achievement:nth-child(1) { animation-delay: 0.1s; }
+.achievement:nth-child(2) { animation-delay: 0.2s; }
+.achievement:nth-child(3) { animation-delay: 0.3s; }
+.achievement:nth-child(4) { animation-delay: 0.4s; }
+
+@keyframes achievementPop {
+    0% {
+        opacity: 0;
+        transform: scale(0) rotate(-180deg);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1) rotate(0deg);
+    }
+}
+
+.achievement.unlocked {
+    animation: achievementUnlock 0.8s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+@keyframes achievementUnlock {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2) rotate(5deg);
+    }
+    100% {
+        transform: scale(1) rotate(0deg);
+    }
+}
+
+/* 9. LEVEL DISPLAY PULSE */
+.level-number {
+    animation: levelPulse 2s ease-in-out infinite;
+}
+
+@keyframes levelPulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+}
+
+/* 10. FLOATING ANIMATION FOR ICONS */
+.info-icon,
+.achievement-icon {
+    animation: iconFloat 3s ease-in-out infinite;
+}
+
+@keyframes iconFloat {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-5px);
+    }
+}
+
+/* 11. SMOOTH SCROLLING */
+html {
+    scroll-behavior: smooth !important;
+}
+
+/* 12. LINK HOVER EFFECTS */
+a {
+    transition: all 0.3s ease !important;
+}
+
+a:hover {
+    transform: translateX(2px);
+}
+
+/* 13. FEATURE TILES ANIMATION */
+.feature-tile {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    animation: featureTileFadeIn 0.5s ease-out backwards;
+}
+
+.feature-tile:nth-child(1) { animation-delay: 0.1s; }
+.feature-tile:nth-child(2) { animation-delay: 0.2s; }
+.feature-tile:nth-child(3) { animation-delay: 0.3s; }
+.feature-tile:nth-child(4) { animation-delay: 0.4s; }
+
+@keyframes featureTileFadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px) scale(0.95);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+.feature-tile:hover {
+    transform: translateY(-8px) scale(1.02);
+}
+
+/* 14. COURSE GRID CONTAINER */
+.course-grid {
+    animation: gridFadeIn 0.8s ease-out 0.3s backwards;
+}
+
+@keyframes gridFadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* 15. COMPANY MOTTO BANNER */
+.company-motto-banner {
+    animation: mottoSlideIn 0.8s cubic-bezier(0.4, 0, 0.2, 1) backwards;
+}
+
+@keyframes mottoSlideIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* 16. LOADING STATE SHIMMER */
+@keyframes shimmer {
+    0% {
+        background-position: -1000px 0;
+    }
+    100% {
+        background-position: 1000px 0;
+    }
+}
+
+.loading {
+    background: linear-gradient(
+        90deg,
+        rgba(255, 255, 255, 0.1) 0%,
+        rgba(255, 255, 255, 0.2) 50%,
+        rgba(255, 255, 255, 0.1) 100%
+    );
+    background-size: 1000px 100%;
+    animation: shimmer 2s infinite;
+}
+
+/* 17. MICRO-INTERACTIONS */
+.tab-chip,
+.info-item,
+.achievement,
+.activity-item,
+.feature-item {
+    will-change: transform;
+}
+
+/* Remove will-change after animation completes */
+.tab-chip:hover,
+.info-item:hover,
+.achievement:hover,
+.activity-item:hover {
+    will-change: auto;
+}
+
+/* 18. ENTRANCE STAGGER FOR LISTS */
+.features-list .feature-item {
+    animation: listItemSlideIn 0.4s ease-out backwards;
+}
+
+.features-list .feature-item:nth-child(1) { animation-delay: 0.1s; }
+.features-list .feature-item:nth-child(2) { animation-delay: 0.2s; }
+.features-list .feature-item:nth-child(3) { animation-delay: 0.3s; }
+.features-list .feature-item:nth-child(4) { animation-delay: 0.4s; }
+
+@keyframes listItemSlideIn {
+    0% {
+        opacity: 0;
+        transform: translateX(-15px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* 19. CONSISTENT SPACING SYSTEM */
+.section-spacing {
+    margin-bottom: 2rem !important;
+}
+
+.card-spacing {
+    margin-bottom: 1.5rem !important;
+}
+
+/* 20. REDUCE MOTION FOR ACCESSIBILITY */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+/* 21. FOCUS STATES FOR ACCESSIBILITY - PURPLE-PINK THEME */
+*:focus-visible {
+    outline: 2px solid var(--magenta-bright) !important;
+    outline-offset: 3px !important;
+    border-radius: 4px !important;
+}
+
+button:focus-visible,
+.tab-chip:focus-visible {
+    box-shadow: 0 0 0 4px var(--shadow-magenta) !important;
+}
+
+/* 22. GLASS PANEL DEPTH */
+.info-card,
+.gamification-card,
+.cta-card,
+.promo-card {
+    transform-style: preserve-3d;
+    backface-visibility: hidden;
+}
+
+/* 23. PROMO STATS ANIMATION */
+.promo-card [style*="grid-template-columns"] > div {
+    animation: statBoxPop 0.5s cubic-bezier(0.34, 1.56, 0.64, 1) backwards;
+}
+
+.promo-card [style*="grid-template-columns"] > div:nth-child(1) {
+    animation-delay: 0.2s;
+}
+
+.promo-card [style*="grid-template-columns"] > div:nth-child(2) {
+    animation-delay: 0.3s;
+}
+
+@keyframes statBoxPop {
+    0% {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* 24. LIVE PULSE ANIMATION */
+.live-pulse {
+    animation: livePulse 2s ease-in-out infinite;
+}
+
+@keyframes livePulse {
+    0%, 100% {
+        box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.7);
+    }
+    50% {
+        box-shadow: 0 0 0 10px rgba(34, 197, 94, 0);
+    }
+}
+
+/* 25. STAT URGENCY BADGE PULSE */
+.stat-urgency {
+    animation: urgencyPulse 2s ease-in-out infinite;
+}
+
+@keyframes urgencyPulse {
+    0%, 100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(1.1);
+        opacity: 0.8;
+    }
+}
+
+/* ========================================
+   ADDITIONAL PURPLE-PINK THEME OVERRIDES
+   ======================================== */
+
+/* Override MANAGE badge to purple */
+.manage-badge {
+    background: linear-gradient(135deg, var(--glass-purple) 0%, var(--glass-magenta) 100%) !important;
+    border: 1px solid var(--border-purple) !important;
+    color: var(--text-purple) !important;
+}
+
+/* Override badges in promo cards */
+.buzz-central-card > div > div:first-child,
+.promo-card > div > div[style*="PROMOTE"] {
+    background: linear-gradient(135deg, var(--glass-purple) 0%, rgba(168, 85, 247, 0.2) 100%) !important;
+    border: 1px solid var(--border-purple) !important;
+    color: var(--text-purple) !important;
+}
+
+.marketplace-card > div > div:first-child,
+.promo-card > div > div[style*="EARN"] {
+    background: linear-gradient(135deg, var(--glass-magenta) 0%, var(--glass-pink) 100%) !important;
+    border: 1px solid var(--border-pink) !important;
+    color: var(--text-pink) !important;
+}
+
+/* Override card hover glows */
+.tool-card-hover:hover {
+    box-shadow: 0 16px 48px var(--shadow-purple),
+                0 0 0 1px rgba(139, 92, 246, 0.1) !important;
+    border-color: rgba(139, 92, 246, 0.4) !important;
+}
+
+.mentor-card-hover:hover {
+    box-shadow: 0 16px 48px var(--shadow-magenta),
+                0 0 0 1px rgba(192, 38, 211, 0.1) !important;
+}
+
+.project-card-hover:hover {
+    box-shadow: 0 16px 48px var(--shadow-pink),
+                0 0 0 1px rgba(236, 72, 153, 0.1) !important;
+}
+
+/* Stats cards with purple-pink gradients */
+.fomo-stat-card {
+    border: 1px solid var(--border-purple) !important;
+}
+
+.fomo-stat-card:hover {
+    box-shadow: 0 8px 24px var(--shadow-purple) !important;
+    border-color: rgba(139, 92, 246, 0.4) !important;
+}
+
+/* Community and Marketplace stats glassmorphism */
+.tab-panel#community-panel [style*="text-align: center"],
+.tab-panel#marketplace-panel [style*="text-align: center"] {
+    background: var(--glass-purple) !important;
+    border: 1px solid var(--border-purple) !important;
+}
+
+/* Scarcity badges - purple theme */
+.scarcity-badge {
+    border: 1px solid var(--border-purple) !important;
+}
+
+.scarcity-badge:hover {
+    box-shadow: 0 8px 24px var(--shadow-purple) !important;
+}
+
+/* Live pulse - purple glow */
+.live-pulse {
+    background: var(--purple-deep);
+}
+
+@keyframes livePulse {
+    0%, 100% {
+        box-shadow: 0 0 0 0 rgba(139, 92, 246, 0.7);
+    }
+    50% {
+        box-shadow: 0 0 0 10px rgba(139, 92, 246, 0);
+    }
+}
+
+/* Info icons purple glow on hover */
+.info-item:hover .info-icon {
+    box-shadow: 0 0 40px var(--shadow-purple), 0 0 60px var(--shadow-magenta) !important;
+}
+
+/* Achievement unlocked - purple-pink glow */
+.achievement.unlocked {
+    box-shadow: 0 4px 16px var(--shadow-purple) !important;
+}
+
+/* Level number - purple gradient text */
+.level-number {
+    background: var(--gradient-purple-pink);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* Feature tiles hover - purple shadow */
+.feature-tile:hover {
+    box-shadow: 0 12px 32px var(--shadow-purple) !important;
+    border-color: var(--border-purple) !important;
+}
+
+/* Activity items - purple accent */
+.activity-item:hover {
+    background: var(--glass-purple) !important;
+    border-left: 3px solid var(--purple-deep) !important;
+}
+
+/* Override any remaining cyan/blue elements */
+[style*="#06b6d4"],
+[style*="#06B6D4"],
+[style*="rgb(6, 182, 212)"] {
+    color: var(--magenta-bright) !important;
+}
+
+/* ========================================
+   PROFESSIONAL TEXT HIGHLIGHTING
+   ======================================== */
+
+/* General text highlight class */
+.highlight-text {
+    background: linear-gradient(135deg, rgba(139, 92, 246, 0.15), rgba(236, 72, 153, 0.12));
+    padding: 2px 8px;
+    border-radius: 6px;
+    font-weight: 600;
+    color: #8b5cf6;
+    border-bottom: 2px solid rgba(139, 92, 246, 0.3);
+    position: relative;
+    display: inline-block;
+}
+
+/* Accent highlight - for important keywords */
+.highlight-accent {
+    background: linear-gradient(135deg, rgba(236, 72, 153, 0.15), rgba(192, 38, 211, 0.12));
+    padding: 3px 10px;
+    border-radius: 8px;
+    font-weight: 700;
+    color: #ec4899;
+    box-shadow: 0 2px 8px rgba(236, 72, 153, 0.2);
+    position: relative;
+    display: inline-block;
+}
+
+/* Success highlight - for achievements */
+.highlight-success {
+    background: linear-gradient(135deg, rgba(16, 185, 129, 0.15), rgba(5, 150, 105, 0.12));
+    padding: 3px 10px;
+    border-radius: 8px;
+    font-weight: 700;
+    color: #10b981;
+    box-shadow: 0 2px 8px rgba(16, 185, 129, 0.2);
+    position: relative;
+    display: inline-block;
+}
+
+/* Premium highlight - for exclusive content */
+.highlight-premium {
+    background: linear-gradient(135deg, rgba(245, 158, 11, 0.15), rgba(217, 119, 6, 0.12));
+    padding: 3px 10px;
+    border-radius: 8px;
+    font-weight: 700;
+    color: #f59e0b;
+    box-shadow: 0 2px 8px rgba(245, 158, 11, 0.2);
+    position: relative;
+    display: inline-block;
+}
+
+/* ========================================
+   SHINE EFFECT ANIMATIONS
+   ======================================== */
+
+/* Shine effect for highlights */
+@keyframes shine {
+    0% {
+        left: -100%;
+    }
+    50% {
+        left: 100%;
+    }
+    100% {
+        left: 100%;
+    }
+}
+
+.highlight-shine::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(90deg,
+        transparent 0%,
+        rgba(255, 255, 255, 0.6) 50%,
+        transparent 100%);
+    animation: shine 3s ease-in-out infinite;
+    pointer-events: none;
+}
+
+/* Glow shine effect */
+@keyframes glowPulse {
+    0%, 100% {
+        box-shadow: 0 0 5px rgba(139, 92, 246, 0.3),
+                    0 0 10px rgba(236, 72, 153, 0.2);
+    }
+    50% {
+        box-shadow: 0 0 15px rgba(139, 92, 246, 0.5),
+                    0 0 25px rgba(236, 72, 153, 0.3),
+                    0 0 35px rgba(139, 92, 246, 0.2);
+    }
+}
+
+.highlight-glow {
+    animation: glowPulse 2s ease-in-out infinite;
+}
+
+/* Subtle shimmer effect */
+@keyframes shimmer {
+    0% {
+        background-position: -200% center;
+    }
+    100% {
+        background-position: 200% center;
+    }
+}
+
+.text-shimmer {
+    background: linear-gradient(90deg,
+        #8b5cf6 0%,
+        #a855f7 25%,
+        #ec4899 50%,
+        #a855f7 75%,
+        #8b5cf6 100%);
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: shimmer 3s linear infinite;
+    font-weight: 700;
+}
+
+/* Gradient text highlight */
+.text-gradient {
+    background: var(--gradient-purple-elegant);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-weight: 700;
+    position: relative;
+}
+
+/* Underline highlight */
+.text-underline-highlight {
+    position: relative;
+    display: inline-block;
+    font-weight: 600;
+    color: #8b5cf6;
+}
+
+.text-underline-highlight::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg,
+        transparent 0%,
+        rgba(139, 92, 246, 0.8) 20%,
+        rgba(236, 72, 153, 0.8) 80%,
+        transparent 100%);
+    border-radius: 2px;
+}
+
+/* Badge highlight */
+.badge-highlight {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 14px;
+    background: linear-gradient(135deg, rgba(139, 92, 246, 0.12), rgba(236, 72, 153, 0.1));
+    border: 1.5px solid rgba(139, 92, 246, 0.3);
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: #8b5cf6;
+    box-shadow: 0 2px 8px rgba(139, 92, 246, 0.15);
+    position: relative;
+    overflow: hidden;
+}
+
+.badge-highlight i {
+    background: var(--gradient-purple-pink);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* Number highlight - for stats */
+.number-highlight {
+    font-size: 2rem;
+    font-weight: 800;
+    background: var(--gradient-purple-elegant);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    line-height: 1.2;
+    position: relative;
+}
+
+.number-highlight::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60%;
+    height: 2px;
+    background: linear-gradient(90deg,
+        transparent 0%,
+        rgba(139, 92, 246, 0.6) 50%,
+        transparent 100%);
+}
+
+/* Auto-highlight specific elements */
+strong, b {
+    font-weight: 700;
+    color: #8b5cf6;
+}
+
+em, i {
+    font-style: italic;
+    color: #ec4899;
+}
+
+mark {
+    background: linear-gradient(135deg, rgba(139, 92, 246, 0.2), rgba(236, 72, 153, 0.15));
+    color: #7c3aed;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-weight: 600;
+}
+
+/* Highlight on hover effect */
+.hover-highlight {
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.hover-highlight:hover {
+    background: linear-gradient(135deg, rgba(139, 92, 246, 0.1), rgba(236, 72, 153, 0.08));
+    padding: 4px 8px;
+    margin: -4px -8px;
+    border-radius: 8px;
+    box-shadow: 0 2px 12px rgba(139, 92, 246, 0.2);
+}
+
+/* Animated border shine */
+@keyframes borderShine {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.border-shine {
+    position: relative;
+    padding: 16px;
+    border-radius: 12px;
+    background: linear-gradient(white, white) padding-box,
+                linear-gradient(90deg,
+                    #8b5cf6 0%,
+                    #ec4899 25%,
+                    #8b5cf6 50%,
+                    #ec4899 75%,
+                    #8b5cf6 100%) border-box;
+    border: 2px solid transparent;
+    background-size: 200% 200%;
+    animation: borderShine 3s linear infinite;
+}
+
+/* Quote highlight */
+blockquote {
+    border-left: 4px solid transparent;
+    border-image: var(--gradient-purple-pink) 1;
+    padding-left: 20px;
+    margin-left: 0;
+    font-style: italic;
+    color: #64748b;
+    position: relative;
+}
+
+blockquote::before {
+    content: '"';
+    font-size: 3rem;
+    line-height: 1;
+    color: rgba(139, 92, 246, 0.2);
+    position: absolute;
+    left: -10px;
+    top: -10px;
+    font-family: Georgia, serif;
+}
+
+/* Pill highlight - for tags */
+.pill-highlight {
+    display: inline-block;
+    padding: 4px 12px;
+    background: linear-gradient(135deg, rgba(139, 92, 246, 0.1), rgba(236, 72, 153, 0.08));
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: #8b5cf6;
+    border: 1px solid rgba(139, 92, 246, 0.2);
+    margin: 2px;
+}
+
+/* Sparkle effect for special content */
+@keyframes sparkle {
+    0%, 100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+    50% {
+        opacity: 0.3;
+        transform: scale(0.8);
+    }
+}
+
+.sparkle-text {
+    position: relative;
+    display: inline-block;
+}
+
+.sparkle-text::before,
+.sparkle-text::after {
+    content: '✨';
+    position: absolute;
+    font-size: 0.8em;
+    animation: sparkle 2s ease-in-out infinite;
+}
+
+.sparkle-text::before {
+    left: -1.5em;
+    animation-delay: 0s;
+}
+
+.sparkle-text::after {
+    right: -1.5em;
+    animation-delay: 1s;
+}
+
+/* Neon glow text */
+.neon-text {
+    color: #8b5cf6;
+    font-weight: 700;
+    text-shadow:
+        0 0 5px rgba(139, 92, 246, 0.5),
+        0 0 10px rgba(139, 92, 246, 0.4),
+        0 0 15px rgba(139, 92, 246, 0.3),
+        0 0 20px rgba(139, 92, 246, 0.2);
+    animation: neonPulse 2s ease-in-out infinite;
+}
+
+@keyframes neonPulse {
+    0%, 100% {
+        text-shadow:
+            0 0 5px rgba(139, 92, 246, 0.5),
+            0 0 10px rgba(139, 92, 246, 0.4),
+            0 0 15px rgba(139, 92, 246, 0.3);
+    }
+    50% {
+        text-shadow:
+            0 0 10px rgba(139, 92, 246, 0.8),
+            0 0 20px rgba(139, 92, 246, 0.6),
+            0 0 30px rgba(139, 92, 246, 0.4),
+            0 0 40px rgba(139, 92, 246, 0.2);
+    }
+}
+
+/* ========================================
+   RIGHT PANEL PROMO TABS REDESIGN
+   ======================================== */
+
+.promo-tabs-container {
+    margin-top: 1.5rem;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.95), rgba(248, 250, 252, 0.98));
+    border-radius: 20px;
+    border: 1px solid rgba(139, 92, 246, 0.15);
+    box-shadow: 0 8px 32px rgba(139, 92, 246, 0.1);
+    overflow: hidden;
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+}
+
+.promo-tabs-header {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0;
+    background: linear-gradient(135deg, rgba(139, 92, 246, 0.05), rgba(236, 72, 153, 0.03));
+    border-bottom: 2px solid rgba(139, 92, 246, 0.1);
+    padding: 8px;
+}
+
+.promo-tab {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    padding: 12px 8px;
+    background: transparent;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+}
+
+.promo-tab i {
+    font-size: 1.3rem;
+    color: #64748b;
+    transition: all 0.3s ease;
+}
+
+.promo-tab span {
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: #64748b;
+    font-family: 'Exo 2', sans-serif;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+}
+
+.promo-tab::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%) scaleX(0);
+    width: 80%;
+    height: 3px;
+    background: var(--gradient-purple-pink);
+    border-radius: 3px 3px 0 0;
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.promo-tab:hover:not(.active) {
+    background: rgba(139, 92, 246, 0.08);
+}
+
+.promo-tab:hover:not(.active) i,
+.promo-tab:hover:not(.active) span {
+    color: #8b5cf6;
+}
+
+/* BheemFlow Tab - Purple Theme */
+.promo-tab[data-promo="bheemflow"].active {
+    background: linear-gradient(135deg, rgba(139, 92, 246, 0.15), rgba(124, 58, 237, 0.12));
+}
+
+.promo-tab[data-promo="bheemflow"].active i {
+    background: linear-gradient(135deg, #8b5cf6, #7c3aed);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    transform: scale(1.1);
+}
+
+.promo-tab[data-promo="bheemflow"].active span {
+    background: linear-gradient(135deg, #8b5cf6, #7c3aed);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.promo-tab[data-promo="bheemflow"].active::before {
+    background: linear-gradient(90deg, #8b5cf6, #7c3aed);
+    transform: translateX(-50%) scaleX(1);
+}
+
+.promo-tab[data-promo="bheemflow"]:hover:not(.active) {
+    background: rgba(139, 92, 246, 0.08);
+}
+
+.promo-tab[data-promo="bheemflow"]:hover:not(.active) i,
+.promo-tab[data-promo="bheemflow"]:hover:not(.active) span {
+    color: #8b5cf6;
+}
+
+/* Community Tab - Blue Theme */
+.promo-tab[data-promo="community"].active {
+    background: linear-gradient(135deg, rgba(59, 130, 246, 0.15), rgba(99, 102, 241, 0.12));
+}
+
+.promo-tab[data-promo="community"].active i {
+    background: linear-gradient(135deg, #3b82f6, #6366f1);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    transform: scale(1.1);
+}
+
+.promo-tab[data-promo="community"].active span {
+    background: linear-gradient(135deg, #3b82f6, #6366f1);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.promo-tab[data-promo="community"].active::before {
+    background: linear-gradient(90deg, #3b82f6, #6366f1);
+    transform: translateX(-50%) scaleX(1);
+}
+
+.promo-tab[data-promo="community"]:hover:not(.active) {
+    background: rgba(59, 130, 246, 0.08);
+}
+
+.promo-tab[data-promo="community"]:hover:not(.active) i,
+.promo-tab[data-promo="community"]:hover:not(.active) span {
+    color: #3b82f6;
+}
+
+/* Marketplace Tab - Orange Theme */
+.promo-tab[data-promo="marketplace"].active {
+    background: linear-gradient(135deg, rgba(245, 158, 11, 0.15), rgba(251, 146, 60, 0.12));
+}
+
+.promo-tab[data-promo="marketplace"].active i {
+    background: linear-gradient(135deg, #f59e0b, #fb923c);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    transform: scale(1.1);
+}
+
+.promo-tab[data-promo="marketplace"].active span {
+    background: linear-gradient(135deg, #f59e0b, #fb923c);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.promo-tab[data-promo="marketplace"].active::before {
+    background: linear-gradient(90deg, #f59e0b, #fb923c);
+    transform: translateX(-50%) scaleX(1);
+}
+
+.promo-tab[data-promo="marketplace"]:hover:not(.active) {
+    background: rgba(245, 158, 11, 0.08);
+}
+
+.promo-tab[data-promo="marketplace"]:hover:not(.active) i,
+.promo-tab[data-promo="marketplace"]:hover:not(.active) span {
+    color: #f59e0b;
+}
+
+/* Bheem Cloud Tab - Sky Blue/Cyan Theme */
+.promo-tab[data-promo="bheemcloud"].active {
+    background: linear-gradient(135deg, rgba(14, 165, 233, 0.15), rgba(6, 182, 212, 0.12));
+}
+
+.promo-tab[data-promo="bheemcloud"].active i {
+    background: linear-gradient(135deg, #0ea5e9, #06b6d4);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    transform: scale(1.1);
+}
+
+.promo-tab[data-promo="bheemcloud"].active span {
+    background: linear-gradient(135deg, #0ea5e9, #06b6d4);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.promo-tab[data-promo="bheemcloud"].active::before {
+    background: linear-gradient(90deg, #0ea5e9, #06b6d4);
+    transform: translateX(-50%) scaleX(1);
+}
+
+.promo-tab[data-promo="bheemcloud"]:hover:not(.active) {
+    background: rgba(14, 165, 233, 0.08);
+}
+
+.promo-tab[data-promo="bheemcloud"]:hover:not(.active) i,
+.promo-tab[data-promo="bheemcloud"]:hover:not(.active) span {
+    color: #0ea5e9;
+}
+
+.promo-tabs-content {
+    padding: 0;
+    position: relative;
+    min-height: 300px;
+}
+
+.promo-tab-panel {
+    display: none;
+    animation: fadeInTab 0.4s ease-out;
+}
+
+.promo-tab-panel.active {
+    display: block;
+}
+
+@keyframes fadeInTab {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.promo-tab-panel .promo-card {
+    margin-top: 0 !important;
+    border-radius: 0 0 20px 20px !important;
+    border-top: none !important;
+}
+
+/* Compact styling for cards inside tabs */
+.promo-tabs-container .promo-card {
+    padding: 1.25rem !important;
+}
+
+.promo-tabs-container .promo-card h3 {
+    font-size: 1.2rem !important;
+    margin-bottom: 0.5rem !important;
+}
+
+.promo-tabs-container .promo-card p {
+    font-size: 0.85rem !important;
+    margin-bottom: 1rem !important;
+}
+
+.promo-tabs-container .promo-card > div > div:first-child {
+    padding: 0.25rem 0.7rem !important;
+    font-size: 0.65rem !important;
+    margin-bottom: 0.75rem !important;
+}
+
+.promo-tabs-container .promo-card a {
+    padding: 0.7rem !important;
+    font-size: 0.88rem !important;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .promo-tabs-header {
+        padding: 6px;
+        gap: 4px;
+    }
+
+    .promo-tab {
+        padding: 10px 4px;
+        gap: 4px;
+    }
+
+    .promo-tab i {
+        font-size: 1rem;
+    }
+
+    .promo-tab span {
+        font-size: 0.65rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .promo-tab {
+        padding: 8px 2px;
+    }
+
+    .promo-tab i {
+        font-size: 0.9rem;
+    }
+
+    .promo-tab span {
+        font-size: 0.6rem;
+    }
+}
+
+/* ========================================
+   END OF ELEGANT ENHANCEMENTS
+   ======================================== */

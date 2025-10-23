@@ -1,0 +1,110 @@
+/* Remove ALL hover effects from banner slider images */
+.banner-bg,
+.banner-bg *,
+.banner-bg::before,
+.banner-bg::after,
+.bg-img,
+.bg-img *,
+.swiper-slide,
+.swiper-slide *,
+.banner-slide,
+.banner-slide *,
+.banner-slide .swiper-slide,
+.banner-slide .swiper-slide *,
+.banner-area,
+.banner-area *,
+.banner-area img,
+.banner-content img,
+.banner-bg[data-background],
+.banner-bg[data-background] * {
+    transition: none !important;
+    transform: none !important;
+    animation: none !important;
+}
+
+.banner-bg:hover,
+.banner-bg:hover *,
+.banner-bg:hover::before,
+.banner-bg:hover::after,
+.bg-img:hover,
+.bg-img:hover *,
+.swiper-slide:hover,
+.swiper-slide:hover *,
+.banner-slide:hover,
+.banner-slide:hover *,
+.banner-slide .swiper-slide:hover,
+.banner-slide .swiper-slide:hover *,
+.banner-area:hover,
+.banner-area:hover *,
+.banner-area img:hover,
+.banner-content:hover img {
+    transition: none !important;
+    transform: none !important;
+    scale: 1 !important;
+    filter: none !important;
+    animation: none !important;
+}
+
+/* Ensure background images stay completely static */
+.banner-bg[data-background]:hover,
+.banner-bg[data-background]:hover * {
+    background-size: cover !important;
+    transform: none !important;
+    scale: 1 !important;
+    transition: none !important;
+    animation: none !important;
+}
+
+/* Disable any transforms on banner wrapper */
+.banner-area .container,
+.banner-area .container *,
+.banner-area .container:hover,
+.banner-area .container:hover * {
+    transform: none !important;
+    transition: none !important;
+    animation: none !important;
+}
+
+/* Prevent image stretching in banner slider */
+.banner-area img,
+.banner-bg img,
+.banner-content img,
+.swiper-slide img,
+.banner-slide img {
+    max-width: 100% !important;
+    height: auto !important;
+    object-fit: contain !important;
+    width: auto !important;
+}
+
+/* Fix background image stretching - use cover with proper constraints */
+.banner-area .banner-bg.bg-img,
+.banner-area .banner-bg[data-background],
+.banner-bg.bg-img[data-background],
+div.banner-bg.bg-img,
+div.bg-img {
+    background-size: cover !important;
+    background-position: center center !important;
+    background-repeat: no-repeat !important;
+}
+
+/* Override any inline styles from JavaScript */
+.banner-bg[style*="background-image"] {
+    background-size: cover !important;
+    background-position: center center !important;
+    background-repeat: no-repeat !important;
+}
+
+/* Prevent swiper-slide from forcing stretching with fixed height */
+.banner-slide .swiper-slide {
+    min-height: 400px !important;
+    height: auto !important;
+}
+
+/* Ensure banner background uses natural dimensions */
+.banner-area .banner-bg,
+div.banner-bg {
+    min-height: 400px !important;
+    height: 100% !important;
+    width: 100% !important;
+}

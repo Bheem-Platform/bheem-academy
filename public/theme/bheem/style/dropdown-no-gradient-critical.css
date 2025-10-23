@@ -1,0 +1,131 @@
+/* ================================================
+   CRITICAL: REMOVE ALL DROPDOWN GRADIENTS
+   Force plain white background - No gradients at all
+   ================================================ */
+
+/* Remove ALL gradients from dropdown menus - Maximum specificity */
+html body .navbar .dropdown-menu,
+html body header .dropdown-menu,
+html body #page .navbar .dropdown-menu,
+html body #page-header .dropdown-menu,
+html body .navbar-light .dropdown-menu,
+html body .navbar-dark .dropdown-menu,
+html body .nav .dropdown-menu,
+html body .navbar-nav .dropdown-menu,
+html body [class*="navbar"] .dropdown-menu,
+html body [class*="dropdown"] .dropdown-menu,
+body .dropdown-menu,
+.dropdown-menu {
+  background: #ffffff !important;
+  background-color: #ffffff !important;
+  background-image: none !important;
+  background-attachment: initial !important;
+  background-position: initial !important;
+  background-repeat: initial !important;
+  background-size: initial !important;
+  background-origin: initial !important;
+  background-clip: initial !important;
+}
+
+/* Remove gradients from pseudo elements */
+.navbar .dropdown-menu::before,
+.navbar .dropdown-menu::after,
+.dropdown-menu::before,
+.dropdown-menu::after {
+  background: none !important;
+  background-image: none !important;
+  background-color: transparent !important;
+}
+
+/* Override any inline styles or JavaScript-added gradients */
+.navbar .dropdown-menu[style*="gradient"],
+.dropdown-menu[style*="gradient"] {
+  background: #ffffff !important;
+  background-image: none !important;
+}
+
+/* Remove backdrop effects that might show gradients */
+.navbar .dropdown-menu {
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+  filter: none !important;
+}
+
+/* Ensure dropdown items have no gradient */
+.navbar .dropdown-menu .dropdown-item,
+.navbar .dropdown-menu a,
+.dropdown-menu .dropdown-item,
+.dropdown-menu a,
+.dropdown-menu li,
+.dropdown-menu li a {
+  background: transparent !important;
+  background-image: none !important;
+}
+
+/* Simple hover state - no gradients */
+.navbar .dropdown-menu .dropdown-item:hover,
+.dropdown-menu a:hover,
+.dropdown-menu .dropdown-item:hover {
+  background: #f3f4f6 !important;
+  background-image: none !important;
+}
+
+/* Active state - no gradients */
+.navbar .dropdown-menu .dropdown-item.active,
+.dropdown-menu a.active,
+.dropdown-menu .dropdown-item.active,
+.dropdown-menu .dropdown-item:active {
+  background: #e5e7eb !important;
+  background-image: none !important;
+}
+
+/* Remove any box shadows that might contain gradients */
+.navbar .dropdown-menu {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1) !important;
+}
+
+/* Force override Bootstrap and theme gradients */
+.bg-gradient-primary .dropdown-menu,
+.bg-gradient-secondary .dropdown-menu,
+.bg-gradient .dropdown-menu,
+[class*="gradient"] .dropdown-menu {
+  background: #ffffff !important;
+  background-image: none !important;
+}
+
+/* Ensure text remains dark on white background */
+.navbar .dropdown-menu,
+.navbar .dropdown-menu *,
+.dropdown-menu,
+.dropdown-menu * {
+  color: #1f2937 !important;
+}
+
+/* Remove any divider gradients */
+.dropdown-divider {
+  background: #e5e7eb !important;
+  background-image: none !important;
+  border: none !important;
+  height: 1px !important;
+}
+
+/* Override theme-specific gradients */
+.theme-edoo .dropdown-menu,
+.theme-boost .dropdown-menu,
+[data-theme] .dropdown-menu {
+  background: #ffffff !important;
+  background-image: none !important;
+}
+
+/* Final override with !important on each property */
+.dropdown-menu {
+  background: #ffffff !important;
+}
+
+.dropdown-menu {
+  background-color: #ffffff !important;
+}
+
+.dropdown-menu {
+  background-image: none !important;
+}

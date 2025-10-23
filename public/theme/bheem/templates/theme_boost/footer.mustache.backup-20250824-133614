@@ -1,0 +1,405 @@
+<!-- Optimized Premium Footer for Bheem Academy -->
+<footer class="premium-footer-optimized" id="optimizedFooter">
+    <!-- Aurora Background Effect -->
+    <div class="aurora-bg">
+        <div class="aurora-layer aurora-1"></div>
+        <div class="aurora-layer aurora-2"></div>
+    </div>
+
+    <!-- Floating AI Tech Elements -->
+    <div class="ai-tech-elements">
+        <div class="tech-bubble" data-tech="nn">
+            <span class="tech-icon">NN</span>
+            <span class="tech-name">Neural Net</span>
+        </div>
+        <div class="tech-bubble" data-tech="llama">
+            <span class="tech-icon">🦙</span>
+            <span class="tech-name">LLaMA</span>
+        </div>
+        <div class="tech-bubble" data-tech="gpt">
+            <span class="tech-icon">AI</span>
+            <span class="tech-name">GPT-4</span>
+        </div>
+        <div class="tech-bubble" data-tech="nocode">
+            <span class="tech-icon">⚡</span>
+            <span class="tech-name">NoCode</span>
+        </div>
+        <div class="tech-bubble" data-tech="finetune">
+            <span class="tech-icon">🎯</span>
+            <span class="tech-name">Fine-tune</span>
+        </div>
+        <div class="tech-bubble" data-tech="ml">
+            <span class="tech-icon">🧠</span>
+            <span class="tech-name">ML</span>
+        </div>
+    </div>
+
+    <!-- Live Activity Bar -->
+    <div class="activity-bar">
+        <div class="activity-wrapper">
+            <span class="activity-item">
+                <i class="fas fa-circle pulse"></i> 
+                <strong>Live:</strong> 342 students online
+            </span>
+            <span class="activity-item">
+                <i class="fas fa-graduation-cap"></i>
+                New course: Advanced Prompt Engineering
+            </span>
+            <span class="activity-item">
+                <i class="fas fa-trophy"></i>
+                Sarah completed AI Fundamentals
+            </span>
+            <span class="activity-item">
+                <i class="fas fa-fire"></i>
+                Trending: LLaMA Fine-tuning Workshop
+            </span>
+        </div>
+    </div>
+
+    <!-- Statistics Bar -->
+    <div class="stats-bar-compact">
+        <div class="container">
+            <div class="stats-grid-compact">
+                <div class="stat-item-compact">
+                    <i class="fas fa-users"></i>
+                    <div>
+                        <h3 class="stat-number" data-target="15000">0</h3>
+                        <p>Active Learners</p>
+                    </div>
+                </div>
+                <div class="stat-item-compact">
+                    <i class="fas fa-book-open"></i>
+                    <div>
+                        <h3 class="stat-number" data-target="250">0</h3>
+                        <p>AI Courses</p>
+                    </div>
+                </div>
+                <div class="stat-item-compact">
+                    <i class="fas fa-certificate"></i>
+                    <div>
+                        <h3 class="stat-number" data-target="8500">0</h3>
+                        <p>Certificates</p>
+                    </div>
+                </div>
+                <div class="stat-item-compact">
+                    <i class="fas fa-star"></i>
+                    <div>
+                        <h3 class="stat-number" data-target="98">0</h3>
+                        <span class="stat-suffix">%</span>
+                        <p>Success Rate</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Footer Content -->
+    <div class="footer-main-optimized">
+        <div class="container">
+            <div class="footer-grid-optimized">
+                <!-- Brand & Social Column -->
+                <div class="brand-column-opt">
+                    <div class="brand-header">
+                        {{#footer_logo_visibility}}
+                            <a href="{{{ config.wwwroot }}}/" class="footer-logo">
+                                {{#main_footer_logo}}
+                                    <img src="{{main_footer_logo}}" alt="{{sitename}}">
+                                {{/main_footer_logo}}
+                                {{^main_footer_logo}}
+                                    <h2 class="text-logo-opt">
+                                        <span>Bheem</span>
+                                        <span class="accent">Academy</span>
+                                    </h2>
+                                {{/main_footer_logo}}
+                            </a>
+                        {{/footer_logo_visibility}}
+                    </div>
+                    
+                    <p class="brand-desc">
+                        Revolutionizing AI education for all ages. From curious 8-year-olds to experienced professionals in their 80s.
+                    </p>
+                    
+                    <div class="social-links-opt">
+                        <a href="https://www.facebook.com/bheemacademy" target="_blank" rel="noopener noreferrer" class="social-link-opt" data-network="facebook" title="Follow us on Facebook">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="https://twitter.com/bheemacademy" target="_blank" rel="noopener noreferrer" class="social-link-opt" data-network="twitter" title="Follow us on Twitter">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/company/bheemacademy" target="_blank" rel="noopener noreferrer" class="social-link-opt" data-network="linkedin" title="Connect on LinkedIn">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="https://www.instagram.com/bheemacademy" target="_blank" rel="noopener noreferrer" class="social-link-opt" data-network="instagram" title="Follow us on Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://www.youtube.com/@bheemacademy" target="_blank" rel="noopener noreferrer" class="social-link-opt" data-network="youtube" title="Subscribe on YouTube">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div class="links-column-opt">
+                    <h3 class="column-title">
+                        <i class="fas fa-compass"></i>
+                        Quick Links
+                    </h3>
+                    <div class="links-grid">
+                        <a href="/course/" class="footer-link-opt">
+                            <i class="fas fa-angle-right"></i> All Courses
+                        </a>
+                        <a href="/my/" class="footer-link-opt">
+                            <i class="fas fa-angle-right"></i> Dashboard
+                        </a>
+                        <a href="/badges/mybadges.php" class="footer-link-opt">
+                            <i class="fas fa-angle-right"></i> My Certificates
+                        </a>
+                        <a href="/blog/" class="footer-link-opt">
+                            <i class="fas fa-angle-right"></i> Blog & News
+                        </a>
+                        <a href="/mod/forum/" class="footer-link-opt">
+                            <i class="fas fa-angle-right"></i> Community
+                        </a>
+                        <a href="/user/profile.php" class="footer-link-opt">
+                            <i class="fas fa-angle-right"></i> My Profile
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Resources -->
+                <div class="links-column-opt">
+                    <h3 class="column-title">
+                        <i class="fas fa-book"></i>
+                        Resources
+                    </h3>
+                    <div class="links-grid">
+                        <a href="/mod/page/view.php?id=3" class="footer-link-opt">
+                            <i class="fas fa-angle-right"></i> Help Center
+                        </a>
+                        <a href="/mod/page/view.php?id=4" class="footer-link-opt">
+                            <i class="fas fa-angle-right"></i> Documentation
+                        </a>
+                        <a href="/mod/page/view.php?id=5" class="footer-link-opt">
+                            <i class="fas fa-angle-right"></i> AI Tools
+                        </a>
+                        <a href="/mod/page/view.php?id=6" class="footer-link-opt">
+                            <i class="fas fa-angle-right"></i> API Access
+                        </a>
+                        <a href="/mod/page/view.php?id=7" class="footer-link-opt">
+                            <i class="fas fa-angle-right"></i> Downloads
+                        </a>
+                        <a href="/mod/page/view.php?id=11" class="footer-link-opt">
+                            <i class="fas fa-angle-right"></i> Contact Us
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Newsletter & Contact -->
+                <div class="newsletter-column-opt">
+                    <h3 class="column-title">
+                        <i class="fas fa-envelope"></i>
+                        Stay Updated
+                    </h3>
+                    
+                    <div class="newsletter-box-opt">
+                        <p class="newsletter-text">Get exclusive AI insights and course updates</p>
+                        <form class="newsletter-form-opt" id="newsletterFormOpt">
+                            <input type="email" placeholder="Enter your email" required>
+                            <button type="submit">
+                                <span>Subscribe</span>
+                                <i class="fas fa-arrow-right"></i>
+                            </button>
+                        </form>
+                        <div class="newsletter-features">
+                            <span><i class="fas fa-check"></i> Weekly AI News</span>
+                            <span><i class="fas fa-check"></i> Exclusive Offers</span>
+                            <span><i class="fas fa-check"></i> Free Resources</span>
+                        </div>
+                    </div>
+
+                    <div class="contact-info-opt">
+                        <div class="contact-item-opt">
+                            <i class="fas fa-headset"></i>
+                            <span>24/7 Support Available</span>
+                        </div>
+                        <div class="contact-item-opt">
+                            <i class="fas fa-envelope"></i>
+                            <span>support@bheem.academy</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Featured Courses Slider -->
+            <div class="featured-courses-bar">
+                <h4><i class="fas fa-fire"></i> Trending Courses:</h4>
+                <div class="courses-slider">
+                    <a href="/course/" class="course-chip">
+                        <i class="fas fa-robot"></i> Intro to ChatGPT
+                    </a>
+                    <a href="/course/" class="course-chip">
+                        <i class="fas fa-brain"></i> Neural Networks 101
+                    </a>
+                    <a href="/course/" class="course-chip">
+                        <i class="fas fa-code"></i> Python for AI
+                    </a>
+                    <a href="/course/" class="course-chip">
+                        <i class="fas fa-palette"></i> AI Art Generation
+                    </a>
+                    <a href="/course/" class="course-chip">
+                        <i class="fas fa-chart-line"></i> Data Science Basics
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer Bottom -->
+    <div class="footer-bottom-opt">
+        <div class="container">
+            <div class="bottom-content-opt">
+                <div class="copyright-opt">
+                    <p>© 2024 Bheem Academy • Empowering minds through AI</p>
+                </div>
+                <div class="legal-links-opt">
+                    <a href="/mod/page/view.php?id=8">Privacy Policy</a>
+                    <a href="/mod/page/view.php?id=9">Terms of Service</a>
+                    <a href="/mod/page/view.php?id=10">Cookie Policy</a>
+                    <a href="/mod/page/view.php?id=12">Sitemap</a>
+                </div>
+                <div class="payment-badges">
+                    <i class="fab fa-cc-visa"></i>
+                    <i class="fab fa-cc-mastercard"></i>
+                    <i class="fab fa-cc-paypal"></i>
+                    <i class="fab fa-cc-stripe"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Floating Chat Widget -->
+    <div class="chat-widget">
+        <button class="chat-trigger">
+            <i class="fas fa-comments"></i>
+            <span class="chat-badge">1</span>
+        </button>
+    </div>
+</footer>
+
+<!-- Modern Back to Top -->
+{{#back_to_top}}
+<button id="modernBackTop" class="modern-backtop-opt">
+    <div class="backtop-progress"></div>
+    <i class="fas fa-chevron-up"></i>
+</button>
+{{/back_to_top}}
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    // Animated Counter
+    const counters = document.querySelectorAll('.stat-number');
+    const observerOptions = {
+        threshold: 0.5
+    };
+    
+    const counterObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const counter = entry.target;
+                const target = +counter.getAttribute('data-target');
+                let count = 0;
+                const increment = target / 100;
+                
+                const updateCounter = () => {
+                    if (count < target) {
+                        count += increment;
+                        counter.innerText = Math.ceil(count);
+                        requestAnimationFrame(updateCounter);
+                    } else {
+                        counter.innerText = target;
+                    }
+                };
+                
+                updateCounter();
+                counterObserver.unobserve(counter);
+            }
+        });
+    }, observerOptions);
+    
+    counters.forEach(counter => counterObserver.observe(counter));
+
+    // Floating AI Elements
+    const techBubbles = document.querySelectorAll('.tech-bubble');
+    techBubbles.forEach((bubble, index) => {
+        // Random positioning
+        bubble.style.left = Math.random() * 90 + '%';
+        bubble.style.top = Math.random() * 80 + '%';
+        bubble.style.animationDelay = index * 0.5 + 's';
+    });
+
+    // Newsletter Form
+    const newsletterForm = document.getElementById('newsletterFormOpt');
+    if (newsletterForm) {
+        newsletterForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            const button = this.querySelector('button');
+            button.classList.add('loading');
+            
+            setTimeout(() => {
+                button.classList.remove('loading');
+                button.classList.add('success');
+                button.innerHTML = '<i class="fas fa-check"></i> Subscribed!';
+                
+                setTimeout(() => {
+                    button.classList.remove('success');
+                    button.innerHTML = '<span>Subscribe</span><i class="fas fa-arrow-right"></i>';
+                    this.reset();
+                }, 3000);
+            }, 1500);
+        });
+    }
+
+    // Back to Top with Progress
+    const backTop = document.getElementById('modernBackTop');
+    if (backTop) {
+        window.addEventListener('scroll', () => {
+            const scrollTop = window.scrollY;
+            const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+            const scrollPercent = (scrollTop / docHeight) * 100;
+            
+            if (scrollTop > 300) {
+                backTop.classList.add('visible');
+            } else {
+                backTop.classList.remove('visible');
+            }
+            
+            // Update progress
+            const progress = backTop.querySelector('.backtop-progress');
+            progress.style.background = `conic-gradient(#8b5cf6 ${scrollPercent}%, transparent ${scrollPercent}%)`;
+        });
+        
+        backTop.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    }
+
+    // Activity bar animation
+    const activityWrapper = document.querySelector('.activity-wrapper');
+    if (activityWrapper) {
+        // Clone items for seamless loop
+        const items = activityWrapper.innerHTML;
+        activityWrapper.innerHTML = items + items;
+    }
+
+    // Social media link tracking (optional)
+    const socialLinks = document.querySelectorAll('.social-link-opt');
+    socialLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
+            // You can add analytics tracking here if needed
+            console.log('Social link clicked:', this.getAttribute('data-network'));
+        });
+    });
+});
+</script>
+
+{{{ output.standard_end_of_body_html }}}

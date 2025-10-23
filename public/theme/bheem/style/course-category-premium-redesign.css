@@ -1,0 +1,525 @@
+/* ================================================
+   COURSE CATEGORY PAGE - PREMIUM REDESIGN 2025
+   Complete makeover for outstanding beauty and functionality
+   Modern, clean, professional design with perfect alignment
+   ================================================ */
+
+/* Import Premium Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap');
+
+/* ================================================
+   PAGE FOUNDATION - Clean Modern Base
+   ================================================ */
+#page-course-index-category,
+.path-course-index,
+.course-category-page,
+body.path-course-index {
+  background: #fafbfc !important;
+  min-height: 100vh !important;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif !important;
+}
+
+/* Remove old background elements */
+#page-course-index-category::before {
+  display: none !important;
+}
+
+/* ================================================
+   MAIN CONTAINER - Perfect Layout Structure
+   ================================================ */
+#page-course-index-category .container,
+#page-course-index-category .container-fluid {
+  max-width: 1400px !important;
+  margin: 0 auto !important;
+  padding: 0 24px !important;
+}
+
+/* ================================================
+   PAGE HEADER - Beautiful Hero Section
+   ================================================ */
+#page-course-index-category .page-header,
+.course-category-header {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+  padding: 60px 0 40px 0 !important;
+  margin-bottom: 40px !important;
+  position: relative !important;
+  overflow: hidden !important;
+}
+
+.page-header::before {
+  content: '' !important;
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  bottom: 0 !important;
+  background: url('data:image/svg+xml,<svg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><g fill="%23ffffff" fill-opacity="0.05"><circle cx="30" cy="30" r="4"/></g></svg>') !important;
+  opacity: 0.3 !important;
+}
+
+.page-header-headings {
+  position: relative !important;
+  z-index: 2 !important;
+  text-align: center !important;
+}
+
+.page-header h1,
+.page-header-headings h1 {
+  font-family: 'Poppins', sans-serif !important;
+  font-size: clamp(32px, 4vw, 48px) !important;
+  font-weight: 600 !important;
+  color: #ffffff !important;
+  margin-bottom: 16px !important;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1) !important;
+}
+
+.page-header .breadcrumb,
+.breadcrumb {
+  background: rgba(255, 255, 255, 0.15) !important;
+  border-radius: 25px !important;
+  padding: 12px 24px !important;
+  backdrop-filter: blur(10px) !important;
+  border: 1px solid rgba(255, 255, 255, 0.2) !important;
+  display: inline-flex !important;
+  margin: 0 auto !important;
+}
+
+.breadcrumb-item a,
+.breadcrumb-item {
+  color: rgba(255, 255, 255, 0.9) !important;
+  text-decoration: none !important;
+  font-weight: 500 !important;
+}
+
+/* ================================================
+   MAIN CONTENT AREA - Two Column Layout
+   ================================================ */
+#page-content,
+.course-category-content {
+  display: grid !important;
+  grid-template-columns: 1fr 320px !important;
+  gap: 40px !important;
+  padding: 0 0 60px 0 !important;
+  position: relative !important;
+}
+
+/* ================================================
+   COURSE LISTING - Beautiful Grid Layout
+   ================================================ */
+.courses-listing,
+.course-listing-container,
+#page-content .course-listing {
+  display: grid !important;
+  grid-template-columns: repeat(auto-fit, minmax(360px, 1fr)) !important;
+  gap: 32px !important;
+  padding: 0 !important;
+}
+
+/* ================================================
+   COURSE CARDS - Premium Modern Design
+   ================================================ */
+.coursebox,
+.course-item,
+.course-card {
+  background: #ffffff !important;
+  border-radius: 20px !important;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08) !important;
+  border: 1px solid #f0f0f0 !important;
+  overflow: hidden !important;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  position: relative !important;
+  margin: 0 !important;
+  height: auto !important;
+  display: flex !important;
+  flex-direction: column !important;
+}
+
+.coursebox:hover,
+.course-item:hover,
+.course-card:hover {
+  transform: translateY(-8px) !important;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.12) !important;
+  border-color: #e0e7ff !important;
+}
+
+/* Course Image Container */
+.coursebox .course-image,
+.course-item .course-image,
+.coursebox-image {
+  position: relative !important;
+  width: 100% !important;
+  height: 240px !important;
+  overflow: hidden !important;
+  background: #f8f9fa !important;
+}
+
+.coursebox .course-image img,
+.course-item .course-image img,
+.coursebox-image img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  transition: transform 0.3s ease !important;
+}
+
+.coursebox:hover .course-image img,
+.course-item:hover .course-image img {
+  transform: scale(1.05) !important;
+}
+
+/* Course Price Badge */
+.course-price,
+.price-badge {
+  position: absolute !important;
+  top: 16px !important;
+  right: 16px !important;
+  background: linear-gradient(135deg, #10b981 0%, #059669 100%) !important;
+  color: #ffffff !important;
+  padding: 8px 16px !important;
+  border-radius: 20px !important;
+  font-weight: 600 !important;
+  font-size: 14px !important;
+  box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3) !important;
+}
+
+/* Course Content Area */
+.coursebox-content,
+.course-item-content,
+.course-content {
+  padding: 24px !important;
+  flex: 1 !important;
+  display: flex !important;
+  flex-direction: column !important;
+}
+
+/* Course Title */
+.coursebox-content h3,
+.course-item h3,
+.course-title {
+  font-family: 'Poppins', sans-serif !important;
+  font-size: 20px !important;
+  font-weight: 600 !important;
+  color: #1f2937 !important;
+  line-height: 1.4 !important;
+  margin-bottom: 12px !important;
+  display: -webkit-box !important;
+  -webkit-line-clamp: 2 !important;
+  -webkit-box-orient: vertical !important;
+  overflow: hidden !important;
+}
+
+.coursebox-content h3 a,
+.course-item h3 a,
+.course-title a {
+  color: #1f2937 !important;
+  text-decoration: none !important;
+  transition: color 0.3s ease !important;
+}
+
+.coursebox:hover h3 a,
+.course-item:hover h3 a {
+  color: #667eea !important;
+}
+
+/* Course Description */
+.coursebox-content .course-description,
+.course-item .course-description,
+.course-summary {
+  color: #6b7280 !important;
+  font-size: 15px !important;
+  line-height: 1.5 !important;
+  margin-bottom: 16px !important;
+  display: -webkit-box !important;
+  -webkit-line-clamp: 3 !important;
+  -webkit-box-orient: vertical !important;
+  overflow: hidden !important;
+}
+
+/* Course Meta Info */
+.course-meta,
+.coursebox-meta {
+  display: flex !important;
+  align-items: center !important;
+  gap: 20px !important;
+  margin-top: auto !important;
+  padding-top: 16px !important;
+  border-top: 1px solid #f3f4f6 !important;
+}
+
+.course-meta-item {
+  display: flex !important;
+  align-items: center !important;
+  gap: 6px !important;
+  color: #6b7280 !important;
+  font-size: 14px !important;
+  font-weight: 500 !important;
+}
+
+.course-meta-item i {
+  color: #667eea !important;
+  font-size: 16px !important;
+}
+
+/* ================================================
+   SIDEBAR - Outstanding Beautiful Sidebar
+   ================================================ */
+.course-sidebar,
+#course-sidebar,
+.sidebar {
+  background: #ffffff !important;
+  border-radius: 20px !important;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08) !important;
+  border: 1px solid #f0f0f0 !important;
+  padding: 0 !important;
+  position: sticky !important;
+  top: 20px !important;
+  height: fit-content !important;
+}
+
+/* Sidebar Header */
+.sidebar-header {
+  padding: 24px !important;
+  border-bottom: 1px solid #f3f4f6 !important;
+  background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%) !important;
+  border-radius: 20px 20px 0 0 !important;
+}
+
+.sidebar-header h3 {
+  font-family: 'Poppins', sans-serif !important;
+  font-size: 20px !important;
+  font-weight: 600 !important;
+  color: #1f2937 !important;
+  margin: 0 !important;
+}
+
+/* Sidebar Content */
+.sidebar-content {
+  padding: 24px !important;
+}
+
+/* Filter Sections */
+.filter-section {
+  margin-bottom: 32px !important;
+}
+
+.filter-section:last-child {
+  margin-bottom: 0 !important;
+}
+
+.filter-section h4 {
+  font-family: 'Inter', sans-serif !important;
+  font-size: 16px !important;
+  font-weight: 600 !important;
+  color: #374151 !important;
+  margin-bottom: 16px !important;
+}
+
+/* Filter Options */
+.filter-option {
+  display: flex !important;
+  align-items: center !important;
+  padding: 12px 16px !important;
+  margin-bottom: 8px !important;
+  border-radius: 12px !important;
+  cursor: pointer !important;
+  transition: all 0.3s ease !important;
+  border: 1px solid transparent !important;
+}
+
+.filter-option:hover {
+  background: #f8fafc !important;
+  border-color: #e2e8f0 !important;
+}
+
+.filter-option.active {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+  color: #ffffff !important;
+  border-color: #667eea !important;
+}
+
+.filter-option input[type="checkbox"],
+.filter-option input[type="radio"] {
+  margin-right: 12px !important;
+  accent-color: #667eea !important;
+}
+
+/* ================================================
+   SEARCH AND FILTERS BAR
+   ================================================ */
+.filters-bar,
+.search-filters {
+  background: #ffffff !important;
+  border-radius: 16px !important;
+  padding: 24px !important;
+  margin-bottom: 32px !important;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06) !important;
+  border: 1px solid #f0f0f0 !important;
+  display: flex !important;
+  gap: 16px !important;
+  align-items: center !important;
+  flex-wrap: wrap !important;
+}
+
+.search-input {
+  flex: 1 !important;
+  min-width: 300px !important;
+  padding: 14px 20px !important;
+  border: 2px solid #e5e7eb !important;
+  border-radius: 12px !important;
+  font-size: 16px !important;
+  transition: border-color 0.3s ease !important;
+}
+
+.search-input:focus {
+  outline: none !important;
+  border-color: #667eea !important;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1) !important;
+}
+
+.filter-dropdown {
+  padding: 12px 20px !important;
+  border: 2px solid #e5e7eb !important;
+  border-radius: 12px !important;
+  background: #ffffff !important;
+  cursor: pointer !important;
+  min-width: 140px !important;
+}
+
+/* ================================================
+   PAGINATION - Modern Design
+   ================================================ */
+.pagination-container {
+  margin-top: 48px !important;
+  text-align: center !important;
+}
+
+.pagination {
+  display: inline-flex !important;
+  gap: 8px !important;
+  background: #ffffff !important;
+  padding: 16px 24px !important;
+  border-radius: 16px !important;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08) !important;
+  border: 1px solid #f0f0f0 !important;
+}
+
+.pagination a,
+.pagination span {
+  padding: 12px 16px !important;
+  border-radius: 10px !important;
+  text-decoration: none !important;
+  font-weight: 500 !important;
+  transition: all 0.3s ease !important;
+  border: 1px solid transparent !important;
+}
+
+.pagination a {
+  color: #6b7280 !important;
+}
+
+.pagination a:hover {
+  background: #f8fafc !important;
+  border-color: #e2e8f0 !important;
+  color: #374151 !important;
+}
+
+.pagination .current {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+  color: #ffffff !important;
+}
+
+/* ================================================
+   RESPONSIVE DESIGN - Mobile Excellence
+   ================================================ */
+@media (max-width: 1024px) {
+  #page-content,
+  .course-category-content {
+    grid-template-columns: 1fr !important;
+    gap: 24px !important;
+  }
+
+  .course-sidebar {
+    order: -1 !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .courses-listing {
+    grid-template-columns: 1fr !important;
+    gap: 24px !important;
+  }
+
+  .filters-bar {
+    flex-direction: column !important;
+    align-items: stretch !important;
+  }
+
+  .search-input {
+    min-width: auto !important;
+    width: 100% !important;
+  }
+
+  .coursebox .course-image,
+  .course-item .course-image {
+    height: 200px !important;
+  }
+
+  #page-course-index-category .container {
+    padding: 0 16px !important;
+  }
+}
+
+/* ================================================
+   LOADING STATES AND ANIMATIONS
+   ================================================ */
+.coursebox,
+.course-item {
+  opacity: 0 !important;
+  transform: translateY(20px) !important;
+  animation: courseCardAppear 0.6s ease-out forwards !important;
+}
+
+.coursebox:nth-child(1) { animation-delay: 0.1s !important; }
+.coursebox:nth-child(2) { animation-delay: 0.2s !important; }
+.coursebox:nth-child(3) { animation-delay: 0.3s !important; }
+.coursebox:nth-child(4) { animation-delay: 0.4s !important; }
+.coursebox:nth-child(5) { animation-delay: 0.5s !important; }
+.coursebox:nth-child(6) { animation-delay: 0.6s !important; }
+
+@keyframes courseCardAppear {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ================================================
+   ACCESSIBILITY AND PERFORMANCE
+   ================================================ */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Focus states for accessibility */
+.coursebox:focus-within,
+.filter-option:focus-within,
+.search-input:focus {
+  outline: 2px solid #667eea !important;
+  outline-offset: 2px !important;
+}
+
+/* High contrast support */
+@media (prefers-contrast: high) {
+  .coursebox,
+  .course-sidebar {
+    border: 2px solid #000000 !important;
+  }
+
+  .coursebox-content h3 a {
+    color: #000000 !important;
+  }
+}

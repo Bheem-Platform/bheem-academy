@@ -1,0 +1,158 @@
+/* ================================================
+   CAROUSEL BUTTON IMPROVEMENTS - Better Button Styling
+   - Reduce button width
+   - Increase button height slightly
+   - White text color
+   - Attractive and modern look
+   ================================================ */
+
+/* ================================================
+   CAROUSEL BUTTONS - Improved Styling
+   ================================================ */
+.banner-content .btn,
+.banner-content a.btn-primary,
+.banner-content .btn-primary {
+  /* Button Size - Reduced width, increased height */
+  padding: 16px 28px !important; /* Reduced horizontal padding for narrower width */
+  min-height: 52px !important; /* Slightly increased height */
+  width: auto !important;
+  max-width: 220px !important; /* Limit maximum width */
+
+  /* Text Styling - White and attractive */
+  color: #ffffff !important;
+  font-weight: 600 !important;
+  font-size: 16px !important;
+  text-decoration: none !important;
+  text-shadow: none !important;
+
+  /* Layout and Alignment */
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 10px !important;
+
+  /* Border and Shape */
+  border-radius: 26px !important; /* Nice rounded corners */
+  border: none !important;
+
+  /* Transitions for smooth effects */
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+
+  /* Maintain the gradient background but ensure text is white */
+  position: relative !important;
+  overflow: hidden !important;
+}
+
+/* Hover State - Keep attractive while ensuring white text */
+.banner-content .btn:hover,
+.banner-content a.btn-primary:hover,
+.banner-content .btn-primary:hover {
+  color: #ffffff !important; /* Force white text on hover */
+  text-decoration: none !important;
+  transform: translateY(-2px) scale(1.02) !important;
+  /* Keep the existing gradient hover effect but ensure text stays white */
+}
+
+/* Focus State */
+.banner-content .btn:focus,
+.banner-content a.btn-primary:focus,
+.banner-content .btn-primary:focus {
+  color: #ffffff !important;
+  text-decoration: none !important;
+  outline: 2px solid rgba(255, 255, 255, 0.3) !important;
+  outline-offset: 2px !important;
+}
+
+/* Active State */
+.banner-content .btn:active,
+.banner-content a.btn-primary:active,
+.banner-content .btn-primary:active {
+  color: #ffffff !important;
+  text-decoration: none !important;
+  transform: translateY(0) scale(0.98) !important;
+}
+
+/* Icon Styling - White icons to match text */
+.banner-content .btn i,
+.banner-content a.btn-primary i,
+.banner-content .btn-primary i {
+  color: #ffffff !important;
+  font-size: 14px !important;
+  transition: transform 0.3s ease !important;
+}
+
+.banner-content .btn:hover i,
+.banner-content a.btn-primary:hover i,
+.banner-content .btn-primary:hover i {
+  color: #ffffff !important;
+  transform: translateX(2px) !important;
+}
+
+/* ================================================
+   RESPONSIVE BUTTON STYLING
+   ================================================ */
+@media (max-width: 768px) {
+  .banner-content .btn,
+  .banner-content a.btn-primary,
+  .banner-content .btn-primary {
+    padding: 14px 24px !important;
+    min-height: 48px !important;
+    max-width: 200px !important;
+    font-size: 15px !important;
+    border-radius: 24px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .banner-content .btn,
+  .banner-content a.btn-primary,
+  .banner-content .btn-primary {
+    padding: 12px 20px !important;
+    min-height: 44px !important;
+    max-width: 180px !important;
+    font-size: 14px !important;
+    border-radius: 22px !important;
+  }
+}
+
+/* ================================================
+   ENSURE TEXT REMAINS WHITE ACROSS ALL STATES
+   ================================================ */
+.banner-content .btn *,
+.banner-content a.btn-primary *,
+.banner-content .btn-primary * {
+  color: #ffffff !important;
+}
+
+/* Remove any text color overrides from parent styles */
+.banner-content .btn:not(:hover):not(:focus):not(:active),
+.banner-content a.btn-primary:not(:hover):not(:focus):not(:active),
+.banner-content .btn-primary:not(:hover):not(:focus):not(:active) {
+  color: #ffffff !important;
+}
+
+/* ================================================
+   ACCESSIBILITY IMPROVEMENTS
+   ================================================ */
+@media (prefers-reduced-motion: reduce) {
+  .banner-content .btn,
+  .banner-content a.btn-primary,
+  .banner-content .btn-primary {
+    transition: none !important;
+  }
+
+  .banner-content .btn:hover,
+  .banner-content a.btn-primary:hover,
+  .banner-content .btn-primary:hover {
+    transform: none !important;
+  }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  .banner-content .btn,
+  .banner-content a.btn-primary,
+  .banner-content .btn-primary {
+    border: 2px solid #ffffff !important;
+  }
+}

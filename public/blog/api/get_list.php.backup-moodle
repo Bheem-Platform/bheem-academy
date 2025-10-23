@@ -1,0 +1,211 @@
+<?php
+// API endpoint to fetch blog listing for Vue.js frontend
+define('AJAX_SCRIPT', true);
+require_once(__DIR__ . '/../../config.php');
+require_once($CFG->dirroot . '/blog/lib.php');
+require_once($CFG->dirroot . '/blog/locallib.php');
+
+// Set JSON header
+header('Content-Type: application/json');
+header('Access-Control-Allow-Origin: *');
+
+try {
+    // Get parameters
+    $page = optional_param('page', 1, PARAM_INT);
+    $perpage = optional_param('perpage', 9, PARAM_INT);
+    $search = optional_param('search', '', PARAM_TEXT);
+    $tag = optional_param('tag', '', PARAM_TEXT);
+    $userid = optional_param('userid', null, PARAM_INT);
+
+    // Check if blogs are enabled
+    if (empty($CFG->enableblogs)) {
+        throw new moodle_exception('blogdisable', 'blog');
+    }
+
+    // Swap pages 1 and 2: when requesting page 1, fetch page 2 data and vice versa
+    $actual_page = $page;
+    if ($page == 1) {
+        $actual_page = 2;
+    } elseif ($page == 2) {
+        $actual_page = 1;
+    }
+
+    // Calculate offset based on actual page
+    $offset = ($actual_page - 1) * $perpage;
+
+    // Build the SQL query
+    $sql = "SELECT p.*, u.firstname, u.lastname, u.picture, u.imagealt, u.email
+            FROM {post} p
+            JOIN {user} u ON p.userid = u.id
+            WHERE p.module = 'blog'
+            AND (p.publishstate = 'site' OR p.publishstate = 'public')";
+
+    $params = array();
+
+    // Add search filter
+    if (!empty($search)) {
+        $sql .= " AND (p.subject LIKE :search1 OR p.summary LIKE :search2)";
+        $params['search1'] = '%' . $search . '%';
+        $params['search2'] = '%' . $search . '%';
+    }
+
+    // Add user filter
+    if (!empty($userid)) {
+        $sql .= " AND p.userid = :userid";
+        $params['userid'] = $userid;
+    }
+
+    // Add tag filter
+    if (!empty($tag)) {
+        $sql .= " AND p.id IN (
+            SELECT ti.itemid
+            FROM {tag_instance} ti
+            JOIN {tag} t ON t.id = ti.tagid
+            WHERE ti.component = 'core'
+            AND ti.itemtype = 'post'
+            AND t.name = :tagname
+        )";
+        $params['tagname'] = $tag;
+    }
+
+    // Count total records
+    $countsql = "SELECT COUNT(p.id) " . substr($sql, strpos($sql, 'FROM'));
+    $totalcount = $DB->count_records_sql($countsql, $params);
+
+    // Add ordering and pagination
+    $sql .= " ORDER BY p.created DESC";
+
+    // Get paginated records
+    $entries = $DB->get_records_sql($sql, $params, $offset, $perpage);
+
+    // Format blog posts
+    $blogposts = array();
+    foreach ($entries as $entry) {
+        $user = $DB->get_record('user', array('id' => $entry->userid));
+        $userfullname = fullname($user);
+
+        // Get user picture
+        $userpicture = new user_picture($user);
+        $userpicture->size = 100;
+        $userpictureurl = $userpicture->get_url($PAGE)->out(true);
+
+        // Fallback avatar if no picture
+        if (empty($user->picture) || $user->picture == 0) {
+            $userpictureurl = 'https://ui-avatars.com/api/?name=' . urlencode($userfullname) . '&size=200&background=8b5cf6&color=fff&bold=true&format=svg';
+        }
+
+        // Get tags
+        $tags = core_tag_tag::get_item_tags_array('core', 'post', $entry->id);
+
+        // Get featured image from attachments or content
+        $featuredimage = null;
+
+        // Get attachments using blog_entry class
+        try {
+            $blogentry = new blog_entry($entry->id);
+            $blogentry->prepare_render();
+
+            if (!empty($blogentry->renderable->attachments)) {
+                foreach ($blogentry->renderable->attachments as $attachment) {
+                    // Check if it's an image file
+                    $ext = strtolower(pathinfo($attachment->filename, PATHINFO_EXTENSION));
+                    if (in_array($ext, array('jpg', 'jpeg', 'png', 'gif', 'webp', 'svg'))) {
+                        $featuredimage = $attachment->url;
+                        break;
+                    }
+                }
+            }
+        } catch (Exception $e) {
+            // If blog_entry fails, continue without image
+        }
+
+        // If no attachment, try to extract from content
+        if (empty($featuredimage) && preg_match('/<img[^>]+src=["\']([^"\']+)["\'][^>]*>/i', $entry->summary, $matches)) {
+            $featuredimage = $matches[1];
+        }
+
+        // On first page, only show posts with featured images
+        if ($page == 1 && empty($featuredimage)) {
+            continue; // Skip posts without images on first page
+        }
+
+        // Get reading time (rough estimate)
+        $wordcount = str_word_count(strip_tags($entry->summary));
+        $readingtime = max(1, round($wordcount / 200));
+
+        // Format dates
+        $created = userdate($entry->created, get_string('strftimedatefullshort'));
+        $timeago = format_time(time() - $entry->created);
+
+        $blogposts[] = array(
+            'id' => $entry->id,
+            'subject' => format_string($entry->subject),
+            'summary' => shorten_text(strip_tags($entry->summary), 180),
+            'fullsummary' => strip_tags($entry->summary),
+            'created' => $created,
+            'createdtimestamp' => $entry->created,
+            'timeago' => $timeago,
+            'author' => array(
+                'id' => $user->id,
+                'fullname' => $userfullname,
+                'pictureurl' => $userpictureurl,
+                'profileurl' => $CFG->wwwroot . '/user/profile.php?id=' . $user->id
+            ),
+            'tags' => array_values($tags),
+            'featuredimage' => $featuredimage,
+            'readingtime' => $readingtime,
+            'url' => $CFG->wwwroot . '/blog/detail.php?entryid=' . $entry->id
+        );
+    }
+
+    // Get popular tags
+    $populartags = array();
+    $tagsql = "SELECT t.name, COUNT(ti.id) as count
+               FROM {tag} t
+               JOIN {tag_instance} ti ON t.id = ti.tagid
+               WHERE ti.component = 'core'
+               AND ti.itemtype = 'post'
+               GROUP BY t.id, t.name
+               ORDER BY count DESC
+               LIMIT 10";
+    $tagrecords = $DB->get_records_sql($tagsql);
+    foreach ($tagrecords as $tagrec) {
+        $populartags[] = array(
+            'name' => $tagrec->name,
+            'count' => $tagrec->count
+        );
+    }
+
+    // Calculate pagination info
+    $totalpages = ceil($totalcount / $perpage);
+
+    // Build response
+    $response = array(
+        'success' => true,
+        'posts' => $blogposts,
+        'pagination' => array(
+            'currentpage' => $page,
+            'perpage' => $perpage,
+            'totalcount' => $totalcount,
+            'totalpages' => $totalpages,
+            'hasnext' => $page < $totalpages,
+            'hasprev' => $page > 1
+        ),
+        'filters' => array(
+            'search' => $search,
+            'tag' => $tag,
+            'userid' => $userid
+        ),
+        'populartags' => $populartags,
+        'siteurl' => $CFG->wwwroot
+    );
+
+    echo json_encode($response, JSON_PRETTY_PRINT);
+
+} catch (Exception $e) {
+    http_response_code(400);
+    echo json_encode(array(
+        'success' => false,
+        'error' => $e->getMessage()
+    ));
+}

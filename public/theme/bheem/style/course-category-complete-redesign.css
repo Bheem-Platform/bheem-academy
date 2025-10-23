@@ -1,0 +1,833 @@
+/* ================================================
+   COURSE CATEGORY PAGE - COMPLETE REDESIGN 2025
+   Entire page redesign: Search, Cards, Dropdown, Sidebar, Structure
+   Modern, beautiful, outstanding design with perfect UX
+   ================================================ */
+
+/* Import Premium Typography */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700;800&family=Manrope:wght@400;500;600;700&display=swap');
+
+/* ================================================
+   GLOBAL PAGE FOUNDATION - Clean Modern Base
+   ================================================ */
+#page-course-index-category,
+.path-course-index,
+body.path-course-index,
+#page,
+#page-content,
+.path-course-index #page-content {
+  background: #ffffff !important;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif !important;
+  min-height: 100vh !important;
+  color: #1f2937 !important;
+}
+
+/* REMOVE ALL BUBBLE BACKGROUNDS AND GRADIENT ANIMATIONS */
+#page-course-index-category::before,
+#page-course-index-category::after,
+.course-category-page::before,
+.course-category-page::after,
+#page::before,
+#page::after,
+#page-content::before,
+#page-content::after,
+body.path-course-index::before,
+body.path-course-index::after,
+.animated-background,
+.bubble-bg,
+.gradient-bg,
+[class*="floating"],
+[class*="particle"],
+[class*="bubble"] {
+  display: none !important;
+  content: none !important;
+  background: none !important;
+  animation: none !important;
+}
+
+/* ================================================
+   MAIN CONTAINER - Perfect Structure
+   ================================================ */
+#page-course-index-category,
+#region-main,
+.path-course-index #region-main {
+  max-width: 1400px !important;
+  margin: 0 auto !important;
+  padding: 32px 24px !important;
+}
+
+/* ================================================
+   PAGE HEADER - Clean Professional Hero
+   ================================================ */
+.page-header,
+#page-course-index-category .page-header,
+.page-header-headings {
+  background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 50%, #d946ef 100%) !important;
+  padding: 60px 40px !important;
+  margin: 0 0 32px 0 !important;
+  border-radius: 20px !important;
+  position: relative !important;
+  overflow: hidden !important;
+  box-shadow: 0 10px 40px rgba(99, 102, 241, 0.2) !important;
+}
+
+/* Clean subtle pattern - NO bubbles or floaty stuff */
+.page-header::after {
+  content: '' !important;
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  bottom: 0 !important;
+  background: linear-gradient(135deg, transparent 0%, rgba(0, 0, 0, 0.05) 100%) !important;
+  pointer-events: none !important;
+}
+
+.page-header-headings,
+.page-header h1,
+.page-header .page-title {
+  position: relative !important;
+  z-index: 2 !important;
+  text-align: center !important;
+  color: #ffffff !important;
+  font-family: 'Poppins', sans-serif !important;
+  font-size: clamp(28px, 4vw, 42px) !important;
+  font-weight: 700 !important;
+  margin: 0 !important;
+  line-height: 1.2 !important;
+  letter-spacing: -0.02em !important;
+}
+
+/* Modern Breadcrumb */
+.breadcrumb,
+nav[aria-label="breadcrumb"],
+.page-header nav {
+  background: rgba(255, 255, 255, 0.15) !important;
+  border-radius: 100px !important;
+  padding: 10px 20px !important;
+  backdrop-filter: blur(10px) !important;
+  border: 1px solid rgba(255, 255, 255, 0.2) !important;
+  display: inline-flex !important;
+  justify-content: center !important;
+  margin: 16px auto 0 !important;
+  width: fit-content !important;
+}
+
+.breadcrumb-item,
+.breadcrumb-item a,
+nav[aria-label="breadcrumb"] a {
+  color: rgba(255, 255, 255, 0.95) !important;
+  text-decoration: none !important;
+  font-weight: 500 !important;
+  font-size: 14px !important;
+  transition: color 0.2s ease !important;
+}
+
+.breadcrumb-item + .breadcrumb-item::before {
+  content: '/' !important;
+  color: rgba(255, 255, 255, 0.6) !important;
+  margin: 0 10px !important;
+}
+
+.breadcrumb-item a:hover {
+  color: #ffffff !important;
+}
+
+/* ================================================
+   SEARCH AND FILTERS BAR - Modern Design
+   ================================================ */
+.search-filters-container {
+  background: #ffffff !important;
+  border-radius: 24px !important;
+  padding: 32px !important;
+  margin-bottom: 40px !important;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.06) !important;
+  border: 1px solid #e5e7eb !important;
+  position: relative !important;
+}
+
+.search-filters-container::before {
+  content: '' !important;
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  height: 4px !important;
+  background: linear-gradient(90deg, #667eea 0%, #764ba2 100%) !important;
+  border-radius: 24px 24px 0 0 !important;
+}
+
+/* Search Bar */
+.search-bar-container {
+  display: flex !important;
+  gap: 16px !important;
+  align-items: center !important;
+  margin-bottom: 24px !important;
+  flex-wrap: wrap !important;
+}
+
+.main-search-input {
+  flex: 1 !important;
+  min-width: 300px !important;
+  padding: 18px 24px 18px 56px !important;
+  border: 2px solid #e5e7eb !important;
+  border-radius: 16px !important;
+  font-size: 16px !important;
+  font-weight: 500 !important;
+  background: #ffffff !important;
+  transition: all 0.3s ease !important;
+  position: relative !important;
+}
+
+.search-input-wrapper {
+  position: relative !important;
+  flex: 1 !important;
+  min-width: 300px !important;
+}
+
+.search-input-wrapper::before {
+  content: '🔍' !important;
+  position: absolute !important;
+  left: 20px !important;
+  top: 50% !important;
+  transform: translateY(-50%) !important;
+  font-size: 18px !important;
+  z-index: 2 !important;
+}
+
+.main-search-input:focus {
+  outline: none !important;
+  border-color: #667eea !important;
+  box-shadow: 0 0 0 4px rgba(102, 126, 234, 0.1) !important;
+  background: #ffffff !important;
+}
+
+/* Modern Filter Dropdowns */
+.filters-row {
+  display: flex !important;
+  gap: 16px !important;
+  align-items: center !important;
+  flex-wrap: wrap !important;
+}
+
+.filter-dropdown {
+  position: relative !important;
+  min-width: 160px !important;
+}
+
+.filter-dropdown select {
+  width: 100% !important;
+  padding: 14px 20px !important;
+  border: 2px solid #e5e7eb !important;
+  border-radius: 12px !important;
+  background: #ffffff !important;
+  font-size: 15px !important;
+  font-weight: 500 !important;
+  cursor: pointer !important;
+  transition: all 0.3s ease !important;
+  appearance: none !important;
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="12" height="8" viewBox="0 0 12 8" fill="none"><path d="M1 1L6 6L11 1" stroke="%236B7280" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>') !important;
+  background-repeat: no-repeat !important;
+  background-position: right 16px center !important;
+}
+
+.filter-dropdown select:focus {
+  outline: none !important;
+  border-color: #667eea !important;
+  box-shadow: 0 0 0 4px rgba(102, 126, 234, 0.1) !important;
+}
+
+.filter-dropdown label {
+  display: block !important;
+  margin-bottom: 8px !important;
+  font-size: 14px !important;
+  font-weight: 600 !important;
+  color: #374151 !important;
+}
+
+/* Filter Tags */
+.active-filters {
+  display: flex !important;
+  gap: 12px !important;
+  flex-wrap: wrap !important;
+  margin-top: 16px !important;
+  padding-top: 16px !important;
+  border-top: 1px solid #f3f4f6 !important;
+}
+
+.filter-tag {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+  color: #ffffff !important;
+  padding: 8px 16px !important;
+  border-radius: 20px !important;
+  font-size: 14px !important;
+  font-weight: 500 !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+}
+
+.filter-tag .remove {
+  cursor: pointer !important;
+  font-weight: 700 !important;
+  opacity: 0.8 !important;
+  transition: opacity 0.3s ease !important;
+}
+
+.filter-tag .remove:hover {
+  opacity: 1 !important;
+}
+
+/* ================================================
+   MAIN CONTENT LAYOUT - Perfect Grid Structure
+   ================================================ */
+.main-content-area {
+  display: grid !important;
+  grid-template-columns: 1fr 340px !important;
+  gap: 48px !important;
+  align-items: start !important;
+  margin-bottom: 60px !important;
+}
+
+/* ================================================
+   COURSE CARDS - Beautiful Modern Design
+   ================================================ */
+.courses-grid {
+  display: grid !important;
+  grid-template-columns: repeat(auto-fit, minmax(380px, 1fr)) !important;
+  gap: 32px !important;
+}
+
+.course-card {
+  background: #ffffff !important;
+  border-radius: 24px !important;
+  overflow: hidden !important;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08) !important;
+  border: 1px solid #f0f0f0 !important;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  position: relative !important;
+  display: flex !important;
+  flex-direction: column !important;
+}
+
+.course-card:hover {
+  transform: translateY(-12px) !important;
+  box-shadow: 0 20px 48px rgba(0, 0, 0, 0.15) !important;
+  border-color: #667eea !important;
+}
+
+.course-card::before {
+  content: '' !important;
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  height: 4px !important;
+  background: linear-gradient(90deg, #667eea 0%, #764ba2 100%) !important;
+  opacity: 0 !important;
+  transition: opacity 0.3s ease !important;
+}
+
+.course-card:hover::before {
+  opacity: 1 !important;
+}
+
+/* Course Image */
+.course-image-container {
+  position: relative !important;
+  width: 100% !important;
+  height: 260px !important;
+  overflow: hidden !important;
+  background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%) !important;
+}
+
+.course-image {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  transition: transform 0.4s ease !important;
+}
+
+.course-card:hover .course-image {
+  transform: scale(1.1) !important;
+}
+
+/* Course Badges */
+.course-price-badge {
+  position: absolute !important;
+  top: 20px !important;
+  right: 20px !important;
+  background: linear-gradient(135deg, #10b981 0%, #059669 100%) !important;
+  color: #ffffff !important;
+  padding: 10px 20px !important;
+  border-radius: 50px !important;
+  font-weight: 700 !important;
+  font-size: 14px !important;
+  box-shadow: 0 4px 16px rgba(16, 185, 129, 0.4) !important;
+  backdrop-filter: blur(10px) !important;
+}
+
+.course-level-badge {
+  position: absolute !important;
+  top: 20px !important;
+  left: 20px !important;
+  background: rgba(255, 255, 255, 0.95) !important;
+  color: #374151 !important;
+  padding: 8px 16px !important;
+  border-radius: 20px !important;
+  font-weight: 600 !important;
+  font-size: 12px !important;
+  text-transform: uppercase !important;
+  backdrop-filter: blur(10px) !important;
+}
+
+/* Course Content */
+.course-content {
+  padding: 28px !important;
+  flex: 1 !important;
+  display: flex !important;
+  flex-direction: column !important;
+}
+
+.course-title {
+  font-family: 'Poppins', sans-serif !important;
+  font-size: 22px !important;
+  font-weight: 600 !important;
+  color: #1f2937 !important;
+  line-height: 1.4 !important;
+  margin-bottom: 12px !important;
+  display: -webkit-box !important;
+  -webkit-line-clamp: 2 !important;
+  -webkit-box-orient: vertical !important;
+  overflow: hidden !important;
+}
+
+.course-title a {
+  color: #1f2937 !important;
+  text-decoration: none !important;
+  transition: color 0.3s ease !important;
+}
+
+.course-card:hover .course-title a {
+  color: #667eea !important;
+}
+
+.course-description {
+  color: #6b7280 !important;
+  font-size: 15px !important;
+  line-height: 1.6 !important;
+  margin-bottom: 20px !important;
+  display: -webkit-box !important;
+  -webkit-line-clamp: 3 !important;
+  -webkit-box-orient: vertical !important;
+  overflow: hidden !important;
+  flex: 1 !important;
+}
+
+/* Course Meta */
+.course-meta-grid {
+  display: grid !important;
+  grid-template-columns: 1fr 1fr !important;
+  gap: 16px !important;
+  margin-bottom: 20px !important;
+  padding: 16px !important;
+  background: #f8fafc !important;
+  border-radius: 12px !important;
+}
+
+.course-meta-item {
+  display: flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+  color: #6b7280 !important;
+  font-size: 14px !important;
+  font-weight: 500 !important;
+}
+
+.course-meta-item i {
+  color: #667eea !important;
+  font-size: 16px !important;
+  width: 20px !important;
+  text-align: center !important;
+}
+
+/* Course Action Button */
+.course-action-btn {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+  color: #ffffff !important;
+  border: none !important;
+  padding: 16px 24px !important;
+  border-radius: 12px !important;
+  font-weight: 600 !important;
+  font-size: 15px !important;
+  cursor: pointer !important;
+  transition: all 0.3s ease !important;
+  text-align: center !important;
+  text-decoration: none !important;
+  display: block !important;
+}
+
+.course-action-btn:hover {
+  transform: translateY(-2px) !important;
+  box-shadow: 0 8px 24px rgba(102, 126, 234, 0.4) !important;
+  color: #ffffff !important;
+  text-decoration: none !important;
+}
+
+/* ================================================
+   SIDEBAR - Outstanding Modern Design
+   ================================================ */
+.course-sidebar {
+  position: sticky !important;
+  top: 24px !important;
+  background: #ffffff !important;
+  border-radius: 24px !important;
+  border: 1px solid #e5e7eb !important;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.06) !important;
+  overflow: hidden !important;
+}
+
+/* Sidebar Header */
+.sidebar-header {
+  background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%) !important;
+  padding: 24px !important;
+  border-bottom: 1px solid #e5e7eb !important;
+}
+
+.sidebar-header h3 {
+  font-family: 'Poppins', sans-serif !important;
+  font-size: 20px !important;
+  font-weight: 600 !important;
+  color: #1f2937 !important;
+  margin: 0 !important;
+  display: flex !important;
+  align-items: center !important;
+  gap: 12px !important;
+}
+
+.sidebar-header h3::before {
+  content: '📚' !important;
+  font-size: 24px !important;
+}
+
+/* Sidebar Content */
+.sidebar-content {
+  padding: 0 !important;
+}
+
+/* Sidebar Sections */
+.sidebar-section {
+  border-bottom: 1px solid #f3f4f6 !important;
+}
+
+.sidebar-section:last-child {
+  border-bottom: none !important;
+}
+
+.sidebar-section-header {
+  padding: 20px 24px !important;
+  background: #ffffff !important;
+  cursor: pointer !important;
+  transition: background 0.3s ease !important;
+  border: none !important;
+  width: 100% !important;
+  text-align: left !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+}
+
+.sidebar-section-header:hover {
+  background: #f8fafc !important;
+}
+
+.sidebar-section-title {
+  font-family: 'Inter', sans-serif !important;
+  font-size: 16px !important;
+  font-weight: 600 !important;
+  color: #374151 !important;
+  margin: 0 !important;
+}
+
+.sidebar-section-icon {
+  color: #667eea !important;
+  transition: transform 0.3s ease !important;
+}
+
+.sidebar-section.expanded .sidebar-section-icon {
+  transform: rotate(180deg) !important;
+}
+
+/* Sidebar Options */
+.sidebar-options {
+  padding: 16px 24px !important;
+  background: #fafbfc !important;
+  display: none !important;
+}
+
+.sidebar-section.expanded .sidebar-options {
+  display: block !important;
+}
+
+.sidebar-option {
+  display: flex !important;
+  align-items: center !important;
+  padding: 12px 16px !important;
+  margin-bottom: 8px !important;
+  border-radius: 10px !important;
+  cursor: pointer !important;
+  transition: all 0.3s ease !important;
+  border: 1px solid transparent !important;
+}
+
+.sidebar-option:hover {
+  background: #f0f4ff !important;
+  border-color: #e0e7ff !important;
+}
+
+.sidebar-option.active {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+  color: #ffffff !important;
+  border-color: #667eea !important;
+}
+
+.sidebar-option input {
+  margin-right: 12px !important;
+  accent-color: #667eea !important;
+}
+
+.sidebar-option label {
+  cursor: pointer !important;
+  font-size: 14px !important;
+  font-weight: 500 !important;
+  color: inherit !important;
+  margin: 0 !important;
+}
+
+/* ================================================
+   PAGINATION - Modern Design
+   ================================================ */
+.pagination-container {
+  text-align: center !important;
+  margin-top: 48px !important;
+}
+
+.pagination-wrapper {
+  display: inline-flex !important;
+  background: #ffffff !important;
+  border-radius: 16px !important;
+  padding: 8px !important;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08) !important;
+  border: 1px solid #e5e7eb !important;
+}
+
+.pagination-item {
+  padding: 12px 16px !important;
+  margin: 0 4px !important;
+  border-radius: 10px !important;
+  text-decoration: none !important;
+  font-weight: 500 !important;
+  transition: all 0.3s ease !important;
+  border: 1px solid transparent !important;
+  min-width: 44px !important;
+  text-align: center !important;
+}
+
+.pagination-item:not(.current) {
+  color: #6b7280 !important;
+}
+
+.pagination-item:not(.current):hover {
+  background: #f8fafc !important;
+  border-color: #e2e8f0 !important;
+  color: #374151 !important;
+}
+
+.pagination-item.current {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+  color: #ffffff !important;
+  border-color: #667eea !important;
+}
+
+/* ================================================
+   RESPONSIVE DESIGN - Perfect Mobile Experience
+   ================================================ */
+@media (max-width: 1024px) {
+  .main-content-area {
+    grid-template-columns: 1fr !important;
+    gap: 32px !important;
+  }
+
+  .course-sidebar {
+    order: -1 !important;
+    position: static !important;
+  }
+
+  .courses-grid {
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)) !important;
+    gap: 24px !important;
+  }
+}
+
+@media (max-width: 768px) {
+  #page-course-index-category {
+    padding: 0 16px !important;
+  }
+
+  .page-header {
+    margin: -16px -16px 24px -16px !important;
+    padding: 60px 0 40px 0 !important;
+  }
+
+  .search-filters-container {
+    padding: 24px !important;
+  }
+
+  .search-bar-container,
+  .filters-row {
+    flex-direction: column !important;
+    align-items: stretch !important;
+  }
+
+  .search-input-wrapper,
+  .filter-dropdown {
+    min-width: auto !important;
+    width: 100% !important;
+  }
+
+  .courses-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  .course-meta-grid {
+    grid-template-columns: 1fr !important;
+    gap: 12px !important;
+  }
+}
+
+/* ================================================
+   LOADING ANIMATIONS - Smooth Entrance Effects
+   ================================================ */
+.course-card {
+  opacity: 0 !important;
+  transform: translateY(30px) !important;
+  animation: cardSlideIn 0.6s ease-out forwards !important;
+}
+
+.course-card:nth-child(1) { animation-delay: 0.1s !important; }
+.course-card:nth-child(2) { animation-delay: 0.2s !important; }
+.course-card:nth-child(3) { animation-delay: 0.3s !important; }
+.course-card:nth-child(4) { animation-delay: 0.4s !important; }
+.course-card:nth-child(5) { animation-delay: 0.5s !important; }
+.course-card:nth-child(6) { animation-delay: 0.6s !important; }
+
+@keyframes cardSlideIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Search bar animation */
+.search-filters-container {
+  opacity: 0 !important;
+  transform: translateY(-20px) !important;
+  animation: searchBarSlideIn 0.8s ease-out 0.2s forwards !important;
+}
+
+@keyframes searchBarSlideIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ================================================
+   ACCESSIBILITY AND PERFORMANCE
+   ================================================ */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Focus states for accessibility */
+.main-search-input:focus,
+.filter-dropdown select:focus,
+.course-action-btn:focus,
+.sidebar-option:focus-within,
+.pagination-item:focus {
+  outline: 2px solid #667eea !important;
+  outline-offset: 2px !important;
+}
+
+/* High contrast support */
+@media (prefers-contrast: high) {
+  .course-card,
+  .course-sidebar,
+  .search-filters-container {
+    border: 2px solid #000000 !important;
+  }
+
+  .course-title a {
+    color: #000000 !important;
+  }
+}
+
+/* ================================================
+   NUCLEAR OPTION - REMOVE ALL ANIMATED BACKGROUNDS
+   Remove bubbles, AI tool icons, floating elements
+   ================================================ */
+#page-course-index-category *::before,
+#page-course-index-category *::after,
+.path-course-index *::before,
+.path-course-index *::after,
+body.path-course-index *::before,
+body.path-course-index *::after {
+  background-image: none !important;
+  background: none !important;
+  animation: none !important;
+  content: none !important;
+}
+
+/* Force clean backgrounds on all containers */
+#page-course-index-category,
+#page-course-index-category *,
+.path-course-index,
+.path-course-index *,
+body.path-course-index,
+body.path-course-index * {
+  background-image: none !important;
+  animation-name: none !important;
+  animation: none !important;
+}
+
+/* Ensure main page has clean white background */
+#page-course-index-category,
+.path-course-index,
+body.path-course-index {
+  background: #ffffff !important;
+  background-image: none !important;
+  background-color: #ffffff !important;
+}
+
+/* Override any gradient shifts or animations */
+@keyframes gradientShift { }
+@keyframes float { }
+@keyframes bubble { }
+@keyframes fadeFloat { }
+
+/* Remove AI tool icons and bubble decorations */
+.ai-tools-bg,
+.ai-icon-float,
+.bubble-decoration,
+.floating-decoration,
+[class*="ai-tool"],
+[class*="bubble"],
+[class*="float"] {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+}

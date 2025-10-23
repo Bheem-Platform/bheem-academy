@@ -1,0 +1,569 @@
+/* ================================================
+   ULTIMATE MODERN HEADER DESIGN - 2024 Best Practices
+   Complete Header Enhancement with Perfect Colors
+   ================================================ */
+
+/* ================================================
+   HEADER CONTAINER - STUNNING GRADIENT DESIGN
+   ================================================ */
+.navbar,
+#page-header,
+header.navbar {
+  /* Premium Gradient Background */
+  background: linear-gradient(135deg,
+    #667eea 0%,
+    #764ba2 25%,
+    #f093fb 50%,
+    #4facfe 75%,
+    #00f2fe 100%) !important;
+  background-size: 300% 300% !important;
+  animation: gradientShift 15s ease infinite !important;
+
+  /* Glass Morphism Layer */
+  position: relative !important;
+  backdrop-filter: blur(10px) saturate(180%) !important;
+  -webkit-backdrop-filter: blur(10px) saturate(180%) !important;
+
+  /* Premium Shadow Effects */
+  box-shadow:
+    0 4px 30px rgba(0, 0, 0, 0.1),
+    0 2px 10px rgba(0, 0, 0, 0.05),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1) !important;
+
+  /* Spacing & Layout */
+  padding: 18px 0 !important;
+  min-height: 90px !important;
+  z-index: 1030 !important;
+  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) !important;
+}
+
+/* Gradient Animation */
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Glossy Overlay Effect */
+.navbar::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 50%;
+  background: linear-gradient(180deg,
+    rgba(255, 255, 255, 0.15) 0%,
+    transparent 100%);
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* ================================================
+   NAVBAR BRAND/LOGO - PREMIUM STYLING
+   ================================================ */
+.navbar-brand {
+  font-size: 28px !important;
+  font-weight: 800 !important;
+  color: #ffffff !important;
+  text-shadow:
+    0 2px 4px rgba(0, 0, 0, 0.2),
+    0 4px 8px rgba(0, 0, 0, 0.1) !important;
+  letter-spacing: -0.5px !important;
+  transition: all 0.3s ease !important;
+  position: relative !important;
+  z-index: 2 !important;
+}
+
+.navbar-brand:hover {
+  transform: translateY(-2px) scale(1.05) !important;
+  text-shadow:
+    0 4px 8px rgba(0, 0, 0, 0.3),
+    0 8px 16px rgba(0, 0, 0, 0.2) !important;
+}
+
+/* Logo Image Sizing - HUGE SIZE */
+.navbar-brand img,
+.navbar .logo img,
+.navbar .site-logo img,
+.navbar-brand > img,
+.navbar .navbar-brand img {
+  height: 95px !important;
+  min-height: 95px !important;
+  max-height: 95px !important;
+  width: auto !important;
+  max-width: 320px !important;
+  object-fit: contain !important;
+}
+
+/* ================================================
+   NAVIGATION LINKS - WHITE WITH PROPER HOVER
+   ================================================ */
+.navbar-nav .nav-link,
+.navbar .nav-link {
+  color: #ffffff !important;
+  font-weight: 600 !important;
+  font-size: 15px !important;
+  padding: 10px 20px !important;
+  margin: 0 5px !important;
+  border-radius: 25px !important;
+  background: rgba(255, 255, 255, 0.1) !important;
+  backdrop-filter: blur(5px) !important;
+  border: 1px solid rgba(255, 255, 255, 0.2) !important;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1) !important;
+  transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) !important;
+  position: relative !important;
+  overflow: hidden !important;
+  z-index: 2 !important;
+}
+
+/* Nav Link Hover - Changes to Dark Text on White Background */
+.navbar-nav .nav-link:hover,
+.navbar .nav-link:hover {
+  color: #1f2937 !important; /* Dark gray text */
+  background: rgba(255, 255, 255, 0.95) !important; /* White background */
+  border-color: rgba(255, 255, 255, 1) !important;
+  text-shadow: none !important;
+  transform: translateY(-2px) !important;
+  box-shadow:
+    0 8px 25px rgba(0, 0, 0, 0.15),
+    0 4px 10px rgba(0, 0, 0, 0.1) !important;
+}
+
+/* Active Link State */
+.navbar-nav .nav-link.active,
+.navbar-nav .nav-item.active > .nav-link {
+  color: #1f2937 !important;
+  background: rgba(255, 255, 255, 0.9) !important;
+  box-shadow:
+    0 4px 15px rgba(0, 0, 0, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 1) !important;
+  text-shadow: none !important;
+}
+
+/* ================================================
+   DROPDOWN TOGGLE WITH ARROW - PROPER SPACING
+   ================================================ */
+.navbar .dropdown-toggle {
+  padding-right: 35px !important; /* Space for arrow */
+  position: relative !important;
+}
+
+/* Dropdown Arrow - Restored and Enhanced */
+.navbar .dropdown-toggle::after {
+  content: '' !important;
+  display: inline-block !important;
+  position: absolute !important;
+  right: 15px !important;
+  top: 50% !important;
+  width: 0 !important;
+  height: 0 !important;
+  margin-top: -3px !important;
+  border-left: 5px solid transparent !important;
+  border-right: 5px solid transparent !important;
+  border-top: 6px solid #ffffff !important;
+  transition: all 0.3s ease !important;
+  opacity: 0.9 !important;
+}
+
+/* Arrow on Hover - Changes Color with Background */
+.navbar .dropdown-toggle:hover::after {
+  border-top-color: #1f2937 !important; /* Dark arrow on white background */
+}
+
+/* Arrow Rotation when Open */
+.navbar .dropdown.show > .dropdown-toggle::after {
+  transform: rotate(180deg) !important;
+  border-top-color: #ffd700 !important; /* Gold when active */
+}
+
+/* ================================================
+   DROPDOWN MENU - PREMIUM DESIGN
+   ================================================ */
+.navbar .dropdown-menu {
+  /* Initial Hidden State */
+  visibility: hidden !important;
+  opacity: 0 !important;
+  display: block !important;
+  transform: translateY(-10px) scale(0.95) !important;
+
+  /* Premium Background */
+  background: linear-gradient(180deg,
+    rgba(255, 255, 255, 0.98) 0%,
+    rgba(249, 250, 251, 0.98) 100%) !important;
+  backdrop-filter: blur(20px) saturate(200%) !important;
+  -webkit-backdrop-filter: blur(20px) saturate(200%) !important;
+
+  /* Beautiful Shadow */
+  box-shadow:
+    0 10px 40px rgba(0, 0, 0, 0.12),
+    0 4px 10px rgba(0, 0, 0, 0.08),
+    0 20px 60px rgba(102, 126, 234, 0.1) !important;
+
+  /* Modern Border & Radius */
+  border: 1px solid rgba(0, 0, 0, 0.06) !important;
+  border-radius: 16px !important;
+
+  /* Spacing */
+  padding: 10px !important;
+  margin-top: 10px !important;
+  min-width: 250px !important;
+
+  /* Transitions */
+  transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) !important;
+
+  /* Positioning */
+  position: absolute !important;
+  top: 100% !important;
+  z-index: 1040 !important;
+}
+
+/* Show Dropdown on Hover */
+.navbar .dropdown:hover > .dropdown-menu {
+  visibility: visible !important;
+  opacity: 1 !important;
+  transform: translateY(0) scale(1) !important;
+  pointer-events: auto !important;
+}
+
+/* ================================================
+   DROPDOWN ITEMS - MODERN STYLING
+   ================================================ */
+.navbar .dropdown-item {
+  color: #374151 !important; /* Dark gray text */
+  font-size: 14px !important;
+  font-weight: 500 !important;
+  padding: 12px 18px !important;
+  margin: 3px 0 !important;
+  border-radius: 10px !important;
+  transition: all 0.2s ease !important;
+  position: relative !important;
+  background: transparent !important;
+}
+
+/* Dropdown Item Hover */
+.navbar .dropdown-item:hover {
+  color: #7c3aed !important; /* Purple text */
+  background: linear-gradient(135deg,
+    rgba(139, 92, 246, 0.1) 0%,
+    rgba(124, 58, 237, 0.08) 100%) !important;
+  padding-left: 24px !important;
+  transform: translateX(2px) !important;
+}
+
+/* Active Dropdown Item */
+.navbar .dropdown-item.active {
+  color: #7c3aed !important;
+  background: linear-gradient(135deg,
+    rgba(139, 92, 246, 0.15) 0%,
+    rgba(124, 58, 237, 0.12) 100%) !important;
+  font-weight: 600 !important;
+}
+
+/* ================================================
+   SEARCH BAR - MODERN DESIGN
+   ================================================ */
+.navbar .form-control,
+.navbar input[type="search"] {
+  background: rgba(255, 255, 255, 0.9) !important;
+  border: 2px solid rgba(255, 255, 255, 0.3) !important;
+  border-radius: 25px !important;
+  padding: 10px 20px !important;
+  color: #1f2937 !important;
+  font-size: 14px !important;
+  min-width: 250px !important;
+  transition: all 0.3s ease !important;
+}
+
+.navbar .form-control::placeholder {
+  color: #6b7280 !important;
+}
+
+.navbar .form-control:focus {
+  background: rgba(255, 255, 255, 0.95) !important;
+  border-color: rgba(255, 255, 255, 0.5) !important;
+  box-shadow:
+    0 0 0 3px rgba(255, 255, 255, 0.2),
+    0 4px 12px rgba(0, 0, 0, 0.1) !important;
+  outline: none !important;
+}
+
+/* ================================================
+   USER MENU - PREMIUM STYLING
+   ================================================ */
+.navbar .usermenu .dropdown-toggle {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 10px !important;
+  padding: 8px 16px 8px 12px !important;
+  background: rgba(255, 255, 255, 0.15) !important;
+  border-radius: 30px !important;
+  border: 1px solid rgba(255, 255, 255, 0.25) !important;
+  transition: all 0.3s ease !important;
+}
+
+.navbar .usermenu .dropdown-toggle:hover {
+  background: rgba(255, 255, 255, 0.95) !important;
+  border-color: rgba(255, 255, 255, 1) !important;
+}
+
+.navbar .usermenu .dropdown-toggle:hover .usertext {
+  color: #1f2937 !important;
+}
+
+/* User Avatar */
+.navbar .usermenu .avatars img {
+  width: 32px !important;
+  height: 32px !important;
+  border-radius: 50% !important;
+  border: 2px solid rgba(255, 255, 255, 0.5) !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1) !important;
+}
+
+/* Username Text */
+.navbar .usermenu .usertext {
+  color: #ffffff !important;
+  font-weight: 500 !important;
+  font-size: 14px !important;
+  transition: color 0.3s ease !important;
+}
+
+/* ================================================
+   BUTTONS IN NAVBAR - MODERN STYLE
+   ================================================ */
+.navbar .btn {
+  background: linear-gradient(135deg,
+    rgba(255, 255, 255, 0.2) 0%,
+    rgba(255, 255, 255, 0.1) 100%) !important;
+  border: 2px solid rgba(255, 255, 255, 0.3) !important;
+  color: #ffffff !important;
+  padding: 10px 24px !important;
+  border-radius: 25px !important;
+  font-weight: 600 !important;
+  font-size: 14px !important;
+  transition: all 0.3s ease !important;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1) !important;
+}
+
+.navbar .btn:hover {
+  background: rgba(255, 255, 255, 0.95) !important;
+  border-color: rgba(255, 255, 255, 1) !important;
+  color: #1f2937 !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15) !important;
+  text-shadow: none !important;
+}
+
+/* Primary Button */
+.navbar .btn-primary {
+  background: linear-gradient(135deg, #ffd700 0%, #ffed4b 100%) !important;
+  border: none !important;
+  color: #1f2937 !important;
+  text-shadow: none !important;
+}
+
+.navbar .btn-primary:hover {
+  background: linear-gradient(135deg, #ffed4b 0%, #ffd700 100%) !important;
+  box-shadow:
+    0 8px 25px rgba(255, 215, 0, 0.4),
+    0 4px 10px rgba(0, 0, 0, 0.1) !important;
+}
+
+/* ================================================
+   NOTIFICATION BADGES - MODERN DESIGN
+   ================================================ */
+.navbar .badge,
+.navbar .count-container {
+  background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%) !important;
+  color: #ffffff !important;
+  border: 2px solid rgba(255, 255, 255, 0.8) !important;
+  border-radius: 12px !important;
+  padding: 2px 8px !important;
+  font-size: 11px !important;
+  font-weight: 700 !important;
+  box-shadow: 0 2px 8px rgba(239, 68, 68, 0.4) !important;
+  animation: pulse 2s infinite !important;
+}
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+}
+
+/* ================================================
+   BREADCRUMBS IN HEADER
+   ================================================ */
+.navbar .breadcrumb {
+  background: transparent !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+.navbar .breadcrumb-item {
+  color: rgba(255, 255, 255, 0.9) !important;
+  font-size: 13px !important;
+  font-weight: 500 !important;
+}
+
+.navbar .breadcrumb-item a {
+  color: rgba(255, 255, 255, 0.95) !important;
+  text-decoration: none !important;
+  transition: all 0.2s ease !important;
+}
+
+.navbar .breadcrumb-item a:hover {
+  color: #ffffff !important;
+  text-decoration: underline !important;
+}
+
+.navbar .breadcrumb-item + .breadcrumb-item::before {
+  content: "›" !important;
+  color: rgba(255, 255, 255, 0.7) !important;
+  padding: 0 10px !important;
+  font-size: 16px !important;
+}
+
+/* ================================================
+   MOBILE MENU TOGGLE - PREMIUM DESIGN
+   ================================================ */
+.navbar-toggler {
+  background: rgba(255, 255, 255, 0.2) !important;
+  border: 2px solid rgba(255, 255, 255, 0.3) !important;
+  border-radius: 10px !important;
+  padding: 8px 12px !important;
+  transition: all 0.3s ease !important;
+}
+
+.navbar-toggler:hover {
+  background: rgba(255, 255, 255, 0.3) !important;
+  border-color: rgba(255, 255, 255, 0.4) !important;
+}
+
+.navbar-toggler-icon {
+  background-image: none !important;
+  position: relative !important;
+  width: 24px !important;
+  height: 18px !important;
+}
+
+.navbar-toggler span,
+.navbar-toggler-icon::before,
+.navbar-toggler-icon::after {
+  display: block !important;
+  width: 100% !important;
+  height: 3px !important;
+  background: #ffffff !important;
+  border-radius: 3px !important;
+  margin: 5px 0 !important;
+  transition: all 0.3s ease !important;
+}
+
+/* ================================================
+   STICKY HEADER ENHANCEMENT
+   ================================================ */
+.navbar.sticky,
+.navbar.scrolled {
+  padding: 12px 0 !important;
+  background: linear-gradient(135deg,
+    rgba(102, 126, 234, 0.98) 0%,
+    rgba(118, 75, 162, 0.98) 100%) !important;
+  box-shadow:
+    0 8px 40px rgba(0, 0, 0, 0.15),
+    0 2px 10px rgba(0, 0, 0, 0.1) !important;
+}
+
+/* ================================================
+   LANGUAGE SELECTOR
+   ================================================ */
+.navbar .langmenu .dropdown-toggle {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+  padding: 8px 16px !important;
+  background: rgba(255, 255, 255, 0.1) !important;
+  border-radius: 20px !important;
+  color: #ffffff !important;
+  font-weight: 500 !important;
+}
+
+.navbar .langmenu .dropdown-toggle:hover {
+  background: rgba(255, 255, 255, 0.95) !important;
+  color: #1f2937 !important;
+}
+
+/* ================================================
+   ICONS IN NAVBAR
+   ================================================ */
+.navbar i,
+.navbar .icon {
+  color: currentColor !important;
+  transition: all 0.3s ease !important;
+}
+
+.navbar .nav-link:hover i,
+.navbar .dropdown-toggle:hover i {
+  transform: translateX(2px) !important;
+}
+
+/* ================================================
+   RESPONSIVE DESIGN
+   ================================================ */
+@media (max-width: 991px) {
+  .navbar-collapse {
+    background: rgba(255, 255, 255, 0.98) !important;
+    backdrop-filter: blur(20px) !important;
+    border-radius: 16px !important;
+    margin-top: 15px !important;
+    padding: 20px !important;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1) !important;
+  }
+
+  .navbar-nav .nav-link {
+    color: #1f2937 !important;
+    background: transparent !important;
+    border: none !important;
+    text-shadow: none !important;
+    margin: 5px 0 !important;
+  }
+
+  .navbar-nav .nav-link:hover {
+    background: rgba(139, 92, 246, 0.1) !important;
+    padding-left: 25px !important;
+  }
+
+  .navbar .dropdown-toggle::after {
+    border-top-color: #1f2937 !important;
+  }
+
+  .navbar .dropdown-menu {
+    position: static !important;
+    box-shadow: none !important;
+    background: transparent !important;
+    padding-left: 20px !important;
+  }
+}
+
+/* ================================================
+   ACCESSIBILITY ENHANCEMENTS
+   ================================================ */
+.navbar *:focus {
+  outline: 2px solid rgba(255, 255, 255, 0.5) !important;
+  outline-offset: 2px !important;
+  border-radius: 8px !important;
+}
+
+.navbar .dropdown-item:focus {
+  outline: 2px solid rgba(139, 92, 246, 0.5) !important;
+  outline-offset: -2px !important;
+}
+
+/* ================================================
+   PERFORMANCE OPTIMIZATIONS
+   ================================================ */
+.navbar,
+.navbar * {
+  -webkit-font-smoothing: antialiased !important;
+  -moz-osx-font-smoothing: grayscale !important;
+  transform: translateZ(0) !important;
+  backface-visibility: hidden !important;
+}

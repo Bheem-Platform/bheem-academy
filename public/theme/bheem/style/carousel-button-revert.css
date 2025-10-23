@@ -1,0 +1,247 @@
+/* ================================================
+   CAROUSEL BUTTON REVERT - Classic Clean Design
+   Reverts buttons to a more traditional, clean style
+   ================================================ */
+
+/* ================================================
+   CTA BUTTON - Clean Traditional Design (REVERTED)
+   ================================================ */
+.banner-content .btn,
+.banner-content a.btn-primary {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif !important;
+  font-size: 16px !important;
+  font-weight: 600 !important;
+  text-transform: none !important;
+  letter-spacing: 0 !important;
+  padding: 16px 32px !important;
+  border-radius: 8px !important;
+  text-decoration: none !important;
+  position: relative !important;
+  overflow: hidden !important;
+  transition: all 0.3s ease !important;
+
+  /* Clean Blue Design - Traditional and Professional */
+  background: #2563eb !important;
+  color: #ffffff !important;
+  border: 2px solid #2563eb !important;
+
+  /* Simple clean shadow */
+  box-shadow:
+    0 2px 8px rgba(37, 99, 235, 0.2),
+    0 1px 2px rgba(0, 0, 0, 0.05) !important;
+}
+
+/* Button hover state - Clean and Simple */
+.banner-content .btn:hover,
+.banner-content a.btn-primary:hover {
+  transform: translateY(-1px) !important;
+  background: #1d4ed8 !important;
+  border-color: #1d4ed8 !important;
+  box-shadow:
+    0 4px 16px rgba(37, 99, 235, 0.3),
+    0 2px 4px rgba(0, 0, 0, 0.1) !important;
+}
+
+/* Button focus state for accessibility */
+.banner-content .btn:focus,
+.banner-content a.btn-primary:focus {
+  outline: 2px solid #60a5fa !important;
+  outline-offset: 2px !important;
+}
+
+/* Arrow icon in button - Clean styling */
+.banner-content .btn i,
+.banner-content a.btn-primary i {
+  font-size: 14px !important;
+  transition: transform 0.2s ease !important;
+}
+
+.banner-content .btn:hover i,
+.banner-content a.btn-primary:hover i {
+  transform: translateX(2px) !important;
+}
+
+/* Remove complex animations and effects */
+.banner-content .btn::before,
+.banner-content a.btn-primary::before {
+  display: none !important;
+  content: none !important;
+}
+
+/* Remove complex hover animations */
+.banner-content .btn:active::before,
+.banner-content a.btn-primary:active::before {
+  display: none !important;
+}
+
+/* ================================================
+   CAROUSEL NAVIGATION BUTTONS - Clean Design
+   ================================================ */
+.controller-icon {
+  width: 48px !important;
+  height: 48px !important;
+  border-radius: 50% !important;
+  background: rgba(255, 255, 255, 0.9) !important;
+  backdrop-filter: none !important;
+  border: 2px solid rgba(37, 99, 235, 0.2) !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  cursor: pointer !important;
+  transition: all 0.3s ease !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1) !important;
+}
+
+.controller-icon:hover {
+  transform: scale(1.05) !important;
+  background: #2563eb !important;
+  border-color: #2563eb !important;
+  box-shadow: 0 4px 16px rgba(37, 99, 235, 0.3) !important;
+}
+
+.controller-icon i {
+  font-size: 18px !important;
+  color: #2563eb !important;
+  font-weight: 600 !important;
+}
+
+.controller-icon:hover i {
+  color: #ffffff !important;
+  transform: none !important;
+}
+
+/* ================================================
+   TEXT STYLING - Clean and Readable
+   ================================================ */
+
+/* Headlines - Clean Dark Text (No Gradients) */
+.banner-content h1 {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif !important;
+  font-size: clamp(36px, 4vw, 52px) !important;
+  font-weight: 700 !important;
+  line-height: 1.2 !important;
+  letter-spacing: -0.01em !important;
+  margin-bottom: 20px !important;
+
+  /* Clean dark text */
+  color: #1f2937 !important;
+  background: none !important;
+  -webkit-background-clip: unset !important;
+  -webkit-text-fill-color: unset !important;
+  background-clip: unset !important;
+  animation: none !important;
+
+  /* Simple text shadow for readability */
+  text-shadow: none !important;
+  filter: none !important;
+}
+
+/* Paragraph text - Clean Gray */
+.banner-content p {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif !important;
+  font-size: clamp(16px, 1.5vw, 18px) !important;
+  font-weight: 400 !important;
+  line-height: 1.6 !important;
+  color: #6b7280 !important;
+  margin-bottom: 28px !important;
+  max-width: 600px !important;
+  letter-spacing: 0 !important;
+  opacity: 1 !important;
+  text-shadow: none !important;
+  animation: none !important;
+}
+
+/* ================================================
+   BANNER BACKGROUND - Clean White Background
+   ================================================ */
+.banner-area {
+  background: #f8fafc !important;
+  padding: 80px 0 60px 0 !important;
+  margin-top: 0 !important;
+}
+
+.banner-bg {
+  background: #ffffff !important;
+  backdrop-filter: none !important;
+  border: 1px solid #e5e7eb !important;
+  border-radius: 12px !important;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05) !important;
+  padding: 60px 40px !important;
+  margin: 0 !important;
+}
+
+/* ================================================
+   REMOVE COMPLEX ANIMATIONS
+   ================================================ */
+.bg-linear {
+  background: transparent !important;
+  background-image: none !important;
+  animation: none !important;
+}
+
+/* Remove all keyframe animations */
+@keyframes contentFadeIn,
+@keyframes headlineReveal,
+@keyframes softFadeIn {
+  from, to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* ================================================
+   RESPONSIVE ADJUSTMENTS
+   ================================================ */
+@media (max-width: 768px) {
+  .banner-content .btn,
+  .banner-content a.btn-primary {
+    padding: 14px 24px !important;
+    font-size: 15px !important;
+  }
+
+  .banner-bg {
+    padding: 40px 24px !important;
+    border-radius: 8px !important;
+  }
+
+  .controller-icon {
+    width: 44px !important;
+    height: 44px !important;
+  }
+
+  .controller-icon i {
+    font-size: 16px !important;
+  }
+}
+
+/* ================================================
+   ACCESSIBILITY IMPROVEMENTS
+   ================================================ */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.1s !important;
+  }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  .banner-content .btn,
+  .banner-content a.btn-primary {
+    background: #000000 !important;
+    border-color: #000000 !important;
+    color: #ffffff !important;
+  }
+
+  .banner-content h1 {
+    color: #000000 !important;
+  }
+
+  .banner-content p {
+    color: #333333 !important;
+  }
+}

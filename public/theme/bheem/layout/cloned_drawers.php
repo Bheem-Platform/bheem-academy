@@ -1,0 +1,74 @@
+<?php
+// This file is part of Moodle - http://moodle.org/
+//
+// Moodle is free software: you can redistribute it and/or modify
+// it under the terms of the GNU General Public License as published by
+// the Free Software Foundation, either version 3 of the License, or
+// (at your option) any later version.
+//
+// Moodle is distributed in the hope that it will be useful,
+// but WITHOUT ANY WARRANTY; without even the implied warranty of
+// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+// GNU General Public License for more details.
+//
+// You should have received a copy of the GNU General Public License
+// along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
+
+/**
+ * A cloned layout template for the cloned homepage.
+ * This is based on the original drawers.php but allows for independent customization.
+ *
+ * @package   theme_bheem
+ * @copyright 2025 Bheem Academy
+ * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
+ */
+
+defined('MOODLE_INTERNAL') || die();
+
+require_once($CFG->libdir . '/behat/lib.php');
+require_once($CFG->dirroot . '/course/lib.php');
+
+if (isloggedin()) {
+    $courseindexopen = (get_user_preferences('drawer-open-index', true) == true);
+    $blockdraweropen = (get_user_preferences('drawer-open-block') == true);
+} else {
+    $courseindexopen = false;
+    $blockdraweropen = false;
+}
+
+if (defined('BEHAT_SITE_RUNNING')) {
+    $blockdraweropen = true;
+}
+
+$extraclasses = ['uses-drawers', 'cloned-homepage-layout'];
+if ($courseindexopen) {
+    $extraclasses[] = 'drawer-open-index';
+}
+
+include($CFG->dirroot . '/theme/bheem/inc/bheem_themehandler.php');
+
+require_once($CFG->libdir . '/behat/lib.php');
+
+$extraclasses = ['cloned-homepage-layout'];
+$bodyattributes = $OUTPUT->body_attributes($extraclasses);
+$forceblockdraweropen = $OUTPUT->firstview_fakeblocks();
+$blockshtml = $OUTPUT->blocks('side-pre');
+$hasblocks = strpos($blockshtml, 'data-block=') !== false;
+if (!$hasblocks) {
+    $blockdraweropen = false;
+}
+$courseindex = core_course_drawer();
+if (!$courseindex) {
+    $courseindexopen = false;
+}
+include($CFG->dirroot . '/theme/bheem/inc/bheem_themehandler_context.php');
+
+$templatecontext += [
+    'courseindexopen' => $courseindexopen,
+    'blockdraweropen' => $blockdraweropen,
+    'courseindex' => $courseindex,
+    'primarymoremenu' => $primarymenu['moremenu'],
+    'forceblockdraweropen' => $forceblockdraweropen,
+];
+
+echo $OUTPUT->render_from_template('theme_boost/drawers', $templatecontext);

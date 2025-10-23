@@ -1,0 +1,195 @@
+/* Course Font Readability Fix for Moodle Edoo Theme */
+
+/* Fix transparent text issues */
+.course-content *,
+.course-section *,
+.course-module *,
+.content *,
+.section *,
+.activity *,
+.mod-content *,
+.course-description *,
+.course-summary *,
+.course-info *,
+.coursebox *,
+.course-item-content * {
+    -webkit-text-fill-color: initial !important;
+    color: #333333 !important;
+}
+
+/* Ensure course titles are visible */
+.course-title,
+.coursename,
+h1.coursename,
+h2.coursename,
+.course-content h1,
+.course-content h2,
+.course-content h3,
+.course-content h4,
+.course-content h5,
+.course-content h6 {
+    -webkit-text-fill-color: initial !important;
+    color: #1a1a1a !important;
+    font-weight: 600 !important;
+}
+
+/* Fix course text content */
+.course-content p,
+.course-content span,
+.course-content div,
+.course-content li,
+.course-content td,
+.course-content th,
+.section-summary,
+.activity-instance,
+.mod-content p,
+.mod-content span {
+    -webkit-text-fill-color: initial !important;
+    color: #4a4a4a !important;
+    line-height: 1.6 !important;
+}
+
+/* Improve link visibility in courses */
+.course-content a,
+.activity a,
+.section a,
+.mod-content a {
+    -webkit-text-fill-color: initial !important;
+    color: #0066cc !important;
+    text-decoration: underline !important;
+}
+
+.course-content a:hover,
+.activity a:hover,
+.section a:hover,
+.mod-content a:hover {
+    color: #0052a3 !important;
+}
+
+/* Fix activity names */
+.activityname,
+.instancename {
+    -webkit-text-fill-color: initial !important;
+    color: #333333 !important;
+    font-weight: 500 !important;
+}
+
+/* Fix section names */
+.sectionname,
+.section-title {
+    -webkit-text-fill-color: initial !important;
+    color: #1a1a1a !important;
+    font-weight: 600 !important;
+    font-size: 1.2em !important;
+}
+
+/* Fix course card text */
+.course-card *,
+.coursebox-content *,
+.course-item * {
+    -webkit-text-fill-color: initial !important;
+}
+
+/* Specific fixes for common problem areas */
+.text-muted {
+    -webkit-text-fill-color: initial !important;
+    color: #6c757d !important;
+}
+
+.text-info {
+    -webkit-text-fill-color: initial !important;
+    color: #17a2b8 !important;
+}
+
+.text-primary {
+    -webkit-text-fill-color: initial !important;
+    color: #007bff !important;
+}
+
+/* Fix breadcrumb navigation */
+.breadcrumb-item,
+.breadcrumb-item a {
+    -webkit-text-fill-color: initial !important;
+    color: #495057 !important;
+}
+
+.breadcrumb-item.active {
+    -webkit-text-fill-color: initial !important;
+    color: #6c757d !important;
+}
+
+/* Fix dropdown menus in courses */
+.dropdown-menu *,
+.dropdown-item {
+    -webkit-text-fill-color: initial !important;
+    color: #212529 !important;
+}
+
+/* Fix form elements in courses */
+.course-content input,
+.course-content select,
+.course-content textarea,
+.course-content label {
+    -webkit-text-fill-color: initial !important;
+    color: #495057 !important;
+}
+
+/* Fix buttons in courses */
+.course-content .btn,
+.course-content button {
+    -webkit-text-fill-color: initial !important;
+}
+
+/* Fix tables in courses */
+.course-content table,
+.course-content th,
+.course-content td {
+    -webkit-text-fill-color: initial !important;
+    color: #333333 !important;
+    border-color: #dee2e6 !important;
+}
+
+/* Fix notification and alert text */
+.alert *,
+.notification * {
+    -webkit-text-fill-color: initial !important;
+}
+
+/* Additional contrast improvements */
+body.path-course,
+body.path-mod {
+    background-color: #ffffff !important;
+}
+
+.course-content {
+    background-color: #ffffff !important;
+}
+
+/* Ensure minimum contrast ratio */
+.course-content *:not(a) {
+    min-color: #333333;
+}
+
+/* Fix quiz and assignment text */
+.que .content,
+.que .qtext,
+.que .answer,
+.assignsubmission_onlinetext_content {
+    -webkit-text-fill-color: initial !important;
+    color: #333333 !important;
+}
+
+/* Fix forum posts */
+.forumpost .content,
+.forum-post-container {
+    -webkit-text-fill-color: initial !important;
+    color: #333333 !important;
+}
+
+/* Override any gradient text effects in courses */
+.course-content [style*="background-clip: text"],
+.course-content [style*="-webkit-background-clip: text"] {
+    -webkit-text-fill-color: initial !important;
+    background-clip: initial !important;
+    -webkit-background-clip: initial !important;
+}

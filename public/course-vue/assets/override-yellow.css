@@ -1,0 +1,172 @@
+/*
+ * YELLOW BACKGROUND OVERRIDE
+ * This file removes all violet/purple gradients and applies light yellow background
+ */
+
+/* HERO SECTION - With actual image element */
+.course-hero-section {
+    position: relative !important;
+    background-color: #667EEA !important;
+    overflow: hidden !important;
+}
+
+.hero-image-wrapper {
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    bottom: 0 !important;
+    z-index: 0 !important;
+}
+
+.hero-image {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    object-position: center !important;
+    display: block !important;
+}
+
+.hero-overlay {
+    background: transparent !important;
+    z-index: 1 !important;
+}
+
+/* Force yellow background on all main containers EXCEPT hero */
+html,
+body,
+#app,
+#page,
+#page-wrapper,
+#page-content,
+.course-content,
+.course-layout[data-v-079e0055],
+.course-main-content[data-v-079e0055],
+.vue-course-content[data-v-6f9b7509] {
+    background: #FFFACD !important;
+    background-color: #FFFACD !important;
+}
+
+html:not(.course-hero-section),
+body:not(.course-hero-section),
+#app:not(.course-hero-section),
+#page:not(.course-hero-section) {
+    background-image: none !important;
+}
+
+/* Force hero image to be visible */
+.hero-image {
+    display: block !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+}
+
+/* Remove ALL gradient backgrounds globally EXCEPT hero section */
+*:not(.course-hero-section):not(.hero-image) {
+    background-image: none !important;
+}
+
+/* Hide all pseudo-element overlays that create gradients */
+*::before,
+*::after {
+    background: transparent !important;
+    background-image: none !important;
+    opacity: 0 !important;
+    content: none !important;
+    display: none !important;
+}
+
+/* Restore necessary pseudo-elements for icons */
+.fa::before,
+.fas::before,
+.far::before,
+.fab::before,
+i.fa::before,
+i.fas::before,
+i.far::before,
+i.fab::before {
+    opacity: 1 !important;
+    display: inline-block !important;
+    content: attr(data-icon) !important;
+}
+
+/* Override header gradient */
+.professional-header[data-v-fe795fdf] {
+    background: #FFFFFF !important;
+    background-image: none !important;
+}
+
+/* Keep section cards white with clean styling */
+.section-card-modern[data-v-6f9b7509],
+.section-header-modern[data-v-6f9b7509],
+.section-body-modern[data-v-6f9b7509] {
+    background: #FFFFFF !important;
+    background-image: none !important;
+    border: 1px solid #E8E8E8 !important;
+}
+
+/* Course sections wrapper - yellow background */
+.course-sections-wrapper[data-v-6f9b7509] {
+    background: #FFFACD !important;
+    background-image: none !important;
+}
+
+/* Activity items - keep white but remove gradients */
+.activity-item-modern[data-v-6f9b7509] {
+    background: #F8F9FA !important;
+    background-image: none !important;
+    border: 1px solid #E8E8E8 !important;
+}
+
+.activity-item-modern[data-v-6f9b7509]:hover {
+    background: #FFFFFF !important;
+    background-image: none !important;
+}
+
+/* Activity icon box - solid color instead of gradient */
+.activity-icon-box[data-v-6f9b7509] {
+    background: #667EEA !important;
+    background-image: none !important;
+    color: #FFFFFF !important;
+}
+
+/* Override button gradients - keep them styled but no gradient */
+.cta-button[data-v-fe795fdf],
+.activity-access-btn[data-v-6f9b7509] {
+    background: #667EEA !important;
+    background-image: none !important;
+    color: #FFFFFF !important;
+}
+
+.login-btn[data-v-fe795fdf] {
+    background: #FFFFFF !important;
+    background-image: none !important;
+    color: #333333 !important;
+    border: 2px solid #667EEA !important;
+}
+
+/* Section number circle - solid color */
+.section-number-circle[data-v-6f9b7509] {
+    background: #667EEA !important;
+    background-image: none !important;
+    color: #FFFFFF !important;
+}
+
+/* Remove grid gradient backgrounds */
+.activities-list[data-v-6f9b7509] {
+    background: transparent !important;
+    background-image: none !important;
+}
+
+/* Course info header area */
+.course-info-header[data-v-6f9b7509] {
+    background: transparent !important;
+    background-image: none !important;
+}
+
+/* Meta tags styling */
+.meta-tag[data-v-6f9b7509] {
+    background: #FFFFFF !important;
+    background-image: none !important;
+    border: 1px solid #E8E8E8 !important;
+}

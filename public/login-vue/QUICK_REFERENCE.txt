@@ -1,0 +1,92 @@
+================================================================================
+  BHEEM ACADEMY - VUE LOGIN PAGE DEPLOYMENT
+  Exact Moodle Design - Now LIVE as Default Login
+================================================================================
+
+✅ STATUS: DEPLOYED & ACTIVE
+
+================================================================================
+ACCESS URLS
+================================================================================
+
+NEW Vue Login (DEFAULT):
+https://dev.bheem.cloud/login/index.php
+https://dev.bheem.cloud/login-vue/academy-login.php
+
+Traditional Login (BACKUP):
+https://dev.bheem.cloud/login/index.php?traditional=1
+
+================================================================================
+WHAT CHANGED
+================================================================================
+
+✅ /login/index.php now redirects to Vue login page
+✅ Exact design replicated from original Moodle login
+✅ All functionality preserved (login, guest, forgot password)
+✅ Vue.js powered for better performance
+✅ Same look, better tech!
+
+================================================================================
+KEY FEATURES
+================================================================================
+
+✓ Green page banner (#126849) - "Log in to the site"
+✓ Bheem Academy logo
+✓ Username & password fields
+✓ "Log in" button (green)
+✓ "Lost password?" link
+✓ Guest login section
+✓ "Access as a guest" button (gray)
+✓ Cookies notice button
+✓ Form validation & error handling
+✓ Fully integrated with Moodle authentication
+✓ Responsive design (mobile, tablet, desktop)
+
+================================================================================
+TO REVERT TO TRADITIONAL LOGIN
+================================================================================
+
+Quick Access:
+  https://dev.bheem.cloud/login/index.php?traditional=1
+
+Permanent Revert:
+  Edit: /opt/bitnami/moodle-staging/login/index.php
+  Comment out lines 32-35 (the redirect code)
+
+================================================================================
+FILE LOCATIONS
+================================================================================
+
+Deployed Files:     /opt/bitnami/moodle-staging/login-vue/
+Source Code:        /opt/bitnami/moodle-staging/edoo-components/vue-login-page/
+Modified Redirect:  /opt/bitnami/moodle-staging/login/index.php
+
+================================================================================
+REBUILD & REDEPLOY
+================================================================================
+
+cd /opt/bitnami/moodle-staging/edoo-components/vue-login-page
+npm run build
+cp -r dist/* /opt/bitnami/moodle-staging/login-vue/
+chown -R www-data:www-data /opt/bitnami/moodle-staging/login-vue/
+
+================================================================================
+DESIGN MATCH
+================================================================================
+
+✅ Exact same colors (#126849 green, #6c757d gray)
+✅ Exact same layout and spacing
+✅ Exact same fonts and sizes
+✅ Exact same form field styling
+✅ Exact same button styling
+✅ Exact same HTML structure
+✅ Exact same functionality
+
+================================================================================
+DEPLOYMENT DATE
+================================================================================
+
+October 8, 2024
+Version: 2.0.0 (Exact Moodle Design)
+
+================================================================================

@@ -1,0 +1,992 @@
+/* ================================================
+   JOIN OUR 780+ LIVE ONLINE CLASSES - 2025 STUNNING REDESIGN
+   Breathtaking, Premium & Visually Striking Design
+   Best Practices: Advanced Glassmorphism, Parallax, Neon Effects, 3D Cards
+   ================================================ */
+
+/* ================================================
+   PREMIUM TYPOGRAPHY - Ultra-Modern Font System
+   ================================================ */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Outfit:wght@300;400;500;600;700;800;900&family=Manrope:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800;900&display=swap');
+
+/* ================================================
+   STANDARD TYPOGRAPHY WITH NORMAL SPACING
+   ================================================ */
+.join-section h1,
+.join-section h2,
+.join-section h3,
+.join-section .section-title {
+    letter-spacing: normal !important;
+    word-spacing: normal !important;
+    line-height: 1.3 !important;
+    font-family: 'Outfit', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif !important;
+    font-weight: 700 !important;
+    text-rendering: optimizeLegibility !important;
+    -webkit-font-smoothing: antialiased !important;
+    -moz-osx-font-smoothing: grayscale !important;
+}
+
+.join-section p,
+.join-section .description,
+.join-section .subtitle {
+    letter-spacing: normal !important;
+    word-spacing: normal !important;
+    line-height: 1.6 !important;
+    font-family: 'Inter', 'Manrope', -apple-system, BlinkMacSystemFont, sans-serif !important;
+    font-weight: 400 !important;
+    text-rendering: optimizeLegibility !important;
+    -webkit-font-smoothing: antialiased !important;
+    -moz-osx-font-smoothing: grayscale !important;
+}
+
+.join-section .btn,
+.join-section button,
+.join-section .cta-button,
+.join-section a[class*="btn"] {
+    letter-spacing: 0.5px !important;
+    word-spacing: normal !important;
+    font-family: 'Plus Jakarta Sans', 'Outfit', sans-serif !important;
+    font-weight: 600 !important;
+    text-rendering: optimizeLegibility !important;
+    -webkit-font-smoothing: antialiased !important;
+    -moz-osx-font-smoothing: grayscale !important;
+}
+
+/* ================================================
+   MAIN SECTION CONTAINER - Ultra-Modern Glass Design
+   ================================================ */
+.join-section,
+.online-classes-section,
+section[class*="780"],
+section[class*="join"],
+.student-section,
+#join-our-classes {
+    position: relative !important;
+    padding: 120px 0 !important;
+    margin: 100px 0 !important;
+    overflow: hidden !important;
+    min-height: 100vh !important;
+
+    /* BEAUTIFUL SOLID VISIBLE BACKGROUND */
+    background:
+        linear-gradient(45deg,
+            #667eea 0%,
+            #764ba2 25%,
+            #f093fb 50%,
+            #4facfe 75%,
+            #00f2fe 100%) !important;
+    background-attachment: fixed !important;
+    background-size: 400% 400% !important;
+    animation: gradientMove 12s ease infinite !important;
+
+    /* Additional solid color overlay */
+    background-image:
+        linear-gradient(135deg, rgba(103, 126, 234, 0.9) 0%, rgba(118, 75, 162, 0.8) 50%, rgba(240, 147, 251, 0.9) 100%) !important;
+
+    /* Overlay for better text readability */
+    background-image:
+        linear-gradient(45deg, rgba(0, 0, 0, 0.05) 25%, transparent 25%),
+        linear-gradient(-45deg, rgba(0, 0, 0, 0.05) 25%, transparent 25%),
+        linear-gradient(45deg, transparent 75%, rgba(0, 0, 0, 0.05) 75%),
+        linear-gradient(-45deg, transparent 75%, rgba(0, 0, 0, 0.05) 75%) !important;
+    background-size: 30px 30px !important;
+    background-position: 0 0, 0 15px, 15px -15px, -15px 0px !important;
+
+    /* Premium 3D Shadow System */
+    box-shadow:
+        inset 0 0 200px rgba(255, 255, 255, 0.1),
+        0 0 100px rgba(102, 126, 234, 0.3),
+        0 20px 80px rgba(139, 92, 246, 0.4),
+        0 0 0 1px rgba(255, 255, 255, 0.1) !important;
+
+    /* Neon Border Animation */
+    border: 2px solid transparent !important;
+    border-image: linear-gradient(45deg, #ff6b6b, #4ecdc4, #45b7d1, #96ceb4, #feca57) 1 !important;
+    border-image-slice: 1 !important;
+}
+
+/* SOLID COLOR ACCENT ELEMENTS */
+.join-section::before {
+    content: '' !important;
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    background:
+        radial-gradient(circle at 30% 40%, rgba(102, 126, 234, 0.3) 0%, transparent 70%),
+        radial-gradient(circle at 70% 60%, rgba(240, 147, 251, 0.25) 0%, transparent 70%),
+        radial-gradient(circle at 50% 80%, rgba(79, 172, 254, 0.2) 0%, transparent 60%) !important;
+    animation: floatingColors 10s ease-in-out infinite !important;
+    z-index: 1 !important;
+    filter: blur(20px) !important;
+}
+
+.join-section::after {
+    content: '' !important;
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    background:
+        linear-gradient(45deg, transparent 30%, rgba(255, 255, 255, 0.08) 50%, transparent 70%) !important;
+    animation: shimmer 8s linear infinite !important;
+    z-index: 2 !important;
+    pointer-events: none !important;
+}
+
+@keyframes gradientMove {
+    0% {
+        background-position: 0% 50%;
+    }
+    25% {
+        background-position: 50% 0%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    75% {
+        background-position: 50% 100%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+@keyframes floatingColors {
+    0%, 100% { transform: scale(1) rotate(0deg); opacity: 0.8; }
+    25% { transform: scale(1.1) rotate(90deg); opacity: 0.6; }
+    50% { transform: scale(0.9) rotate(180deg); opacity: 1; }
+    75% { transform: scale(1.05) rotate(270deg); opacity: 0.7; }
+}
+
+@keyframes shimmer {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(100%); }
+}
+
+/* ================================================
+   SECTION HEADER - Modern Typography System
+   ================================================ */
+.join-section .container,
+.online-classes-section .container {
+    position: relative !important;
+    z-index: 10 !important;
+    max-width: 1200px !important;
+    margin: 0 auto !important;
+    backdrop-filter: blur(20px) saturate(150%) !important;
+    -webkit-backdrop-filter: blur(20px) saturate(150%) !important;
+    background:
+        linear-gradient(135deg, rgba(255, 255, 255, 0.12) 0%, rgba(255, 255, 255, 0.04) 100%),
+        radial-gradient(circle at 30% 30%, rgba(102, 126, 234, 0.1) 0%, transparent 60%),
+        radial-gradient(circle at 70% 70%, rgba(240, 147, 251, 0.08) 0%, transparent 60%) !important;
+    border-radius: 25px !important;
+    border: 1px solid rgba(255, 255, 255, 0.2) !important;
+    padding: 60px 40px !important;
+    box-shadow:
+        0 10px 40px rgba(0, 0, 0, 0.15),
+        0 4px 20px rgba(102, 126, 234, 0.1),
+        inset 0 1px 0 rgba(255, 255, 255, 0.2) !important;
+}
+
+/* BEAUTIFUL TITLE WITH LARGER FONT SIZE */
+.join-section h2,
+.online-classes-section h2,
+.section-title {
+    font-family: 'Outfit', 'Plus Jakarta Sans', sans-serif !important;
+    font-size: clamp(3rem, 7vw, 5rem) !important;
+    font-weight: 700 !important;
+    line-height: 1.2 !important;
+    letter-spacing: normal !important;
+    word-spacing: normal !important;
+    margin: 0 0 40px 0 !important;
+    text-align: center !important;
+    text-rendering: optimizeLegibility !important;
+    -webkit-font-smoothing: antialiased !important;
+    -moz-osx-font-smoothing: grayscale !important;
+
+    /* HOLOGRAPHIC TEXT EFFECT */
+    background: linear-gradient(45deg,
+        #ff6b6b 0%,
+        #4ecdc4 15%,
+        #45b7d1 30%,
+        #96ceb4 45%,
+        #feca57 60%,
+        #ff9ff3 75%,
+        #54a0ff 90%,
+        #5f27cd 100%) !important;
+    background-size: 300% 300% !important;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+    background-clip: text !important;
+    animation: holographicText 8s ease infinite !important;
+
+    /* NEON GLOW EFFECT */
+    filter: drop-shadow(0 0 30px rgba(255, 107, 107, 0.5))
+            drop-shadow(0 0 60px rgba(78, 205, 196, 0.3))
+            drop-shadow(0 0 90px rgba(69, 183, 209, 0.2)) !important;
+
+    position: relative !important;
+    z-index: 10 !important;
+}
+
+/* HOLOGRAPHIC TEXT ANIMATION */
+@keyframes holographicText {
+    0% { background-position: 0% 50%; }
+    25% { background-position: 100% 50%; }
+    50% { background-position: 0% 100%; }
+    75% { background-position: 100% 0%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* FLOATING TEXT SHADOW */
+.join-section h2::before {
+    content: attr(data-text) !important;
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    background: linear-gradient(45deg, rgba(255, 255, 255, 0.1), transparent) !important;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+    background-clip: text !important;
+    z-index: -1 !important;
+    animation: floatShadow 6s ease-in-out infinite !important;
+}
+
+@keyframes floatShadow {
+    0%, 100% { transform: translate(0, 0); }
+    50% { transform: translate(3px, -3px); }
+}
+
+/* Clean Subtitle with Larger Font Size */
+.join-section .section-subtitle,
+.join-section p {
+    font-family: 'Inter', 'Manrope', sans-serif !important;
+    font-size: 1.4rem !important;
+    font-weight: 400 !important;
+    line-height: 1.6 !important;
+    letter-spacing: normal !important;
+    word-spacing: normal !important;
+    color: rgba(255, 255, 255, 0.9) !important;
+    text-align: center !important;
+    max-width: 800px !important;
+    margin: 0 auto 60px auto !important;
+    text-rendering: optimizeLegibility !important;
+    -webkit-font-smoothing: antialiased !important;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.2) !important;
+}
+
+/* ================================================
+   CARDS GRID SYSTEM - Modern Layout
+   ================================================ */
+.classes-grid,
+.join-grid,
+.courses-container {
+    display: grid !important;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)) !important;
+    gap: 40px !important;
+    margin-top: 80px !important;
+    padding: 20px 0 !important;
+}
+
+/* STUNNING 3D FLOATING COURSE CARDS */
+.course-card,
+.class-card,
+.join-card,
+.online-class-item {
+    position: relative !important;
+    background: rgba(255, 255, 255, 0.15) !important;
+    backdrop-filter: blur(25px) saturate(200%) contrast(120%) !important;
+    -webkit-backdrop-filter: blur(25px) saturate(200%) contrast(120%) !important;
+    border: 2px solid rgba(255, 255, 255, 0.3) !important;
+    border-radius: 32px !important;
+    padding: 0 !important;
+    overflow: hidden !important;
+    transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1) !important;
+    cursor: pointer !important;
+    transform-style: preserve-3d !important;
+
+    /* HOLOGRAPHIC BORDER EFFECT */
+    background-image:
+        linear-gradient(135deg, rgba(255, 255, 255, 0.2) 0%, transparent 50%, rgba(255, 255, 255, 0.1) 100%) !important;
+
+    /* PREMIUM 3D SHADOW SYSTEM */
+    box-shadow:
+        0 0 0 1px rgba(255, 255, 255, 0.2),
+        0 8px 32px rgba(0, 0, 0, 0.1),
+        0 16px 64px rgba(102, 126, 234, 0.15),
+        0 32px 128px rgba(139, 92, 246, 0.1),
+        inset 0 1px 0 rgba(255, 255, 255, 0.4),
+        inset 0 -1px 0 rgba(255, 255, 255, 0.1) !important;
+
+    /* FLOATING ANIMATION */
+    animation: cardFloat 6s ease-in-out infinite var(--delay, 0s) !important;
+}
+
+/* FLOATING ANIMATION */
+@keyframes cardFloat {
+    0%, 100% {
+        transform: translateY(0px) rotateX(0deg) rotateY(0deg);
+    }
+    50% {
+        transform: translateY(-20px) rotateX(2deg) rotateY(1deg);
+    }
+}
+
+/* STUNNING HOLOGRAPHIC BORDER ANIMATION */
+.course-card::before {
+    content: '' !important;
+    position: absolute !important;
+    top: -2px !important;
+    left: -2px !important;
+    right: -2px !important;
+    bottom: -2px !important;
+    background: linear-gradient(45deg,
+        #ff6b6b, #4ecdc4, #45b7d1, #96ceb4, #feca57, #ff9ff3, #54a0ff, #5f27cd) !important;
+    background-size: 300% 300% !important;
+    border-radius: 32px !important;
+    z-index: -1 !important;
+    animation: borderGlow 8s linear infinite !important;
+    opacity: 0 !important;
+    transition: opacity 0.6s ease !important;
+}
+
+@keyframes borderGlow {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* SPECTACULAR HOVER EFFECTS */
+.course-card:hover,
+.class-card:hover,
+.join-card:hover {
+    transform: translateY(-30px) rotateX(10deg) rotateY(5deg) scale(1.05) !important;
+    animation-play-state: paused !important;
+
+    /* HOLOGRAPHIC GLOW */
+    box-shadow:
+        0 0 0 1px rgba(255, 255, 255, 0.4),
+        0 15px 35px rgba(0, 0, 0, 0.15),
+        0 30px 70px rgba(102, 126, 234, 0.3),
+        0 60px 140px rgba(139, 92, 246, 0.2),
+        inset 0 2px 0 rgba(255, 255, 255, 0.6),
+        inset 0 -2px 0 rgba(255, 255, 255, 0.2),
+        0 0 100px rgba(255, 107, 107, 0.4),
+        0 0 200px rgba(78, 205, 196, 0.2) !important;
+
+    /* ENHANCED GLASSMORPHISM */
+    background: rgba(255, 255, 255, 0.25) !important;
+    backdrop-filter: blur(40px) saturate(250%) contrast(150%) !important;
+    border-color: rgba(255, 255, 255, 0.5) !important;
+
+    /* NEON BORDER ACTIVATION */
+    border-width: 3px !important;
+}
+
+.course-card:hover::before {
+    opacity: 1 !important;
+}
+
+/* MAGICAL PARTICLE EFFECTS ON HOVER */
+.course-card:hover::after {
+    content: '' !important;
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    background:
+        radial-gradient(circle at 20% 20%, rgba(255, 107, 107, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 80% 80%, rgba(78, 205, 196, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 50% 10%, rgba(69, 183, 209, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 10% 90%, rgba(254, 202, 87, 0.1) 0%, transparent 50%) !important;
+    animation: particleDance 3s ease infinite !important;
+    pointer-events: none !important;
+    z-index: 5 !important;
+    border-radius: 32px !important;
+}
+
+@keyframes particleDance {
+    0%, 100% {
+        transform: scale(1) rotate(0deg);
+        opacity: 0.3;
+    }
+    50% {
+        transform: scale(1.2) rotate(180deg);
+        opacity: 0.7;
+    }
+}
+
+/* Card Image Container */
+.course-card .card-image,
+.class-card .image-container,
+.card-img-wrapper {
+    position: relative !important;
+    width: 100% !important;
+    height: 200px !important;
+    overflow: hidden !important;
+    border-radius: 20px 20px 0 0 !important;
+    background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%) !important;
+}
+
+/* Card Images - Responsive & Modern */
+.course-card img,
+.class-card img,
+.card-image img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    object-position: center !important;
+    transition: all 0.4s ease !important;
+    filter: brightness(1) saturate(1.1) !important;
+}
+
+/* Image Hover Effects */
+.course-card:hover img,
+.class-card:hover img {
+    transform: scale(1.05) !important;
+    filter: brightness(1.1) saturate(1.2) !important;
+}
+
+/* Image Overlay for Better Text Readability */
+.course-card .card-image::after,
+.class-card .image-container::after {
+    content: '' !important;
+    position: absolute !important;
+    bottom: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    height: 60px !important;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.3), transparent) !important;
+    opacity: 0 !important;
+    transition: opacity 0.3s ease !important;
+}
+
+.course-card:hover .card-image::after {
+    opacity: 1 !important;
+}
+
+/* ================================================
+   CARD CONTENT - Premium Typography
+   ================================================ */
+.course-card .card-body,
+.class-card .card-content,
+.card-content-wrapper {
+    padding: 40px 35px !important;
+    position: relative !important;
+    background: rgba(255, 255, 255, 0.05) !important;
+    backdrop-filter: blur(10px) !important;
+    border-radius: 0 0 20px 20px !important;
+}
+
+/* Clean Card Titles with Larger Font Size */
+.course-card h3,
+.class-card h3,
+.card-title {
+    font-family: 'Outfit', 'Plus Jakarta Sans', sans-serif !important;
+    font-size: 1.5rem !important;
+    font-weight: 600 !important;
+    line-height: 1.3 !important;
+    letter-spacing: normal !important;
+    word-spacing: normal !important;
+    color: rgba(255, 255, 255, 0.95) !important;
+    margin: 0 0 18px 0 !important;
+    text-rendering: optimizeLegibility !important;
+    -webkit-font-smoothing: antialiased !important;
+    -moz-osx-font-smoothing: grayscale !important;
+    transition: all 0.3s ease !important;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.15) !important;
+}
+
+.course-card:hover h3 {
+    color: rgba(255, 255, 255, 1) !important;
+    text-shadow: 0 0 20px rgba(124, 58, 237, 0.6) !important;
+    transform: translateY(-2px) !important;
+}
+
+/* Clean Card Descriptions with Larger Font Size */
+.course-card p,
+.class-card p,
+.card-description {
+    font-family: 'Inter', 'Manrope', sans-serif !important;
+    font-size: 1.1rem !important;
+    font-weight: 400 !important;
+    line-height: 1.5 !important;
+    letter-spacing: normal !important;
+    word-spacing: normal !important;
+    color: rgba(255, 255, 255, 0.8) !important;
+    margin: 0 0 25px 0 !important;
+    text-rendering: optimizeLegibility !important;
+    -webkit-font-smoothing: antialiased !important;
+    display: -webkit-box !important;
+    -webkit-line-clamp: 3 !important;
+    -webkit-box-orient: vertical !important;
+    overflow: hidden !important;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1) !important;
+}
+
+/* ================================================
+   MODERN BUTTONS & LINKS - Interactive Elements
+   ================================================ */
+.course-card .btn,
+.class-card .btn,
+.view-more-link,
+.course-link {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 8px !important;
+    font-family: 'Plus Jakarta Sans', 'Inter', sans-serif !important;
+    font-size: 1rem !important;
+    font-weight: 600 !important;
+    letter-spacing: 0.5px !important;
+    word-spacing: normal !important;
+    text-decoration: none !important;
+    color: rgba(255, 255, 255, 0.9) !important;
+    background: linear-gradient(135deg, rgba(124, 58, 237, 0.2) 0%, rgba(139, 92, 246, 0.15) 100%) !important;
+    backdrop-filter: blur(15px) !important;
+    border: 1px solid rgba(255, 255, 255, 0.2) !important;
+    border-radius: 12px !important;
+    padding: 14px 24px !important;
+    transition: all 0.3s ease !important;
+    position: relative !important;
+    overflow: hidden !important;
+    cursor: pointer !important;
+    text-rendering: optimizeLegibility !important;
+    -webkit-font-smoothing: antialiased !important;
+    box-shadow: 0 3px 10px rgba(124, 58, 237, 0.1) !important;
+}
+
+/* Enhanced Button Hover Effects */
+.course-card .btn:hover,
+.view-more-link:hover {
+    color: rgba(255, 255, 255, 1) !important;
+    background: linear-gradient(135deg, rgba(124, 58, 237, 0.8) 0%, rgba(139, 92, 246, 0.6) 100%) !important;
+    backdrop-filter: blur(20px) !important;
+    border-color: rgba(255, 255, 255, 0.4) !important;
+    transform: translateY(-4px) scale(1.02) !important;
+    box-shadow:
+        0 12px 35px rgba(124, 58, 237, 0.4),
+        0 0 20px rgba(139, 92, 246, 0.3),
+        inset 0 1px 0 rgba(255, 255, 255, 0.2) !important;
+    text-shadow: 0 0 10px rgba(124, 58, 237, 0.5) !important;
+}
+
+/* Enhanced Button Icon Animation */
+.course-card .btn i,
+.view-more-link i {
+    transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1) !important;
+    font-size: 0.9rem !important;
+    filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.1)) !important;
+}
+
+.course-card .btn:hover i,
+.view-more-link:hover i {
+    transform: translateX(4px) !important;
+}
+
+/* ================================================
+   STATISTICS SECTION - Modern Counters
+   ================================================ */
+.stats-container,
+.counters-section {
+    display: grid !important;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)) !important;
+    gap: 24px !important;
+    margin: 80px 0 60px 0 !important;
+    padding: 40px 0 !important;
+    border-top: 1px solid rgba(99, 102, 241, 0.1) !important;
+    border-bottom: 1px solid rgba(99, 102, 241, 0.1) !important;
+}
+
+.stat-item,
+.counter-item {
+    text-align: center !important;
+    padding: 24px !important;
+    background: rgba(255, 255, 255, 0.5) !important;
+    backdrop-filter: blur(10px) !important;
+    border-radius: 20px !important;
+    border: 1px solid rgba(255, 255, 255, 0.2) !important;
+    transition: all 0.3s ease !important;
+}
+
+.stat-item:hover {
+    transform: translateY(-4px) !important;
+    background: rgba(255, 255, 255, 0.8) !important;
+    box-shadow: 0 12px 40px rgba(99, 102, 241, 0.12) !important;
+}
+
+/* Counter Numbers */
+.stat-number,
+.counter-number {
+    font-family: 'Space Grotesk', sans-serif !important;
+    font-size: 2.5rem !important;
+    font-weight: 700 !important;
+    background: linear-gradient(135deg, #7c3aed 0%, #db2777 100%) !important;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+    background-clip: text !important;
+    margin: 0 0 8px 0 !important;
+    line-height: 1 !important;
+}
+
+/* Counter Labels */
+.stat-label,
+.counter-label {
+    font-family: 'Inter', sans-serif !important;
+    font-size: 0.9rem !important;
+    font-weight: 500 !important;
+    color: #64748b !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.05em !important;
+}
+
+/* ================================================
+   CALL TO ACTION SECTION - Modern CTA
+   ================================================ */
+.cta-section,
+.join-cta {
+    text-align: center !important;
+    margin: 80px 0 0 0 !important;
+    padding: 60px 40px !important;
+    background: linear-gradient(135deg, rgba(124, 58, 237, 0.05), rgba(219, 39, 119, 0.05)) !important;
+    border-radius: 32px !important;
+    border: 1px solid rgba(124, 58, 237, 0.1) !important;
+    position: relative !important;
+    overflow: hidden !important;
+}
+
+.cta-section::before {
+    content: '' !important;
+    position: absolute !important;
+    top: 0 !important;
+    left: -100% !important;
+    width: 100% !important;
+    height: 100% !important;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent) !important;
+    animation: shimmer 3s ease-in-out infinite !important;
+}
+
+@keyframes shimmer {
+    0% { left: -100%; }
+    50% { left: 100%; }
+    100% { left: 100%; }
+}
+
+/* CTA Title */
+.cta-title {
+    font-family: 'Poppins', sans-serif !important;
+    font-size: 2rem !important;
+    font-weight: 600 !important;
+    color: #1e293b !important;
+    margin: 0 0 16px 0 !important;
+}
+
+/* CTA Description */
+.cta-description {
+    font-family: 'Inter', sans-serif !important;
+    font-size: 1.1rem !important;
+    color: #64748b !important;
+    margin: 0 0 32px 0 !important;
+    max-width: 600px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
+
+/* SPECTACULAR HOLOGRAPHIC CTA BUTTON */
+.cta-button,
+.primary-cta {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 15px !important;
+    font-family: 'Outfit', 'Manrope', sans-serif !important;
+    font-size: 1.3rem !important;
+    font-weight: 800 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.1em !important;
+    color: #ffffff !important;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3) !important;
+
+    /* HOLOGRAPHIC GRADIENT BACKGROUND */
+    background: linear-gradient(135deg,
+        #ff6b6b 0%,
+        #4ecdc4 25%,
+        #45b7d1 50%,
+        #96ceb4 75%,
+        #feca57 100%) !important;
+    background-size: 300% 300% !important;
+    animation: buttonGradient 8s ease infinite !important;
+
+    border: 3px solid rgba(255, 255, 255, 0.3) !important;
+    border-radius: 25px !important;
+    padding: 20px 50px !important;
+    text-decoration: none !important;
+    transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1) !important;
+    position: relative !important;
+    overflow: hidden !important;
+    cursor: pointer !important;
+    backdrop-filter: blur(10px) !important;
+
+    /* PREMIUM 3D SHADOW */
+    box-shadow:
+        0 0 0 1px rgba(255, 255, 255, 0.2),
+        0 10px 30px rgba(0, 0, 0, 0.2),
+        0 20px 60px rgba(255, 107, 107, 0.3),
+        0 0 100px rgba(78, 205, 196, 0.2),
+        inset 0 1px 0 rgba(255, 255, 255, 0.4) !important;
+
+    /* FLOATING ANIMATION */
+    animation: buttonFloat 4s ease-in-out infinite, buttonGradient 8s ease infinite !important;
+}
+
+/* STUNNING HOVER EFFECTS */
+.cta-button:hover {
+    transform: translateY(-8px) scale(1.1) rotateX(5deg) !important;
+    border-width: 4px !important;
+    border-color: rgba(255, 255, 255, 0.6) !important;
+
+    /* NEON GLOW */
+    box-shadow:
+        0 0 0 1px rgba(255, 255, 255, 0.4),
+        0 15px 40px rgba(0, 0, 0, 0.3),
+        0 30px 80px rgba(255, 107, 107, 0.5),
+        0 0 150px rgba(78, 205, 196, 0.4),
+        0 0 250px rgba(69, 183, 209, 0.3),
+        inset 0 2px 0 rgba(255, 255, 255, 0.6) !important;
+
+    /* ENHANCED BLUR */
+    backdrop-filter: blur(20px) !important;
+
+    /* HOLOGRAPHIC SHIMMER */
+    background-size: 200% 200% !important;
+}
+
+/* HOLOGRAPHIC SHIMMER OVERLAY */
+.cta-button::before {
+    content: '' !important;
+    position: absolute !important;
+    top: 0 !important;
+    left: -100% !important;
+    width: 100% !important;
+    height: 100% !important;
+    background: linear-gradient(90deg,
+        transparent,
+        rgba(255, 255, 255, 0.4),
+        transparent) !important;
+    animation: shimmerPass 3s ease infinite !important;
+    z-index: 1 !important;
+}
+
+/* BUTTON ANIMATIONS */
+@keyframes buttonFloat {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-5px); }
+}
+
+@keyframes buttonGradient {
+    0% { background-position: 0% 50%; }
+    25% { background-position: 100% 50%; }
+    50% { background-position: 50% 100%; }
+    75% { background-position: 100% 0%; }
+    100% { background-position: 0% 50%; }
+}
+
+@keyframes shimmerPass {
+    0% { left: -100%; opacity: 0; }
+    50% { opacity: 1; }
+    100% { left: 100%; opacity: 0; }
+}
+
+/* BUTTON TEXT ENHANCEMENT */
+.cta-button span {
+    position: relative !important;
+    z-index: 2 !important;
+    font-weight: 900 !important;
+}
+
+.cta-button i {
+    position: relative !important;
+    z-index: 2 !important;
+    font-size: 1.2em !important;
+    transition: transform 0.3s ease !important;
+}
+
+.cta-button:hover i {
+    transform: translateX(5px) scale(1.2) !important;
+}
+
+/* ================================================
+   RESPONSIVE DESIGN - Mobile-First Approach
+   ================================================ */
+
+/* Large Tablets */
+@media (max-width: 1024px) {
+    .join-section {
+        padding: 80px 0 !important;
+        margin: 60px 0 !important;
+    }
+
+    .classes-grid {
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)) !important;
+        gap: 24px !important;
+    }
+
+    .cta-section {
+        padding: 40px 20px !important;
+    }
+}
+
+/* Tablets */
+@media (max-width: 768px) {
+    .join-section {
+        padding: 60px 0 !important;
+        margin: 40px 0 !important;
+    }
+
+    .join-section h2 {
+        font-size: clamp(2rem, 8vw, 2.5rem) !important;
+    }
+
+    .classes-grid {
+        grid-template-columns: 1fr !important;
+        gap: 20px !important;
+    }
+
+    .course-card .card-image {
+        height: 160px !important;
+    }
+
+    .stats-container {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 16px !important;
+        margin: 40px 0 !important;
+    }
+
+    .stat-number {
+        font-size: 2rem !important;
+    }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+    .join-section {
+        padding: 40px 0 !important;
+        margin: 30px 0 !important;
+    }
+
+    .join-section .container {
+        padding: 0 15px !important;
+    }
+
+    .course-card .card-body {
+        padding: 24px 20px !important;
+    }
+
+    .stats-container {
+        grid-template-columns: 1fr !important;
+    }
+
+    .cta-section {
+        padding: 30px 20px !important;
+        margin: 40px 0 0 0 !important;
+    }
+
+    .cta-button {
+        width: 100% !important;
+        justify-content: center !important;
+        max-width: 300px !important;
+    }
+}
+
+/* ================================================
+   ANIMATIONS & MICRO-INTERACTIONS
+   ================================================ */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Staggered Animation Delays */
+.course-card:nth-child(1) { --delay: 0.1s; }
+.course-card:nth-child(2) { --delay: 0.2s; }
+.course-card:nth-child(3) { --delay: 0.3s; }
+.course-card:nth-child(4) { --delay: 0.4s; }
+.course-card:nth-child(5) { --delay: 0.5s; }
+
+/* ================================================
+   ACCESSIBILITY & PERFORMANCE
+   ================================================ */
+
+/* Focus States */
+.course-card:focus,
+.cta-button:focus {
+    outline: 2px solid #7c3aed !important;
+    outline-offset: 2px !important;
+}
+
+/* Reduced Motion Support */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+/* High Contrast Mode */
+@media (prefers-contrast: high) {
+    .course-card {
+        border: 2px solid currentColor !important;
+    }
+
+    .join-section h2 {
+        -webkit-text-fill-color: initial !important;
+        color: #1e293b !important;
+    }
+}
+
+/* ================================================
+   PERFORMANCE OPTIMIZATIONS
+   ================================================ */
+.course-card,
+.cta-button,
+.stat-item {
+    will-change: transform, box-shadow !important;
+}
+
+/* GPU Acceleration */
+.course-card img {
+    transform: translateZ(0) !important;
+    backface-visibility: hidden !important;
+}
+
+/* ================================================
+   PRINT STYLES
+   ================================================ */
+@media print {
+    .join-section {
+        background: white !important;
+        box-shadow: none !important;
+        padding: 20px 0 !important;
+    }
+
+    .course-card {
+        break-inside: avoid !important;
+        background: white !important;
+        border: 1px solid #ccc !important;
+        margin-bottom: 20px !important;
+    }
+}

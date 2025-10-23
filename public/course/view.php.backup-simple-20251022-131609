@@ -1,0 +1,216 @@
+<?php
+// Get course ID from URL
+$course_id = isset($_GET['id']) ? intval($_GET['id']) : 9;
+
+// Fetch course data from FastAPI backend
+$api_url = 'http://localhost:8082/api/v1/academy/courses/' . $course_id;
+$course_data = null;
+$error = null;
+
+try {
+    $response = file_get_contents($api_url);
+    if ($response !== false) {
+        $course_data = json_decode($response, true);
+    } else {
+        $error = 'Failed to fetch course data';
+    }
+} catch (Exception $e) {
+    $error = 'Error: ' . $e->getMessage();
+}
+
+// Set default values if API call failed
+$course_title = $course_data ? $course_data['fullname'] : 'Course Not Found';
+$course_summary = $course_data ? strip_tags($course_data['summary']) : 'Unable to load course information';
+$category_name = $course_data ? $course_data['category_name'] : 'Unknown';
+$is_visible = $course_data ? $course_data['visible'] : false;
+?>
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="description" content="<?php echo htmlspecialchars($course_summary); ?>">
+    <title><?php echo htmlspecialchars($course_title); ?> - Bheem Academy</title>
+
+    <!-- Preconnect for performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+
+    <!-- Preload critical fonts -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" as="style">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Global Header Styles -->
+    <link rel="stylesheet" href="/includes/bheem_header_styles.css">
+
+    <!-- Bheem Academy 2025 Design System -->
+    <link rel="stylesheet" href="/course/styles/design-system-2025.css">
+    <link rel="stylesheet" href="/course/styles/components-2025.css">
+    <link rel="stylesheet" href="/course/styles/elegant-enhancements.css">
+    <link rel="stylesheet" href="/course/styles/hero-compact.css">
+    <link rel="stylesheet" href="/course/styles/cta-card-professional.css">
+
+    <style>
+        body {
+            font-family: 'Inter', system-ui, -apple-system, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #f8fafc;
+        }
+
+        .course-header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 4rem 2rem;
+            text-align: center;
+        }
+
+        .course-header h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        .course-header p {
+            font-size: 1.125rem;
+            opacity: 0.95;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .course-meta {
+            display: flex;
+            gap: 2rem;
+            justify-content: center;
+            margin-top: 1.5rem;
+            flex-wrap: wrap;
+        }
+
+        .meta-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .course-content {
+            background: white;
+            border-radius: 12px;
+            padding: 2rem;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+
+        .enroll-button {
+            display: inline-block;
+            background: #667eea;
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            margin-top: 1.5rem;
+            transition: all 0.3s ease;
+        }
+
+        .enroll-button:hover {
+            background: #5A4FCF;
+            transform: translateY(-2px);
+        }
+
+        .error-message {
+            background: #fee;
+            color: #c00;
+            padding: 1rem;
+            border-radius: 8px;
+            margin: 1rem 0;
+        }
+    </style>
+</head>
+<body>
+    <?php if ($error): ?>
+        <div class="container">
+            <div class="error-message">
+                <strong>Error:</strong> <?php echo htmlspecialchars($error); ?>
+            </div>
+        </div>
+    <?php endif; ?>
+
+    <div class="course-header">
+        <h1><?php echo htmlspecialchars($course_title); ?></h1>
+        <p><?php echo htmlspecialchars($course_summary); ?></p>
+        
+        <div class="course-meta">
+            <div class="meta-item">
+                <i class="fas fa-folder"></i>
+                <span><?php echo htmlspecialchars($category_name); ?></span>
+            </div>
+            <?php if ($course_data && $course_data['enablecompletion']): ?>
+            <div class="meta-item">
+                <i class="fas fa-certificate"></i>
+                <span>Certificate Available</span>
+            </div>
+            <?php endif; ?>
+            <div class="meta-item">
+                <i class="fas fa-users"></i>
+                <span>Self-Paced Learning</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="course-content">
+            <h2>About This Course</h2>
+            <?php if ($course_data): ?>
+                <div class="course-description">
+                    <?php echo $course_data['summary']; ?>
+                </div>
+
+                <h3>Course Information</h3>
+                <ul>
+                    <li><strong>Format:</strong> <?php echo ucfirst($course_data['format']); ?></li>
+                    <li><strong>Category:</strong> <?php echo htmlspecialchars($category_name); ?></li>
+                    <?php if ($course_data['startdate'] > 0): ?>
+                    <li><strong>Start Date:</strong> <?php echo date('F j, Y', $course_data['startdate']); ?></li>
+                    <?php endif; ?>
+                    <?php if ($course_data['enddate'] > 0): ?>
+                    <li><strong>End Date:</strong> <?php echo date('F j, Y', $course_data['enddate']); ?></li>
+                    <?php endif; ?>
+                </ul>
+
+                <?php if (!$course_data['is_enrolled']): ?>
+                <a href="/enrol/index.php?id=<?php echo $course_id; ?>" class="enroll-button">
+                    <i class="fas fa-rocket"></i> Enroll Now
+                </a>
+                <?php else: ?>
+                <a href="#" class="enroll-button" style="background: #10b981;">
+                    <i class="fas fa-check"></i> You are enrolled
+                </a>
+                <?php endif; ?>
+
+            <?php else: ?>
+                <p>Course information is currently unavailable. Please try again later.</p>
+            <?php endif; ?>
+
+            <div style="margin-top: 2rem; padding-top: 2rem; border-top: 1px solid #e2e8f0;">
+                <p style="color: #64748b; font-size: 0.875rem;">
+                    <strong>Note:</strong> This page is now dynamically loading course data from the Academy API. 
+                    Course ID: <?php echo $course_id; ?>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Log course data for debugging
+        console.log('Course Data:', <?php echo json_encode($course_data); ?>);
+    </script>
+</body>
+</html>

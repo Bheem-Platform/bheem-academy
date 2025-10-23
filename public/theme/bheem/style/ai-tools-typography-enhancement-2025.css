@@ -1,0 +1,376 @@
+/* ================================================
+   AI TOOLS TYPOGRAPHY ENHANCEMENT 2025
+   Beautiful font styling and perfect alignment
+   ================================================ */
+
+/* Import premium fonts for better typography */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Sora:wght@300;400;500;600;700;800&family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+/* ================================================
+   AI TOOLS HEADING - ENHANCED TYPOGRAPHY
+   ================================================ */
+
+/* Main heading with comprehensive targeting */
+h3:contains("Master the AI Tools"),
+h3:contains("Master AI Tools"),
+h3:contains("Shape the Future"),
+h3 a[href*="AI Tools"],
+.no-overflow h3,
+.partner-bg h3,
+.card-body h3:contains("Master"),
+.card-body h3:contains("AI"),
+.block-content h3:contains("Master"),
+.block-content h3:contains("AI"),
+#inst40 h3,
+.block_html h3,
+section h3:contains("Master"),
+section h3:contains("AI"),
+div h3:contains("Master"),
+div h3:contains("Future") {
+    /* ================================================
+       PREMIUM TYPOGRAPHY - MODERN & ATTRACTIVE
+       ================================================ */
+
+    /* Font Family - Premium Stack */
+    font-family: 'Sora', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+
+    /* Font Sizing - Smaller & Clean */
+    font-size: clamp(18px, 3vw, 24px) !important;
+    font-weight: 600 !important;
+    line-height: 1.3 !important;
+
+    /* Letter Spacing - Professional */
+    letter-spacing: -0.01em !important;
+
+    /* ================================================
+       SIMPLE & CLEAN STYLING
+       ================================================ */
+
+    /* Simple solid color - no gradients to prevent conflicts */
+    background: transparent !important;
+    background-image: none !important;
+    background-size: initial !important;
+    -webkit-background-clip: initial !important;
+    -webkit-text-fill-color: initial !important;
+    background-clip: initial !important;
+    color: #333333 !important;
+
+    /* No animations to prevent conflicts */
+    animation: none !important;
+
+    /* Simple appearance */
+    text-shadow: none !important;
+
+    /* ================================================
+       PERFECT ALIGNMENT & SPACING
+       ================================================ */
+
+    /* Center Alignment */
+    text-align: center !important;
+
+    /* Single Line Display */
+    white-space: nowrap !important;
+    overflow: visible !important;
+    text-overflow: clip !important;
+
+    /* Spacing - Optimized */
+    margin: 20px auto 25px auto !important;
+    padding: 10px 20px !important;
+
+    /* Container Width */
+    width: 100% !important;
+    max-width: 100% !important;
+    display: block !important;
+
+    /* ================================================
+       MODERN VISUAL ENHANCEMENTS
+       ================================================ */
+
+    /* Position Context */
+    position: relative !important;
+    z-index: 10 !important;
+
+    /* Smooth Transitions */
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1) !important;
+
+    /* Remove conflicting styles */
+    background-image: none;
+    filter: none !important;
+    transform: none !important;
+}
+
+/* Gradient animation keyframes */
+@keyframes gradientFlow {
+    0% {
+        background-position: 0% 50%;
+        transform: scale(1);
+    }
+    25% {
+        background-position: 50% 0%;
+        transform: scale(1.01);
+    }
+    50% {
+        background-position: 100% 50%;
+        transform: scale(1);
+    }
+    75% {
+        background-position: 50% 100%;
+        transform: scale(1.01);
+    }
+    100% {
+        background-position: 0% 50%;
+        transform: scale(1);
+    }
+}
+
+/* ================================================
+   SIMPLE HOVER EFFECTS - NO CONFLICTS
+   ================================================ */
+
+h3:contains("Master the AI Tools"):hover,
+h3:contains("Master AI Tools"):hover,
+h3:contains("Shape the Future"):hover,
+.no-overflow h3:hover,
+.partner-bg h3:hover,
+#inst40 h3:hover {
+    /* Simple hover effect - no complex styling */
+    color: #555555 !important;
+    background: transparent !important;
+    background-image: none !important;
+    transform: none !important;
+    text-shadow: none !important;
+    animation: none !important;
+}
+
+/* ================================================
+   CONTAINER ENHANCEMENTS
+   ================================================ */
+
+/* Container for proper alignment */
+.no-overflow,
+.card-body:has(h3:contains("Master")),
+.block-content:has(h3:contains("Master")),
+.card-body:has(h3:contains("AI")),
+.block-content:has(h3:contains("AI")),
+#inst40,
+.block_html#inst40 {
+    /* Perfect center alignment */
+    text-align: center !important;
+    display: block !important;
+
+    /* Optimized spacing */
+    padding: 15px 20px !important;
+    margin: 0 auto !important;
+
+    /* Container width */
+    width: 100% !important;
+    max-width: 100% !important;
+
+    /* Single line container */
+    white-space: nowrap !important;
+    overflow: visible !important;
+
+    /* Remove backgrounds */
+    background: transparent !important;
+    background-color: transparent !important;
+    background-image: none !important;
+
+    /* Position context */
+    position: relative !important;
+}
+
+/* Remove decorative elements that might interfere */
+.no-overflow::before,
+.no-overflow::after,
+#inst40::before,
+#inst40::after {
+    display: none !important;
+    content: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+}
+
+/* ================================================
+   NO DECORATIVE ELEMENTS - CLEAN DESIGN
+   ================================================ */
+
+/* Remove all decorative elements to prevent duplication */
+h3:contains("Master the AI Tools")::after,
+h3:contains("Master AI Tools")::after,
+h3:contains("Shape the Future")::after,
+.no-overflow h3::after,
+.partner-bg h3::after,
+#inst40 h3::after {
+    display: none !important;
+    content: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+}
+
+/* ================================================
+   RESPONSIVE DESIGN - ALL DEVICES
+   ================================================ */
+
+/* Tablet adjustments */
+@media (max-width: 992px) {
+    h3:contains("Master the AI Tools"),
+    h3:contains("Master AI Tools"),
+    h3:contains("Shape the Future"),
+    .no-overflow h3,
+    .partner-bg h3,
+    #inst40 h3 {
+        font-size: clamp(24px, 6vw, 36px) !important;
+        padding: 8px 15px !important;
+        margin: 15px auto 20px auto !important;
+    }
+
+    .no-overflow,
+    #inst40 {
+        padding: 10px 15px !important;
+    }
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+    h3:contains("Master the AI Tools"),
+    h3:contains("Master AI Tools"),
+    h3:contains("Shape the Future"),
+    .no-overflow h3,
+    .partner-bg h3,
+    #inst40 h3 {
+        /* Smaller but still impactful */
+        font-size: clamp(20px, 7vw, 28px) !important;
+        font-weight: 700 !important;
+
+        /* Mobile spacing */
+        padding: 5px 10px !important;
+        margin: 10px auto 15px auto !important;
+
+        /* Allow line break on very small screens if needed */
+        white-space: normal !important;
+        line-height: 1.2 !important;
+    }
+
+    .no-overflow,
+    #inst40 {
+        padding: 8px 10px !important;
+        white-space: normal !important;
+    }
+
+    /* Smaller accent line on mobile */
+    h3:contains("Master the AI Tools")::after,
+    h3:contains("Master AI Tools")::after,
+    h3:contains("Shape the Future")::after,
+    .no-overflow h3::after,
+    .partner-bg h3::after,
+    #inst40 h3::after {
+        width: 60px !important;
+        height: 3px !important;
+        margin: 10px auto 0 auto !important;
+    }
+}
+
+/* Small mobile adjustments */
+@media (max-width: 480px) {
+    h3:contains("Master the AI Tools"),
+    h3:contains("Master AI Tools"),
+    h3:contains("Shape the Future"),
+    .no-overflow h3,
+    .partner-bg h3,
+    #inst40 h3 {
+        font-size: clamp(18px, 8vw, 24px) !important;
+        padding: 5px !important;
+        margin: 8px auto 12px auto !important;
+    }
+}
+
+/* ================================================
+   ACCESSIBILITY ENHANCEMENTS
+   ================================================ */
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+    h3:contains("Master the AI Tools"),
+    h3:contains("Master AI Tools"),
+    h3:contains("Shape the Future"),
+    .no-overflow h3,
+    .partner-bg h3,
+    #inst40 h3 {
+        /* Fallback solid color for high contrast */
+        background: none !important;
+        -webkit-text-fill-color: #1a202c !important;
+        color: #1a202c !important;
+        font-weight: 800 !important;
+        text-shadow: none !important;
+    }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+    h3:contains("Master the AI Tools"),
+    h3:contains("Master AI Tools"),
+    h3:contains("Shape the Future"),
+    .no-overflow h3,
+    .partner-bg h3,
+    #inst40 h3 {
+        animation: none !important;
+        transition: none !important;
+    }
+
+    h3:contains("Master the AI Tools")::after,
+    h3:contains("Master AI Tools")::after,
+    h3:contains("Shape the Future")::after,
+    .no-overflow h3::after,
+    .partner-bg h3::after,
+    #inst40 h3::after {
+        transition: none !important;
+    }
+}
+
+/* Focus states for accessibility */
+h3:contains("Master the AI Tools"):focus,
+h3:contains("Master AI Tools"):focus,
+h3:contains("Shape the Future"):focus,
+.no-overflow h3:focus,
+.partner-bg h3:focus,
+#inst40 h3:focus {
+    outline: 3px solid #4f46e5 !important;
+    outline-offset: 4px !important;
+}
+
+/* ================================================
+   PERFORMANCE OPTIMIZATIONS
+   ================================================ */
+
+/* Hardware acceleration */
+h3:contains("Master the AI Tools"),
+h3:contains("Master AI Tools"),
+h3:contains("Shape the Future"),
+.no-overflow h3,
+.partner-bg h3,
+#inst40 h3 {
+    will-change: background-position, transform !important;
+    transform3d: translate3d(0, 0, 0) !important;
+    backface-visibility: hidden !important;
+    -webkit-backface-visibility: hidden !important;
+    -webkit-font-smoothing: antialiased !important;
+    -moz-osx-font-smoothing: grayscale !important;
+}
+
+/* ================================================
+   FALLBACK STYLES
+   ================================================ */
+
+/* Fallback for browsers that don't support gradient text */
+@supports not (-webkit-background-clip: text) {
+    h3:contains("Master the AI Tools"),
+    h3:contains("Master AI Tools"),
+    h3:contains("Shape the Future"),
+    .no-overflow h3,
+    .partner-bg h3,
+    #inst40 h3 {
+        background: none !important;
+        color: #4f46e5 !important;
+        text-shadow: 0 2px 10px rgba(79, 70, 229, 0.3) !important;
+    }
+}

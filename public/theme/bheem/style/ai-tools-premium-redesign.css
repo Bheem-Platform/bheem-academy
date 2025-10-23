@@ -1,0 +1,447 @@
+/* ================================================
+   AI TOOLS PREMIUM REDESIGN - Stunning Modern Design
+   Transform the Master AI Tools section into a gorgeous,
+   efficient, and highly attractive layout
+   ================================================ */
+
+/* Import Modern Fonts for AI Section */
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap');
+
+/* ================================================
+   SECTION BACKGROUND - Clean Transparent Background
+   ================================================ */
+.all-classes-area {
+  background: transparent !important;
+  padding: 100px 0 120px 0 !important;
+  position: relative !important;
+  overflow: visible !important;
+  margin: 60px 0 !important;
+  border-radius: 0 !important;
+}
+
+/* Remove animated background particles */
+.all-classes-area::before {
+  display: none !important;
+  content: none !important;
+}
+
+/* ================================================
+   SECTION TITLE - Stunning AI Typography
+   ================================================ */
+.all-classes-area .section-title {
+  margin-bottom: 80px !important;
+  text-align: center !important;
+  position: relative !important;
+  z-index: 2 !important;
+}
+
+.all-classes-area .section-title h2 {
+  font-family: 'Space Grotesk', -apple-system, sans-serif !important;
+  font-size: clamp(32px, 4vw, 48px) !important;
+  font-weight: 700 !important;
+  line-height: 1.2 !important;
+  margin-bottom: 24px !important;
+  letter-spacing: -0.02em !important;
+  white-space: nowrap !important; /* Force single line */
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+
+  /* Simple clean text - no gradient backgrounds */
+  background: transparent !important;
+  background-image: none !important;
+  background-size: initial !important;
+  -webkit-background-clip: initial !important;
+  -webkit-text-fill-color: initial !important;
+  background-clip: initial !important;
+  animation: none !important;
+  color: #333333 !important;
+
+  /* No glow effects */
+  filter: none !important;
+}
+
+@keyframes aiGradientShift {
+  0%, 100% { background-position: 0% 50%; }
+  25% { background-position: 100% 0%; }
+  50% { background-position: 100% 100%; }
+  75% { background-position: 0% 100%; }
+}
+
+.all-classes-area .section-title p {
+  font-family: 'Inter', -apple-system, sans-serif !important;
+  font-size: clamp(18px, 2vw, 22px) !important;
+  font-weight: 500 !important;
+  line-height: 1.6 !important;
+  color: rgba(255, 255, 255, 0.85) !important;
+  max-width: 800px !important;
+  margin: 0 auto 40px auto !important;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3) !important;
+}
+
+/* ================================================
+   MAIN CTA BUTTON - Enhanced Design with Maximum Border Radius
+   ================================================ */
+.all-classes-area .section-title .btn,
+.all-classes-area .section-title .btn-primary,
+.all-classes-area .section-title a.btn,
+.all-classes-area .btn,
+.all-classes-area a.btn-primary,
+.all-classes-area a[class*="btn"] {
+  font-family: 'Space Grotesk', sans-serif !important;
+  font-size: 18px !important;
+  font-weight: 600 !important;
+  padding: 20px 40px !important;
+  border-radius: 50px !important; /* Maximum border radius for pill shape */
+  border: none !important;
+  color: #ffffff !important;
+  text-decoration: none !important;
+  position: relative !important;
+  overflow: hidden !important;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 12px !important;
+
+  /* Simple button background */
+  background: #007bff !important;
+  background-image: none !important;
+  background-size: initial !important;
+  animation: none !important;
+
+  /* Simple appearance */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1) !important;
+}
+
+/* FORCE WHITE TEXT IN ALL STATES */
+.all-classes-area .section-title .btn:hover,
+.all-classes-area .section-title .btn-primary:hover,
+.all-classes-area .section-title a.btn:hover,
+.all-classes-area .btn:hover,
+.all-classes-area a.btn-primary:hover,
+.all-classes-area a[class*="btn"]:hover {
+  color: #ffffff !important; /* Keep text white on hover */
+  text-decoration: none !important;
+  transform: translateY(-4px) scale(1.05) !important;
+  box-shadow:
+    0 16px 48px rgba(102, 126, 234, 0.5),
+    0 8px 24px rgba(118, 75, 162, 0.4),
+    inset 0 1px 0 rgba(255, 255, 255, 0.3) !important;
+}
+
+.all-classes-area .section-title .btn:focus,
+.all-classes-area .section-title .btn-primary:focus,
+.all-classes-area .section-title a.btn:focus,
+.all-classes-area .btn:focus,
+.all-classes-area a.btn-primary:focus,
+.all-classes-area a[class*="btn"]:focus {
+  color: #ffffff !important; /* Keep text white on focus */
+  text-decoration: none !important;
+}
+
+.all-classes-area .section-title .btn:active,
+.all-classes-area .section-title .btn-primary:active,
+.all-classes-area .section-title a.btn:active,
+.all-classes-area .btn:active,
+.all-classes-area a.btn-primary:active,
+.all-classes-area a[class*="btn"]:active {
+  color: #ffffff !important; /* Keep text white on active */
+  text-decoration: none !important;
+}
+
+.all-classes-area .section-title .btn:visited,
+.all-classes-area .section-title .btn-primary:visited,
+.all-classes-area .section-title a.btn:visited,
+.all-classes-area .btn:visited,
+.all-classes-area a.btn-primary:visited,
+.all-classes-area a[class*="btn"]:visited {
+  color: #ffffff !important; /* Keep text white on visited */
+  text-decoration: none !important;
+}
+
+/* FORCE WHITE TEXT FOR ALL BUTTON CONTENT */
+.all-classes-area .btn *,
+.all-classes-area .btn-primary *,
+.all-classes-area a.btn *,
+.all-classes-area a.btn-primary *,
+.all-classes-area a[class*="btn"] * {
+  color: #ffffff !important;
+}
+
+/* Button icon styling */
+.all-classes-area .section-title .btn i,
+.all-classes-area .section-title .btn-primary i,
+.all-classes-area .section-title a.btn i,
+.all-classes-area .btn i,
+.all-classes-area a.btn-primary i,
+.all-classes-area a[class*="btn"] i {
+  color: #ffffff !important;
+  font-size: 16px !important;
+  transition: transform 0.3s ease !important;
+}
+
+.all-classes-area .section-title .btn:hover i,
+.all-classes-area .section-title .btn-primary:hover i,
+.all-classes-area .section-title a.btn:hover i,
+.all-classes-area .btn:hover i,
+.all-classes-area a.btn-primary:hover i,
+.all-classes-area a[class*="btn"]:hover i {
+  color: #ffffff !important;
+  transform: translateX(3px) !important;
+}
+
+/* OVERRIDE ANY EXISTING BUTTON TEXT COLOR */
+.all-classes-area .btn span,
+.all-classes-area .btn-primary span,
+.all-classes-area a.btn span,
+.all-classes-area a.btn-primary span {
+  color: #ffffff !important;
+}
+
+@keyframes buttonGradientShift {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+/* ================================================
+   COURSE CARDS - Clean Modern Design
+   ================================================ */
+.all-classes-area .single-all-classes-item {
+  background: #ffffff !important;
+  border: 1px solid rgba(0, 0, 0, 0.08) !important;
+  border-radius: 24px !important;
+  padding: 0 !important;
+  margin-bottom: 32px !important;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  position: relative !important;
+  overflow: hidden !important;
+  box-shadow:
+    0 8px 32px rgba(0, 0, 0, 0.08),
+    0 4px 16px rgba(0, 0, 0, 0.04) !important;
+}
+
+.all-classes-area .single-all-classes-item::before {
+  content: '' !important;
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100% !important;
+  height: 2px !important;
+  background: linear-gradient(90deg, #3b82f6, #8b5cf6, #06d6a0) !important;
+  opacity: 0 !important;
+  transition: opacity 0.3s ease !important;
+}
+
+.all-classes-area .single-all-classes-item:hover {
+  transform: translateY(-12px) !important;
+  background: #ffffff !important;
+  border-color: rgba(59, 130, 246, 0.3) !important;
+  box-shadow:
+    0 20px 60px rgba(59, 130, 246, 0.15),
+    0 8px 32px rgba(0, 0, 0, 0.12) !important;
+}
+
+.all-classes-area .single-all-classes-item:hover::before {
+  opacity: 1 !important;
+}
+
+/* ================================================
+   COURSE IMAGE - Enhanced Visual Appeal
+   ================================================ */
+.all-classes-area .classes-img {
+  border-radius: 20px 20px 0 0 !important;
+  overflow: hidden !important;
+  position: relative !important;
+  margin: 0 !important;
+}
+
+.all-classes-area .classes-img img {
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  width: 100% !important;
+  height: 220px !important;
+  object-fit: cover !important;
+}
+
+.all-classes-area .single-all-classes-item:hover .classes-img img {
+  transform: scale(1.1) !important;
+}
+
+/* Price and Date Badges - Modern Design */
+.all-classes-area .classes-img .count {
+  font-family: 'Inter', sans-serif !important;
+  font-weight: 600 !important;
+  font-size: 14px !important;
+  padding: 10px 16px !important;
+  border-radius: 20px !important;
+  backdrop-filter: blur(10px) !important;
+  -webkit-backdrop-filter: blur(10px) !important;
+  border: 1px solid rgba(255, 255, 255, 0.2) !important;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1) !important;
+  transition: all 0.3s ease !important;
+}
+
+.all-classes-area .classes-img .count.bg-success {
+  background: linear-gradient(135deg, #06d6a0, #059669) !important;
+  color: #ffffff !important;
+}
+
+.all-classes-area .classes-img .count.bg-white {
+  background: rgba(255, 255, 255, 0.95) !important;
+  color: #1f2937 !important;
+}
+
+/* ================================================
+   COURSE CONTENT - Premium Typography
+   ================================================ */
+.all-classes-area .classes-content {
+  padding: 32px 24px 24px 24px !important;
+}
+
+.all-classes-area .classes-content h3 {
+  font-family: 'Space Grotesk', sans-serif !important;
+  font-size: 22px !important;
+  font-weight: 600 !important;
+  line-height: 1.3 !important;
+  margin-bottom: 16px !important;
+  color: #1f2937 !important;
+  transition: color 0.3s ease !important;
+}
+
+.all-classes-area .classes-content h3 a {
+  color: #1f2937 !important;
+  text-decoration: none !important;
+  transition: all 0.3s ease !important;
+}
+
+.all-classes-area .single-all-classes-item:hover .classes-content h3 a {
+  color: #3b82f6 !important;
+  text-shadow: none !important;
+}
+
+.all-classes-area .classes-content p {
+  font-family: 'Inter', sans-serif !important;
+  font-size: 16px !important;
+  font-weight: 400 !important;
+  line-height: 1.6 !important;
+  color: #6b7280 !important;
+  margin-bottom: 20px !important;
+  padding-bottom: 20px !important;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1) !important;
+}
+
+/* ================================================
+   COURSE META INFO - Modern Icons & Stats
+   ================================================ */
+.all-classes-area .classes-content ul {
+  margin-bottom: 0 !important;
+  padding: 0 !important;
+}
+
+.all-classes-area .classes-content ul li {
+  font-family: 'Inter', sans-serif !important;
+  font-size: 14px !important;
+  font-weight: 500 !important;
+  color: #6b7280 !important;
+  display: flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+}
+
+.all-classes-area .classes-content ul li i {
+  font-size: 16px !important;
+  color: #3b82f6 !important;
+  width: 20px !important;
+  text-align: center !important;
+}
+
+/* ================================================
+   RESPONSIVE DESIGN - Perfect on All Devices
+   ================================================ */
+@media (max-width: 1200px) {
+  .all-classes-area {
+    padding: 80px 0 100px 0 !important;
+  }
+
+  .all-classes-area .section-title {
+    margin-bottom: 60px !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .all-classes-area {
+    padding: 60px 0 80px 0 !important;
+    margin: 40px 0 !important;
+  }
+
+  .all-classes-area .section-title {
+    margin-bottom: 50px !important;
+  }
+
+  .all-classes-area .section-title .d-md-flex {
+    text-align: center !important;
+  }
+
+  .all-classes-area .single-all-classes-item {
+    margin-bottom: 24px !important;
+  }
+
+  .all-classes-area .classes-content {
+    padding: 24px 20px 20px 20px !important;
+  }
+}
+
+/* ================================================
+   LOADING ANIMATIONS - Smooth Entrance Effects
+   ================================================ */
+.all-classes-area .single-all-classes-item {
+  opacity: 0 !important;
+  transform: translateY(30px) !important;
+  animation: cardFadeInUp 0.8s ease-out forwards !important;
+}
+
+.all-classes-area .single-all-classes-item:nth-child(1) { animation-delay: 0.1s !important; }
+.all-classes-area .single-all-classes-item:nth-child(2) { animation-delay: 0.2s !important; }
+.all-classes-area .single-all-classes-item:nth-child(3) { animation-delay: 0.3s !important; }
+.all-classes-area .single-all-classes-item:nth-child(4) { animation-delay: 0.4s !important; }
+.all-classes-area .single-all-classes-item:nth-child(5) { animation-delay: 0.5s !important; }
+.all-classes-area .single-all-classes-item:nth-child(6) { animation-delay: 0.6s !important; }
+
+@keyframes cardFadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ================================================
+   ACCESSIBILITY & PERFORMANCE
+   ================================================ */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* High contrast support */
+@media (prefers-contrast: high) {
+  .all-classes-area {
+    background: #000000 !important;
+  }
+
+  .all-classes-area .section-title h2 {
+    color: #ffffff !important;
+    background: none !important;
+    -webkit-text-fill-color: #ffffff !important;
+  }
+
+  .all-classes-area .single-all-classes-item {
+    background: #1f1f1f !important;
+    border: 2px solid #ffffff !important;
+  }
+}

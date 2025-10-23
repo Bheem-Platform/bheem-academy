@@ -1,0 +1,562 @@
+/* ================================================
+   COURSE CATEGORY/DETAILS PAGE - Premium Beautiful Design
+   AI for Kids, AI for Youth Category Pages
+   ================================================ */
+
+/* ================================================
+   PAGE CONTAINER - Full Width Beautiful Layout
+   ================================================ */
+#page-course-index-category,
+.path-course-index,
+.course-category-page {
+  background: linear-gradient(180deg,
+    #ffffff 0%,
+    #f8f9ff 10%,
+    #ffffff 30%,
+    #f0f4ff 60%,
+    #ffffff 100%) !important;
+  min-height: 100vh !important;
+  position: relative !important;
+  overflow-x: hidden !important;
+}
+
+/* Decorative Background Elements */
+#page-course-index-category::before {
+  content: '' !important;
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  height: 400px !important;
+  background: linear-gradient(135deg,
+    rgba(139, 92, 246, 0.05) 0%,
+    rgba(236, 72, 153, 0.03) 50%,
+    transparent 100%) !important;
+  pointer-events: none !important;
+  z-index: 0 !important;
+}
+
+/* ================================================
+   CATEGORY HEADER - Hero Section
+   ================================================ */
+.category-header,
+#page-course-index-category .page-header-headings,
+.course-category-header {
+  position: relative !important;
+  padding: 80px 0 60px !important;
+  text-align: center !important;
+  background: linear-gradient(135deg,
+    #667eea 0%,
+    #764ba2 50%,
+    #f093fb 100%) !important;
+  background-size: 200% 200% !important;
+  animation: gradientShift 10s ease infinite !important;
+  margin-bottom: 50px !important;
+  overflow: hidden !important;
+}
+
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Glass Overlay */
+.category-header::after {
+  content: '' !important;
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  bottom: 0 !important;
+  background: rgba(255, 255, 255, 0.1) !important;
+  backdrop-filter: blur(10px) !important;
+  pointer-events: none !important;
+}
+
+/* Category Title - Beautiful Typography */
+#page-course-index-category h1,
+.category-header h1,
+.page-header-headings h1 {
+  font-size: clamp(2.5rem, 5vw, 4rem) !important;
+  font-weight: 800 !important;
+  color: white !important;
+  text-shadow: 0 4px 20px rgba(0, 0, 0, 0.2) !important;
+  margin-bottom: 20px !important;
+  position: relative !important;
+  z-index: 2 !important;
+  letter-spacing: -1px !important;
+  line-height: 1.2 !important;
+  animation: fadeInUp 0.8s ease !important;
+}
+
+/* Category Description */
+.category-description,
+#page-course-index-category .page-header-headings p {
+  color: rgba(255, 255, 255, 0.95) !important;
+  font-size: 1.3rem !important;
+  max-width: 800px !important;
+  margin: 0 auto !important;
+  line-height: 1.6 !important;
+  position: relative !important;
+  z-index: 2 !important;
+  animation: fadeInUp 0.8s ease 0.2s both !important;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ================================================
+   BREADCRUMB - Modern Style
+   ================================================ */
+.breadcrumb,
+nav[aria-label="Navigation bar"] {
+  background: white !important;
+  padding: 20px 30px !important;
+  border-radius: 15px !important;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05) !important;
+  margin-bottom: 30px !important;
+  position: relative !important;
+  z-index: 10 !important;
+}
+
+.breadcrumb-item a {
+  color: #667eea !important;
+  text-decoration: none !important;
+  font-weight: 600 !important;
+  transition: all 0.3s ease !important;
+}
+
+.breadcrumb-item a:hover {
+  color: #764ba2 !important;
+  transform: translateX(2px) !important;
+}
+
+.breadcrumb-item.active {
+  color: #4a5568 !important;
+  font-weight: 700 !important;
+}
+
+/* ================================================
+   COURSE FILTER/SEARCH - Premium Design
+   ================================================ */
+.course-search-form,
+.coursesearch,
+#coursesearch {
+  background: white !important;
+  padding: 30px !important;
+  border-radius: 20px !important;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08) !important;
+  margin-bottom: 40px !important;
+  border: 1px solid rgba(139, 92, 246, 0.1) !important;
+  position: relative !important;
+  overflow: hidden !important;
+}
+
+/* Search Input */
+.course-search-form input[type="text"],
+.coursesearch input[type="text"],
+.form-control {
+  height: 50px !important;
+  padding: 0 20px !important;
+  border: 2px solid rgba(139, 92, 246, 0.2) !important;
+  border-radius: 12px !important;
+  font-size: 1rem !important;
+  transition: all 0.3s ease !important;
+  background: rgba(249, 250, 251, 0.5) !important;
+}
+
+.course-search-form input[type="text"]:focus,
+.form-control:focus {
+  border-color: #667eea !important;
+  background: white !important;
+  box-shadow: 0 0 0 3px rgba(139, 92, 246, 0.1) !important;
+  outline: none !important;
+}
+
+/* Search Button */
+.course-search-form button,
+.btn-search,
+button[type="submit"] {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+  color: white !important;
+  padding: 12px 30px !important;
+  border: none !important;
+  border-radius: 12px !important;
+  font-weight: 700 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.5px !important;
+  transition: all 0.3s ease !important;
+  box-shadow: 0 8px 20px rgba(139, 92, 246, 0.3) !important;
+}
+
+.course-search-form button:hover {
+  transform: translateY(-2px) !important;
+  box-shadow: 0 12px 30px rgba(139, 92, 246, 0.4) !important;
+}
+
+/* ================================================
+   COURSE CARDS GRID - Beautiful Layout
+   ================================================ */
+.courses,
+.course-list,
+.card-deck {
+  display: grid !important;
+  grid-template-columns: repeat(auto-fill, minmax(380px, 1fr)) !important;
+  gap: 35px !important;
+  padding: 0 20px !important;
+  margin-bottom: 60px !important;
+}
+
+/* Individual Course Card - Premium Design */
+.coursebox,
+.course-card,
+.card {
+  background: white !important;
+  border-radius: 24px !important;
+  overflow: hidden !important;
+  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) !important;
+  box-shadow:
+    0 20px 40px -10px rgba(0, 0, 0, 0.1),
+    0 10px 20px -5px rgba(0, 0, 0, 0.05) !important;
+  border: 1px solid rgba(226, 232, 240, 0.8) !important;
+  position: relative !important;
+  display: flex !important;
+  flex-direction: column !important;
+  height: 100% !important;
+}
+
+.coursebox:hover {
+  transform: translateY(-10px) scale(1.02) !important;
+  box-shadow:
+    0 30px 60px -15px rgba(139, 92, 246, 0.25),
+    0 20px 40px -10px rgba(0, 0, 0, 0.12) !important;
+  border-color: rgba(139, 92, 246, 0.3) !important;
+}
+
+/* Course Image */
+.coursebox .content .courseimage,
+.course-card-img {
+  height: 240px !important;
+  position: relative !important;
+  overflow: hidden !important;
+  background: linear-gradient(135deg,
+    #667eea 0%,
+    #764ba2 50%,
+    #f093fb 100%) !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+.coursebox .content .courseimage img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  transition: transform 0.6s ease !important;
+}
+
+.coursebox:hover .courseimage img {
+  transform: scale(1.1) !important;
+}
+
+/* Category Badge */
+.course-category-badge {
+  position: absolute !important;
+  top: 20px !important;
+  left: 20px !important;
+  background: rgba(255, 255, 255, 0.95) !important;
+  backdrop-filter: blur(10px) !important;
+  padding: 8px 16px !important;
+  border-radius: 30px !important;
+  font-size: 0.75rem !important;
+  font-weight: 700 !important;
+  color: #667eea !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.5px !important;
+  z-index: 2 !important;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1) !important;
+}
+
+/* Course Content */
+.coursebox .content,
+.coursebox .info {
+  padding: 30px !important;
+  flex-grow: 1 !important;
+  display: flex !important;
+  flex-direction: column !important;
+}
+
+/* Course Name */
+.coursebox .info h3.coursename,
+.coursename a {
+  font-size: 1.5rem !important;
+  font-weight: 700 !important;
+  margin-bottom: 15px !important;
+  line-height: 1.3 !important;
+}
+
+.coursename a {
+  background: linear-gradient(135deg,
+    #2d3748 0%,
+    #2d3748 100%) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  background-clip: text !important;
+  text-decoration: none !important;
+  transition: all 0.3s ease !important;
+}
+
+.coursebox:hover .coursename a {
+  background: linear-gradient(135deg,
+    #667eea 0%,
+    #764ba2 100%) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  background-clip: text !important;
+}
+
+/* Course Summary */
+.coursebox .content .summary,
+.course-summary {
+  color: #4a5568 !important;
+  font-size: 1rem !important;
+  line-height: 1.7 !important;
+  margin-bottom: 20px !important;
+  flex-grow: 1 !important;
+}
+
+/* Course Meta Info */
+.course-meta {
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+  padding-top: 20px !important;
+  border-top: 1px solid rgba(226, 232, 240, 0.5) !important;
+  margin-top: auto !important;
+}
+
+.course-meta-item {
+  display: flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+  color: #718096 !important;
+  font-size: 0.9rem !important;
+}
+
+.course-meta-item i {
+  color: #a78bfa !important;
+  font-size: 1.1rem !important;
+}
+
+/* ================================================
+   PAGINATION - Modern Style
+   ================================================ */
+.pagination,
+.paging {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  gap: 10px !important;
+  margin: 50px 0 !important;
+  padding: 20px !important;
+}
+
+.page-item {
+  margin: 0 5px !important;
+}
+
+.page-link {
+  background: white !important;
+  color: #667eea !important;
+  border: 2px solid rgba(139, 92, 246, 0.2) !important;
+  padding: 12px 20px !important;
+  border-radius: 12px !important;
+  font-weight: 600 !important;
+  transition: all 0.3s ease !important;
+  text-decoration: none !important;
+}
+
+.page-link:hover {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+  color: white !important;
+  border-color: transparent !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 8px 20px rgba(139, 92, 246, 0.3) !important;
+}
+
+.page-item.active .page-link {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+  color: white !important;
+  border-color: transparent !important;
+  box-shadow: 0 8px 20px rgba(139, 92, 246, 0.3) !important;
+}
+
+/* ================================================
+   CATEGORY SIDEBAR - If Present
+   ================================================ */
+.category-sidebar,
+.block-region {
+  background: white !important;
+  padding: 30px !important;
+  border-radius: 20px !important;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08) !important;
+  margin-bottom: 30px !important;
+  position: sticky !important;
+  top: 20px !important;
+}
+
+.category-sidebar h3 {
+  font-size: 1.3rem !important;
+  font-weight: 700 !important;
+  color: #2d3748 !important;
+  margin-bottom: 20px !important;
+  padding-bottom: 15px !important;
+  border-bottom: 2px solid rgba(139, 92, 246, 0.2) !important;
+}
+
+/* ================================================
+   NO COURSES MESSAGE - Styled
+   ================================================ */
+.nocourses,
+.empty-message {
+  background: white !important;
+  padding: 60px 40px !important;
+  border-radius: 20px !important;
+  text-align: center !important;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08) !important;
+  border: 2px dashed rgba(139, 92, 246, 0.3) !important;
+}
+
+.nocourses::before {
+  content: '📚' !important;
+  font-size: 4rem !important;
+  display: block !important;
+  margin-bottom: 20px !important;
+}
+
+/* ================================================
+   FLOATING ACTION BUTTON - Add Course
+   ================================================ */
+.floating-action-btn {
+  position: fixed !important;
+  bottom: 30px !important;
+  right: 30px !important;
+  width: 60px !important;
+  height: 60px !important;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+  border-radius: 50% !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  color: white !important;
+  font-size: 1.5rem !important;
+  box-shadow: 0 10px 30px rgba(139, 92, 246, 0.4) !important;
+  cursor: pointer !important;
+  transition: all 0.3s ease !important;
+  z-index: 1000 !important;
+}
+
+.floating-action-btn:hover {
+  transform: scale(1.1) !important;
+  box-shadow: 0 15px 40px rgba(139, 92, 246, 0.5) !important;
+}
+
+/* ================================================
+   ANIMATIONS - Entrance Effects
+   ================================================ */
+.coursebox {
+  opacity: 0 !important;
+  animation: slideInUp 0.6s ease forwards !important;
+}
+
+.coursebox:nth-child(1) { animation-delay: 0.1s !important; }
+.coursebox:nth-child(2) { animation-delay: 0.2s !important; }
+.coursebox:nth-child(3) { animation-delay: 0.3s !important; }
+.coursebox:nth-child(4) { animation-delay: 0.4s !important; }
+.coursebox:nth-child(5) { animation-delay: 0.5s !important; }
+.coursebox:nth-child(6) { animation-delay: 0.6s !important; }
+
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ================================================
+   RESPONSIVE DESIGN
+   ================================================ */
+@media (max-width: 991px) {
+  .courses,
+  .course-list {
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)) !important;
+    gap: 25px !important;
+  }
+
+  .category-header {
+    padding: 60px 20px 40px !important;
+  }
+
+  #page-course-index-category h1 {
+    font-size: 2.5rem !important;
+  }
+}
+
+@media (max-width: 575px) {
+  .courses,
+  .course-list {
+    grid-template-columns: 1fr !important;
+    gap: 20px !important;
+    padding: 0 10px !important;
+  }
+
+  .category-header {
+    padding: 40px 15px 30px !important;
+  }
+
+  #page-course-index-category h1 {
+    font-size: 2rem !important;
+  }
+
+  .coursebox .content,
+  .coursebox .info {
+    padding: 20px !important;
+  }
+}
+
+/* ================================================
+   SPECIAL CATEGORY STYLES - AI for Kids & Youth
+   ================================================ */
+/* AI for Kids Category */
+body[class*="category-"][class*="kids"] .category-header,
+.category-name:contains("Kids") ~ .category-header {
+  background: linear-gradient(135deg,
+    #ff6b6b 0%,
+    #feca57 25%,
+    #48dbfb 50%,
+    #ff9ff3 100%) !important;
+  background-size: 300% 300% !important;
+}
+
+/* AI for Youth Category */
+body[class*="category-"][class*="youth"] .category-header,
+.category-name:contains("Youth") ~ .category-header {
+  background: linear-gradient(135deg,
+    #5f27cd 0%,
+    #00d2d3 50%,
+    #54a0ff 100%) !important;
+  background-size: 300% 300% !important;
+}

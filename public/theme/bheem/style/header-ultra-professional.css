@@ -1,0 +1,555 @@
+/* =====================================================
+   ULTRA PROFESSIONAL HEADER DESIGN
+   Spectacular 3D Buttons, Glittering Effects, and Premium Styling
+   ===================================================== */
+
+/* ==================== LOGO STYLING ==================== */
+.logo-section {
+    display: flex;
+    align-items: center;
+}
+
+.brand-logo {
+    display: inline-block;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.logo-img {
+    height: 55px !important;
+    width: auto !important;
+    max-width: none !important;
+    filter: drop-shadow(0 4px 12px rgba(0, 188, 242, 0.2));
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.brand-logo:hover .logo-img {
+    filter: drop-shadow(0 6px 20px rgba(0, 188, 242, 0.5));
+    transform: scale(1.08) translateY(-3px);
+}
+
+/* ==================== ADVANCED KEYFRAME ANIMATIONS ==================== */
+@keyframes ultraGlitter {
+    0%, 100% {
+        background-position: 0% 50%;
+        filter: brightness(1);
+    }
+    50% {
+        background-position: 100% 50%;
+        filter: brightness(1.15);
+    }
+}
+
+@keyframes diamondShimmer {
+    0% {
+        transform: translateX(-200%) rotate(45deg);
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        transform: translateX(200%) rotate(45deg);
+        opacity: 0;
+    }
+}
+
+@keyframes pulseGlow {
+    0%, 100% {
+        box-shadow:
+            0 0 25px rgba(0, 188, 242, 0.5),
+            0 0 50px rgba(0, 188, 242, 0.25),
+            0 10px 30px rgba(0, 0, 0, 0.2),
+            inset 0 2px 4px rgba(255, 255, 255, 0.3),
+            inset 0 -2px 4px rgba(0, 0, 0, 0.1);
+    }
+    50% {
+        box-shadow:
+            0 0 40px rgba(0, 188, 242, 0.7),
+            0 0 80px rgba(0, 188, 242, 0.4),
+            0 15px 45px rgba(0, 0, 0, 0.25),
+            inset 0 2px 4px rgba(255, 255, 255, 0.4),
+            inset 0 -2px 4px rgba(0, 0, 0, 0.15);
+    }
+}
+
+@keyframes floatBounce {
+    0%, 100% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-5px);
+    }
+}
+
+@keyframes sparkle {
+    0%, 100% {
+        opacity: 0;
+        transform: scale(0) rotate(0deg);
+    }
+    50% {
+        opacity: 1;
+        transform: scale(1) rotate(180deg);
+    }
+}
+
+@keyframes gradientShift {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* ==================== GET IN TOUCH - ULTRA PREMIUM BUTTON ==================== */
+.cta-button {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    padding: 16px 36px;
+    font-family: 'Poppins', 'Inter', sans-serif !important;
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    color: #ffffff !important;
+    text-decoration: none !important;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+    background: linear-gradient(135deg,
+        #00d4ff 0%,
+        #00bcf2 25%,
+        #0099cc 50%,
+        #00bcf2 75%,
+        #00d4ff 100%);
+    background-size: 300% 300%;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-radius: 60px;
+    cursor: pointer;
+    overflow: hidden;
+    transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    box-shadow:
+        0 0 25px rgba(0, 188, 242, 0.6),
+        0 0 50px rgba(0, 188, 242, 0.3),
+        0 12px 35px rgba(0, 0, 0, 0.25),
+        inset 0 2px 4px rgba(255, 255, 255, 0.4),
+        inset 0 -2px 8px rgba(0, 0, 0, 0.2);
+    transform-style: preserve-3d;
+    perspective: 1000px;
+    animation: floatBounce 4s ease-in-out infinite, ultraGlitter 3s ease-in-out infinite;
+}
+
+/* Diamond shimmer overlay */
+.cta-button::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(
+        45deg,
+        transparent 30%,
+        rgba(255, 255, 255, 0.8) 50%,
+        transparent 70%
+    );
+    animation: diamondShimmer 2.5s linear infinite;
+    pointer-events: none;
+    z-index: 3;
+}
+
+/* Glittering particles effect */
+.cta-button::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.4) 0%, transparent 70%);
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    pointer-events: none;
+    z-index: 2;
+}
+
+.cta-button i,
+.cta-button span {
+    position: relative;
+    z-index: 4;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.cta-button i {
+    font-size: 18px;
+    filter: drop-shadow(0 3px 6px rgba(0, 0, 0, 0.4));
+}
+
+/* Hover state - Spectacular lift with glow */
+.cta-button:hover {
+    transform: translateY(-8px) scale(1.08);
+    background-position: 100% 50%;
+    box-shadow:
+        0 0 40px rgba(0, 212, 255, 0.9),
+        0 0 80px rgba(0, 212, 255, 0.5),
+        0 20px 50px rgba(0, 0, 0, 0.35),
+        inset 0 3px 6px rgba(255, 255, 255, 0.5),
+        inset 0 -3px 10px rgba(0, 0, 0, 0.25);
+    border-color: rgba(255, 255, 255, 0.6);
+    animation: floatBounce 4s ease-in-out infinite, ultraGlitter 3s ease-in-out infinite, pulseGlow 1.5s ease-in-out infinite;
+}
+
+.cta-button:hover::after {
+    opacity: 1;
+}
+
+.cta-button:hover i {
+    transform: rotate(15deg) scale(1.2);
+    filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.5));
+}
+
+/* Active/Press state - Smooth press effect */
+.cta-button:active {
+    transform: translateY(-3px) scale(1.03);
+    box-shadow:
+        0 0 30px rgba(0, 188, 242, 0.7),
+        0 0 60px rgba(0, 188, 242, 0.4),
+        0 8px 25px rgba(0, 0, 0, 0.3),
+        inset 0 3px 10px rgba(0, 0, 0, 0.3);
+    transition: all 0.15s ease;
+}
+
+/* ==================== LOGIN BUTTON - ULTRA PREMIUM ==================== */
+.login-btn {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 16px 32px;
+    font-family: 'Poppins', 'Inter', sans-serif !important;
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    color: #ffffff !important;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+    background: linear-gradient(135deg,
+        #9333ea 0%,
+        #7c3aed 25%,
+        #6d28d9 50%,
+        #7c3aed 75%,
+        #9333ea 100%);
+    background-size: 300% 300%;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-radius: 60px;
+    cursor: pointer;
+    overflow: hidden;
+    transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    box-shadow:
+        0 0 25px rgba(147, 51, 234, 0.6),
+        0 0 50px rgba(147, 51, 234, 0.3),
+        0 12px 35px rgba(0, 0, 0, 0.25),
+        inset 0 2px 4px rgba(255, 255, 255, 0.4),
+        inset 0 -2px 8px rgba(0, 0, 0, 0.2);
+    transform-style: preserve-3d;
+    perspective: 1000px;
+}
+
+/* Diamond shimmer for login button */
+.login-btn::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(
+        45deg,
+        transparent 30%,
+        rgba(255, 255, 255, 0.8) 50%,
+        transparent 70%
+    );
+    animation: diamondShimmer 2.5s linear infinite;
+    pointer-events: none;
+    z-index: 3;
+}
+
+/* Glittering particles for login button */
+.login-btn::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.4) 0%, transparent 70%);
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    pointer-events: none;
+    z-index: 2;
+}
+
+.login-btn i,
+.login-btn span {
+    position: relative;
+    z-index: 4;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.login-btn i {
+    font-size: 18px;
+    filter: drop-shadow(0 3px 6px rgba(0, 0, 0, 0.4));
+}
+
+/* Hover state */
+.login-btn:hover {
+    transform: translateY(-8px) scale(1.08);
+    background-position: 100% 50%;
+    box-shadow:
+        0 0 40px rgba(168, 85, 247, 0.9),
+        0 0 80px rgba(168, 85, 247, 0.5),
+        0 20px 50px rgba(0, 0, 0, 0.35),
+        inset 0 3px 6px rgba(255, 255, 255, 0.5),
+        inset 0 -3px 10px rgba(0, 0, 0, 0.25);
+    border-color: rgba(255, 255, 255, 0.6);
+}
+
+.login-btn:hover::after {
+    opacity: 1;
+}
+
+.login-btn:hover i:first-child {
+    transform: scale(1.2);
+    filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.5));
+}
+
+.login-btn:hover i:last-child {
+    transform: rotate(180deg);
+}
+
+/* Active state */
+.login-btn:active {
+    transform: translateY(-3px) scale(1.03);
+    box-shadow:
+        0 0 30px rgba(147, 51, 234, 0.7),
+        0 0 60px rgba(147, 51, 234, 0.4),
+        0 8px 25px rgba(0, 0, 0, 0.3),
+        inset 0 3px 10px rgba(0, 0, 0, 0.3);
+    transition: all 0.15s ease;
+}
+
+/* ==================== LOGIN DROPDOWN - ULTRA PREMIUM ==================== */
+.login-dropdown {
+    position: absolute;
+    top: calc(100% + 18px);
+    right: 0;
+    min-width: 240px;
+    background: rgba(255, 255, 255, 0.98);
+    backdrop-filter: blur(30px) saturate(200%);
+    -webkit-backdrop-filter: blur(30px) saturate(200%);
+    border-radius: 24px;
+    padding: 16px;
+    box-shadow:
+        0 30px 80px rgba(0, 0, 0, 0.2),
+        0 15px 40px rgba(0, 0, 0, 0.15),
+        inset 0 2px 0 rgba(255, 255, 255, 1),
+        0 0 0 1px rgba(0, 0, 0, 0.08);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-25px) scale(0.9);
+    transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    z-index: 1000;
+    transform-style: preserve-3d;
+}
+
+.login-dropdown-container:hover .login-dropdown,
+.login-dropdown.active {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0) scale(1);
+}
+
+/* ==================== DROPDOWN ITEMS - ULTRA PREMIUM ==================== */
+.login-dropdown-item {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 16px 20px;
+    margin-bottom: 8px;
+    font-family: 'Poppins', 'Inter', sans-serif !important;
+    font-size: 15px;
+    font-weight: 600;
+    color: #1e293b !important;
+    text-decoration: none !important;
+    background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+    border-radius: 18px;
+    overflow: hidden;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    box-shadow:
+        0 4px 12px rgba(0, 0, 0, 0.08),
+        inset 0 1px 0 rgba(255, 255, 255, 1);
+    cursor: pointer;
+}
+
+.login-dropdown-item:last-child {
+    margin-bottom: 0;
+}
+
+/* Shimmer effect for dropdown items */
+.login-dropdown-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(255, 255, 255, 0.8),
+        transparent
+    );
+    transition: left 0.6s ease;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.login-dropdown-item i {
+    font-size: 20px;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.15));
+    z-index: 2;
+}
+
+.login-dropdown-item span {
+    font-weight: 700;
+    transition: all 0.4s ease;
+    z-index: 2;
+}
+
+/* Hover effects with unique colors */
+.login-dropdown-item:hover {
+    transform: translateX(8px) translateY(-4px);
+    box-shadow:
+        0 12px 30px rgba(0, 0, 0, 0.15),
+        0 6px 18px rgba(0, 0, 0, 0.1),
+        inset 0 1px 0 rgba(255, 255, 255, 1);
+}
+
+.login-dropdown-item:hover::before {
+    left: 100%;
+}
+
+.login-dropdown-item:hover i {
+    transform: scale(1.3) rotate(10deg);
+}
+
+/* Student - Gold Luxury */
+.login-dropdown-item:nth-child(1):hover {
+    background: linear-gradient(135deg, #fef3c7 0%, #fde047 100%);
+    color: #713f12 !important;
+    box-shadow:
+        0 12px 30px rgba(251, 191, 36, 0.4),
+        0 6px 18px rgba(0, 0, 0, 0.1),
+        inset 0 1px 0 rgba(255, 255, 255, 1),
+        0 0 30px rgba(251, 191, 36, 0.3);
+}
+
+/* Mentor - Orange Vibrant */
+.login-dropdown-item:nth-child(2):hover {
+    background: linear-gradient(135deg, #fed7aa 0%, #fb923c 100%);
+    color: #7c2d12 !important;
+    box-shadow:
+        0 12px 30px rgba(249, 115, 22, 0.4),
+        0 6px 18px rgba(0, 0, 0, 0.1),
+        inset 0 1px 0 rgba(255, 255, 255, 1),
+        0 0 30px rgba(249, 115, 22, 0.3);
+}
+
+/* Parent - Cyan Modern */
+.login-dropdown-item:nth-child(3):hover {
+    background: linear-gradient(135deg, #a5f3fc 0%, #22d3ee 100%);
+    color: #164e63 !important;
+    box-shadow:
+        0 12px 30px rgba(6, 182, 212, 0.4),
+        0 6px 18px rgba(0, 0, 0, 0.1),
+        inset 0 1px 0 rgba(255, 255, 255, 1),
+        0 0 30px rgba(6, 182, 212, 0.3);
+}
+
+/* Admin - Purple Elite */
+.login-dropdown-item:nth-child(4):hover {
+    background: linear-gradient(135deg, #e9d5ff 0%, #c084fc 100%);
+    color: #4c1d95 !important;
+    box-shadow:
+        0 12px 30px rgba(168, 85, 247, 0.4),
+        0 6px 18px rgba(0, 0, 0, 0.1),
+        inset 0 1px 0 rgba(255, 255, 255, 1),
+        0 0 30px rgba(168, 85, 247, 0.3);
+}
+
+/* Active/Press state */
+.login-dropdown-item:active {
+    transform: translateX(6px) translateY(-2px) scale(0.98);
+    box-shadow:
+        0 6px 18px rgba(0, 0, 0, 0.12),
+        inset 0 2px 6px rgba(0, 0, 0, 0.15);
+    transition: all 0.12s ease;
+}
+
+/* ==================== TOUCH OPTIMIZATION ==================== */
+@media (hover: none) and (pointer: coarse) {
+    .cta-button,
+    .login-btn,
+    .login-dropdown-item {
+        -webkit-tap-highlight-color: transparent;
+        touch-action: manipulation;
+    }
+
+    .cta-button:active,
+    .login-btn:active {
+        transform: scale(0.95);
+    }
+
+    .login-dropdown-item {
+        padding: 18px 20px;
+    }
+}
+
+/* ==================== PERFORMANCE OPTIMIZATIONS ==================== */
+.cta-button,
+.login-btn,
+.login-dropdown-item,
+.logo-img {
+    will-change: transform;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* ==================== ADDITIONAL POLISH ==================== */
+.cta-button:focus,
+.login-btn:focus {
+    outline: none;
+    box-shadow:
+        0 0 0 4px rgba(0, 188, 242, 0.3),
+        0 0 40px rgba(0, 188, 242, 0.8),
+        0 0 80px rgba(0, 188, 242, 0.5),
+        0 20px 50px rgba(0, 0, 0, 0.35);
+}
+
+/* Ensure smooth animations on all devices */
+* {
+    -webkit-transform: translateZ(0);
+    -moz-transform: translateZ(0);
+    -ms-transform: translateZ(0);
+    -o-transform: translateZ(0);
+    transform: translateZ(0);
+}

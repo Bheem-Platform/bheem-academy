@@ -1,0 +1,688 @@
+/* ================================================
+   PREMIUM BEAUTIFUL HEADER - Perfect Structure & Alignment
+   Modern, Clean, and Perfectly Organized Design
+   ================================================ */
+
+/* ================================================
+   1. HEADER CONTAINER - Premium Glass Design
+   ================================================ */
+.navbar,
+#page-header,
+header.navbar {
+  /* Premium Glass Background with Subtle Gradient */
+  background:
+    linear-gradient(135deg,
+      rgba(255, 255, 255, 0.98) 0%,
+      rgba(250, 251, 255, 0.95) 25%,
+      rgba(248, 250, 255, 0.96) 50%,
+      rgba(250, 251, 255, 0.95) 75%,
+      rgba(255, 255, 255, 0.98) 100%) !important;
+  backdrop-filter: blur(20px) saturate(150%) !important;
+  -webkit-backdrop-filter: blur(20px) saturate(150%) !important;
+
+  /* Premium Multi-layer Shadow */
+  box-shadow:
+    0 1px 0 rgba(255, 255, 255, 0.9) inset,
+    0 -1px 0 rgba(139, 92, 246, 0.05) inset,
+    0 4px 20px rgba(0, 0, 0, 0.08),
+    0 2px 4px rgba(0, 0, 0, 0.04) !important;
+
+  /* Perfect Height & Spacing */
+  padding: 0 !important;
+  min-height: 90px !important;
+  height: 90px !important;
+  display: flex !important;
+  align-items: center !important;
+  position: sticky !important;
+  top: 0 !important;
+  z-index: 1030 !important;
+  overflow: visible !important;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  border-bottom: 1px solid rgba(139, 92, 246, 0.08) !important;
+}
+
+/* Animated Gradient Border */
+.navbar::after {
+  content: '' !important;
+  position: absolute !important;
+  bottom: -1px !important;
+  left: 0 !important;
+  right: 0 !important;
+  height: 2px !important;
+  background: linear-gradient(90deg,
+    transparent 0%,
+    rgba(139, 92, 246, 0.4) 25%,
+    rgba(236, 72, 153, 0.4) 50%,
+    rgba(139, 92, 246, 0.4) 75%,
+    transparent 100%) !important;
+  background-size: 200% 100% !important;
+  animation: borderFlow 10s linear infinite !important;
+}
+
+@keyframes borderFlow {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+/* Header Scroll Effect */
+.navbar.scrolled {
+  box-shadow:
+    0 1px 0 rgba(255, 255, 255, 0.9) inset,
+    0 8px 32px rgba(0, 0, 0, 0.12),
+    0 4px 8px rgba(0, 0, 0, 0.06) !important;
+  background:
+    linear-gradient(135deg,
+      rgba(255, 255, 255, 0.99) 0%,
+      rgba(250, 251, 255, 0.98) 100%) !important;
+}
+
+/* ================================================
+   2. CONTAINER LAYOUT - Perfect Alignment
+   ================================================ */
+.navbar .container,
+.navbar .container-fluid,
+.navbar > div {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  height: 100% !important;
+  padding: 0 30px !important;
+  max-width: 100% !important;
+  width: 100% !important;
+  margin: 0 !important;
+}
+
+/* Main Navigation Wrapper */
+.navbar .navbar-inner {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  width: 100% !important;
+  height: 100% !important;
+}
+
+/* ================================================
+   3. LOGO SECTION - Perfect Size & Position
+   ================================================ */
+.navbar-brand,
+.navbar .navbar-brand,
+.navbar .logo,
+.edoo-brand {
+  display: inline-flex !important;
+  align-items: center !important;
+  padding: 0 !important;
+  margin: 0 40px 0 0 !important;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  z-index: 10 !important;
+  position: relative !important;
+  height: 50px !important;
+  flex-shrink: 0 !important;
+}
+
+/* Logo Image - Crystal Clear - HUGE SIZE */
+.navbar-brand img,
+.navbar .logo img,
+.edoo-brand img,
+.edoologo,
+.navbar-brand > img,
+.navbar .navbar-brand img,
+img.edoologo {
+  height: 95px !important;
+  min-height: 95px !important;
+  width: auto !important;
+  max-width: 320px !important;
+  object-fit: contain !important;
+  display: block !important;
+
+  /* Premium Glass Container for Logo */
+  background: linear-gradient(135deg,
+    rgba(255, 255, 255, 0.9) 0%,
+    rgba(250, 251, 255, 0.8) 100%) !important;
+  padding: 10px 15px !important;
+  border-radius: 14px !important;
+  border: 1px solid rgba(139, 92, 246, 0.1) !important;
+
+  /* Subtle Shadow */
+  box-shadow:
+    0 2px 8px rgba(139, 92, 246, 0.08),
+    inset 0 1px 0 rgba(255, 255, 255, 0.9) !important;
+
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+/* Logo Hover Effect */
+.navbar-brand:hover img,
+.edoo-brand:hover img {
+  transform: scale(1.05) translateY(-2px) !important;
+  box-shadow:
+    0 4px 16px rgba(139, 92, 246, 0.15),
+    0 2px 4px rgba(0, 0, 0, 0.05),
+    inset 0 1px 0 rgba(255, 255, 255, 1) !important;
+  border-color: rgba(139, 92, 246, 0.2) !important;
+}
+
+/* ================================================
+   4. NAVIGATION MENU - Centered & Balanced
+   ================================================ */
+.navbar-collapse {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  flex-grow: 1 !important;
+  height: 100% !important;
+}
+
+.navbar-nav {
+  display: flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  list-style: none !important;
+  height: 100% !important;
+}
+
+/* Navigation Items Container */
+.navbar-nav .nav-item {
+  display: flex !important;
+  align-items: center !important;
+  height: 100% !important;
+  position: relative !important;
+}
+
+/* ================================================
+   5. NAVIGATION LINKS - Premium Typography
+   ================================================ */
+.navbar-nav .nav-link,
+.navbar .nav-link,
+.navbar-nav a:not(.dropdown-item):not([href*="login"]):not(.btn) {
+  /* Perfect Typography */
+  color: #1f2937 !important;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif !important;
+  font-size: 14.5px !important;
+  font-weight: 500 !important;
+  letter-spacing: 0.02em !important;
+  line-height: 1 !important;
+
+  /* Perfect Spacing */
+  padding: 10px 20px !important;
+  margin: 0 4px !important;
+  height: 42px !important;
+
+  /* Premium Glass Button Style */
+  background: rgba(255, 255, 255, 0.5) !important;
+  backdrop-filter: blur(10px) !important;
+  border: 1px solid rgba(139, 92, 246, 0.08) !important;
+  border-radius: 12px !important;
+
+  /* Flex Alignment */
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 6px !important;
+  white-space: nowrap !important;
+  text-decoration: none !important;
+
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  position: relative !important;
+  overflow: hidden !important;
+}
+
+/* Hover Effect - Premium Gradient */
+.navbar-nav .nav-link:hover,
+.navbar-nav a:not(.dropdown-item):hover {
+  color: #667eea !important;
+  background:
+    linear-gradient(135deg,
+      rgba(139, 92, 246, 0.12) 0%,
+      rgba(236, 72, 153, 0.08) 100%) !important;
+  border-color: rgba(139, 92, 246, 0.25) !important;
+  transform: translateY(-2px) !important;
+  box-shadow:
+    0 8px 20px rgba(139, 92, 246, 0.2),
+    0 4px 8px rgba(236, 72, 153, 0.15),
+    inset 0 1px 0 rgba(255, 255, 255, 0.9) !important;
+}
+
+/* Active State - Current Page */
+.navbar-nav .nav-link.active,
+.navbar-nav .nav-item.active .nav-link,
+.navbar-nav .current .nav-link {
+  color: #667eea !important;
+  font-weight: 600 !important;
+  background:
+    linear-gradient(135deg,
+      rgba(139, 92, 246, 0.15) 0%,
+      rgba(236, 72, 153, 0.1) 100%) !important;
+  border-color: rgba(139, 92, 246, 0.3) !important;
+  box-shadow:
+    0 4px 12px rgba(139, 92, 246, 0.15),
+    inset 0 1px 0 rgba(255, 255, 255, 0.9) !important;
+}
+
+/* Active Indicator */
+.navbar-nav .nav-link.active::after,
+.navbar-nav .nav-item.active .nav-link::after {
+  content: '' !important;
+  position: absolute !important;
+  bottom: -1px !important;
+  left: 20% !important;
+  right: 20% !important;
+  height: 3px !important;
+  background: linear-gradient(90deg,
+    #667eea 0%,
+    #764ba2 100%) !important;
+  border-radius: 3px 3px 0 0 !important;
+}
+
+/* ================================================
+   6. DROPDOWN ICON - Perfect Alignment
+   ================================================ */
+.navbar-nav .dropdown-toggle::after {
+  display: inline-block !important;
+  margin-left: 6px !important;
+  vertical-align: middle !important;
+  content: '' !important;
+  border: solid !important;
+  border-width: 0 2px 2px 0 !important;
+  padding: 2.5px !important;
+  transform: rotate(45deg) !important;
+  transition: transform 0.3s ease !important;
+}
+
+.navbar-nav .dropdown.show .dropdown-toggle::after {
+  transform: rotate(-135deg) !important;
+}
+
+/* ================================================
+   7. USER MENU & LOGIN BUTTONS - Right Section
+   ================================================ */
+.navbar .usermenu,
+.navbar .user-menu,
+.navbar .logininfo,
+.navbar .login {
+  display: flex !important;
+  align-items: center !important;
+  gap: 12px !important;
+  margin-left: auto !important;
+  padding-left: 20px !important;
+}
+
+/* Student Login Button - High Visibility */
+.navbar a[href*="login"],
+.navbar .logininfo a,
+.navbar .login a,
+.navbar a.btn-login,
+.navbar .btn-primary {
+  /* Premium Button Styling */
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+  color: #ffffff !important;
+  font-family: 'Inter', -apple-system, sans-serif !important;
+  font-size: 14px !important;
+  font-weight: 600 !important;
+  letter-spacing: 0.02em !important;
+  padding: 10px 24px !important;
+  border-radius: 12px !important;
+  border: none !important;
+  text-decoration: none !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  box-shadow:
+    0 4px 12px rgba(139, 92, 246, 0.25),
+    0 2px 4px rgba(0, 0, 0, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2) !important;
+  cursor: pointer !important;
+  white-space: nowrap !important;
+}
+
+/* Login Button Hover Effect */
+.navbar a[href*="login"]:hover,
+.navbar .logininfo a:hover,
+.navbar .login a:hover,
+.navbar a.btn-login:hover,
+.navbar .btn-primary:hover {
+  background: linear-gradient(135deg, #764ba2 0%, #f093fb 100%) !important;
+  transform: translateY(-2px) scale(1.02) !important;
+  box-shadow:
+    0 8px 20px rgba(139, 92, 246, 0.35),
+    0 4px 8px rgba(236, 72, 153, 0.2),
+    inset 0 1px 0 rgba(255, 255, 255, 0.3) !important;
+  color: #ffffff !important;
+}
+
+/* Secondary Login/User Button */
+.navbar .userbutton,
+.navbar .user-button,
+.navbar .btn-secondary,
+.navbar a.btn-outline {
+  /* Glass Button Style */
+  background: rgba(255, 255, 255, 0.9) !important;
+  color: #667eea !important;
+  font-family: 'Inter', -apple-system, sans-serif !important;
+  font-size: 14px !important;
+  font-weight: 500 !important;
+  padding: 10px 20px !important;
+  border: 2px solid rgba(139, 92, 246, 0.3) !important;
+  border-radius: 12px !important;
+  text-decoration: none !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 6px !important;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  backdrop-filter: blur(10px) !important;
+  cursor: pointer !important;
+}
+
+/* Secondary Button Hover */
+.navbar .userbutton:hover,
+.navbar .user-button:hover,
+.navbar .btn-secondary:hover,
+.navbar a.btn-outline:hover {
+  background: linear-gradient(135deg,
+    rgba(139, 92, 246, 0.15) 0%,
+    rgba(236, 72, 153, 0.1) 100%) !important;
+  border-color: rgba(139, 92, 246, 0.5) !important;
+  color: #667eea !important;
+  transform: translateY(-2px) !important;
+  box-shadow:
+    0 6px 16px rgba(139, 92, 246, 0.2),
+    inset 0 1px 0 rgba(255, 255, 255, 0.9) !important;
+}
+
+/* Avatar Styling */
+.navbar .usermenu img,
+.navbar .avatar img {
+  width: 40px !important;
+  height: 40px !important;
+  border-radius: 50% !important;
+  border: 2px solid rgba(139, 92, 246, 0.2) !important;
+  box-shadow:
+    0 2px 8px rgba(139, 92, 246, 0.1),
+    0 1px 3px rgba(0, 0, 0, 0.05) !important;
+  object-fit: cover !important;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+.navbar .usermenu:hover img {
+  border-color: rgba(139, 92, 246, 0.5) !important;
+  transform: scale(1.1) !important;
+  box-shadow:
+    0 4px 16px rgba(139, 92, 246, 0.25),
+    0 2px 4px rgba(0, 0, 0, 0.1) !important;
+}
+
+/* User Name Text */
+.navbar .usermenu .usertext,
+.navbar .username {
+  color: #1f2937 !important;
+  font-family: 'Inter', -apple-system, sans-serif !important;
+  font-size: 14px !important;
+  font-weight: 500 !important;
+  margin-left: 8px !important;
+}
+
+/* ================================================
+   8. SEARCH BAR - Premium Glass Style
+   ================================================ */
+.navbar .search-input-wrapper,
+.navbar .simplesearchform {
+  display: flex !important;
+  align-items: center !important;
+  margin: 0 20px !important;
+}
+
+.navbar input[type="search"],
+.navbar .form-control {
+  background: rgba(255, 255, 255, 0.9) !important;
+  border: 1px solid rgba(139, 92, 246, 0.15) !important;
+  border-radius: 12px !important;
+  padding: 8px 16px !important;
+  font-size: 14px !important;
+  color: #1f2937 !important;
+  width: 200px !important;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+.navbar input[type="search"]:focus {
+  width: 250px !important;
+  border-color: rgba(139, 92, 246, 0.4) !important;
+  box-shadow:
+    0 0 0 3px rgba(139, 92, 246, 0.1),
+    0 4px 12px rgba(139, 92, 246, 0.15) !important;
+  outline: none !important;
+}
+
+/* ================================================
+   9. MOBILE MENU BUTTON - Hidden on Desktop
+   ================================================ */
+.navbar-toggler {
+  display: none !important;
+}
+
+@media (max-width: 991px) {
+  .navbar-toggler {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 40px !important;
+    height: 40px !important;
+    padding: 0 !important;
+    border: 1px solid rgba(139, 92, 246, 0.2) !important;
+    border-radius: 8px !important;
+    background: rgba(255, 255, 255, 0.9) !important;
+    transition: all 0.3s ease !important;
+  }
+
+  .navbar-toggler:hover {
+    background: rgba(139, 92, 246, 0.1) !important;
+    border-color: rgba(139, 92, 246, 0.4) !important;
+  }
+}
+
+/* ================================================
+   10. RESPONSIVE DESIGN - Mobile Optimization
+   ================================================ */
+@media (max-width: 991px) {
+  .navbar {
+    padding: 15px 0 !important;
+    min-height: 70px !important;
+    height: auto !important;
+  }
+
+  .navbar-nav {
+    flex-direction: column !important;
+    gap: 5px !important;
+    padding: 20px 0 !important;
+    width: 100% !important;
+  }
+
+  .navbar-nav .nav-link {
+    width: 100% !important;
+    text-align: center !important;
+    margin: 2px 0 !important;
+  }
+
+  .navbar-collapse {
+    position: absolute !important;
+    top: 100% !important;
+    left: 0 !important;
+    right: 0 !important;
+    background: rgba(255, 255, 255, 0.98) !important;
+    backdrop-filter: blur(20px) !important;
+    border-radius: 0 0 20px 20px !important;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1) !important;
+  }
+}
+
+/* ================================================
+   11. SPECIAL EFFECTS - Premium Touches
+   ================================================ */
+
+/* Shimmer effect on hover */
+@keyframes shimmer {
+  0% {
+    background-position: -200% center;
+  }
+  100% {
+    background-position: 200% center;
+  }
+}
+
+/* Add shimmer to nav items on hover */
+.navbar-nav .nav-link::before {
+  content: '' !important;
+  position: absolute !important;
+  top: 0 !important;
+  left: -100% !important;
+  width: 100% !important;
+  height: 100% !important;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.4) 50%,
+    transparent 100%
+  ) !important;
+  transition: left 0.5s ease !important;
+}
+
+.navbar-nav .nav-link:hover::before {
+  left: 100% !important;
+}
+
+/* Premium Focus States */
+.navbar *:focus {
+  outline: none !important;
+  box-shadow: 0 0 0 3px rgba(139, 92, 246, 0.15) !important;
+}
+
+/* Smooth scroll behavior */
+.navbar {
+  scroll-behavior: smooth !important;
+}
+
+/* ================================================
+   12. LOGIN BUTTONS SPECIFIC FIXES - Maximum Visibility
+   ================================================ */
+
+/* Force Login Buttons Container to be Visible */
+.navbar .d-flex:has(a[href*="login"]),
+.navbar .ml-auto,
+.navbar .ms-auto {
+  display: flex !important;
+  align-items: center !important;
+  gap: 12px !important;
+  margin-left: auto !important;
+  z-index: 100 !important;
+}
+
+/* Student Login Button - MAXIMUM VISIBILITY */
+.navbar a[title*="Log in"],
+.navbar a[title*="Login"],
+.navbar a[href*="/login/"],
+.navbar .btn:contains("Student"),
+a.btn[href*="login"] {
+  /* High Contrast Gradient Background */
+  background: linear-gradient(135deg,
+    #667eea 0%,
+    #8b5cf6 50%,
+    #a855f7 100%) !important;
+  color: #ffffff !important;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2) !important;
+
+  /* Prominent Size */
+  padding: 12px 28px !important;
+  font-size: 15px !important;
+  font-weight: 600 !important;
+
+  /* Stand Out Effects */
+  box-shadow:
+    0 6px 20px rgba(139, 92, 246, 0.4),
+    0 2px 8px rgba(0, 0, 0, 0.15),
+    inset 0 1px 0 rgba(255, 255, 255, 0.3) !important;
+
+  /* Ensure Visibility */
+  opacity: 1 !important;
+  visibility: visible !important;
+  display: inline-flex !important;
+  position: relative !important;
+  z-index: 10 !important;
+}
+
+/* User/Account Button - Secondary Style but Visible */
+.navbar .userbutton a,
+.navbar a[href*="user"],
+.navbar a[href*="profile"],
+.navbar .userpicture + a {
+  /* White Background with Purple Border */
+  background: #ffffff !important;
+  color: #667eea !important;
+  border: 2px solid #667eea !important;
+
+  /* Clear Visibility */
+  padding: 10px 24px !important;
+  font-weight: 600 !important;
+  font-size: 14px !important;
+
+  /* Stand Out from Background */
+  box-shadow:
+    0 4px 12px rgba(139, 92, 246, 0.2),
+    0 2px 4px rgba(0, 0, 0, 0.1) !important;
+
+  display: inline-flex !important;
+  align-items: center !important;
+  text-decoration: none !important;
+  border-radius: 12px !important;
+}
+
+/* Icon in Login Buttons */
+.navbar a[href*="login"] i,
+.navbar .btn-primary i {
+  margin-right: 6px !important;
+  font-size: 16px !important;
+}
+
+/* Ensure buttons don't overlap */
+.navbar .navbar-nav {
+  margin-right: 20px !important;
+}
+
+/* Right section with login buttons */
+.navbar > div > div:last-child,
+.navbar .navbar-right {
+  display: flex !important;
+  align-items: center !important;
+  gap: 15px !important;
+  padding-right: 30px !important;
+}
+
+/* Remove any transparent backgrounds that might hide buttons */
+.navbar a.btn {
+  background-color: var(--background, #667eea) !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+
+/* Pulsing animation for login button to grab attention */
+@keyframes softPulse {
+  0%, 100% {
+    box-shadow:
+      0 6px 20px rgba(139, 92, 246, 0.4),
+      0 2px 8px rgba(0, 0, 0, 0.15);
+  }
+  50% {
+    box-shadow:
+      0 8px 25px rgba(139, 92, 246, 0.5),
+      0 4px 12px rgba(0, 0, 0, 0.2);
+  }
+}
+
+.navbar a[href*="login"] {
+  animation: softPulse 3s ease-in-out infinite !important;
+}
+
+/* Stop animation on hover */
+.navbar a[href*="login"]:hover {
+  animation: none !important;
+}

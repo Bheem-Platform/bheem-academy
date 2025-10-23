@@ -1,0 +1,99 @@
+/**
+ * Z-Index System for Bheem Academy
+ * Establishes a proper stacking order for all UI elements
+ *
+ * Usage: Use CSS variables for consistent z-index management
+ * Never use arbitrary high numbers like 9999 or 999999
+ */
+
+:root {
+    /* ================================================
+       Z-INDEX SCALE - ORGANIZED BY LAYER
+       ================================================ */
+
+    /* Base Layer (0-9) - Normal content flow */
+    --z-base: 1;
+    --z-background: 0;
+    --z-content: 2;
+    --z-raised: 3;
+    --z-card: 4;
+    --z-interactive: 5;
+
+    /* UI Elements Layer (10-99) - Interactive components */
+    --z-dropdown-trigger: 10;
+    --z-badge: 15;
+    --z-tooltip: 20;
+    --z-popover: 30;
+    --z-notification: 40;
+
+    /* Navigation Layer (100-999) - Site navigation */
+    --z-sidebar: 100;
+    --z-drawer: 200;
+    --z-navbar: 1000;
+    --z-navbar-dropdown: 1010;
+    --z-header-sticky: 1020;
+
+    /* Overlay Layer (1000-1099) - Overlays and modals */
+    --z-overlay: 1030;
+    --z-modal-backdrop: 1040;
+    --z-modal: 1050;
+    --z-modal-content: 1055;
+
+    /* Critical UI Layer (1100+) - Always on top */
+    --z-notification-toast: 1060;
+    --z-tooltip-critical: 1070;
+    --z-debug: 1080;
+    --z-maximum: 1090;
+}
+
+/* ================================================
+   DARK MODE - Same values
+   ================================================ */
+[data-theme="dark"] {
+    /* Z-index values remain the same in dark mode */
+}
+
+/* ================================================
+   UTILITY CLASSES
+   ================================================ */
+
+.z-base { z-index: var(--z-base) !important; }
+.z-raised { z-index: var(--z-raised) !important; }
+.z-dropdown { z-index: var(--z-navbar-dropdown) !important; }
+.z-navbar { z-index: var(--z-navbar) !important; }
+.z-modal { z-index: var(--z-modal) !important; }
+.z-tooltip { z-index: var(--z-tooltip) !important; }
+
+/* ================================================
+   DOCUMENTATION
+   ================================================
+
+   Layer Hierarchy (Bottom to Top):
+
+   1. Background (-1 to 0)
+      - Background patterns, decorative elements
+
+   2. Base Content (1-9)
+      - Regular page content
+      - Cards, sections, basic elements
+
+   3. UI Components (10-99)
+      - Tooltips, badges, popovers
+      - Small interactive elements
+
+   4. Navigation (100-999)
+      - Sidebars, drawers
+      - Main navigation bar
+      - Dropdown menus from nav
+
+   5. Overlays & Modals (1000-1099)
+      - Modal backdrops
+      - Modal dialogs
+      - Full-screen overlays
+
+   6. Critical UI (1100+)
+      - Toast notifications
+      - Debug tools
+      - Emergency messages
+
+   ================================================ */

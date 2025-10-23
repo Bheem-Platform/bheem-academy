@@ -1,0 +1,520 @@
+/* ================================================
+   CAROUSEL ENHANCEMENT 2025 - Modern Design Overlay
+   Enhances existing carousel without breaking functionality
+   ================================================ */
+
+/* Import Modern Typography */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap');
+
+/* ================================================
+   BANNER AREA - Soft Gradient Background
+   ================================================ */
+.bg-linear {
+  /* Remove gradient - clean transparent background */
+  background: transparent !important;
+  background-image: none !important;
+  animation: none !important;
+}
+
+/* Animation removed - no longer needed */
+
+.banner-area {
+  position: relative !important;
+  padding: 0 0 40px 0 !important; /* Removed top padding completely */
+  margin-top: -10px !important; /* Pull carousel up closer to header */
+  overflow: visible !important;
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+/* Remove overlay pattern */
+.banner-area::before {
+  display: none !important;
+  content: none !important;
+}
+
+/* ================================================
+   BANNER BACKGROUND - Clean Rounded Container
+   ================================================ */
+.banner-bg {
+  background: transparent !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+  border: none !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  padding: 5px 20px 40px 20px !important; /* Minimal top padding */
+  margin: 0 !important;
+  position: relative !important;
+  overflow: hidden !important;
+}
+
+/* Remove default background image but keep structure */
+.banner-bg[data-background] {
+  background-image: none !important;
+}
+
+/* ================================================
+   SWIPER SLIDES - Enhanced Spacing
+   ================================================ */
+.swiper.banner-slide {
+  padding: 0 !important;
+  border-radius: 0 !important;
+  overflow: hidden !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+.swiper.banner-slide .swiper-wrapper {
+  overflow: hidden !important;
+  display: flex !important;
+  align-items: stretch !important;
+  position: relative !important;
+  width: 100% !important;
+  height: 100% !important;
+}
+
+.swiper-slide {
+  display: flex !important;
+  align-items: center !important;
+  min-height: 500px !important;
+  border-radius: 0 !important;
+  overflow: hidden !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  box-shadow: none !important;
+  border: none !important;
+  flex-shrink: 0 !important;
+  width: 100% !important;
+  position: relative !important;
+  isolation: isolate !important;
+}
+
+/* Prevent slide overlap by ensuring each slide is contained */
+.swiper-slide::before {
+  content: '' !important;
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  bottom: 0 !important;
+  z-index: -1 !important;
+  background: var(--bg-primary, #fff) !important;
+}
+
+/* Ensure each slide's background is isolated and contained */
+.swiper-slide .slide-background {
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  bottom: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  background-size: cover !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+  overflow: hidden !important;
+  z-index: 0 !important;
+  pointer-events: none !important;
+}
+
+/* Ensure each slide's overlay stays within bounds */
+.swiper-slide .slide-overlay {
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  bottom: 0 !important;
+  z-index: 1 !important;
+  pointer-events: none !important;
+}
+
+/* Ensure slide content is properly layered */
+.swiper-slide .slide-content {
+  position: relative !important;
+  z-index: 2 !important;
+  width: 100% !important;
+  height: 100% !important;
+}
+
+/* Critical: Clip each slide to its own boundaries */
+.swiper-slide {
+  clip-path: inset(0) !important;
+  -webkit-clip-path: inset(0) !important;
+  contain: layout style paint !important;
+}
+
+/* Ensure backgrounds don't bleed between slides */
+.swiper-slide .slide-background,
+.swiper-slide .slide-overlay {
+  will-change: auto !important;
+  transform: translateZ(0) !important;
+  backface-visibility: hidden !important;
+  -webkit-backface-visibility: hidden !important;
+}
+
+/* ================================================
+   BANNER CONTENT - Modern Typography & Layout
+   ================================================ */
+.banner-content {
+  max-width: 800px !important;
+  animation: contentFadeIn 1s ease-out !important;
+  position: relative !important;
+  z-index: 2 !important;
+}
+
+@keyframes contentFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Headlines - Modern Gradient Style */
+.banner-content h1 {
+  font-family: 'Montserrat', 'Raleway', sans-serif !important;
+  font-size: clamp(38px, 5.5vw, 58px) !important;
+  font-weight: 800 !important;
+  line-height: 1.15 !important;
+  letter-spacing: -0.02em !important;
+  margin-bottom: 20px !important;
+
+  /* Beautiful Purple to Blue Gradient */
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  background-clip: text !important;
+  animation: none !important;
+
+  /* Subtle shadow for depth */
+  filter: drop-shadow(0 2px 4px rgba(102, 126, 234, 0.2)) !important;
+}
+
+/* Animation removed for cleaner look */
+
+/* Paragraph text - Sophisticated Gray */
+.banner-content p {
+  font-family: 'Source Sans 3', 'Nunito Sans', sans-serif !important;
+  font-size: clamp(16px, 1.7vw, 19px) !important;
+  font-weight: 500 !important;
+  line-height: 1.65 !important;
+  /* Sophisticated Dark Gray */
+  color: #374151 !important;
+  margin-bottom: 24px !important;
+  max-width: 600px !important;
+  letter-spacing: 0.01em !important;
+  opacity: 1 !important;
+}
+
+/* ================================================
+   CTA BUTTON - Premium Gradient Design
+   ================================================ */
+.banner-content .btn,
+.banner-content a.btn-primary {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 12px !important;
+  font-family: 'Inter', sans-serif !important;
+  font-size: 17px !important;
+  font-weight: 600 !important;
+  text-transform: none !important;
+  letter-spacing: -0.01em !important;
+  padding: 18px 36px !important;
+  border-radius: 100px !important;
+  text-decoration: none !important;
+  position: relative !important;
+  overflow: hidden !important;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+
+  /* Stunning Purple to Pink Gradient */
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+  color: #ffffff !important;
+  border: none !important;
+
+  /* Beautiful shadow */
+  box-shadow:
+    0 4px 15px rgba(102, 126, 234, 0.4),
+    0 2px 4px rgba(0, 0, 0, 0.1) !important;
+}
+
+/* Button hover state */
+.banner-content .btn:hover,
+.banner-content a.btn-primary:hover {
+  transform: translateY(-2px) scale(1.02) !important;
+  box-shadow:
+    0 14px 30px rgba(102, 126, 234, 0.5),
+    0 6px 12px rgba(118, 75, 162, 0.3),
+    inset 0 1px 0 rgba(255, 255, 255, 0.3) !important;
+  background: linear-gradient(135deg, #764ba2 0%, #f953c6 100%) !important;
+}
+
+/* Arrow icon in button */
+.banner-content .btn i,
+.banner-content a.btn-primary i {
+  font-size: 16px !important;
+  transition: transform 0.3s ease !important;
+}
+
+.banner-content .btn:hover i,
+.banner-content a.btn-primary:hover i {
+  transform: translateX(4px) !important;
+}
+
+/* Button ripple effect */
+.banner-content .btn::before,
+.banner-content a.btn-primary::before {
+  content: '' !important;
+  position: absolute !important;
+  top: 50% !important;
+  left: 50% !important;
+  width: 0 !important;
+  height: 0 !important;
+  border-radius: 50% !important;
+  background: rgba(255, 255, 255, 0.5) !important;
+  transform: translate(-50%, -50%) !important;
+  transition: width 0.6s, height 0.6s !important;
+}
+
+.banner-content .btn:active::before,
+.banner-content a.btn-primary:active::before {
+  width: 300px !important;
+  height: 300px !important;
+}
+
+/* ================================================
+   REVIEW SECTIONS - Modern Cards
+   ================================================ */
+.banner-content + .pb-195 + .d-lg-flex {
+  background: rgba(255, 255, 255, 0.6) !important;
+  backdrop-filter: blur(10px) !important;
+  border-radius: 24px !important;
+  padding: 24px 32px !important;
+  border: 1px solid rgba(255, 255, 255, 0.3) !important;
+  box-shadow:
+    0 4px 20px rgba(0, 0, 0, 0.04),
+    inset 0 1px 0 rgba(255, 255, 255, 0.8) !important;
+  margin-top: 40px !important;
+}
+
+/* Review text styling - Modern Purple Accent */
+.text-gray,
+.banner-area .text-gray,
+.lato-font {
+  /* Modern purple-gray for sophistication */
+  color: #6b7280 !important;
+  font-family: 'Plus Jakarta Sans', 'Inter', sans-serif !important;
+  font-weight: 600 !important;
+  letter-spacing: -0.01em !important;
+  opacity: 0.95 !important;
+}
+
+/* ================================================
+   NAVIGATION CONTROLS - Enhanced Visibility
+   ================================================ */
+.banner-controller {
+  position: absolute !important;
+  top: 50% !important;
+  transform: translateY(-50%) !important;
+  width: 100% !important;
+  padding: 0 40px !important;
+  display: flex !important;
+  justify-content: space-between !important;
+  pointer-events: none !important;
+  z-index: 20 !important;
+}
+
+.controller-icon {
+  width: 50px !important;
+  height: 50px !important;
+  border-radius: 50% !important;
+  background: rgba(255, 255, 255, 0.95) !important;
+  backdrop-filter: blur(10px) !important;
+  border: 2px solid rgba(102, 126, 234, 0.3) !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  cursor: pointer !important;
+  pointer-events: all !important;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  box-shadow:
+    0 4px 12px rgba(102, 126, 234, 0.2),
+    0 2px 4px rgba(0, 0, 0, 0.05) !important;
+}
+
+.controller-icon.prev {
+  margin-left: 0 !important;
+}
+
+.controller-icon.next {
+  margin-right: 0 !important;
+}
+
+.controller-icon:hover {
+  transform: scale(1.1) !important;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+  border-color: #667eea !important;
+  box-shadow:
+    0 6px 20px rgba(102, 126, 234, 0.4),
+    0 2px 8px rgba(118, 75, 162, 0.2) !important;
+}
+
+.controller-icon i {
+  font-size: 20px !important;
+  color: #667eea !important; /* Purple arrows */
+  font-weight: 700 !important;
+}
+
+.controller-icon:hover i {
+  color: #ffffff !important; /* White on purple gradient */
+  transform: scale(1.05) !important;
+}
+
+/* Clean controller without animation */
+
+/* Pulse animation removed for cleaner look */
+
+/* ================================================
+   SOCIAL LINKS - Clean Modern Style
+   ================================================ */
+.social-link-banner {
+  padding: 12px 20px !important;
+  background: rgba(255, 255, 255, 0.5) !important;
+  backdrop-filter: blur(8px) !important;
+  border-radius: 50px !important;
+  border: 1px solid rgba(255, 255, 255, 0.3) !important;
+}
+
+.social-link-banner a {
+  color: #64748b !important;
+  font-weight: 600 !important;
+  transition: all 0.3s ease !important;
+  padding: 8px 12px !important;
+  border-radius: 20px !important;
+}
+
+.social-link-banner a:hover {
+  color: #667eea !important;
+  background: rgba(102, 126, 234, 0.1) !important;
+}
+
+/* ================================================
+   ADDITIONAL TEXT STYLING
+   ================================================ */
+
+/* Ensure all text in banner area has professional styling */
+.banner-area,
+.banner-area * {
+  font-family: 'Plus Jakarta Sans', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif !important;
+}
+
+.banner-area span:not(.text-gray) {
+  /* 2025 Trend: Warm charcoal for readability */
+  color: #27272a !important;
+  font-weight: 500 !important;
+}
+
+/* Style any additional headings - Gradient Purple */
+.banner-content h2 {
+  font-family: 'Inter', sans-serif !important;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  background-clip: text !important;
+  font-weight: 600 !important;
+  letter-spacing: -0.01em !important;
+  font-size: clamp(24px, 2.5vw, 32px) !important;
+}
+
+.banner-content h3,
+.banner-content h4 {
+  font-family: 'Inter', sans-serif !important;
+  color: #7c3aed !important;
+  font-weight: 700 !important;
+  letter-spacing: -0.02em !important;
+}
+
+/* ================================================
+   SPACING ADJUSTMENTS
+   ================================================ */
+.pb-195 {
+  padding-bottom: 60px !important;
+}
+
+.pb-62 {
+  padding-bottom: 40px !important;
+}
+
+/* ================================================
+   RESPONSIVE DESIGN
+   ================================================ */
+@media (max-width: 991px) {
+  .banner-bg {
+    padding: 60px 30px !important;
+    margin: 0 15px !important;
+    border-radius: 24px !important;
+  }
+
+  .banner-content h1 {
+    font-size: 42px !important;
+  }
+
+  .banner-controller {
+    bottom: 20px !important;
+    right: 20px !important;
+  }
+
+  .controller-icon {
+    width: 48px !important;
+    height: 48px !important;
+  }
+}
+
+@media (max-width: 767px) {
+  .banner-bg {
+    padding: 40px 20px !important;
+    border-radius: 20px !important;
+  }
+
+  .banner-content h1 {
+    font-size: 32px !important;
+  }
+
+  .banner-content p {
+    font-size: 16px !important;
+  }
+
+  .banner-content .btn,
+  .banner-content a.btn-primary {
+    padding: 14px 28px !important;
+    font-size: 15px !important;
+  }
+
+  .swiper-slide {
+    min-height: 400px !important;
+  }
+}
+
+/* ================================================
+   PERFORMANCE OPTIMIZATIONS
+   ================================================ */
+.banner-area,
+.banner-bg,
+.banner-content,
+.controller-icon {
+  will-change: transform, opacity !important;
+}
+
+/* Reduce motion for accessibility */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

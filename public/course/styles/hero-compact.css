@@ -1,0 +1,81 @@
+/**
+ * Hero Banner Compact Mode - Reduced Header Height
+ * Reduces vacant space in the header section
+ */
+
+/* Reduce hero banner height */
+.hero-banner-elegant {
+    min-height: 240px !important;
+}
+
+/* Compact motto strip */
+.hero-motto-strip {
+    padding: 12px 30px 0 !important;
+}
+
+/* Compact motto items */
+.motto-item-elegant {
+    gap: 6px !important;
+    padding: 6px 12px !important;
+    font-size: 0.8rem !important;
+}
+
+/* Compact hero title section */
+.hero-title-elegant {
+    padding: 20px 30px 30px !important;
+}
+
+/* Reduce title size */
+.hero-title-elegant h1 {
+    font-size: clamp(1.8rem, 4.5vw, 2.8rem) !important;
+    margin-bottom: 12px !important;
+}
+
+/* Compact subtitle */
+.hero-subtitle-elegant {
+    font-size: 1rem !important;
+    margin: 0 auto 10px !important;
+    line-height: 1.5 !important;
+}
+
+/* Compact tagline */
+.hero-tagline-elegant {
+    font-size: 0.9rem !important;
+    margin-bottom: 18px !important;
+}
+
+/* Compact scarcity badges */
+.scarcity-badges-hero {
+    gap: 10px !important;
+    margin-top: 16px !important;
+}
+
+.scarcity-badge-hero {
+    gap: 6px !important;
+    padding: 8px 16px !important;
+    font-size: 0.8rem !important;
+}
+
+/* Mobile responsive adjustments */
+@media (max-width: 768px) {
+    .hero-banner-elegant {
+        min-height: 200px !important;
+    }
+
+    .hero-motto-strip {
+        padding: 8px 16px 0 !important;
+    }
+
+    .motto-icons-elegant {
+        gap: 8px !important;
+    }
+
+    .motto-item-elegant {
+        padding: 4px 10px !important;
+        font-size: 0.75rem !important;
+    }
+
+    .hero-title-elegant {
+        padding: 16px 20px 24px !important;
+    }
+}

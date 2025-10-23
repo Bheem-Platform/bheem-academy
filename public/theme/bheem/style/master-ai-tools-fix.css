@@ -1,0 +1,549 @@
+/* ================================================
+   MASTER AI TOOLS SECTION - Remove Carousel Overlays
+   Removes blue gradient and carousel image background
+   ================================================ */
+
+/* Main partner section - keep white box background */
+.partner-bg,
+.bg-success.partner-bg,
+.rounded-2.partner-bg,
+.partner-bg.rounded-2,
+div.partner-bg {
+  /* Remove any background image and gradients */
+  background-image: none !important;
+  background: #ffffff !important; /* White background for the box */
+  background-color: #ffffff !important;
+
+  /* Remove any inherited carousel styles */
+  position: relative !important;
+  z-index: 1 !important;
+  isolation: isolate !important;
+}
+
+/* Override Bootstrap bg-success to white */
+.bg-success.partner-bg {
+  background-color: #ffffff !important;
+  background: #ffffff !important;
+}
+
+/* Remove blue gradient overlay completely */
+.partner-bg::before,
+.partner-bg::after,
+.partner-slide::before,
+.partner-slide::after {
+  display: none !important;
+  background: none !important;
+  background-image: none !important;
+  content: none !important;
+}
+
+/* Ensure the swiper inside has no background */
+.partner-bg .swiper,
+.partner-bg .partner-slide,
+.partner-bg .swiper-wrapper {
+  background: transparent !important;
+  background-image: none !important;
+  background-color: transparent !important;
+}
+
+/* Remove any carousel image that might be inherited */
+.partner-bg .swiper-slide {
+  background: transparent !important;
+  background-image: none !important;
+}
+
+/* ★ DARK & VISIBLE Icon Styling - Maximum Clarity ★ */
+.partner-bg .swiper-slide img,
+.partner-slide .swiper-slide img {
+  /* Optimal sizing for carousel */
+  display: block !important;
+  max-width: 100px !important;
+  max-height: 60px !important;
+  width: auto !important;
+  height: auto !important;
+  object-fit: contain !important;
+  margin: 0 auto !important;
+
+  /* DARK & VISIBLE - High contrast */
+  opacity: 1 !important;
+  filter:
+    brightness(0.3)
+    contrast(1.5)
+    saturate(1.3) !important; /* Very dark for maximum visibility */
+  transition: all 0.3s ease !important;
+
+  /* No background */
+  background: transparent !important;
+  background-image: none !important;
+  box-shadow: none !important;
+
+  /* Premium rendering */
+  image-rendering: -webkit-optimize-contrast !important;
+  will-change: transform, filter !important;
+}
+
+/* ★ Hover Effect - Slightly Lighter ★ */
+.partner-bg .swiper-slide img:hover {
+  opacity: 1 !important;
+  transform: scale(1.1) !important;
+  filter:
+    brightness(0.4)
+    contrast(1.6)
+    saturate(1.4)
+    drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3)) !important;
+}
+
+/* Enable Swiper Auto-play and Loop */
+.partner-bg .swiper {
+  width: 100% !important;
+  position: relative !important;
+}
+
+/* Ensure icons are visible in carousel */
+.partner-bg .swiper-slide {
+  min-width: 120px !important;
+  max-width: 150px !important;
+}
+
+/* Ensure proper wrapper alignment */
+.partner-bg .swiper-wrapper {
+  display: flex !important;
+  align-items: center !important;
+  height: 100% !important;
+}
+
+/* Remove gradients from any icon wrappers */
+.partner-bg *,
+.partner-slide * {
+  background-image: none !important;
+}
+
+/* Ensure swiper slides have no gradient */
+.partner-bg .swiper-slide::before,
+.partner-bg .swiper-slide::after,
+.partner-slide .swiper-slide::before,
+.partner-slide .swiper-slide::after {
+  display: none !important;
+  background: none !important;
+  content: none !important;
+}
+
+/* Remove any gradient overlays from parent containers */
+#inst40,
+.block_html#inst40,
+section#inst40,
+.card:has(.partner-bg),
+.card-body:has(.partner-bg) {
+  background: transparent !important;
+  background-image: none !important;
+}
+
+/* ★ GORGEOUS Premium Heading - Stunning Typography ★ */
+h3:contains("Master the AI Tools"),
+h3 a[href*="AI Tools"],
+.no-overflow h3 {
+  /* Simple clean styling to prevent conflicts - Smaller size */
+  margin: 10px 0 30px 0 !important;
+  font-size: clamp(18px, 3vw, 24px) !important;
+  line-height: 1.3 !important;
+  font-weight: 600 !important;
+  letter-spacing: -0.01em !important;
+  text-align: center !important;
+  font-family: 'Sora', 'Inter', -apple-system, sans-serif !important;
+  text-transform: none !important;
+  color: #333333 !important;
+
+  /* Remove conflicting background styling */
+  background: transparent !important;
+  -webkit-background-clip: initial !important;
+  -webkit-text-fill-color: initial !important;
+  background-clip: initial !important;
+  animation: none !important;
+  filter: none !important;
+  text-shadow: none !important;
+  position: relative !important;
+  z-index: 2 !important;
+}
+
+@keyframes auroraFlow {
+  0%, 100% {
+    background-position: 0% 50%;
+    filter: hue-rotate(0deg) drop-shadow(0 0 20px rgba(139, 92, 246, 0.3));
+  }
+  25% {
+    background-position: 50% 100%;
+    filter: hue-rotate(10deg) drop-shadow(0 0 25px rgba(236, 72, 153, 0.4));
+  }
+  50% {
+    background-position: 100% 50%;
+    filter: hue-rotate(-10deg) drop-shadow(0 0 30px rgba(79, 172, 254, 0.3));
+  }
+  75% {
+    background-position: 50% 0%;
+    filter: hue-rotate(5deg) drop-shadow(0 0 25px rgba(245, 87, 108, 0.4));
+  }
+}
+
+/* ★ Simple Container - No Decorative Elements ★ */
+.no-overflow {
+  position: relative !important;
+  text-align: center !important;
+  padding: 15px 0 !important;
+  background: transparent !important;
+  background-image: none !important;
+}
+
+/* Remove all decorative elements to prevent duplication */
+.no-overflow::before,
+.no-overflow::after {
+  display: none !important;
+  content: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+}
+
+@keyframes sparkleRotate {
+  0%, 100% {
+    transform: translateY(-50%) rotate(0deg) scale(1);
+    opacity: 0.5;
+  }
+  50% {
+    transform: translateY(-50%) rotate(180deg) scale(1.2);
+    opacity: 1;
+  }
+}
+
+/* Reduce gap between 3 cards section and Master AI Tools */
+.single-features-item + * h3,
+.container:has(.single-features-item) + * {
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+}
+
+/* Compact the heading container */
+.no-overflow {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+/* Reduce space above Master AI Tools section */
+#inst40,
+.block_html#inst40 {
+  margin-top: -10px !important; /* Pull section up */
+  padding-top: 0 !important;
+}
+
+.card-body:has(.no-overflow) {
+  padding: 10px !important; /* Minimal padding */
+}
+
+/* ★ SIMPLE Clean Section - No Background ★ */
+.partner-bg {
+  padding: 20px 0 !important;
+  margin: 10px 0 !important;
+
+  /* COMPLETELY TRANSPARENT - No background at all */
+  background: transparent !important;
+  background-color: transparent !important;
+  background-image: none !important;
+  background-size: initial !important;
+  background-position: initial !important;
+  background-repeat: initial !important;
+  background-attachment: initial !important;
+
+  /* Remove all visual effects */
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+  border: none !important;
+  border-radius: 0 !important;
+  background-clip: initial !important;
+  position: relative !important;
+  box-shadow: none !important;
+
+  /* Simple layout */
+  height: auto !important;
+  overflow: visible !important;
+  display: block !important;
+  transition: none !important;
+  transform-style: initial !important;
+  transform: none !important;
+  animation: none !important;
+}
+
+/* Remove all pseudo-elements */
+.partner-bg::after {
+  display: none !important;
+  content: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+  background: none !important;
+  background-image: none !important;
+}
+
+@keyframes gorgeousMeshFlow {
+  0%, 100% {
+    background-position: 0% 0%, 100% 0%, 50% 50%, 0% 100%, 0% 50%;
+  }
+  25% {
+    background-position: 100% 100%, 0% 100%, 50% 50%, 100% 0%, 25% 50%;
+  }
+  50% {
+    background-position: 100% 0%, 0% 100%, 50% 50%, 100% 100%, 50% 50%;
+  }
+  75% {
+    background-position: 0% 100%, 100% 0%, 50% 50%, 0% 0%, 75% 50%;
+  }
+}
+
+@keyframes borderGlow {
+  0%, 100% { background-position: 0% 50%; opacity: 0.7; }
+  50% { background-position: 100% 50%; opacity: 1; }
+}
+
+/* ★ Simple Hover Effect - No Complex Effects ★ */
+.partner-bg:hover {
+  transform: none !important;
+  box-shadow: none !important;
+  background: transparent !important;
+}
+
+.partner-bg:hover::after {
+  display: none !important;
+  content: none !important;
+  opacity: 0 !important;
+}
+
+/* ★ Remove All Floating Orbs & Sparkles Effect ★ */
+.partner-bg::before {
+  display: none !important;
+  content: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+  background: none !important;
+  background-image: none !important;
+}
+
+/* Clean partner-bg with no decorative elements */
+.partner-bg {
+  position: relative !important;
+}
+
+.partner-bg[data-orbs]::before {
+  display: none !important;
+  content: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+  background: none !important;
+  background-image: none !important;
+}
+
+@keyframes shinePulse {
+  0%, 100% {
+    width: 200px;
+    opacity: 0.7;
+    filter: blur(1px) brightness(1);
+  }
+  50% {
+    width: 300px;
+    opacity: 1;
+    filter: blur(0.5px) brightness(1.5);
+  }
+}
+
+@keyframes floatOrb1 {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  33% { transform: translate(-20px, 10px) scale(1.1); }
+  66% { transform: translate(10px, -20px) scale(0.9); }
+}
+
+@keyframes gradientSlide {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Remove any blue/purple gradient classes */
+.bg-linear,
+.bg-gradient,
+.gradient-bg {
+  background-image: none !important;
+}
+
+/* Force override any inline styles with blue gradients */
+[style*="linear-gradient"] .partner-bg,
+.partner-bg[style*="linear-gradient"] {
+  background-image: none !important;
+  background: #ffffff !important;
+}
+
+/* Ensure no carousel background bleeds through */
+.banner-area + * .partner-bg,
+.banner-bg + * .partner-bg,
+.carousel + * .partner-bg,
+.swiper + * .partner-bg {
+  background-image: none !important;
+  background: #ffffff !important;
+}
+
+/* Remove rounded-2 Bootstrap gradient if present */
+.rounded-2 {
+  background-image: none !important;
+}
+
+/* Final override to ensure white box background */
+.partner-bg,
+.partner-bg.bg-success,
+.partner-bg.rounded-2,
+.partner-bg.bg-success.rounded-2 {
+  background: #ffffff !important;
+  background-color: #ffffff !important;
+  background-image: none !important;
+}
+
+/* FORCE: Remove ALL gradients from partner section elements */
+.partner-bg,
+.partner-bg *,
+.partner-bg .swiper,
+.partner-bg .swiper *,
+.partner-bg .swiper-wrapper,
+.partner-bg .swiper-wrapper *,
+.partner-bg .swiper-slide,
+.partner-bg .swiper-slide *,
+.partner-slide,
+.partner-slide * {
+  background-image: none !important;
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+/* Main container should have white background */
+.partner-bg {
+  background: #ffffff !important;
+  background-color: #ffffff !important;
+}
+
+/* Images should have NO background at all */
+.partner-bg img,
+.partner-slide img {
+  background: none !important;
+  background-color: transparent !important;
+  background-image: none !important;
+}
+
+/* ★ Swiper Container - Carousel Functionality ★ */
+.partner-bg .swiper,
+.partner-bg .partner-slide {
+  padding: 10px 0 !important;
+  margin: 0 !important;
+  height: 70px !important;
+  max-height: 70px !important;
+  overflow: hidden !important; /* Hide overflow for carousel */
+  position: relative !important;
+
+  /* Clean transparent look */
+  box-shadow: none !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+}
+
+/* Swiper Wrapper - Enable horizontal scroll */
+.partner-bg .swiper-wrapper {
+  display: flex !important;
+  align-items: center !important;
+  transition-property: transform !important;
+  box-sizing: content-box !important;
+  height: 100% !important;
+}
+
+.partner-bg .swiper-slide {
+  height: 70px !important;
+  width: auto !important;
+  flex-shrink: 0 !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  padding: 10px 15px !important;
+  background: transparent !important;
+  position: relative !important;
+  transition: all 0.3s ease !important;
+  cursor: pointer !important;
+}
+
+/* Simple hover background for slides */
+.partner-bg .swiper-slide:hover {
+  background: rgba(139, 92, 246, 0.05) !important;
+  border-radius: 12px !important;
+}
+
+/* Ensure swiper wrapper alignment */
+.partner-bg .swiper-wrapper {
+  height: 100% !important;
+  align-items: center !important;
+}
+
+/* Remove separator lines - keep clean */
+
+/* Carousel Configuration for Auto-scroll */
+.partner-bg .swiper {
+  --swiper-navigation-color: #667eea !important;
+  --swiper-pagination-color: #667eea !important;
+}
+
+/* Ensure smooth carousel scrolling */
+.partner-bg .swiper-wrapper {
+  transition-timing-function: linear !important;
+  animation: scrollCarousel 30s linear infinite !important;
+}
+
+@keyframes scrollCarousel {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+/* Pause on hover */
+.partner-bg:hover .swiper-wrapper {
+  animation-play-state: paused !important;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .partner-bg {
+    padding: 15px !important;
+    margin: 0 0 20px 0 !important;
+    height: 100px !important;
+    overflow: hidden !important;
+  }
+
+  .partner-bg .swiper-slide img {
+    max-width: 70px !important;
+    max-height: 40px !important;
+    filter:
+      brightness(0.35)
+      contrast(1.4)
+      saturate(1.2) !important;
+  }
+
+  .partner-bg .swiper-slide {
+    height: 40px !important;
+  }
+
+  .partner-bg .swiper,
+  .partner-bg .partner-slide {
+    height: 50px !important;
+    padding: 5px 0 !important;
+  }
+
+  h3 a[href*="AI Tools"],
+  .no-overflow h3 {
+    font-size: 18px !important;
+    margin: 8px 0 !important;
+  }
+}
+
+/* Ensure no overlap with next section */
+#inst40 + *,
+.partner-bg + *,
+.block_html:has(.partner-bg) + * {
+  margin-top: 20px !important; /* Space before next section */
+  clear: both !important;
+}

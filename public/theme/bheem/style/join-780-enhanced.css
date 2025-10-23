@@ -1,0 +1,441 @@
+/* ================================================
+   JOIN OUR 780+ SECTION - Premium Beautiful Design
+   Modern, Attractive, Efficient & Gorgeous Styling
+   ================================================ */
+
+/* ================================================
+   MAIN CONTAINER - Glass Morphism Premium Design
+   ================================================ */
+.join-section,
+.counter-section,
+.stats-section,
+[class*="780"],
+.achievement-section,
+#join-our-780,
+.join-our-section {
+  position: relative !important;
+  padding: 80px 0 !important;
+  margin-top: 60px !important;
+  overflow: hidden !important;
+
+  /* Premium Gradient Background */
+  background: linear-gradient(135deg,
+    #667eea 0%,
+    #764ba2 25%,
+    #f093fb 50%,
+    #f5576c 75%,
+    #fda085 100%) !important;
+  background-size: 300% 300% !important;
+  animation: GradientShift 15s ease infinite !important;
+
+  /* Glass overlay for depth */
+  box-shadow:
+    inset 0 0 100px rgba(255, 255, 255, 0.1),
+    0 20px 80px rgba(139, 92, 246, 0.3) !important;
+}
+
+/* Gradient Animation */
+@keyframes GradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Glass Content Container */
+.join-section .container,
+.counter-section .container,
+[class*="780"] .container {
+  position: relative !important;
+  z-index: 2 !important;
+  background: rgba(255, 255, 255, 0.95) !important;
+  backdrop-filter: blur(20px) saturate(180%) !important;
+  -webkit-backdrop-filter: blur(20px) saturate(180%) !important;
+  border-radius: 30px !important;
+  padding: 50px !important;
+  box-shadow:
+    0 8px 32px rgba(31, 38, 135, 0.2),
+    inset 0 2px 4px rgba(255, 255, 255, 0.8) !important;
+  border: 1px solid rgba(255, 255, 255, 0.3) !important;
+}
+
+/* ================================================
+   TYPOGRAPHY - Beautiful & Readable
+   ================================================ */
+
+/* Main Heading - "Join our 780+" */
+.join-section h2,
+.counter-section h2,
+[class*="780"] h2 {
+  font-size: clamp(2.5rem, 5vw, 4rem) !important;
+  font-weight: 800 !important;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  background-clip: text !important;
+  text-align: center !important;
+  margin-bottom: 20px !important;
+  text-transform: uppercase !important;
+  letter-spacing: 2px !important;
+  position: relative !important;
+  animation: fadeInUp 1s ease !important;
+}
+
+/* Subtitle */
+.join-section p,
+.counter-section p {
+  font-size: 1.3rem !important;
+  color: #4a5568 !important;
+  text-align: center !important;
+  max-width: 800px !important;
+  margin: 0 auto 40px !important;
+  line-height: 1.8 !important;
+  animation: fadeInUp 1s ease 0.2s both !important;
+}
+
+/* ================================================
+   COUNTER CARDS - Modern Card Design
+   ================================================ */
+.counter-box,
+.stats-box,
+.achievement-box,
+.join-section .col-lg-3,
+.counter-section .col-lg-3 {
+  padding: 15px !important;
+  animation: fadeInUp 1s ease 0.4s both !important;
+}
+
+.counter-box > div,
+.stats-box > div,
+.achievement-item,
+.counter-item {
+  background: linear-gradient(145deg, #ffffff, #f7fafc) !important;
+  border-radius: 20px !important;
+  padding: 35px 25px !important;
+  text-align: center !important;
+  position: relative !important;
+  overflow: hidden !important;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  box-shadow:
+    10px 10px 30px rgba(0, 0, 0, 0.1),
+    -10px -10px 30px rgba(255, 255, 255, 0.8) !important;
+  border: 1px solid rgba(139, 92, 246, 0.1) !important;
+}
+
+/* Hover Effect for Cards */
+.counter-box > div:hover,
+.stats-box > div:hover {
+  transform: translateY(-10px) scale(1.05) !important;
+  box-shadow:
+    0 20px 40px rgba(139, 92, 246, 0.3),
+    inset 0 2px 10px rgba(139, 92, 246, 0.1) !important;
+  background: linear-gradient(145deg,
+    rgba(139, 92, 246, 0.05),
+    rgba(236, 72, 153, 0.05)) !important;
+}
+
+/* ================================================
+   NUMBERS - Bold & Attractive
+   ================================================ */
+.counter-number,
+.stats-number,
+h3[class*="counter"],
+.count-number {
+  font-size: 3.5rem !important;
+  font-weight: 900 !important;
+  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  background-clip: text !important;
+  margin-bottom: 15px !important;
+  display: block !important;
+  line-height: 1 !important;
+  position: relative !important;
+}
+
+/* Plus Sign Styling */
+.counter-number::after,
+.stats-number::after {
+  content: '+' !important;
+  position: absolute !important;
+  right: -5px !important;
+  top: 0 !important;
+  font-size: 2rem !important;
+  opacity: 0.8 !important;
+}
+
+/* Counter Label */
+.counter-label,
+.stats-label,
+.counter-text {
+  font-size: 1.1rem !important;
+  color: #4a5568 !important;
+  font-weight: 600 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 1px !important;
+  margin-top: 10px !important;
+  display: block !important;
+}
+
+/* ================================================
+   ICONS - Beautiful Icon Styling
+   ================================================ */
+.counter-icon,
+.stats-icon,
+.achievement-icon {
+  width: 80px !important;
+  height: 80px !important;
+  margin: 0 auto 20px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+  border-radius: 50% !important;
+  box-shadow: 0 10px 30px rgba(139, 92, 246, 0.3) !important;
+  position: relative !important;
+  overflow: hidden !important;
+}
+
+.counter-icon i,
+.stats-icon i {
+  font-size: 2rem !important;
+  color: white !important;
+  z-index: 2 !important;
+  position: relative !important;
+}
+
+/* Icon Pulse Animation */
+.counter-icon::before,
+.stats-icon::before {
+  content: '' !important;
+  position: absolute !important;
+  top: 50% !important;
+  left: 50% !important;
+  transform: translate(-50%, -50%) !important;
+  width: 100% !important;
+  height: 100% !important;
+  background: rgba(255, 255, 255, 0.3) !important;
+  border-radius: 50% !important;
+  animation: iconPulse 2s ease-out infinite !important;
+}
+
+@keyframes iconPulse {
+  0% { transform: translate(-50%, -50%) scale(1); opacity: 0.3; }
+  100% { transform: translate(-50%, -50%) scale(2); opacity: 0; }
+}
+
+/* ================================================
+   DECORATIVE ELEMENTS - Eye-catching Design
+   ================================================ */
+
+/* Floating Shapes */
+.join-section::before {
+  content: '' !important;
+  position: absolute !important;
+  top: 10% !important;
+  left: 5% !important;
+  width: 300px !important;
+  height: 300px !important;
+  background: radial-gradient(circle, rgba(139, 92, 246, 0.2) 0%, transparent 70%) !important;
+  border-radius: 50% !important;
+  animation: floatBubble 20s infinite ease-in-out !important;
+}
+
+.join-section::after {
+  content: '' !important;
+  position: absolute !important;
+  bottom: 10% !important;
+  right: 5% !important;
+  width: 250px !important;
+  height: 250px !important;
+  background: radial-gradient(circle, rgba(236, 72, 153, 0.2) 0%, transparent 70%) !important;
+  border-radius: 50% !important;
+  animation: floatBubble 25s infinite ease-in-out reverse !important;
+}
+
+@keyframes floatBubble {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  25% { transform: translate(30px, -30px) scale(1.1); }
+  50% { transform: translate(-20px, 20px) scale(0.9); }
+  75% { transform: translate(40px, 10px) scale(1.05); }
+}
+
+/* Particle Effect */
+.particle {
+  position: absolute !important;
+  width: 4px !important;
+  height: 4px !important;
+  background: white !important;
+  border-radius: 50% !important;
+  opacity: 0.6 !important;
+  animation: particleFloat 15s infinite linear !important;
+}
+
+@keyframes particleFloat {
+  from { transform: translateY(100vh) rotate(0deg); opacity: 0; }
+  10% { opacity: 0.6; }
+  90% { opacity: 0.6; }
+  to { transform: translateY(-100vh) rotate(720deg); opacity: 0; }
+}
+
+/* ================================================
+   CTA BUTTON - Attractive Call to Action
+   ================================================ */
+.join-section .btn,
+.counter-section .btn,
+.join-btn {
+  display: inline-block !important;
+  padding: 18px 45px !important;
+  font-size: 1.1rem !important;
+  font-weight: 700 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 1px !important;
+  color: white !important;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+  border: none !important;
+  border-radius: 50px !important;
+  box-shadow: 0 10px 30px rgba(139, 92, 246, 0.4) !important;
+  transition: all 0.3s ease !important;
+  position: relative !important;
+  overflow: hidden !important;
+  margin-top: 30px !important;
+  cursor: pointer !important;
+}
+
+.join-section .btn::before {
+  content: '' !important;
+  position: absolute !important;
+  top: 0 !important;
+  left: -100% !important;
+  width: 100% !important;
+  height: 100% !important;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent) !important;
+  transition: left 0.5s ease !important;
+}
+
+.join-section .btn:hover {
+  transform: translateY(-3px) !important;
+  box-shadow: 0 15px 40px rgba(139, 92, 246, 0.5) !important;
+}
+
+.join-section .btn:hover::before {
+  left: 100% !important;
+}
+
+/* ================================================
+   RESPONSIVE DESIGN - Mobile Optimization
+   ================================================ */
+@media (max-width: 991px) {
+  .join-section .container {
+    padding: 30px 20px !important;
+  }
+
+  .counter-number {
+    font-size: 2.5rem !important;
+  }
+
+  .join-section h2 {
+    font-size: 2rem !important;
+  }
+
+  .counter-box,
+  .stats-box {
+    margin-bottom: 20px !important;
+  }
+}
+
+@media (max-width: 575px) {
+  .join-section {
+    padding: 50px 0 !important;
+  }
+
+  .counter-box > div {
+    padding: 25px 15px !important;
+  }
+
+  .counter-icon {
+    width: 60px !important;
+    height: 60px !important;
+  }
+}
+
+/* ================================================
+   ANIMATIONS - Smooth Entry Effects
+   ================================================ */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Counter Animation */
+@keyframes countUp {
+  from { opacity: 0; transform: scale(0.5); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+.counter-number {
+  animation: countUp 1s ease-out !important;
+}
+
+/* ================================================
+   SPECIAL EFFECTS - Premium Touch
+   ================================================ */
+
+/* Glow Effect on Hover */
+.join-section:hover .container {
+  box-shadow:
+    0 8px 32px rgba(139, 92, 246, 0.3),
+    0 0 80px rgba(139, 92, 246, 0.1),
+    inset 0 2px 4px rgba(255, 255, 255, 0.9) !important;
+}
+
+/* Text Selection Color */
+.join-section ::selection {
+  background: rgba(139, 92, 246, 0.3) !important;
+  color: white !important;
+}
+
+/* Smooth Scrolling */
+.join-section {
+  scroll-behavior: smooth !important;
+}
+
+/* ================================================
+   ACCESSIBILITY - Better User Experience
+   ================================================ */
+.join-section:focus-within {
+  outline: 3px solid rgba(139, 92, 246, 0.5) !important;
+  outline-offset: 2px !important;
+}
+
+.join-section button:focus,
+.join-section a:focus {
+  outline: 2px solid #667eea !important;
+  outline-offset: 2px !important;
+}
+
+/* High Contrast Mode Support */
+@media (prefers-contrast: high) {
+  .join-section {
+    border: 2px solid currentColor !important;
+  }
+
+  .counter-number {
+    -webkit-text-fill-color: initial !important;
+    color: #667eea !important;
+  }
+}
+
+/* Reduced Motion Support */
+@media (prefers-reduced-motion: reduce) {
+  .join-section,
+  .join-section * {
+    animation: none !important;
+    transition: none !important;
+  }
+}

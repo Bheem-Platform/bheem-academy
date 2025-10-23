@@ -1,0 +1,1210 @@
+/* ================================================
+   CARD WIDTH AND ALIGNMENT FIX 2025
+   Focused enhancement for increased card container width
+   and proper image/text alignment within cards
+   ================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+/* ================================================
+   CONTAINER WIDTH ENHANCEMENT
+   ================================================ */
+
+/* Main page container - increased maximum width */
+#page-course-index-category .container,
+#page-course-index-category .container-fluid,
+.path-course-index .container,
+.path-course-index .container-fluid {
+    max-width: 1600px !important;
+    margin: 0 auto !important;
+    padding: 0 40px !important;
+}
+
+/* Content region optimization */
+#region-main,
+.main-content {
+    max-width: none !important;
+    padding: 0 20px !important;
+}
+
+/* Course grid container - MAXIMUM width layout */
+.courses.row,
+.courses.row.courses_container,
+div[data-region="course-view-content"],
+.course-listing,
+.courses-container,
+#page-course-index-category .courses.row,
+.path-course-index .courses.row {
+    display: grid !important;
+    grid-template-columns: repeat(auto-fill, minmax(600px, 1fr)) !important; /* INCREASED from 450px to 600px */
+    gap: 50px !important; /* INCREASED gap from 40px to 50px */
+    width: 100% !important;
+    max-width: none !important;
+    margin: 20px 0 !important;
+    padding: 0 !important;
+    justify-content: center !important;
+}
+
+/* ================================================
+   INDIVIDUAL CARD ENHANCEMENTS
+   ================================================ */
+
+/* Main course card container - HORIZONTAL layout with REDUCED height */
+.coursebox,
+.course-item,
+.single-onlin-class-three,
+.course-card,
+div[data-region="course-view-content"] .card,
+#page-course-index-category .coursebox,
+.path-course-index .coursebox,
+.courses .coursebox,
+.courses .single-onlin-class-three {
+    /* REDUCED Container Dimensions for HORIZONTAL layout */
+    min-height: 220px !important; /* REDUCED height from 320px */
+    max-height: 260px !important; /* REDUCED height from 380px */
+    width: 100% !important;
+    min-width: 100% !important; /* FORCE full width */
+    max-width: 100% !important; /* FORCE full width */
+    height: auto !important;
+
+    /* HORIZONTAL Structure - Image LEFT, Content RIGHT */
+    background: #ffffff !important;
+    border-radius: 16px !important;
+    overflow: hidden !important;
+    display: flex !important;
+    flex-direction: row !important; /* CHANGE to row for horizontal */
+    align-items: stretch !important; /* Ensure equal height for both sides */
+    position: relative !important;
+
+    /* Enhanced Shadows */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12), 0 4px 15px rgba(0, 0, 0, 0.06) !important;
+    border: 1px solid rgba(0, 0, 0, 0.08) !important;
+
+    /* Smooth Transitions */
+    transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) !important;
+
+    /* FORCE full width - NO constraints */
+    margin: 0 !important;
+    padding: 0 !important;
+    flex-shrink: 0 !important;
+    flex-grow: 1 !important;
+}
+
+/* Enhanced hover effect */
+.coursebox:hover,
+.course-item:hover,
+.single-onlin-class-three:hover,
+.course-card:hover {
+    transform: translateY(-8px) scale(1.01) !important;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12), 0 6px 15px rgba(74, 144, 226, 0.1) !important;
+    border-color: rgba(74, 144, 226, 0.15) !important;
+}
+
+/* ================================================
+   IMAGE SECTION - PERFECT ALIGNMENT
+   ================================================ */
+
+/* Image container - LEFT in HORIZONTAL layout - NO BACKGROUND */
+.coursebox .courseimage,
+.coursebox .content .courseimage,
+.course-item .courseimage,
+.single-onlin-class-three .img-whp,
+.single-onlin-class-three .classes-img,
+.course-card .card-img-top,
+.coursebox img {
+    /* HORIZONTAL Image Container - LEFT side with REDUCED height */
+    width: 35% !important; /* 35% width for left positioning */
+    min-width: 35% !important;
+    max-width: 35% !important;
+    height: 100% !important; /* Full height in horizontal layout */
+    min-height: 220px !important; /* REDUCED height */
+    max-height: 260px !important; /* REDUCED height */
+
+    /* Enhanced Display Properties - NO BLUE BACKGROUND */
+    position: relative !important;
+    overflow: hidden !important;
+    border-radius: 16px 0 0 16px !important; /* LEFT corners only for horizontal */
+    background: transparent !important; /* REMOVED blue background */
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    flex-shrink: 0 !important;
+    order: 1 !important; /* Ensure image appears first (left) */
+}
+
+/* Image element - perfect fit and alignment */
+.coursebox .courseimage img,
+.coursebox .content .courseimage img,
+.course-item .courseimage img,
+.single-onlin-class-three .img-whp img,
+.single-onlin-class-three .classes-img img,
+.course-card .card-img-top,
+.coursebox img {
+    /* Perfect Image Display */
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    object-position: center !important;
+
+    /* Enhanced Quality */
+    border-radius: 0 !important;
+    transition: transform 0.3s ease !important;
+    display: block !important;
+
+    /* Remove any distortions */
+    filter: none !important;
+    opacity: 1 !important;
+    max-width: none !important;
+    max-height: none !important;
+}
+
+/* Image hover effect */
+.coursebox:hover .courseimage img,
+.coursebox:hover .content .courseimage img,
+.course-item:hover .courseimage img,
+.single-onlin-class-three:hover .img-whp img,
+.single-onlin-class-three:hover .classes-img img,
+.coursebox:hover img {
+    transform: scale(1.03) !important;
+}
+
+/* ================================================
+   CONTENT SECTION - PERFECT TEXT ALIGNMENT
+   ================================================ */
+
+/* Content container - RIGHT in HORIZONTAL layout with REDUCED height */
+.coursebox .content,
+.coursebox .info,
+.course-item .content,
+.single-onlin-class-three .onlin-class-three-content,
+.course-card .card-body {
+    /* HORIZONTAL Container - RIGHT side with REDUCED height */
+    padding: 20px 25px 20px 25px !important; /* REDUCED padding for compact design */
+    flex: 1 !important; /* Take remaining space after image */
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: space-between !important;
+    min-height: 220px !important; /* REDUCED height to match card */
+    width: 65% !important; /* 65% width for right positioning - MORE SPACE */
+
+    /* Clean Background */
+    background: #ffffff !important;
+    position: relative !important;
+    box-sizing: border-box !important;
+    border-radius: 0 16px 16px 0 !important; /* RIGHT corners only for horizontal */
+    order: 2 !important; /* Ensure content appears second (right) */
+}
+
+/* Course title - OPTIMIZED typography for compact design */
+.coursebox .coursename a,
+.coursebox .info h3 a,
+.course-item .coursename a,
+.single-onlin-class-three h3 a,
+.single-onlin-class-three .title a,
+.single-onlin-class-three h4 a,
+.course-card .card-title a {
+    /* OPTIMIZED Typography for compact horizontal layout */
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif !important;
+    font-size: 1.2rem !important; /* REDUCED for compact design */
+    font-weight: 700 !important; /* Keep bold for prominence */
+    line-height: 1.2 !important; /* REDUCED line height for compactness */
+    color: #1a202c !important;
+
+    /* Perfect Spacing for compact design */
+    margin: 0 0 8px 0 !important; /* REDUCED margin for compact layout */
+    display: block !important;
+    text-decoration: none !important;
+
+    /* Text Optimization - 1 line for compact design */
+    display: -webkit-box !important;
+    -webkit-line-clamp: 1 !important; /* REDUCED to 1 line */
+    -webkit-box-orient: vertical !important;
+    overflow: hidden !important;
+
+    /* Smooth Transitions */
+    transition: color 0.3s ease !important;
+}
+
+/* Title hover effect */
+.coursebox:hover .coursename a,
+.coursebox:hover .info h3 a,
+.course-item:hover .coursename a,
+.single-onlin-class-three:hover h3 a,
+.single-onlin-class-three:hover .title a,
+.single-onlin-class-three:hover h4 a {
+    color: #4a90e2 !important;
+}
+
+/* Course description/summary - COMPACT for horizontal layout */
+.coursebox .summary,
+.coursebox .content .summary,
+.course-item .summary,
+.single-onlin-class-three p,
+.course-card .card-text {
+    /* COMPACT Typography for reduced height */
+    font-size: 0.9rem !important; /* REDUCED for compact design */
+    line-height: 1.4 !important; /* REDUCED line height */
+    color: #4a5568 !important;
+    font-weight: 400 !important;
+
+    /* Compact Spacing */
+    margin: 0 0 12px 0 !important; /* REDUCED margin */
+    padding: 0 !important;
+
+    /* Text Optimization - 2 lines for compact layout */
+    display: -webkit-box !important;
+    -webkit-line-clamp: 2 !important; /* REDUCED to 2 lines */
+    -webkit-box-orient: vertical !important;
+    overflow: hidden !important;
+}
+
+/* ================================================
+   META INFORMATION - CLEAN ALIGNMENT
+   ================================================ */
+
+/* Meta container (instructor, students) - COMPACT HORIZONTAL display */
+.coursebox .teachers,
+.coursebox .coursecat,
+.course-item .meta,
+.single-onlin-class-three .onlin-class-three-content ul,
+.single-onlin-class-three .star-price,
+.coursebox .content .d-flex,
+.single-onlin-class-three .d-flex:last-child {
+    /* COMPACT HORIZONTAL Layout */
+    display: flex !important;
+    align-items: center !important;
+    justify-content: flex-start !important; /* LEFT aligned for horizontal flow */
+    flex-wrap: nowrap !important; /* PREVENT wrapping for horizontal alignment */
+    gap: 8px !important; /* REDUCED gap for compact design */
+    width: 100% !important;
+
+    /* COMPACT Spacing */
+    margin-top: auto !important;
+    padding: 8px 0 0 0 !important; /* REDUCED padding */
+    border-top: 1px solid #e5e7eb !important; /* THINNER border */
+    min-height: 40px !important; /* REDUCED height */
+
+    /* Clean Reset */
+    margin-bottom: 0 !important;
+    list-style: none !important;
+    box-sizing: border-box !important;
+}
+
+/* Individual meta items - COMPACT HORIZONTAL buttons with REDUCED heights */
+.single-onlin-class-three .star-price li,
+.coursebox .teachers a,
+.course-item .meta-item,
+.coursebox .content .enrolmenticons,
+.single-onlin-class-three .student-count,
+.coursebox .content .teacher,
+.single-onlin-class-three .teacher-name {
+    /* COMPACT Typography for horizontal layout */
+    font-size: 0.85rem !important; /* REDUCED for compact buttons */
+    font-weight: 600 !important; /* Keep bold for readability */
+    color: #374151 !important; /* DARKER color */
+    line-height: 1.2 !important; /* REDUCED line height */
+
+    /* COMPACT Button Design with REDUCED heights */
+    margin: 0 6px 0 0 !important; /* REDUCED spacing between items */
+    padding: 8px 12px !important; /* REDUCED padding for smaller buttons */
+    background: #f8fafc !important;
+    border-radius: 8px !important; /* SMALLER radius */
+    border: 1px solid #e2e8f0 !important; /* THINNER border */
+    min-width: 80px !important; /* REDUCED minimum width */
+    max-height: 32px !important; /* FORCE reduced height */
+    text-align: center !important;
+
+    /* Clean Reset */
+    list-style: none !important;
+    text-decoration: none !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    white-space: nowrap !important; /* Prevent text wrapping */
+
+    /* Smooth Transitions */
+    transition: all 0.3s ease !important;
+}
+
+/* Meta item hover effect */
+.single-onlin-class-three .star-price li:hover,
+.coursebox .teachers a:hover {
+    background: #4a90e2 !important;
+    color: #ffffff !important;
+    border-color: #4a90e2 !important;
+}
+
+/* ================================================
+   RESPONSIVE BREAKPOINTS
+   ================================================ */
+
+/* Large screens - HORIZONTAL layout optimization */
+@media (min-width: 1400px) {
+    .courses.row,
+    .courses.row.courses_container {
+        grid-template-columns: repeat(auto-fit, minmax(1100px, 1fr)) !important; /* WIDER for horizontal layout */
+        gap: 50px !important;
+        max-width: 2400px !important; /* INCREASED container width */
+    }
+
+    .coursebox,
+    .single-onlin-class-three {
+        min-height: 350px !important; /* OPTIMIZED height for horizontal */
+        max-height: 400px !important;
+    }
+
+    .coursebox .courseimage,
+    .single-onlin-class-three .img-whp {
+        width: 35% !important; /* LEFT positioning for horizontal */
+        min-width: 35% !important;
+        max-width: 35% !important;
+        height: 100% !important; /* Full height for horizontal */
+        min-height: 350px !important;
+        max-height: 400px !important;
+    }
+
+    .coursebox .content,
+    .single-onlin-class-three .onlin-class-three-content {
+        width: 65% !important; /* RIGHT positioning with MORE SPACE */
+        min-height: 350px !important;
+        padding: 35px 40px !important; /* INCREASED padding for large screens */
+    }
+}
+
+/* Desktop screens - HORIZONTAL layout */
+@media (min-width: 1200px) and (max-width: 1399px) {
+    .courses.row,
+    .courses.row.courses_container {
+        grid-template-columns: repeat(auto-fit, minmax(950px, 1fr)) !important; /* HORIZONTAL layout */
+        gap: 40px !important;
+    }
+
+    .coursebox,
+    .single-onlin-class-three {
+        min-height: 320px !important; /* HORIZONTAL height */
+        max-height: 380px !important;
+    }
+
+    .coursebox .courseimage,
+    .single-onlin-class-three .img-whp {
+        width: 35% !important; /* LEFT positioning for horizontal */
+        min-width: 35% !important;
+        max-width: 35% !important;
+        height: 100% !important; /* Full height for horizontal */
+        min-height: 320px !important;
+        max-height: 380px !important;
+    }
+
+    .coursebox .content,
+    .single-onlin-class-three .onlin-class-three-content {
+        width: 65% !important; /* RIGHT positioning with MORE SPACE */
+        min-height: 320px !important;
+    }
+}
+
+/* Tablet landscape - SWITCH TO VERTICAL for smaller screens */
+@media (min-width: 992px) and (max-width: 1199px) {
+    .courses.row,
+    .courses.row.courses_container {
+        grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)) !important; /* VERTICAL layout for tablets */
+        gap: 30px !important;
+    }
+
+    .coursebox,
+    .single-onlin-class-three {
+        flex-direction: column !important; /* SWITCH back to vertical */
+        min-height: 500px !important;
+        max-height: 600px !important;
+    }
+
+    .coursebox .courseimage,
+    .single-onlin-class-three .img-whp {
+        width: 100% !important; /* Full width for vertical */
+        height: 220px !important; /* VERTICAL image height */
+        min-height: 220px !important;
+        max-height: 220px !important;
+        border-radius: 16px 16px 0 0 !important; /* TOP corners only */
+        order: 1 !important;
+    }
+
+    .coursebox .content,
+    .single-onlin-class-three .onlin-class-three-content {
+        width: 100% !important; /* Full width for vertical */
+        border-radius: 0 0 16px 16px !important; /* BOTTOM corners only */
+        min-height: 280px !important;
+        order: 2 !important;
+    }
+}
+
+/* Tablet portrait */
+@media (min-width: 768px) and (max-width: 991px) {
+    .courses.row,
+    .courses.row.courses_container {
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)) !important;
+        gap: 20px !important;
+    }
+
+    #page-course-index-category .container,
+    .path-course-index .container {
+        padding: 0 20px !important;
+    }
+}
+
+/* Mobile - VERTICAL layout */
+@media (max-width: 767px) {
+    .courses.row,
+    .courses.row.courses_container {
+        grid-template-columns: 1fr !important;
+        gap: 20px !important;
+    }
+
+    #page-course-index-category .container,
+    .path-course-index .container {
+        padding: 0 16px !important;
+    }
+
+    .coursebox,
+    .single-onlin-class-three {
+        min-height: 360px !important;
+        max-height: 420px !important;
+    }
+
+    .coursebox .courseimage,
+    .single-onlin-class-three .img-whp {
+        height: 200px !important;
+        min-height: 200px !important;
+        max-height: 200px !important;
+        width: 100% !important;
+    }
+}
+
+/* ================================================
+   SEARCH BAR ALIGNMENT - NO TOP SPACING
+   ================================================ */
+
+/* Enhanced search container - starts immediately at top */
+.tertiary-navigation,
+.search-container {
+    background: #ffffff !important;
+    border-radius: 12px !important;
+    padding: 20px !important;
+    margin: 0 0 30px 0 !important; /* NO top margin */
+    margin-top: 0 !important; /* Force NO top margin */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05) !important;
+    border: 1px solid #e2e8f0 !important;
+}
+
+/* ================================================
+   LOADING ANIMATION
+   ================================================ */
+
+/* Smooth entrance animation */
+.coursebox,
+.course-item,
+.single-onlin-class-three {
+    animation: fadeInUp 0.5s ease forwards !important;
+}
+
+.coursebox:nth-child(1) { animation-delay: 0.05s !important; }
+.coursebox:nth-child(2) { animation-delay: 0.1s !important; }
+.coursebox:nth-child(3) { animation-delay: 0.15s !important; }
+.coursebox:nth-child(4) { animation-delay: 0.2s !important; }
+.coursebox:nth-child(5) { animation-delay: 0.25s !important; }
+.coursebox:nth-child(6) { animation-delay: 0.3s !important; }
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* ================================================
+   ACCESSIBILITY ENHANCEMENTS
+   ================================================ */
+
+/* Focus states */
+.coursebox:focus,
+.coursebox a:focus,
+.single-onlin-class-three:focus {
+    outline: 2px solid #4a90e2 !important;
+    outline-offset: 2px !important;
+}
+
+/* ================================================
+   FALLBACK FOR EMPTY IMAGES
+   ================================================ */
+
+/* No image fallback */
+.coursebox:not(:has(img)) .courseimage,
+.single-onlin-class-three:not(:has(img)) .img-whp {
+    background: transparent !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    color: #a0aec0 !important;
+    font-size: 1rem !important;
+    font-weight: 500 !important;
+}
+
+.coursebox:not(:has(img)) .courseimage::before,
+.single-onlin-class-three:not(:has(img)) .img-whp::before {
+    content: '📚 Course Preview' !important;
+}
+
+/* ================================================
+   ABSOLUTE FINAL OVERRIDE - MAXIMUM PRIORITY
+   TRUE FULL WIDTH IMAGES WITHIN CARDS
+   ================================================ */
+
+/* Direct override of course_beautification.css line 480 - MAXIMUM FULL WIDTH */
+html body#page .courses.row .coursebox .content .courseimage,
+html body#page .courses .coursebox .content .courseimage,
+html body .courses .coursebox .content .courseimage,
+.coursebox .content .courseimage,
+.courses .coursebox .content .courseimage {
+    width: 100% !important;
+    min-width: 100% !important;
+    max-width: 100% !important;
+    height: 380px !important; /* INCREASED from 320px to 380px */
+    min-height: 380px !important;
+    max-height: 380px !important;
+    background: transparent !important;
+    position: relative !important;
+    overflow: hidden !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    border-radius: 16px 16px 0 0 !important; /* Match card border radius */
+    box-sizing: border-box !important;
+}
+
+/* All possible image container variations - MAXIMUM FULL WIDTH */
+html body#page .courses .single-onlin-class-three .img-whp,
+html body .courses .single-onlin-class-three .img-whp,
+.single-onlin-class-three .img-whp,
+.courses .single-onlin-class-three .img-whp {
+    width: 100% !important;
+    min-width: 100% !important;
+    max-width: 100% !important;
+    height: 380px !important; /* INCREASED from 320px to 380px */
+    min-height: 380px !important;
+    max-height: 380px !important;
+    background: transparent !important;
+    position: relative !important;
+    overflow: hidden !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    border-radius: 16px 16px 0 0 !important; /* Match card border radius */
+    box-sizing: border-box !important;
+}
+
+/* NUCLEAR OPTION - Force TRUE FULL WIDTH images */
+html body div.courses div.coursebox div.content div.courseimage,
+html body div.courses div.coursebox div.courseimage,
+html body div.courses div.single-onlin-class-three div.img-whp,
+html body div.courses div.single-onlin-class-three div.classes-img,
+html body div#page-course-index-category div.courses div.coursebox div.content div.courseimage,
+html body div#page-course-index-category div.courses div.coursebox div.courseimage,
+html body div#page-course-index-category div.courses div.single-onlin-class-three div.img-whp,
+html body div.path-course-index div.courses div.coursebox div.content div.courseimage,
+html body div.path-course-index div.courses div.coursebox div.courseimage,
+html body div.path-course-index div.courses div.single-onlin-class-three div.img-whp {
+    /* FORCE TRUE FULL WIDTH - Override ALL constraints */
+    width: 100% !important;
+    min-width: 100% !important;
+    max-width: 100% !important;
+    height: 320px !important;
+    min-height: 320px !important;
+    max-height: 320px !important;
+    background: transparent !important;
+    position: relative !important;
+    overflow: hidden !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    border-radius: 16px 16px 0 0 !important;
+    box-sizing: border-box !important;
+    left: 0 !important;
+    right: 0 !important;
+    top: 0 !important;
+}
+
+/* ULTIMATE OVERRIDE - Force image elements to be TRUE FULL WIDTH */
+html body div.courses div.coursebox div.content div.courseimage img,
+html body div.courses div.coursebox div.courseimage img,
+html body div.courses div.single-onlin-class-three div.img-whp img,
+html body div.courses div.single-onlin-class-three div.classes-img img,
+html body div#page-course-index-category div.courses div.coursebox div.content div.courseimage img,
+html body div#page-course-index-category div.courses div.coursebox div.courseimage img,
+html body div#page-course-index-category div.courses div.single-onlin-class-three div.img-whp img,
+html body div.path-course-index div.courses div.coursebox div.content div.courseimage img,
+html body div.path-course-index div.courses div.coursebox div.courseimage img,
+html body div.path-course-index div.courses div.single-onlin-class-three div.img-whp img {
+    /* TRUE FULL WIDTH IMAGE DISPLAY */
+    width: 100% !important;
+    min-width: 100% !important;
+    max-width: 100% !important;
+    height: 100% !important;
+    min-height: 100% !important;
+    max-height: 100% !important;
+    object-fit: cover !important;
+    object-position: center !important;
+    display: block !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    border-radius: 16px 16px 0 0 !important;
+    box-sizing: border-box !important;
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    bottom: 0 !important;
+}
+
+/* Ensure parent cards VERTICAL layout - MAXIMUM SIZE */
+html body div.courses div.coursebox,
+html body div.courses div.single-onlin-class-three,
+html body div#page-course-index-category div.courses div.coursebox,
+html body div#page-course-index-category div.courses div.single-onlin-class-three,
+html body div.path-course-index div.courses div.coursebox,
+html body div.path-course-index div.courses div.single-onlin-class-three,
+.courses .coursebox,
+.courses .single-onlin-class-three {
+    /* VERTICAL layout for cards - RESTORED */
+    padding: 0 !important;
+    margin: 0 !important;
+    min-height: 680px !important; /* RESTORED vertical height */
+    max-height: none !important;
+    width: 100% !important;
+    min-width: 100% !important;
+    max-width: 100% !important;
+    display: flex !important;
+    flex-direction: column !important; /* RESTORED vertical layout */
+    overflow: hidden !important;
+    border-radius: 16px !important;
+    background: #ffffff !important;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12) !important; /* ENHANCED shadow */
+    flex-shrink: 0 !important;
+    flex-grow: 1 !important;
+}
+
+/* Force content to be BELOW image in VERTICAL layout */
+html body div.courses div.coursebox div.content,
+html body div.courses div.single-onlin-class-three div.onlin-class-three-content,
+html body div#page-course-index-category div.courses div.coursebox div.content,
+html body div#page-course-index-category div.courses div.single-onlin-class-three div.onlin-class-three-content,
+html body div.path-course-index div.courses div.coursebox div.content,
+html body div.path-course-index div.courses div.single-onlin-class-three div.onlin-class-three-content {
+    /* Content BELOW image - VERTICAL layout - RESTORED */
+    margin-top: 0 !important;
+    padding: 30px 25px 25px 25px !important; /* RESTORED vertical padding */
+    flex: 1 !important;
+    background: #ffffff !important;
+    border-radius: 0 0 16px 16px !important; /* RESTORED bottom corners only */
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: space-between !important;
+    min-height: 260px !important; /* RESTORED vertical min-height */
+}
+
+/* ================================================
+   HOME PAGE VIEW MORE BUTTON STYLING
+   White text color and enhanced border radius
+   ================================================ */
+
+/* Target View More buttons on home page specifically */
+.paging-morelink,
+a[href*="/course"],
+.btn-view-more,
+.view-more-link,
+.courses-view-more,
+.paging .paging-morelink,
+button[class*="view-more"],
+a[class*="view-more"],
+.btn[href*="view"],
+.more-link {
+    display: inline-block !important;
+    margin: 40px auto !important;
+    padding: 18px 50px !important; /* Slightly increased padding */
+    background: linear-gradient(135deg,
+        #4a90e2 0%,
+        #357abd 50%,
+        #5ba3f5 100%) !important;
+    background-size: 200% 100% !important;
+    color: #ffffff !important; /* Ensure white text */
+    text-decoration: none !important;
+    border-radius: 30px !important; /* Enhanced border radius */
+    font-weight: 700 !important;
+    font-size: 1.1rem !important;
+    text-transform: uppercase !important;
+    letter-spacing: 1.2px !important;
+    transition: all 0.4s ease !important;
+    box-shadow: 0 12px 30px rgba(74, 144, 226, 0.4) !important;
+    position: relative !important;
+    overflow: hidden !important;
+    text-align: center !important;
+    border: none !important;
+    outline: none !important;
+}
+
+/* Enhanced hover effect */
+.paging-morelink:hover,
+.btn-view-more:hover,
+.view-more-link:hover,
+.courses-view-more:hover {
+    background-position: 100% 0 !important;
+    transform: translateY(-3px) scale(1.05) !important;
+    box-shadow: 0 15px 35px rgba(74, 144, 226, 0.5) !important;
+    color: #ffffff !important; /* Ensure white text on hover */
+}
+
+/* Active and focus states */
+.paging-morelink:active,
+.btn-view-more:active,
+.view-more-link:active,
+.courses-view-more:active,
+.paging-morelink:focus,
+.btn-view-more:focus,
+.view-more-link:focus,
+.courses-view-more:focus {
+    color: #ffffff !important; /* Ensure white text in all states */
+    background: linear-gradient(135deg,
+        #357abd 0%,
+        #4a90e2 50%,
+        #5ba3f5 100%) !important;
+    transform: translateY(-1px) !important;
+    outline: none !important;
+}
+
+/* Override any theme defaults that might set black text */
+body .paging-morelink,
+body .btn-view-more,
+body .view-more-link,
+body .courses-view-more {
+    color: #ffffff !important;
+}
+
+/* Ensure text color inheritance doesn't override */
+.paging-morelink *,
+.btn-view-more *,
+.view-more-link *,
+.courses-view-more * {
+    color: inherit !important;
+}
+
+/* Home page specific targeting */
+#page-my-index .paging-morelink,
+#page-site-index .paging-morelink,
+.path-site .paging-morelink,
+body[class*="home"] .paging-morelink {
+    color: #ffffff !important;
+    border-radius: 35px !important; /* Extra rounded for home page */
+}
+
+/* ================================================
+   SEARCH FIELD ICON POSITIONING FIX
+   Position search icon at the RIGHT END of search field
+   ================================================ */
+
+/* Search input wrapper with proper icon positioning */
+.search-input-wrapper,
+.tertiary-navigation form,
+.coursesearchbox,
+#coursesearch,
+.course-search-form {
+    position: relative !important;
+}
+
+/* Position search icon at the END (right side) of search input */
+.search-input-wrapper::before,
+.tertiary-navigation form::before,
+.coursesearchbox::before,
+#coursesearch::before,
+.course-search-form::before {
+    content: '🔍' !important;
+    position: absolute !important;
+    right: 20px !important; /* Move to right side instead of left */
+    left: auto !important; /* Override any left positioning */
+    top: 50% !important;
+    transform: translateY(-50%) !important;
+    font-size: 18px !important;
+    color: #6b7280 !important;
+    pointer-events: none !important;
+    z-index: 10 !important;
+}
+
+/* Ensure search input has proper padding for right-side icon */
+.search-input,
+input[type="search"],
+.tertiary-navigation input[type="search"],
+.coursesearchbox input[type="text"],
+#coursesearch input[type="text"],
+.course-search-form input[type="text"] {
+    padding-right: 50px !important; /* Add space for icon on the right */
+    padding-left: 20px !important; /* Standard left padding */
+}
+
+/* Alternative search icon using Font Awesome if available */
+.search-input-wrapper.with-fa-icon::before,
+.tertiary-navigation form.with-fa-icon::before {
+    content: '\f002' !important; /* fa-search */
+    font-family: 'Font Awesome 5 Free', 'FontAwesome' !important;
+    font-weight: 900 !important;
+    font-size: 16px !important;
+}
+
+/* ================================================
+   COMPLETELY REMOVE SEARCH ICONS FROM DROPDOWN SESSIONS
+   No search icons should appear in any dropdown menus or sessions
+   ================================================ */
+
+/* Remove search icon from dropdown elements completely */
+.dropdown .search-input-wrapper::before,
+.dropdown .tertiary-navigation form::before,
+.dropdown-menu .search-input-wrapper::before,
+.dropdown-toggle .search-input-wrapper::before,
+.dropdown::before,
+.dropdown-menu::before,
+.dropdown-item::before {
+    display: none !important;
+    content: '' !important;
+    visibility: hidden !important;
+}
+
+/* Remove any search icons from dropdown sessions and menus */
+.dropdown *::before,
+.dropdown-menu *::before,
+.dropdown-toggle *::before,
+.dropdown-item *::before {
+    content: '' !important;
+}
+
+/* Specifically target search-related pseudo elements in dropdowns */
+.dropdown [class*="search"]::before,
+.dropdown-menu [class*="search"]::before,
+.dropdown [id*="search"]::before,
+.dropdown-menu [id*="search"]::before {
+    display: none !important;
+    content: '' !important;
+}
+
+/* Remove search icons from user menu dropdown */
+.usermenu .dropdown-menu::before,
+.usermenu .dropdown-toggle::before,
+.usermenu .dropdown::before {
+    display: none !important;
+    content: '' !important;
+}
+
+/* Remove search icons from language menu dropdown */
+.langmenu .dropdown-menu::before,
+.langmenu .dropdown-toggle::before,
+.langmenu .dropdown::before {
+    display: none !important;
+    content: '' !important;
+}
+
+/* Remove search icons from notification dropdown */
+.popover-region .dropdown-menu::before,
+.popover-region .dropdown-toggle::before,
+.popover-region .dropdown::before {
+    display: none !important;
+    content: '' !important;
+}
+
+/* ================================================
+   HIDE BLUE BACKGROUND SEARCH BUTTON ENTIRELY
+   Remove the duplicate search button with blue background
+   ================================================ */
+
+/* Hide all search buttons with blue backgrounds */
+.coursesearchbox .btn,
+#coursesearch button,
+.coursesearchbox button,
+.course-search-form button,
+.btn-search,
+.tertiary-navigation button[type="submit"],
+.search-input-wrapper button,
+button[type="submit"]:has([class*="search"]),
+input[type="submit"][value*="Search"],
+input[type="submit"][value*="search"] {
+    display: none !important;
+    visibility: hidden !important;
+    width: 0 !important;
+    height: 0 !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    border: none !important;
+    background: none !important;
+}
+
+/* Make sure search forms don't show submit buttons */
+form:has(input[type="search"]) button[type="submit"],
+form:has(input[name*="search"]) button[type="submit"],
+.search-form button,
+.search-wrapper button {
+    display: none !important;
+}
+
+/* Override the blue gradient button from category-page-enhanced.css */
+.coursesearchbox .btn,
+#coursesearch button,
+.btn-secondary {
+    background: none !important;
+    background-color: transparent !important;
+    background-image: none !important;
+    display: none !important;
+}
+
+.coursesearchbox .btn:hover,
+#coursesearch button:hover {
+    background: none !important;
+    transform: none !important;
+    box-shadow: none !important;
+    display: none !important;
+}
+
+/* ================================================
+   REMOVE BLANK CONTAINER ABOVE DROPDOWN AND SEARCH
+   Eliminate unnecessary spacing and empty containers
+   ================================================ */
+
+/* Remove page header padding and margin to eliminate blank space */
+#page-header {
+    padding: 0 !important;
+    margin: 0 !important;
+    margin-bottom: 0 !important;
+    height: 0 !important;
+    min-height: 0 !important;
+    overflow: hidden !important;
+    display: none !important;
+}
+
+/* Remove page header background and pseudo elements */
+#page-header::before,
+#page-header::after {
+    display: none !important;
+    content: '' !important;
+}
+
+/* Remove any empty containers above navigation */
+.page-header-headings,
+.page-header-image,
+#page-content > .container:empty,
+#page-content > .row:empty,
+.empty-header-space,
+.course-header-actions {
+    display: none !important;
+    height: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+/* Remove breadcrumb spacing if empty or minimal */
+.breadcrumb:empty,
+.breadcrumb-nav:empty,
+.breadcrumb {
+    display: none !important;
+    height: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+/* Remove any top spacing from page content */
+#page-course-index-category,
+.path-course-index,
+body.path-course-index {
+    padding-top: 0 !important;
+    margin-top: 0 !important;
+}
+
+/* Ensure tertiary navigation has no top margin and starts immediately */
+.tertiary-navigation,
+.search-container {
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+}
+
+/* Remove any spacing from navbar if present */
+.navbar-light,
+.navbar,
+.navbar-nav {
+    margin-bottom: 0 !important;
+    padding-bottom: 0 !important;
+}
+
+/* Force immediate start of content */
+#region-main {
+    padding-top: 0 !important;
+    margin-top: 0 !important;
+}
+
+/* Remove any default body margins that create blank space */
+body.path-course-index {
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+/* Ensure main container starts immediately */
+.main-inner {
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+}
+
+/* Remove spacing from any admin or editing blocks */
+.editing_on .block-region,
+.block-region {
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+}
+
+/* ================================================
+   CENTER ALIGN ENTIRE SECTION - DROPDOWN, SEARCH, CARDS
+   Perfect center alignment for all course page content
+   ================================================ */
+
+/* Center align the main page content container */
+#page-content,
+.main-content,
+#page-course-index-category,
+.path-course-index {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: flex-start !important; /* Changed from center to flex-start */
+    width: 100% !important;
+    max-width: 1400px !important; /* Increased maximum width */
+    margin: 0 auto !important;
+    padding: 0 20px !important;
+    min-height: auto !important; /* Remove minimum height constraints */
+}
+
+/* Perfect center alignment for dropdown and search section - NO TOP SPACING */
+.tertiary-navigation,
+.search-container,
+.coursesearchbox,
+#coursesearch,
+.course-search-wrapper,
+.navbar-nav .dropdown,
+.form-inline {
+    width: 100% !important;
+    max-width: 900px !important; /* Increased width for better centering */
+    margin: 0 auto 30px auto !important; /* NO top margin, only bottom spacing */
+    padding-top: 0 !important; /* Force NO top padding */
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    text-align: center !important;
+    position: relative !important;
+}
+
+/* Center align dropdown menus specifically */
+.dropdown,
+.dropdown-menu,
+.nav-item.dropdown {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    margin: 0 auto !important;
+    text-align: center !important;
+}
+
+/* Center align search input fields */
+.search-input,
+input[type="search"],
+.form-control {
+    text-align: center !important;
+    margin: 0 auto !important;
+}
+
+/* Center align the courses container - MAXIMUM WIDTH for HORIZONTAL cards */
+.courses.row,
+.courses,
+div.courses.row,
+.courses_container {
+    width: 100% !important;
+    max-width: 2200px !important; /* INCREASED for wider horizontal cards */
+    margin: 0 auto !important;
+    display: grid !important;
+    grid-template-columns: repeat(auto-fit, minmax(950px, 1fr)) !important; /* INCREASED for horizontal cards */
+    gap: 40px !important; /* Optimized gap for horizontal layout */
+    padding: 30px !important;
+    justify-content: center !important;
+    align-items: start !important;
+    box-sizing: border-box !important;
+}
+
+/* ================================================
+   NUCLEAR OVERRIDE - ENSURE HORIZONTAL LAYOUT DEPLOYMENT
+   Force horizontal layout with maximum specificity
+   ================================================ */
+
+/* FORCE HORIZONTAL LAYOUT for desktop screens - COMPACT DESIGN */
+@media (min-width: 992px) {
+    /* Ultimate override for card layout - REDUCED HEIGHT */
+    html body .coursebox,
+    html body .single-onlin-class-three,
+    .coursebox,
+    .single-onlin-class-three {
+        display: flex !important;
+        flex-direction: row !important; /* FORCE ROW LAYOUT */
+        align-items: stretch !important;
+        min-height: 220px !important; /* REDUCED HEIGHT */
+        max-height: 260px !important; /* REDUCED HEIGHT */
+    }
+
+    /* Ultimate override for image positioning - LEFT SIDE - NO BACKGROUND */
+    html body .coursebox .courseimage,
+    html body .coursebox .content .courseimage,
+    html body .single-onlin-class-three .img-whp,
+    html body .single-onlin-class-three .classes-img,
+    .coursebox .courseimage,
+    .coursebox .content .courseimage,
+    .single-onlin-class-three .img-whp,
+    .single-onlin-class-three .classes-img {
+        width: 35% !important;
+        min-width: 35% !important;
+        max-width: 35% !important;
+        height: 100% !important;
+        min-height: 220px !important; /* REDUCED HEIGHT */
+        max-height: 260px !important; /* REDUCED HEIGHT */
+        background: transparent !important; /* NO BLUE BACKGROUND */
+        border-radius: 16px 0 0 16px !important; /* LEFT CORNERS */
+        order: 1 !important;
+        flex-shrink: 0 !important;
+    }
+
+    /* Ultimate override for content positioning - RIGHT SIDE - COMPACT */
+    html body .coursebox .content,
+    html body .coursebox .info,
+    html body .single-onlin-class-three .onlin-class-three-content,
+    .coursebox .content,
+    .coursebox .info,
+    .single-onlin-class-three .onlin-class-three-content {
+        width: 65% !important;
+        min-width: 65% !important;
+        max-width: 65% !important;
+        height: 100% !important;
+        min-height: 220px !important; /* REDUCED HEIGHT */
+        max-height: 260px !important; /* REDUCED HEIGHT */
+        border-radius: 0 16px 16px 0 !important; /* RIGHT CORNERS */
+        order: 2 !important;
+        flex: 1 !important;
+        padding: 20px 25px !important; /* REDUCED PADDING for compact design */
+    }
+
+    /* Force grid layout */
+    html body .courses.row,
+    html body .courses,
+    .courses.row,
+    .courses {
+        grid-template-columns: repeat(auto-fit, minmax(950px, 1fr)) !important;
+        max-width: 2200px !important;
+        gap: 40px !important;
+    }
+}
+

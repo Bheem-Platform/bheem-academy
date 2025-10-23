@@ -1,0 +1,204 @@
+/* ================================================
+   CAROUSEL WIDTH INCREASE & WHITE FONT
+   Simple adjustments for carousel slider
+   ================================================ */
+
+/* ================================================
+   CAROUSEL WIDTH INCREASE
+   ================================================ */
+
+/* Increase carousel container width */
+.banner-area {
+  width: 100% !important;
+  max-width: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.banner-bg {
+  width: 100% !important;
+  max-width: none !important;
+  margin: 0 !important;
+}
+
+/* Swiper container full width */
+.swiper.banner-slide {
+  width: 100% !important;
+  max-width: none !important;
+  margin: 0 !important;
+}
+
+/* Individual slides full width */
+.swiper-slide {
+  width: 100% !important;
+  max-width: none !important;
+}
+
+/* Banner content area - increased width */
+.banner-content {
+  max-width: 1200px !important; /* Increased from default */
+  width: 100% !important;
+  margin: 0 auto !important;
+  padding: 0 20px !important;
+}
+
+/* Container overrides for carousel */
+.banner-area .container,
+.banner-bg .container,
+.swiper.banner-slide .container {
+  max-width: none !important;
+  width: 100% !important;
+  padding: 0 15px !important;
+  margin: 0 !important;
+}
+
+/* ================================================
+   WHITE FONT COLOR FOR CAROUSEL TEXT
+   ================================================ */
+
+/* Main headline text - white */
+.banner-content h1 {
+  color: #ffffff !important;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3) !important;
+}
+
+/* Paragraph text - white */
+.banner-content p {
+  color: #ffffff !important;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2) !important;
+}
+
+/* Any other text in banner - white */
+.banner-content span,
+.banner-content div,
+.banner-area .text-gray,
+.banner-content .lato-font {
+  color: #ffffff !important;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2) !important;
+}
+
+/* Subheadings - white */
+.banner-content h2,
+.banner-content h3,
+.banner-content h4,
+.banner-content h5,
+.banner-content h6 {
+  color: #ffffff !important;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3) !important;
+}
+
+/* Any links in banner content - white */
+.banner-content a:not(.btn) {
+  color: #ffffff !important;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2) !important;
+}
+
+/* List items - white */
+.banner-content li,
+.banner-content ul,
+.banner-content ol {
+  color: #ffffff !important;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2) !important;
+}
+
+/* ================================================
+   RESPONSIVE WIDTH ADJUSTMENTS
+   ================================================ */
+
+/* Large screens - maximize width */
+@media (min-width: 1200px) {
+  .banner-content {
+    max-width: 1400px !important;
+    padding: 0 30px !important;
+  }
+
+  .banner-area .container,
+  .banner-bg .container {
+    max-width: none !important;
+    width: 100% !important;
+    padding: 0 20px !important;
+  }
+}
+
+/* Extra large screens */
+@media (min-width: 1600px) {
+  .banner-content {
+    max-width: 1600px !important;
+    padding: 0 40px !important;
+  }
+}
+
+/* Medium screens */
+@media (max-width: 1199px) {
+  .banner-content {
+    max-width: 1000px !important;
+    padding: 0 25px !important;
+  }
+}
+
+/* Tablet screens */
+@media (max-width: 768px) {
+  .banner-content {
+    max-width: none !important;
+    width: 100% !important;
+    padding: 0 20px !important;
+  }
+
+  .banner-area,
+  .banner-bg,
+  .swiper.banner-slide {
+    width: 100% !important;
+    max-width: none !important;
+  }
+}
+
+/* Mobile screens */
+@media (max-width: 480px) {
+  .banner-content {
+    padding: 0 15px !important;
+  }
+
+  .banner-area .container,
+  .banner-bg .container {
+    padding: 0 10px !important;
+  }
+}
+
+/* ================================================
+   ENSURE BUTTON TEXT REMAINS READABLE
+   ================================================ */
+
+/* Keep button text readable (not affected by white text) */
+.banner-content .btn,
+.banner-content .btn-primary,
+.banner-content .btn-secondary {
+  color: inherit !important;
+  text-shadow: none !important;
+}
+
+/* ================================================
+   HIGH SPECIFICITY OVERRIDES
+   ================================================ */
+
+/* Ensure these styles take precedence */
+html body .banner-area {
+  width: 100% !important;
+  max-width: none !important;
+}
+
+html body .banner-area .banner-content h1,
+html body .banner-area .banner-content p,
+html body .banner-area .banner-content span {
+  color: #ffffff !important;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3) !important;
+}
+
+html body .banner-bg {
+  width: 100% !important;
+  max-width: none !important;
+}
+
+html body .swiper.banner-slide {
+  width: 100% !important;
+  max-width: none !important;
+}

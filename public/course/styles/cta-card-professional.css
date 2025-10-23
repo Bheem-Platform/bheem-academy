@@ -1,0 +1,293 @@
+/**
+ * Professional CTA Card Redesign
+ * Enhanced styling for premium course enrollment
+ */
+
+/* ========================================
+   CTA CARD PROFESSIONAL STRUCTURE
+   ======================================== */
+
+.cta-card {
+    padding: 0 !important;
+    overflow: visible !important;
+    position: relative;
+}
+
+/* Premium Badge */
+.cta-badge {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    padding: 8px 16px;
+    background: var(--gradient-purple-elegant);
+    border-radius: 16px 16px 0 0;
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    box-shadow: 0 4px 12px rgba(139, 92, 246, 0.3);
+    margin: 0;
+}
+
+.cta-badge i {
+    font-size: 0.9rem;
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
+}
+
+/* Pricing Section */
+.cta-price {
+    padding: 16px 14px 12px !important;
+    text-align: center;
+    background: linear-gradient(135deg, rgba(139, 92, 246, 0.03), rgba(236, 72, 153, 0.02));
+    border-bottom: 1px solid rgba(139, 92, 246, 0.1);
+}
+
+.price-label {
+    font-size: 0.7rem;
+    font-weight: 600;
+    color: var(--text-secondary);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 8px;
+}
+
+.price-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    margin-bottom: 6px;
+}
+
+.price-original {
+    font-size: 1rem !important;
+    text-decoration: line-through !important;
+    text-decoration-color: #ef4444 !important;
+    color: #64748b !important;
+    opacity: 0.8 !important;
+}
+
+.price-current {
+    font-family: 'Orbitron', sans-serif !important;
+    font-size: 2rem !important;
+    font-weight: 900 !important;
+    background: var(--gradient-purple-elegant) !important;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+    background-clip: text !important;
+    line-height: 1 !important;
+}
+
+.price-save {
+    font-size: 0.7rem;
+    font-weight: 700;
+    color: #10b981;
+    background: rgba(16, 185, 129, 0.1);
+    padding: 4px 12px;
+    border-radius: 12px;
+    display: inline-block;
+}
+
+/* Blurred Price Effect */
+.price-blurred {
+    filter: blur(8px);
+    -webkit-filter: blur(8px);
+    user-select: none;
+    transition: filter 0.3s ease;
+}
+
+.price-blurred:hover {
+    filter: blur(6px);
+    -webkit-filter: blur(6px);
+}
+
+/* Price Reveal Link */
+.price-reveal-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    margin-top: 10px;
+    padding: 8px 16px;
+    background: linear-gradient(135deg, rgba(139, 92, 246, 0.12), rgba(236, 72, 153, 0.10));
+    border: 1px solid rgba(139, 92, 246, 0.25);
+    border-radius: 20px;
+    color: #8b5cf6;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 2px 8px rgba(139, 92, 246, 0.15);
+}
+
+.price-reveal-link:hover {
+    background: linear-gradient(135deg, rgba(139, 92, 246, 0.18), rgba(236, 72, 153, 0.15));
+    border-color: rgba(139, 92, 246, 0.4);
+    color: #7c3aed;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(139, 92, 246, 0.25);
+}
+
+.price-reveal-link i {
+    font-size: 0.85rem;
+    transition: transform 0.3s ease;
+}
+
+.price-reveal-link:hover i {
+    transform: scale(1.2);
+}
+
+/* CTA Button Restructured */
+.cta-button.cta-primary {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    width: calc(100% - 28px) !important;
+    padding: 12px 16px !important;
+    margin: 12px 14px !important;
+    background: var(--gradient-purple-magenta) !important;
+    color: white !important;
+    border: none !important;
+    border-radius: 12px !important;
+    font-size: 0.95rem !important;
+    font-weight: 700 !important;
+    text-decoration: none !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.5px !important;
+    box-shadow: 0 6px 20px rgba(139, 92, 246, 0.4),
+                0 0 0 1px rgba(255, 255, 255, 0.2) inset !important;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+    position: relative !important;
+    overflow: hidden !important;
+}
+
+.cta-button-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+    flex-shrink: 0;
+}
+
+.cta-button-icon i {
+    font-size: 1rem;
+}
+
+.cta-button-text {
+    flex: 1;
+    text-align: center;
+}
+
+.cta-button-arrow {
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.cta-button.cta-primary:hover {
+    transform: translateY(-2px) scale(1.01) !important;
+    box-shadow: 0 8px 28px rgba(139, 92, 246, 0.5),
+                0 0 0 1px rgba(255, 255, 255, 0.3) inset !important;
+}
+
+.cta-button.cta-primary:hover .cta-button-arrow {
+    transform: translateX(4px);
+}
+
+.cta-button.cta-primary::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+    transition: left 0.5s ease;
+}
+
+.cta-button.cta-primary:hover::before {
+    left: 100%;
+}
+
+/* Divider */
+.cta-divider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 12px 14px;
+    position: relative;
+}
+
+.cta-divider::before,
+.cta-divider::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(139, 92, 246, 0.2), transparent);
+}
+
+.cta-divider span {
+    padding: 0 12px;
+    font-size: 0.7rem;
+    font-weight: 600;
+    color: var(--text-secondary);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    background: white;
+}
+
+/* Features List Optimized */
+.cta-card .features-list {
+    padding: 0 14px 12px !important;
+    margin-top: 0 !important;
+}
+
+/* Trust Badge */
+.cta-trust-badge {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 10px 14px;
+    background: linear-gradient(135deg, rgba(16, 185, 129, 0.08), rgba(5, 150, 105, 0.06));
+    border-top: 1px solid rgba(16, 185, 129, 0.15);
+    border-radius: 0 0 16px 16px;
+    font-size: 0.7rem;
+    font-weight: 600;
+    color: #059669;
+    margin-top: 8px;
+}
+
+.cta-trust-badge i {
+    font-size: 0.85rem;
+    color: #10b981;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .price-current {
+        font-size: 1.6rem !important;
+    }
+
+    .cta-button.cta-primary {
+        font-size: 0.85rem !important;
+        padding: 10px 14px !important;
+    }
+
+    .cta-button-icon,
+    .cta-button-arrow {
+        width: 28px;
+        height: 28px;
+    }
+}

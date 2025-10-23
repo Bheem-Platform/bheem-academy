@@ -1,0 +1,357 @@
+/* ================================================
+   AI COURSE CARDS FIX - Targeted Styling
+   For AI for Kids, AI for Youth & View More Button
+   ================================================ */
+
+/* ================================================
+   FRONTPAGE COURSE LIST - Main Container
+   ================================================ */
+.frontpage-course-list-all,
+.frontpage-course-list-enrolled,
+#frontpage-course-list,
+.courses.frontpage-course-list-all,
+.block-region .card-deck,
+.course-card-deck {
+  margin-top: 40px !important;
+  padding: 0 15px !important;
+}
+
+/* ================================================
+   COURSE BOX - Individual Course Cards
+   ================================================ */
+.coursebox,
+.course-card-view,
+.card.dashboard-card,
+.course-card,
+div[data-region="course-view-content"] .card,
+.frontpage-course-list-all .coursebox,
+.block_myoverview .coursebox {
+  background: white !important;
+  border-radius: 20px !important;
+  overflow: hidden !important;
+  margin-bottom: 30px !important;
+  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) !important;
+  box-shadow:
+    0 10px 25px rgba(0, 0, 0, 0.08),
+    0 5px 10px rgba(0, 0, 0, 0.05) !important;
+  border: 2px solid transparent !important;
+  position: relative !important;
+}
+
+/* Hover Effect */
+.coursebox:hover,
+.course-card-view:hover,
+.card.dashboard-card:hover {
+  transform: translateY(-10px) scale(1.02) !important;
+  box-shadow:
+    0 20px 40px rgba(139, 92, 246, 0.2),
+    0 10px 20px rgba(0, 0, 0, 0.1) !important;
+  border-color: rgba(139, 92, 246, 0.3) !important;
+}
+
+/* ================================================
+   COURSE IMAGE - Header Section
+   ================================================ */
+.coursebox .content .courseimage,
+.coursebox .courseimage,
+.card-img-top,
+.course-card-img,
+div[data-region="course-view-content"] .card-img-top {
+  height: 220px !important;
+  object-fit: cover !important;
+  border-radius: 18px 18px 0 0 !important;
+  position: relative !important;
+  overflow: hidden !important;
+}
+
+/* Gradient Overlay on Images */
+.coursebox .content .courseimage::after,
+.card-img-top::after {
+  content: '' !important;
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  bottom: 0 !important;
+  background: linear-gradient(180deg,
+    transparent 0%,
+    rgba(0, 0, 0, 0.3) 100%) !important;
+  pointer-events: none !important;
+}
+
+/* If no image, create white background */
+.coursebox:not(:has(img)) .courseimage,
+.coursebox .courseimage:empty {
+  background: white !important;
+  background-size: 200% 200% !important;
+  height: 220px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+
+/* ================================================
+   COURSE INFO - Content Section
+   ================================================ */
+.coursebox .content .coursecat,
+.coursebox .content .coursename,
+.coursebox .info,
+.card-body,
+.course-info-container {
+  padding: 25px !important;
+  background: white !important;
+}
+
+/* Course Name/Title */
+.coursebox .content .coursename a,
+.coursebox .info h3.coursename a,
+.card-title,
+.course-name,
+h3.coursename {
+  font-size: 1.5rem !important;
+  font-weight: 700 !important;
+  color: #2d3748 !important;
+  text-decoration: none !important;
+  display: block !important;
+  margin-bottom: 10px !important;
+  line-height: 1.3 !important;
+  transition: all 0.3s ease !important;
+}
+
+/* Special Styling for AI Courses */
+.coursebox .info h3.coursename a:contains("AI for Kids"),
+.coursebox .info h3.coursename a:contains("Learn"),
+.card-title:contains("AI for Kids") {
+  background: linear-gradient(135deg, #ff6b6b 0%, #feca57 100%) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  background-clip: text !important;
+}
+
+.coursebox .info h3.coursename a:contains("AI for Youth"),
+.coursebox .info h3.coursename a:contains("Innovate"),
+.card-title:contains("AI for Youth") {
+  background: linear-gradient(135deg, #4a90e2 0%, #00d2d3 100%) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  background-clip: text !important;
+}
+
+/* Hover effect on title */
+.coursebox:hover .coursename a,
+.card:hover .card-title {
+  transform: translateX(5px) !important;
+}
+
+/* Course Summary/Description */
+.coursebox .content .summary,
+.coursebox .summary,
+.card-text,
+.course-summary {
+  color: #4a5568 !important;
+  font-size: 0.95rem !important;
+  line-height: 1.6 !important;
+  margin: 15px 0 !important;
+  display: -webkit-box !important;
+  -webkit-line-clamp: 3 !important;
+  -webkit-box-orient: vertical !important;
+  overflow: hidden !important;
+}
+
+/* ================================================
+   COURSE META INFO - Teachers, Students, etc.
+   ================================================ */
+.coursebox .content .coursecat,
+.coursebox .teachers,
+.coursebox .enrolmenticons,
+.course-contacts {
+  display: flex !important;
+  align-items: center !important;
+  gap: 10px !important;
+  margin-top: 15px !important;
+  padding-top: 15px !important;
+  border-top: 1px solid rgba(226, 232, 240, 0.5) !important;
+}
+
+.coursebox .teachers,
+.course-contacts {
+  color: #718096 !important;
+  font-size: 0.9rem !important;
+}
+
+.coursebox .teachers a {
+  color: #4a90e2 !important;
+  text-decoration: none !important;
+  font-weight: 600 !important;
+  transition: color 0.3s ease !important;
+}
+
+.coursebox .teachers a:hover {
+  color: #357abd !important;
+}
+
+/* ================================================
+   SPECIAL BADGE FOR COURSES
+   ================================================ */
+.coursebox::before {
+  content: 'NEW' !important;
+  position: absolute !important;
+  top: 20px !important;
+  right: 20px !important;
+  background: linear-gradient(135deg, #ff6b6b, #feca57) !important;
+  color: white !important;
+  padding: 6px 14px !important;
+  border-radius: 20px !important;
+  font-size: 0.75rem !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.5px !important;
+  z-index: 10 !important;
+  box-shadow: 0 4px 10px rgba(255, 107, 107, 0.3) !important;
+}
+
+/* Remove badge for non-AI courses */
+.coursebox:not(:has(a:contains("AI"))):before {
+  display: none !important;
+}
+
+/* ================================================
+   VIEW MORE BUTTON - Premium Styling
+   ================================================ */
+.paging-morelink,
+a[href*="/course"],
+.btn-view-more,
+.view-more-link,
+.courses-view-more {
+  display: inline-block !important;
+  margin: 40px auto !important;
+  padding: 16px 45px !important;
+  background: linear-gradient(135deg,
+    #4a90e2 0%,
+    #357abd 50%,
+    #5ba3f5 100%) !important;
+  background-size: 200% 100% !important;
+  color: white !important;
+  text-decoration: none !important;
+  border-radius: 50px !important;
+  font-weight: 700 !important;
+  font-size: 1.1rem !important;
+  text-transform: uppercase !important;
+  letter-spacing: 1px !important;
+  transition: all 0.4s ease !important;
+  box-shadow: 0 10px 25px rgba(139, 92, 246, 0.3) !important;
+  position: relative !important;
+  overflow: hidden !important;
+  text-align: center !important;
+}
+
+/* View More Container */
+.paging,
+.course-paging,
+.view-more-container {
+  text-align: center !important;
+  margin-top: 50px !important;
+  padding: 20px !important;
+}
+
+/* Hover Effect */
+.paging-morelink:hover,
+.btn-view-more:hover,
+.view-more-link:hover {
+  background-position: 100% 0 !important;
+  transform: translateY(-3px) scale(1.05) !important;
+  box-shadow: 0 15px 35px rgba(139, 92, 246, 0.4) !important;
+  color: white !important;
+}
+
+/* Shine Effect */
+.paging-morelink::before {
+  content: '' !important;
+  position: absolute !important;
+  top: 0 !important;
+  left: -100% !important;
+  width: 100% !important;
+  height: 100% !important;
+  background: linear-gradient(90deg,
+    transparent,
+    rgba(255, 255, 255, 0.3),
+    transparent) !important;
+  transition: left 0.5s !important;
+}
+
+.paging-morelink:hover::before {
+  left: 100% !important;
+}
+
+/* ================================================
+   COURSE GRID LAYOUT - Responsive
+   ================================================ */
+.courses.frontpage-course-list-all,
+.card-deck {
+  display: grid !important;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)) !important;
+  gap: 30px !important;
+  margin-bottom: 40px !important;
+}
+
+/* ================================================
+   ANIMATIONS
+   ================================================ */
+.coursebox {
+  animation: fadeInUp 0.6s ease both !important;
+}
+
+.coursebox:nth-child(1) { animation-delay: 0.1s !important; }
+.coursebox:nth-child(2) { animation-delay: 0.2s !important; }
+.coursebox:nth-child(3) { animation-delay: 0.3s !important; }
+.coursebox:nth-child(4) { animation-delay: 0.4s !important; }
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ================================================
+   RESPONSIVE DESIGN
+   ================================================ */
+@media (max-width: 768px) {
+  .courses.frontpage-course-list-all,
+  .card-deck {
+    grid-template-columns: 1fr !important;
+    gap: 20px !important;
+    padding: 0 10px !important;
+  }
+
+  .coursebox .content .coursename a,
+  h3.coursename {
+    font-size: 1.2rem !important;
+  }
+
+  .paging-morelink,
+  .btn-view-more {
+    padding: 12px 30px !important;
+    font-size: 1rem !important;
+  }
+}
+
+/* ================================================
+   OVERRIDE ANY CONFLICTING STYLES
+   ================================================ */
+body .coursebox,
+body .course-card,
+#page .coursebox {
+  box-shadow:
+    0 10px 25px rgba(0, 0, 0, 0.08),
+    0 5px 10px rgba(0, 0, 0, 0.05) !important;
+}
+
+body .coursebox:hover,
+#page .coursebox:hover {
+  transform: translateY(-10px) scale(1.02) !important;
+}

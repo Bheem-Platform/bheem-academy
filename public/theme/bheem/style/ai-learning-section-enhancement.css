@@ -1,0 +1,427 @@
+/* ================================================
+   WHY CHILDREN SHOULD LEARN AI - SECTION ENHANCEMENT
+   Beautiful styling for the 3 sessions content section
+   Professional, modern, and engaging design
+   ================================================ */
+
+/* Import Premium Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+
+/* ================================================
+   MAIN SECTION CONTAINER - MODERN FOUNDATION
+   ================================================ */
+
+/* Why children learn AI section wrapper */
+.ai-learning-section,
+.why-children-ai,
+.children-ai-section,
+[class*="children"][class*="ai"],
+.section:has(.numbered-list) {
+  background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%) !important;
+  padding: 80px 0 !important;
+  position: relative !important;
+  overflow: hidden !important;
+}
+
+/* Section background pattern */
+.ai-learning-section::before,
+.why-children-ai::before,
+.children-ai-section::before {
+  content: '' !important;
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  bottom: 0 !important;
+  background: url('data:image/svg+xml,<svg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><g fill="%23667eea" fill-opacity="0.02"><circle cx="30" cy="30" r="2"/></g></svg>') !important;
+  opacity: 1 !important;
+}
+
+/* ================================================
+   SECTION TITLE - STUNNING TYPOGRAPHY
+   ================================================ */
+
+/* Main section heading */
+.ai-learning-section h2,
+.why-children-ai h2,
+.children-ai-section h2,
+h2:contains("Why children should learn AI"),
+.section-title:has-text("children") {
+  font-family: 'Plus Jakarta Sans', sans-serif !important;
+  font-size: clamp(32px, 4vw, 48px) !important;
+  font-weight: 800 !important;
+  color: #1f2937 !important;
+  text-align: center !important;
+  margin-bottom: 16px !important;
+  line-height: 1.2 !important;
+  letter-spacing: -0.02em !important;
+
+  /* Gradient text effect */
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  background-clip: text !important;
+}
+
+/* Section subtitle/description */
+.ai-learning-section p.section-desc,
+.why-children-ai .section-description,
+.children-ai-section .intro-text {
+  font-family: 'Inter', sans-serif !important;
+  font-size: clamp(16px, 2vw, 20px) !important;
+  font-weight: 400 !important;
+  color: #6b7280 !important;
+  text-align: center !important;
+  max-width: 600px !important;
+  margin: 0 auto 60px auto !important;
+  line-height: 1.6 !important;
+}
+
+/* ================================================
+   NUMBERED ITEMS CONTAINER - PREMIUM GRID LAYOUT
+   ================================================ */
+
+/* Main container for the 3 sessions */
+.numbered-list,
+.ai-benefits-list,
+.children-benefits,
+.three-sessions-container {
+  display: grid !important;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)) !important;
+  gap: 40px !important;
+  max-width: 1200px !important;
+  margin: 0 auto !important;
+  padding: 0 20px !important;
+  position: relative !important;
+  z-index: 2 !important;
+}
+
+/* ================================================
+   INDIVIDUAL ITEMS - STUNNING CARD DESIGN
+   ================================================ */
+
+/* Each numbered item (01, 02, 03) */
+.numbered-item,
+.benefit-item,
+.session-item,
+.ai-benefit-card {
+  background: #ffffff !important;
+  border-radius: 24px !important;
+  padding: 40px 32px !important;
+  position: relative !important;
+  overflow: hidden !important;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  border: 1px solid rgba(102, 126, 234, 0.08) !important;
+
+  /* Beautiful shadow */
+  box-shadow:
+    0 4px 20px rgba(0, 0, 0, 0.04),
+    0 2px 8px rgba(0, 0, 0, 0.02),
+    inset 0 1px 0 rgba(255, 255, 255, 0.8) !important;
+}
+
+/* Card hover effect */
+.numbered-item:hover,
+.benefit-item:hover,
+.session-item:hover,
+.ai-benefit-card:hover {
+  transform: translateY(-8px) scale(1.02) !important;
+  border-color: rgba(102, 126, 234, 0.2) !important;
+  box-shadow:
+    0 20px 40px rgba(102, 126, 234, 0.15),
+    0 8px 24px rgba(118, 75, 162, 0.08),
+    inset 0 1px 0 rgba(255, 255, 255, 0.9) !important;
+}
+
+/* Card background gradient on hover */
+.numbered-item:hover::before,
+.benefit-item:hover::before,
+.session-item:hover::before,
+.ai-benefit-card:hover::before {
+  content: '' !important;
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  bottom: 0 !important;
+  background: linear-gradient(135deg, rgba(102, 126, 234, 0.02) 0%, rgba(118, 75, 162, 0.02) 100%) !important;
+  opacity: 1 !important;
+  transition: opacity 0.4s ease !important;
+}
+
+/* ================================================
+   NUMBERED BADGES - STUNNING DESIGN
+   ================================================ */
+
+/* Number badges (01, 02, 03) */
+.number-badge,
+.item-number,
+.session-number {
+  position: absolute !important;
+  top: -15px !important;
+  left: 30px !important;
+  width: 60px !important;
+  height: 60px !important;
+  border-radius: 50% !important;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+  color: #ffffff !important;
+  font-family: 'Plus Jakarta Sans', sans-serif !important;
+  font-size: 20px !important;
+  font-weight: 800 !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  z-index: 3 !important;
+
+  /* Perfect shadow */
+  box-shadow:
+    0 8px 20px rgba(102, 126, 234, 0.4),
+    0 4px 8px rgba(118, 75, 162, 0.2),
+    inset 0 1px 0 rgba(255, 255, 255, 0.3) !important;
+}
+
+/* Number badge hover effect */
+.numbered-item:hover .number-badge,
+.benefit-item:hover .item-number,
+.session-item:hover .session-number {
+  transform: scale(1.1) rotate(5deg) !important;
+  box-shadow:
+    0 12px 30px rgba(102, 126, 234, 0.5),
+    0 6px 12px rgba(118, 75, 162, 0.3),
+    inset 0 2px 0 rgba(255, 255, 255, 0.4) !important;
+}
+
+/* ================================================
+   CONTENT TYPOGRAPHY - PROFESSIONAL STYLING
+   ================================================ */
+
+/* Item titles */
+.numbered-item h3,
+.benefit-item h3,
+.session-item h3,
+.ai-benefit-card h3 {
+  font-family: 'Plus Jakarta Sans', sans-serif !important;
+  font-size: clamp(20px, 2.5vw, 26px) !important;
+  font-weight: 700 !important;
+  color: #1f2937 !important;
+  margin: 30px 0 16px 0 !important;
+  line-height: 1.3 !important;
+  letter-spacing: -0.01em !important;
+  position: relative !important;
+  z-index: 2 !important;
+}
+
+/* Item descriptions */
+.numbered-item p,
+.benefit-item p,
+.session-item p,
+.ai-benefit-card p {
+  font-family: 'Inter', sans-serif !important;
+  font-size: clamp(15px, 1.8vw, 18px) !important;
+  font-weight: 400 !important;
+  color: #6b7280 !important;
+  line-height: 1.7 !important;
+  margin: 0 !important;
+  letter-spacing: 0.01em !important;
+  position: relative !important;
+  z-index: 2 !important;
+}
+
+/* ================================================
+   DECORATIVE ELEMENTS - MODERN ACCENTS
+   ================================================ */
+
+/* Decorative corner accent */
+.numbered-item::after,
+.benefit-item::after,
+.session-item::after,
+.ai-benefit-card::after {
+  content: '' !important;
+  position: absolute !important;
+  bottom: 0 !important;
+  right: 0 !important;
+  width: 80px !important;
+  height: 80px !important;
+  background: linear-gradient(135deg, rgba(102, 126, 234, 0.05) 0%, rgba(118, 75, 162, 0.05) 100%) !important;
+  border-radius: 80px 0 0 0 !important;
+  opacity: 0 !important;
+  transition: opacity 0.4s ease !important;
+}
+
+.numbered-item:hover::after,
+.benefit-item:hover::after,
+.session-item:hover::after,
+.ai-benefit-card:hover::after {
+  opacity: 1 !important;
+}
+
+/* ================================================
+   RESPONSIVE DESIGN - MOBILE EXCELLENCE
+   ================================================ */
+
+/* Large screens optimization */
+@media (min-width: 1200px) {
+  .numbered-list,
+  .ai-benefits-list,
+  .children-benefits {
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 50px !important;
+    max-width: 1400px !important;
+  }
+
+  .numbered-item,
+  .benefit-item,
+  .session-item,
+  .ai-benefit-card {
+    padding: 50px 40px !important;
+  }
+}
+
+/* Tablet screens */
+@media (max-width: 768px) {
+  .ai-learning-section,
+  .why-children-ai,
+  .children-ai-section {
+    padding: 60px 0 !important;
+  }
+
+  .numbered-list,
+  .ai-benefits-list,
+  .children-benefits {
+    grid-template-columns: 1fr !important;
+    gap: 30px !important;
+    padding: 0 16px !important;
+  }
+
+  .numbered-item,
+  .benefit-item,
+  .session-item,
+  .ai-benefit-card {
+    padding: 35px 24px !important;
+  }
+
+  .number-badge,
+  .item-number,
+  .session-number {
+    width: 50px !important;
+    height: 50px !important;
+    font-size: 18px !important;
+    top: -12px !important;
+    left: 24px !important;
+  }
+}
+
+/* Mobile screens */
+@media (max-width: 480px) {
+  .ai-learning-section,
+  .why-children-ai,
+  .children-ai-section {
+    padding: 40px 0 !important;
+  }
+
+  .numbered-list,
+  .ai-benefits-list,
+  .children-benefits {
+    gap: 24px !important;
+    padding: 0 12px !important;
+  }
+
+  .numbered-item,
+  .benefit-item,
+  .session-item,
+  .ai-benefit-card {
+    padding: 30px 20px !important;
+    border-radius: 20px !important;
+  }
+
+  .number-badge,
+  .item-number,
+  .session-number {
+    width: 45px !important;
+    height: 45px !important;
+    font-size: 16px !important;
+    top: -10px !important;
+    left: 20px !important;
+  }
+}
+
+/* ================================================
+   LOADING ANIMATIONS - SMOOTH ENTRANCE
+   ================================================ */
+
+.numbered-item,
+.benefit-item,
+.session-item,
+.ai-benefit-card {
+  opacity: 0 !important;
+  transform: translateY(30px) !important;
+  animation: itemFadeIn 0.8s ease-out forwards !important;
+}
+
+.numbered-item:nth-child(1) { animation-delay: 0.2s !important; }
+.numbered-item:nth-child(2) { animation-delay: 0.4s !important; }
+.numbered-item:nth-child(3) { animation-delay: 0.6s !important; }
+
+@keyframes itemFadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ================================================
+   ACCESSIBILITY - PERFECT FOCUS STATES
+   ================================================ */
+
+.numbered-item:focus-within,
+.benefit-item:focus-within,
+.session-item:focus-within,
+.ai-benefit-card:focus-within {
+  outline: 2px solid #667eea !important;
+  outline-offset: 4px !important;
+}
+
+/* ================================================
+   PERFORMANCE OPTIMIZATIONS
+   ================================================ */
+
+.numbered-item,
+.benefit-item,
+.session-item,
+.ai-benefit-card {
+  will-change: transform, box-shadow !important;
+  contain: layout style paint !important;
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  .numbered-item:hover,
+  .benefit-item:hover,
+  .session-item:hover,
+  .ai-benefit-card:hover {
+    transform: none !important;
+  }
+}
+
+/* High contrast support */
+@media (prefers-contrast: high) {
+  .numbered-item,
+  .benefit-item,
+  .session-item,
+  .ai-benefit-card {
+    border: 2px solid #000000 !important;
+  }
+
+  .numbered-item h3,
+  .benefit-item h3,
+  .session-item h3,
+  .ai-benefit-card h3 {
+    color: #000000 !important;
+  }
+}

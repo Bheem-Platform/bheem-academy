@@ -1,0 +1,295 @@
+/* ================================================
+   AI LEARNING SECTION - TARGETED ENHANCEMENT
+   Specific styling for "Future-Proof Their Career" etc.
+   Targeting the actual HTML structure
+   ================================================ */
+
+/* Import Premium Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+
+/* ================================================
+   SECTION CONTAINER - TRANSPARENT BACKGROUND
+   ================================================ */
+
+/* Target the section containing the process list */
+.process-list {
+  background: transparent !important;
+  padding: 40px 0 !important;
+  border-radius: 0 !important;
+  position: relative !important;
+  overflow: visible !important;
+  margin: 20px 0 !important;
+}
+
+/* Remove background pattern */
+.process-list::before {
+  display: none !important;
+  content: none !important;
+}
+
+/* ================================================
+   INDIVIDUAL LIST ITEMS - PREMIUM CARDS
+   ================================================ */
+
+/* Each li element becomes a clean card */
+.process-list li {
+  background: transparent !important;
+  border-radius: 0 !important;
+  padding: 20px 0 !important;
+  margin-bottom: 30px !important;
+  position: relative !important;
+  overflow: visible !important;
+  transition: all 0.3s ease !important;
+  border: none !important;
+  border-bottom: 1px solid rgba(102, 126, 234, 0.1) !important;
+  z-index: 2 !important;
+  box-shadow: none !important;
+}
+
+/* Last item no margin */
+.process-list li:last-child {
+  margin-bottom: 0 !important;
+}
+
+/* Card hover effect */
+.process-list li:hover {
+  transform: translateX(10px) !important;
+  border-bottom-color: rgba(102, 126, 234, 0.3) !important;
+  box-shadow: none !important;
+}
+
+/* Remove hover background */
+.process-list li:hover::before {
+  display: none !important;
+}
+
+/* ================================================
+   NUMBER BADGES - STUNNING REDESIGN
+   ================================================ */
+
+/* Number spans (01., 02., 03.) */
+.process-list .flex-shrink-0 span {
+  position: relative !important;
+  z-index: 3 !important;
+  width: 60px !important;
+  height: 60px !important;
+  border-radius: 50% !important;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+  color: #ffffff !important;
+  font-family: 'Plus Jakarta Sans', sans-serif !important;
+  font-size: 18px !important;
+  font-weight: 800 !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  margin-right: 20px !important;
+  margin-top: -5px !important;
+
+  /* Perfect shadow */
+  box-shadow:
+    0 8px 20px rgba(102, 126, 234, 0.4),
+    0 4px 8px rgba(118, 75, 162, 0.2),
+    inset 0 1px 0 rgba(255, 255, 255, 0.3) !important;
+
+  /* Override default styles */
+  text-align: center !important;
+  line-height: 1 !important;
+}
+
+/* Number badge hover effect */
+.process-list li:hover .flex-shrink-0 span {
+  transform: scale(1.1) rotate(3deg) !important;
+  box-shadow:
+    0 12px 30px rgba(102, 126, 234, 0.5),
+    0 6px 12px rgba(118, 75, 162, 0.3),
+    inset 0 2px 0 rgba(255, 255, 255, 0.4) !important;
+}
+
+/* ================================================
+   CONTENT STYLING - PROFESSIONAL TYPOGRAPHY
+   ================================================ */
+
+/* Flex container for content */
+.process-list .d-flex {
+  align-items: flex-start !important;
+  position: relative !important;
+  z-index: 2 !important;
+}
+
+/* Content area */
+.process-list .flex-grow-1 {
+  padding-left: 10px !important;
+}
+
+/* Titles (h3) */
+.process-list h3 {
+  font-family: 'Plus Jakarta Sans', sans-serif !important;
+  font-size: clamp(22px, 2.5vw, 28px) !important;
+  font-weight: 700 !important;
+  color: #1f2937 !important;
+  margin-bottom: 16px !important;
+  line-height: 1.3 !important;
+  letter-spacing: -0.01em !important;
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+
+/* Descriptions (p) */
+.process-list p {
+  font-family: 'Inter', sans-serif !important;
+  font-size: clamp(16px, 1.8vw, 18px) !important;
+  font-weight: 400 !important;
+  color: #374151 !important; /* Darker color for better visibility */
+  line-height: 1.7 !important;
+  margin-bottom: 0 !important;
+  letter-spacing: 0.01em !important;
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+
+/* ================================================
+   DECORATIVE ELEMENTS - REMOVED FOR CLARITY
+   ================================================ */
+
+/* Remove decorative elements */
+.process-list li::after {
+  display: none !important;
+}
+
+/* ================================================
+   RESPONSIVE DESIGN - MOBILE EXCELLENCE
+   ================================================ */
+
+/* Large screens */
+@media (min-width: 1200px) {
+  .process-list {
+    padding: 80px 60px !important;
+  }
+
+  .process-list li {
+    padding: 40px !important;
+    margin-bottom: 32px !important;
+  }
+
+  .process-list .flex-shrink-0 span {
+    width: 70px !important;
+    height: 70px !important;
+    font-size: 20px !important;
+    margin-right: 30px !important;
+  }
+}
+
+/* Tablet screens */
+@media (max-width: 768px) {
+  .process-list {
+    padding: 40px 24px !important;
+    margin: 24px 0 !important;
+  }
+
+  .process-list li {
+    padding: 24px !important;
+    margin-bottom: 20px !important;
+  }
+
+  .process-list .flex-shrink-0 span {
+    width: 50px !important;
+    height: 50px !important;
+    font-size: 16px !important;
+    margin-right: 16px !important;
+  }
+
+  .process-list .d-flex {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+  }
+
+  .process-list .flex-shrink-0 {
+    margin-bottom: 16px !important;
+  }
+
+  .process-list .flex-grow-1 {
+    padding-left: 0 !important;
+  }
+}
+
+/* Mobile screens */
+@media (max-width: 480px) {
+  .process-list {
+    padding: 30px 16px !important;
+    border-radius: 16px !important;
+  }
+
+  .process-list li {
+    padding: 20px !important;
+    margin-bottom: 16px !important;
+    border-radius: 16px !important;
+  }
+
+  .process-list .flex-shrink-0 span {
+    width: 45px !important;
+    height: 45px !important;
+    font-size: 14px !important;
+    margin-right: 12px !important;
+  }
+}
+
+/* ================================================
+   LOADING ANIMATIONS - SMOOTH ENTRANCE
+   ================================================ */
+
+.process-list li {
+  opacity: 0 !important;
+  transform: translateY(20px) !important;
+  animation: processItemFadeIn 0.6s ease-out forwards !important;
+}
+
+.process-list li:nth-child(1) { animation-delay: 0.2s !important; }
+.process-list li:nth-child(2) { animation-delay: 0.4s !important; }
+.process-list li:nth-child(3) { animation-delay: 0.6s !important; }
+
+@keyframes processItemFadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ================================================
+   ACCESSIBILITY & PERFORMANCE
+   ================================================ */
+
+.process-list li:focus-within {
+  outline: 2px solid #667eea !important;
+  outline-offset: 4px !important;
+}
+
+.process-list li {
+  will-change: transform, box-shadow !important;
+  contain: layout style paint !important;
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  .process-list li:hover {
+    transform: none !important;
+  }
+}
+
+/* High contrast support */
+@media (prefers-contrast: high) {
+  .process-list li {
+    border: 2px solid #000000 !important;
+  }
+
+  .process-list h3 {
+    color: #000000 !important;
+  }
+}

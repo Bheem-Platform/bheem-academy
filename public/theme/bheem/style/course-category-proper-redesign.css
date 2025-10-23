@@ -1,0 +1,527 @@
+/* ================================================
+   COURSE CATEGORY PAGE - PROPER REDESIGN 2025
+   Target actual HTML elements and classes used by the theme
+   Modern, clean, professional design with proper targeting
+   ================================================ */
+
+/* Import Premium Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap');
+
+/* ================================================
+   PAGE FOUNDATION - Clean Modern Base
+   ================================================ */
+#page-course-index-category,
+.path-course-index,
+body.path-course-index {
+  background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%) !important;
+  min-height: 100vh !important;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif !important;
+}
+
+/* ================================================
+   MAIN CONTAINER - Perfect Layout Structure
+   ================================================ */
+#page-course-index-category .container,
+#page-course-index-category .container-fluid {
+  max-width: 1320px !important;
+  margin: 0 auto !important;
+  padding: 0 20px !important;
+}
+
+/* Main content area */
+#page-content,
+.main-content {
+  padding: 40px 0 80px 0 !important;
+}
+
+/* Container inside courses area */
+.courses.row.courses_container {
+  max-width: none !important;
+  width: 100% !important;
+}
+
+/* ================================================
+   PAGE HEADER - Beautiful Hero Section
+   ================================================ */
+#page-header {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+  padding: 60px 0 40px 0 !important;
+  margin-bottom: 40px !important;
+  position: relative !important;
+  overflow: hidden !important;
+}
+
+#page-header::before {
+  content: '' !important;
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  bottom: 0 !important;
+  background: url('data:image/svg+xml,<svg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><g fill="%23ffffff" fill-opacity="0.05"><circle cx="30" cy="30" r="4"/></g></svg>') !important;
+  opacity: 0.3 !important;
+}
+
+#page-header h1 {
+  font-family: 'Poppins', sans-serif !important;
+  font-size: clamp(32px, 4vw, 48px) !important;
+  font-weight: 600 !important;
+  color: #ffffff !important;
+  margin-bottom: 16px !important;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1) !important;
+  text-align: center !important;
+}
+
+/* Breadcrumb styling */
+.breadcrumb {
+  background: rgba(255, 255, 255, 0.15) !important;
+  border-radius: 25px !important;
+  padding: 12px 24px !important;
+  backdrop-filter: blur(10px) !important;
+  border: 1px solid rgba(255, 255, 255, 0.2) !important;
+  display: inline-flex !important;
+  margin: 0 auto !important;
+}
+
+.breadcrumb-item a,
+.breadcrumb-item {
+  color: rgba(255, 255, 255, 0.9) !important;
+  text-decoration: none !important;
+  font-weight: 500 !important;
+}
+
+/* ================================================
+   ACTION BAR AND SEARCH ENHANCEMENT
+   ================================================ */
+.secondary-navigation,
+.course-search-form,
+[data-region="header-actions-container"] {
+  background: #ffffff !important;
+  border-radius: 12px !important;
+  padding: 20px !important;
+  margin-bottom: 24px !important;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06) !important;
+  border: 1px solid rgba(0, 0, 0, 0.05) !important;
+}
+
+/* Enhanced search styling */
+.page-header-actions,
+.header-actions-container {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+/* Enhanced search input if it exists */
+.search-input,
+input[type="search"],
+input[name="q"] {
+  padding: 16px 20px 16px 50px !important;
+  border: 2px solid #e5e7eb !important;
+  border-radius: 12px !important;
+  font-size: 16px !important;
+  width: 100% !important;
+  transition: all 0.3s ease !important;
+  background: #ffffff !important;
+  position: relative !important;
+}
+
+.search-input:focus,
+input[type="search"]:focus,
+input[name="q"]:focus {
+  outline: none !important;
+  border-color: #667eea !important;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1) !important;
+}
+
+/* Add search icon */
+.search-input-wrapper {
+  position: relative !important;
+}
+
+.search-input-wrapper::before {
+  content: '🔍' !important;
+  position: absolute !important;
+  left: 20px !important;
+  top: 50% !important;
+  transform: translateY(-50%) !important;
+  z-index: 2 !important;
+  font-size: 16px !important;
+}
+
+/* ================================================
+   COURSE CARDS - Target Actual Classes
+   ================================================ */
+.courses.row.courses_container {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  margin: -16px !important;
+  padding: 20px 0 !important;
+}
+
+/* Course card columns - work with Bootstrap grid */
+.courses.row.courses_container .col-lg-4,
+.courses.row.courses_container .col-md-6 {
+  padding: 16px !important;
+  display: flex !important;
+  align-items: stretch !important;
+}
+
+/* Individual course card styling */
+.single-onlin-class-three {
+  background: #ffffff !important;
+  border: 1px solid rgba(0, 0, 0, 0.06) !important;
+  border-radius: 16px !important;
+  padding: 0 !important;
+  margin-bottom: 0 !important;
+  transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) !important;
+  position: relative !important;
+  overflow: hidden !important;
+  box-shadow:
+    0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -1px rgba(0, 0, 0, 0.06) !important;
+  height: 100% !important;
+  display: flex !important;
+  flex-direction: column !important;
+  width: 100% !important;
+}
+
+.single-onlin-class-three::before {
+  content: '' !important;
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100% !important;
+  height: 3px !important;
+  background: linear-gradient(90deg, #3b82f6, #8b5cf6, #06d6a0) !important;
+  opacity: 0 !important;
+  transition: opacity 0.3s ease !important;
+}
+
+.single-onlin-class-three:hover {
+  transform: translateY(-8px) !important;
+  background: #ffffff !important;
+  border-color: rgba(59, 130, 246, 0.2) !important;
+  box-shadow:
+    0 20px 25px -5px rgba(0, 0, 0, 0.1),
+    0 10px 10px -5px rgba(0, 0, 0, 0.04),
+    0 0 0 1px rgba(59, 130, 246, 0.05) !important;
+}
+
+.single-onlin-class-three:hover::before {
+  opacity: 1 !important;
+}
+
+/* Course Image Container */
+.single-onlin-class-three > a {
+  position: relative !important;
+  display: block !important;
+  overflow: hidden !important;
+  border-radius: 12px 12px 0 0 !important;
+  margin-bottom: 0 !important;
+}
+
+/* Course Image Styling */
+.single-onlin-class-three .img-whp {
+  width: 100% !important;
+  height: 220px !important;
+  object-fit: cover !important;
+  border-radius: 0 !important;
+  transition: transform 0.3s ease !important;
+  display: block !important;
+}
+
+.single-onlin-class-three:hover .img-whp {
+  transform: scale(1.08) !important;
+}
+
+/* Course content area */
+.single-onlin-class-three > a + h4,
+.single-onlin-class-three > a + * {
+  padding: 0 20px !important;
+}
+
+.single-onlin-class-three h4.fs-4 {
+  padding: 20px 20px 0 20px !important;
+}
+
+.single-onlin-class-three .d-flex {
+  padding: 0 20px !important;
+}
+
+.single-onlin-class-three .d-flex:last-child {
+  padding: 0 20px 30px 20px !important;
+  margin-top: auto !important;
+  min-height: 80px !important;
+  align-items: center !important;
+}
+
+/* Course Price and Date Badges */
+.single-onlin-class-three .count {
+  font-family: 'Inter', sans-serif !important;
+  font-weight: 600 !important;
+  font-size: 15px !important;
+  padding: 12px 20px !important;
+  border-radius: 25px !important;
+  backdrop-filter: blur(10px) !important;
+  border: 1px solid rgba(255, 255, 255, 0.2) !important;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1) !important;
+  transition: all 0.3s ease !important;
+  min-width: 120px !important;
+  text-align: center !important;
+}
+
+.single-onlin-class-three .count.bg-success {
+  background: linear-gradient(135deg, #10b981 0%, #059669 100%) !important;
+  color: #ffffff !important;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1) !important;
+}
+
+.single-onlin-class-three .count.bg-white {
+  background: rgba(255, 255, 255, 0.95) !important;
+  color: #374151 !important;
+  font-weight: 500 !important;
+}
+
+/* Course Title Styling */
+.single-onlin-class-three h4.fs-4 {
+  font-family: 'Poppins', sans-serif !important;
+  font-size: 20px !important;
+  font-weight: 600 !important;
+  line-height: 1.4 !important;
+  margin-bottom: 16px !important;
+  color: #1f2937 !important;
+  transition: color 0.3s ease !important;
+}
+
+.single-onlin-class-three h4.fs-4 a {
+  color: #1f2937 !important;
+  text-decoration: none !important;
+  transition: all 0.3s ease !important;
+  display: -webkit-box !important;
+  -webkit-line-clamp: 2 !important;
+  -webkit-box-orient: vertical !important;
+  overflow: hidden !important;
+}
+
+.single-onlin-class-three:hover h4.fs-4 a {
+  color: #3b82f6 !important;
+}
+
+/* Course Meta Information */
+.single-onlin-class-three .d-flex.align-items-center {
+  color: #6b7280 !important;
+  font-size: 14px !important;
+  font-weight: 500 !important;
+  margin-bottom: 16px !important;
+}
+
+.single-onlin-class-three .ri-user-line {
+  color: #3b82f6 !important;
+  font-size: 16px !important;
+  margin-right: 8px !important;
+}
+
+/* Student count styling */
+.single-onlin-class-three .fw-medium {
+  color: #374151 !important;
+  font-weight: 600 !important;
+  font-size: 16px !important;
+  line-height: 1.5 !important;
+  padding: 4px 0 !important;
+}
+
+/* ================================================
+   PAGINATION - Modern Design
+   ================================================ */
+.paging.paging-morelink {
+  margin-top: 48px !important;
+  text-align: center !important;
+}
+
+.paging-morelink .courses_all_btn {
+  display: inline-block !important;
+}
+
+.paging-morelink .btn {
+  font-family: 'Poppins', sans-serif !important;
+  font-size: 16px !important;
+  font-weight: 600 !important;
+  padding: 16px 32px !important;
+  border-radius: 50px !important;
+  border: 2px solid #667eea !important;
+  color: #667eea !important;
+  background: #ffffff !important;
+  text-decoration: none !important;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  box-shadow: 0 4px 16px rgba(102, 126, 234, 0.2) !important;
+}
+
+.paging-morelink .btn:hover {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+  color: #ffffff !important;
+  transform: translateY(-3px) !important;
+  box-shadow: 0 8px 25px rgba(102, 126, 234, 0.4) !important;
+}
+
+/* Standard pagination styling */
+.paging-bar {
+  margin-top: 48px !important;
+  text-align: center !important;
+}
+
+.paging-bar .pagination {
+  display: inline-flex !important;
+  gap: 8px !important;
+  background: #ffffff !important;
+  padding: 16px 24px !important;
+  border-radius: 16px !important;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08) !important;
+  border: 1px solid #f0f0f0 !important;
+}
+
+.pagination a,
+.pagination span {
+  padding: 12px 16px !important;
+  border-radius: 10px !important;
+  text-decoration: none !important;
+  font-weight: 500 !important;
+  transition: all 0.3s ease !important;
+  border: 1px solid transparent !important;
+}
+
+.pagination a {
+  color: #6b7280 !important;
+}
+
+.pagination a:hover {
+  background: #f8fafc !important;
+  border-color: #e2e8f0 !important;
+  color: #374151 !important;
+}
+
+.pagination .current {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+  color: #ffffff !important;
+}
+
+/* ================================================
+   RESPONSIVE DESIGN - Mobile Excellence
+   ================================================ */
+@media (max-width: 1200px) {
+  .courses.row.courses_container {
+    margin: -12px !important;
+  }
+
+  .courses.row.courses_container .col-lg-4,
+  .courses.row.courses_container .col-md-6 {
+    padding: 12px !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .courses.row.courses_container {
+    margin: -8px !important;
+  }
+
+  .courses.row.courses_container .col-lg-4,
+  .courses.row.courses_container .col-md-6 {
+    padding: 8px !important;
+    flex: 0 0 100% !important;
+    max-width: 100% !important;
+  }
+
+  .single-onlin-class-three .img-whp {
+    height: 200px !important;
+  }
+
+  #page-course-index-category .container {
+    padding: 0 16px !important;
+  }
+
+  #page-header {
+    padding: 40px 0 30px 0 !important;
+    margin-bottom: 24px !important;
+  }
+}
+
+/* ================================================
+   LOADING ANIMATIONS - Smooth Entrance Effects
+   ================================================ */
+.single-onlin-class-three {
+  opacity: 0 !important;
+  transform: translateY(30px) !important;
+  animation: courseCardFadeIn 0.8s ease-out forwards !important;
+}
+
+.single-onlin-class-three:nth-child(1) { animation-delay: 0.1s !important; }
+.single-onlin-class-three:nth-child(2) { animation-delay: 0.2s !important; }
+.single-onlin-class-three:nth-child(3) { animation-delay: 0.3s !important; }
+.single-onlin-class-three:nth-child(4) { animation-delay: 0.4s !important; }
+.single-onlin-class-three:nth-child(5) { animation-delay: 0.5s !important; }
+.single-onlin-class-three:nth-child(6) { animation-delay: 0.6s !important; }
+
+@keyframes courseCardFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ================================================
+   ACCESSIBILITY & PERFORMANCE
+   ================================================ */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Focus states for accessibility */
+.single-onlin-class-three:focus-within {
+  outline: 2px solid #667eea !important;
+  outline-offset: 2px !important;
+}
+
+/* High contrast support */
+@media (prefers-contrast: high) {
+  .single-onlin-class-three {
+    border: 2px solid #000000 !important;
+  }
+
+  .single-onlin-class-three h4.fs-4 a {
+    color: #000000 !important;
+  }
+}
+
+/* ================================================
+   CATEGORY CARDS - Target Actual Classes
+   ================================================ */
+.cat-card .single-onlin-class-three {
+  /* Same styling as course cards */
+}
+
+.cat-card .courses-image {
+  position: relative !important;
+  border-radius: 16px 16px 0 0 !important;
+  overflow: hidden !important;
+}
+
+.cat-card .courses-img .img-whp {
+  width: 100% !important;
+  height: 200px !important;
+  object-fit: cover !important;
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+.cat-card:hover .courses-img .img-whp {
+  transform: scale(1.05) !important;
+}

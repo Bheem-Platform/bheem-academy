@@ -1,0 +1,617 @@
+/**
+ * Bheem Academy - Course and Form Styling
+ * Modern styling for course creation, editing, and all Moodle forms
+ *
+ * @package    theme_bheemtheme
+ * @copyright  2025 Bheem Academy
+ * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
+ */
+
+/* ================================================
+   Page Layout - Course Edit & Admin Forms
+   ================================================ */
+
+/* Hide custom Bheem header on admin/course edit pages */
+body.path-course-edit .professional-header,
+body.path-course-edit #professionalHeader,
+body.path-course-edit .mobile-menu,
+body.path-course-edit .mobile-menu-overlay,
+body.path-admin .professional-header,
+body.path-admin #professionalHeader,
+body.path-admin .mobile-menu,
+body.path-admin .mobile-menu-overlay {
+    display: none !important;
+}
+
+/* Reset body padding from custom header on these pages */
+body.path-course-edit,
+body.path-admin {
+    padding-top: 0 !important;
+}
+
+/* Show Moodle's default navigation on these pages */
+body.path-course-edit .navbar,
+body.path-course-edit nav.navbar,
+body.path-course-edit #page-header .navbar,
+body.path-course-edit .primary-navigation,
+body.path-course-edit .breadcrumb-wrapper,
+body.path-admin .navbar,
+body.path-admin nav.navbar,
+body.path-admin #page-header .navbar,
+body.path-admin .primary-navigation,
+body.path-admin .breadcrumb-wrapper {
+    display: block !important;
+}
+
+/* Hide all custom block regions on course edit pages */
+body.path-course-edit [data-region="blocks-column"],
+body.path-course-edit .block-region,
+body.path-course-edit #block-region-side-pre,
+body.path-course-edit aside[data-region="blocks-column"],
+body.path-admin [data-region="blocks-column"],
+body.path-admin .block-region,
+body.path-admin aside[data-region="blocks-column"] {
+    display: none !important;
+}
+
+body.path-course-edit,
+body.path-admin,
+body.pagelayout-admin,
+body.pagelayout-incourse {
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+}
+
+/* Main Region Container */
+#region-main {
+    background: white;
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+    margin: 20px auto;
+    max-width: 1400px;
+}
+
+/* Page Header */
+#page-header h1,
+.page-header-headings h1 {
+    color: #2d3748;
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+/* ================================================
+   Form Elements - Modern Gradient Design
+   ================================================ */
+
+/* Fieldsets */
+fieldset,
+.fcontainer {
+    background: linear-gradient(135deg, #ffffff 0%, #f9fafb 100%);
+    border: 2px solid #e2e8f0;
+    border-radius: 16px;
+    padding: 30px;
+    margin-bottom: 25px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+}
+
+fieldset:hover,
+.fcontainer:hover {
+    border-color: #8b5cf6;
+    box-shadow: 0 8px 25px rgba(139, 92, 246, 0.15);
+    transform: translateY(-2px);
+}
+
+/* Fieldset Legend */
+fieldset legend,
+.fcontainer legend,
+.ftoggler {
+    background: linear-gradient(135deg, #8b5cf6, #a855f7);
+    color: white;
+    padding: 12px 25px;
+    border-radius: 12px;
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 12px rgba(139, 92, 246, 0.3);
+    border: none;
+    display: inline-block;
+}
+
+/* Collapsible Fieldset Toggle */
+.ftoggler {
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.ftoggler:hover {
+    background: linear-gradient(135deg, #7c3aed, #9333ea);
+    transform: translateX(5px);
+    box-shadow: 0 6px 18px rgba(139, 92, 246, 0.4);
+}
+
+/* Form Rows */
+.fitem,
+.form-group {
+    margin-bottom: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* Form Labels */
+.fitem label,
+.form-group label,
+.form-label {
+    color: #2d3748;
+    font-weight: 600;
+    font-size: 15px;
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* Required Field Indicator */
+.form-required,
+abbr.req {
+    color: #ef4444;
+    font-weight: 700;
+}
+
+/* Text Inputs */
+input[type="text"],
+input[type="email"],
+input[type="url"],
+input[type="number"],
+input[type="password"],
+input[type="date"],
+input[type="time"],
+textarea,
+.form-control {
+    width: 100%;
+    padding: 14px 18px;
+    border: 2px solid #e2e8f0;
+    border-radius: 12px;
+    font-size: 15px;
+    color: #2d3748;
+    background: white;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="url"]:focus,
+input[type="number"]:focus,
+input[type="password"]:focus,
+input[type="date"]:focus,
+input[type="time"]:focus,
+textarea:focus,
+.form-control:focus {
+    outline: none;
+    border-color: #8b5cf6;
+    box-shadow: 0 0 0 4px rgba(139, 92, 246, 0.1), 0 4px 12px rgba(139, 92, 246, 0.2);
+    transform: translateY(-2px);
+}
+
+/* Textarea */
+textarea {
+    min-height: 120px;
+    resize: vertical;
+    font-family: inherit;
+}
+
+/* Select Dropdowns */
+select,
+.form-select {
+    width: 100%;
+    padding: 14px 18px;
+    border: 2px solid #e2e8f0;
+    border-radius: 12px;
+    font-size: 15px;
+    color: #2d3748;
+    background: white url('data:image/svg+xml;charset=UTF-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%238b5cf6"><path d="M7 10l5 5 5-5z"/></svg>') no-repeat right 12px center;
+    background-size: 24px;
+    appearance: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+select:focus,
+.form-select:focus {
+    outline: none;
+    border-color: #8b5cf6;
+    box-shadow: 0 0 0 4px rgba(139, 92, 246, 0.1), 0 4px 12px rgba(139, 92, 246, 0.2);
+    transform: translateY(-2px);
+}
+
+/* Checkboxes and Radio Buttons */
+input[type="checkbox"],
+input[type="radio"] {
+    width: 20px;
+    height: 20px;
+    border: 2px solid #8b5cf6;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    accent-color: #8b5cf6;
+}
+
+input[type="radio"] {
+    border-radius: 50%;
+}
+
+input[type="checkbox"]:hover,
+input[type="radio"]:hover {
+    border-color: #7c3aed;
+    box-shadow: 0 0 0 4px rgba(139, 92, 246, 0.15);
+}
+
+/* File Upload */
+input[type="file"] {
+    padding: 12px;
+    border: 2px dashed #e2e8f0;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    background: #f9fafb;
+}
+
+input[type="file"]:hover {
+    border-color: #8b5cf6;
+    background: linear-gradient(135deg, #faf5ff, #f3e8ff);
+}
+
+/* ================================================
+   Buttons - Gradient Style
+   ================================================ */
+
+/* Primary Buttons */
+button,
+input[type="submit"],
+input[type="button"],
+.btn,
+.btn-primary,
+.btn-secondary {
+    padding: 14px 28px;
+    border: none;
+    border-radius: 12px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+button[type="submit"],
+input[type="submit"],
+.btn-primary {
+    background: linear-gradient(135deg, #8b5cf6, #a855f7);
+    color: white;
+}
+
+button[type="submit"]:hover,
+input[type="submit"]:hover,
+.btn-primary:hover {
+    background: linear-gradient(135deg, #7c3aed, #9333ea);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(139, 92, 246, 0.4);
+}
+
+button[type="submit"]:active,
+input[type="submit"]:active,
+.btn-primary:active {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(139, 92, 246, 0.3);
+}
+
+/* Secondary Buttons */
+.btn-secondary,
+button[type="button"] {
+    background: linear-gradient(135deg, #64748b, #475569);
+    color: white;
+}
+
+.btn-secondary:hover,
+button[type="button"]:hover {
+    background: linear-gradient(135deg, #475569, #334155);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(100, 116, 139, 0.4);
+}
+
+/* Cancel/Reset Buttons */
+.btn-cancel,
+input[type="reset"] {
+    background: #e2e8f0;
+    color: #2d3748;
+}
+
+.btn-cancel:hover,
+input[type="reset"]:hover {
+    background: #cbd5e1;
+    transform: translateY(-3px);
+}
+
+/* ================================================
+   Form Actions (Submit/Cancel area)
+   ================================================ */
+
+.form-actions,
+#fitem_id_submitbutton,
+.fitem_actionbuttons {
+    display: flex;
+    gap: 15px;
+    padding: 25px 0;
+    margin-top: 30px;
+    border-top: 2px solid #e2e8f0;
+    flex-wrap: wrap;
+}
+
+/* ================================================
+   Editor Containers (TinyMCE, Atto)
+   ================================================ */
+
+.editor_atto,
+.editor_tinymce,
+.fitem_feditor {
+    border: 2px solid #e2e8f0;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+}
+
+.editor_atto:focus-within,
+.editor_tinymce:focus-within,
+.fitem_feditor:focus-within {
+    border-color: #8b5cf6;
+    box-shadow: 0 0 0 4px rgba(139, 92, 246, 0.1), 0 4px 15px rgba(139, 92, 246, 0.2);
+}
+
+.editor_atto_toolbar,
+.mce-toolbar {
+    background: linear-gradient(135deg, #f9fafb, #f3f4f6);
+    border-bottom: 1px solid #e2e8f0;
+    padding: 10px;
+}
+
+/* ================================================
+   Date/Time Selectors
+   ================================================ */
+
+.fdate_selector,
+.fdate_time_selector {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.fdate_selector select,
+.fdate_time_selector select {
+    flex: 1;
+    min-width: 80px;
+}
+
+/* ================================================
+   File Manager / File Picker
+   ================================================ */
+
+.filemanager,
+.filepicker {
+    border: 2px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 20px;
+    background: #f9fafb;
+    min-height: 200px;
+}
+
+.fp-btn-add {
+    background: linear-gradient(135deg, #8b5cf6, #a855f7);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.fp-btn-add:hover {
+    background: linear-gradient(135deg, #7c3aed, #9333ea);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(139, 92, 246, 0.3);
+}
+
+/* ================================================
+   Help Icons and Tooltips
+   ================================================ */
+
+.helptooltip,
+.form-help {
+    color: #8b5cf6;
+    cursor: help;
+    transition: all 0.3s ease;
+}
+
+.helptooltip:hover,
+.form-help:hover {
+    color: #7c3aed;
+    transform: scale(1.2);
+}
+
+/* ================================================
+   Error Messages
+   ================================================ */
+
+.error,
+.form-error,
+.alert-danger {
+    background: linear-gradient(135deg, #fee2e2, #fecaca);
+    border: 2px solid #ef4444;
+    color: #b91c1c;
+    padding: 15px 20px;
+    border-radius: 12px;
+    margin: 15px 0;
+    font-weight: 600;
+    box-shadow: 0 4px 12px rgba(239, 68, 68, 0.2);
+}
+
+/* ================================================
+   Success Messages
+   ================================================ */
+
+.success,
+.form-success,
+.alert-success {
+    background: linear-gradient(135deg, #d1fae5, #a7f3d0);
+    border: 2px solid #10b981;
+    color: #065f46;
+    padding: 15px 20px;
+    border-radius: 12px;
+    margin: 15px 0;
+    font-weight: 600;
+    box-shadow: 0 4px 12px rgba(16, 185, 129, 0.2);
+}
+
+/* ================================================
+   Info/Warning Messages
+   ================================================ */
+
+.alert-info,
+.notification-info {
+    background: linear-gradient(135deg, #dbeafe, #bfdbfe);
+    border: 2px solid #3b82f6;
+    color: #1e3a8a;
+    padding: 15px 20px;
+    border-radius: 12px;
+    margin: 15px 0;
+    box-shadow: 0 4px 12px rgba(59, 130, 246, 0.2);
+}
+
+.alert-warning,
+.notification-warning {
+    background: linear-gradient(135deg, #fef3c7, #fde68a);
+    border: 2px solid #f59e0b;
+    color: #78350f;
+    padding: 15px 20px;
+    border-radius: 12px;
+    margin: 15px 0;
+    box-shadow: 0 4px 12px rgba(245, 158, 11, 0.2);
+}
+
+/* ================================================
+   Tabs
+   ================================================ */
+
+.nav-tabs,
+.tabtree {
+    border-bottom: 2px solid #e2e8f0;
+    display: flex;
+    gap: 10px;
+    margin-bottom: 25px;
+}
+
+.nav-tabs .nav-link,
+.tabtree li a {
+    padding: 12px 24px;
+    border: 2px solid transparent;
+    border-radius: 12px 12px 0 0;
+    color: #64748b;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.nav-tabs .nav-link:hover,
+.tabtree li a:hover {
+    color: #8b5cf6;
+    background: #f9fafb;
+}
+
+.nav-tabs .nav-link.active,
+.tabtree li.active a {
+    background: linear-gradient(135deg, #8b5cf6, #a855f7);
+    color: white;
+    border-color: #8b5cf6;
+}
+
+/* ================================================
+   Responsive Design
+   ================================================ */
+
+@media (max-width: 768px) {
+    #region-main {
+        padding: 20px;
+        border-radius: 12px;
+    }
+
+    fieldset,
+    .fcontainer {
+        padding: 20px;
+    }
+
+    .form-actions,
+    #fitem_id_submitbutton,
+    .fitem_actionbuttons {
+        flex-direction: column;
+    }
+
+    button,
+    input[type="submit"],
+    .btn {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+/* ================================================
+   Course Image/File Upload Area
+   ================================================ */
+
+.course-image-upload,
+.form-filemanager {
+    border: 3px dashed #8b5cf6;
+    border-radius: 16px;
+    padding: 40px;
+    text-align: center;
+    background: linear-gradient(135deg, #faf5ff, #f3e8ff);
+    transition: all 0.3s ease;
+}
+
+.course-image-upload:hover,
+.form-filemanager:hover {
+    border-color: #7c3aed;
+    background: linear-gradient(135deg, #f3e8ff, #e9d5ff);
+    transform: scale(1.02);
+}
+
+/* ================================================
+   Advanced Settings Toggle
+   ================================================ */
+
+.moreless-toggler {
+    background: linear-gradient(135deg, #8b5cf6, #a855f7);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    margin: 20px 0;
+}
+
+.moreless-toggler:hover {
+    background: linear-gradient(135deg, #7c3aed, #9333ea);
+    transform: translateX(5px);
+    box-shadow: 0 4px 12px rgba(139, 92, 246, 0.3);
+}

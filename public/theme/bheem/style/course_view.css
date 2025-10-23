@@ -1,0 +1,122 @@
+/* Course View Page Styles */
+.course-page-wrapper {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    padding: 2rem 0;
+}
+
+.course-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.back-link {
+    display: inline-block;
+    background: white;
+    color: #667eea;
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    margin-bottom: 2rem;
+    transition: all 0.3s;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.back-link:hover {
+    background: #f7fafc;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+
+.course-header {
+    background: white;
+    border-radius: 15px;
+    padding: 3rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.course-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #2d3748;
+    margin-bottom: 1rem;
+    font-family: 'Inter', sans-serif;
+}
+
+.course-summary {
+    font-size: 1.1rem;
+    color: #4a5568;
+    line-height: 1.8;
+}
+
+.course-sections {
+    background: white;
+    border-radius: 15px;
+    padding: 3rem;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.course-sections h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    color: #2d3748;
+    font-weight: 700;
+}
+
+.section {
+    border-left: 4px solid #667eea;
+    padding-left: 2rem;
+    margin-bottom: 2.5rem;
+    transition: all 0.3s;
+}
+
+.section:hover {
+    border-left-color: #5568d3;
+    transform: translateX(5px);
+}
+
+.section-name {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #2d3748;
+    margin-bottom: 0.75rem;
+}
+
+.section-summary {
+    color: #4a5568;
+    margin-bottom: 1rem;
+    line-height: 1.6;
+}
+
+.section-summary p {
+    margin-bottom: 0.5rem;
+}
+
+.no-content-message {
+    color: #718096;
+    text-align: center;
+    padding: 3rem;
+    font-size: 1.1rem;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .course-header {
+        padding: 2rem 1.5rem;
+    }
+    
+    .course-title {
+        font-size: 2rem;
+    }
+    
+    .course-sections {
+        padding: 2rem 1.5rem;
+    }
+    
+    .section {
+        padding-left: 1rem;
+    }
+}

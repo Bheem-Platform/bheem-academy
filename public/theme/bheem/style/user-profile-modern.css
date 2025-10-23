@@ -1,0 +1,345 @@
+/**
+ * Modern User Profile Styling for Bheem Academy
+ * Styles the standard Moodle user profile page with modern design
+ */
+
+/* Hide custom Bheem header on profile page */
+body.pagelayout-mypublic .professional-header,
+body.pagelayout-mypublic #professionalHeader,
+body.pagelayout-mypublic .mobile-menu,
+body.pagelayout-mypublic .mobile-menu-overlay {
+    display: none !important;
+}
+
+/* Reset body padding from custom header */
+body.pagelayout-mypublic {
+    padding-top: 0 !important;
+}
+
+/* Show Moodle's default navigation */
+body.pagelayout-mypublic .navbar,
+body.pagelayout-mypublic nav.navbar,
+body.pagelayout-mypublic #page-header .navbar,
+body.pagelayout-mypublic .primary-navigation,
+body.pagelayout-mypublic .breadcrumb-wrapper {
+    display: block !important;
+}
+
+/* Hide all blocks on profile page */
+body.pagelayout-mypublic [data-region="blocks-column"],
+body.pagelayout-mypublic .block-region,
+body.pagelayout-mypublic #block-region-side-pre,
+body.pagelayout-mypublic aside[data-region="blocks-column"] {
+    display: none !important;
+}
+
+/* Hide custom block region and description above profile */
+body.pagelayout-mypublic .userprofile > .description,
+body.pagelayout-mypublic [data-region="content"],
+body.pagelayout-mypublic .userprofile > h2 {
+    display: none !important;
+}
+
+/* Ensure main content takes full width */
+body.pagelayout-mypublic #region-main {
+    max-width: 100% !important;
+    margin: 0 auto !important;
+}
+
+/* Profile Page Container */
+body.pagelayout-mypublic {
+    background: #f8f9fa;
+}
+
+.userprofile {
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 0 20px;
+}
+
+/* User Description Section */
+.userprofile .description {
+    background: linear-gradient(135deg, #8b5cf6 0%, #a855f7 100%);
+    border-radius: 20px;
+    padding: 40px;
+    margin-bottom: 30px;
+    color: white;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 10px 40px rgba(139, 92, 246, 0.3);
+}
+
+.userprofile .description::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background:
+        radial-gradient(circle at 20% 20%, rgba(255, 255, 255, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 80% 80%, rgba(255, 255, 255, 0.1) 0%, transparent 50%);
+    animation: profilePulse 8s ease-in-out infinite;
+}
+
+@keyframes profilePulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.7; }
+}
+
+.userprofile .description > * {
+    position: relative;
+    z-index: 1;
+}
+
+/* Profile Tree Sections */
+.profile_tree {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 24px;
+    margin-top: 30px;
+}
+
+.profile_tree section {
+    background: white;
+    border-radius: 16px;
+    padding: 30px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+    border: 1px solid #e5e7eb;
+}
+
+.profile_tree .node_category {
+    margin-bottom: 30px;
+}
+
+.profile_tree .node_category:last-child {
+    margin-bottom: 0;
+}
+
+/* Section Headers */
+.profile_tree h3.lead {
+    font-size: 20px;
+    font-weight: 700;
+    color: #1f2937;
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid #8b5cf6;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.profile_tree h3.lead::before {
+    content: '\f007';
+    font-family: 'Font Awesome 6 Free';
+    font-weight: 900;
+    color: #8b5cf6;
+}
+
+/* Profile Fields */
+.profile_tree .contentnode {
+    padding: 12px 0;
+    border-bottom: 1px solid #f3f4f6;
+}
+
+.profile_tree .contentnode:last-child {
+    border-bottom: none;
+}
+
+.profile_tree dt {
+    font-weight: 600;
+    color: #4b5563;
+    margin-bottom: 5px;
+    font-size: 14px;
+}
+
+.profile_tree dd {
+    color: #6b7280;
+    margin-left: 0;
+    margin-bottom: 0;
+    font-size: 15px;
+}
+
+/* User Picture in Profile */
+.userprofile .userpicture {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 4px solid rgba(255, 255, 255, 0.3);
+    object-fit: cover;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* Links in Profile */
+.profile_tree a {
+    color: #8b5cf6;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.profile_tree a:hover {
+    color: #7c3aed;
+    text-decoration: underline;
+}
+
+/* Custom Block Region */
+.userprofile [data-region="blocks-column"] {
+    background: white;
+    border-radius: 16px;
+    padding: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+    border: 1px solid #e5e7eb;
+}
+
+/* Block Styling */
+.block {
+    background: #f9fafb;
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 20px;
+    border: 1px solid #e5e7eb;
+}
+
+.block .header {
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #8b5cf6;
+}
+
+.block .header h2,
+.block .header .title {
+    font-size: 16px;
+    font-weight: 600;
+    color: #1f2937;
+    margin: 0;
+}
+
+/* Lists in Profile */
+.profile_tree ul {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+}
+
+.profile_tree li {
+    padding: 8px 0;
+    border-bottom: 1px solid #f3f4f6;
+}
+
+.profile_tree li:last-child {
+    border-bottom: none;
+}
+
+/* Badges and Tags */
+.badge {
+    display: inline-block;
+    padding: 4px 12px;
+    background: linear-gradient(135deg, #8b5cf6, #a855f7);
+    color: white;
+    border-radius: 12px;
+    font-size: 12px;
+    font-weight: 600;
+    margin-right: 5px;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .profile_tree {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .userprofile {
+        padding: 0 15px;
+    }
+
+    .userprofile .description {
+        padding: 30px 20px;
+    }
+
+    .profile_tree section {
+        padding: 20px;
+    }
+
+    .profile_tree h3.lead {
+        font-size: 18px;
+    }
+}
+
+/* Empty States */
+.alert-info {
+    background: #e0f2fe;
+    border: 1px solid #bae6fd;
+    border-radius: 12px;
+    padding: 20px;
+    color: #0369a1;
+}
+
+/* Course List in Profile */
+.courses {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.course-item {
+    background: #f9fafb;
+    border-radius: 10px;
+    padding: 15px;
+    border: 1px solid #e5e7eb;
+    transition: all 0.2s ease;
+}
+
+.course-item:hover {
+    background: #f3f4f6;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.course-item h4 {
+    font-size: 16px;
+    font-weight: 600;
+    color: #1f2937;
+    margin-bottom: 5px;
+}
+
+/* Edit Button Styling */
+.editing_move,
+.editing_update,
+.editing_delete {
+    background: white;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    padding: 8px 12px;
+    color: #4b5563;
+    transition: all 0.2s ease;
+}
+
+.editing_move:hover,
+.editing_update:hover,
+.editing_delete:hover {
+    background: #8b5cf6;
+    color: white;
+    border-color: #8b5cf6;
+}
+
+/* Action Menu */
+.action-menu {
+    background: white;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.action-menu .dropdown-item {
+    padding: 10px 15px;
+    color: #4b5563;
+    transition: all 0.2s ease;
+}
+
+.action-menu .dropdown-item:hover {
+    background: #f3f4f6;
+    color: #8b5cf6;
+}

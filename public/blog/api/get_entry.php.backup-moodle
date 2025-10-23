@@ -1,0 +1,192 @@
+<?php
+// API endpoint to fetch blog entry data for Vue.js frontend
+define('AJAX_SCRIPT', true);
+require_once(__DIR__ . '/../../config.php');
+require_once($CFG->dirroot . '/blog/lib.php');
+require_once($CFG->dirroot . '/blog/locallib.php');
+
+// Set JSON header
+header('Content-Type: application/json');
+header('Access-Control-Allow-Origin: *');
+
+try {
+    // Get entry ID from request
+    $entryid = required_param('entryid', PARAM_INT);
+
+    // Check if blogs are enabled
+    if (empty($CFG->enableblogs)) {
+        throw new moodle_exception('blogdisable', 'blog');
+    }
+
+    // Get blog entry
+    $entry = new blog_entry($entryid);
+
+    // Prepare render data
+    $entry->prepare_render();
+
+    // Get user data
+    $user = $DB->get_record('user', array('id' => $entry->userid));
+    $userfullname = fullname($user);
+
+    // Get user picture with full URL
+    $userpicture = new user_picture($user);
+    $userpicture->size = 100;
+    $userpictureurl = $userpicture->get_url($PAGE)->out(true); // Get full URL
+
+    // If user has no custom picture, provide a default avatar
+    if (empty($user->picture) || $user->picture == 0) {
+        // Use a professional default avatar
+        $userpictureurl = 'https://ui-avatars.com/api/?name=' . urlencode($userfullname) . '&size=200&background=8b5cf6&color=fff&bold=true&format=svg';
+    }
+
+    // Format the summary/content with proper context
+    $context = context_system::instance();
+
+    // Rewrite pluginfile URLs to full absolute URLs
+    $summary = file_rewrite_pluginfile_urls(
+        $entry->summary,
+        'pluginfile.php',
+        $context->id,
+        'blog',
+        'post',
+        $entry->id
+    );
+
+    // Format the text
+    $formattedcontent = format_text($summary, $entry->summaryformat, array('context' => $context));
+
+    // Ensure all image URLs are absolute
+    $formattedcontent = str_replace('src="/pluginfile.php', 'src="' . $CFG->wwwroot . '/pluginfile.php', $formattedcontent);
+    $formattedcontent = str_replace('src="pluginfile.php', 'src="' . $CFG->wwwroot . '/pluginfile.php', $formattedcontent);
+
+    // Get tags
+    $tags = core_tag_tag::get_item_tags_array('core', 'post', $entry->id);
+
+    // Get featured image and attachments
+    $featuredimage = null;
+    $attachments = array();
+
+    if ($entry->renderable->attachments) {
+        foreach ($entry->renderable->attachments as $attachment) {
+            // Check if it's an image file and set as featured image if not already set
+            $ext = strtolower(pathinfo($attachment->filename, PATHINFO_EXTENSION));
+            if (empty($featuredimage) && in_array($ext, array('jpg', 'jpeg', 'png', 'gif', 'webp', 'svg'))) {
+                // Use the direct pluginfile URL - browsers will display it inline in <img> tags
+                // despite the Content-Disposition: attachment header
+                $featuredimage = $attachment->url;
+            }
+
+            $attachments[] = array(
+                'filename' => $attachment->filename,
+                'url' => $attachment->url,
+                'filesize' => $attachment->filesize
+            );
+        }
+    }
+
+    // If no attachment image, try to extract from content
+    if (empty($featuredimage) && preg_match('/<img[^>]+src=["\']([^"\']+)["\'][^>]*>/i', $formattedcontent, $matches)) {
+        $imageurl = $matches[1];
+        // Make sure it's an absolute URL
+        if (strpos($imageurl, 'http') !== 0) {
+            $featuredimage = $CFG->wwwroot . '/' . ltrim($imageurl, '/');
+        } else {
+            $featuredimage = $imageurl;
+        }
+    }
+
+    // Get comments count if enabled
+    $commentscount = 0;
+    if (!empty($CFG->usecomments) && $CFG->blogusecomments) {
+        require_once($CFG->dirroot . '/comment/lib.php');
+        $cmt = new stdClass();
+        $cmt->context = context_user::instance($entry->userid);
+        $cmt->courseid = SITEID;
+        $cmt->area = 'format_blog';
+        $cmt->itemid = $entry->id;
+        $cmt->showcount = true;
+        $cmt->component = 'blog';
+        $comment = new comment($cmt);
+        $commentscount = $comment->count();
+    }
+
+    // Get related blog posts (same tags or same author)
+    $relatedposts = array();
+    if (!empty($tags)) {
+        $tagids = array();
+        foreach ($tags as $tag) {
+            if ($tagrec = $DB->get_record('tag', array('name' => $tag))) {
+                $tagids[] = $tagrec->id;
+            }
+        }
+
+        if (!empty($tagids)) {
+            list($tagsql, $tagparams) = $DB->get_in_or_equal($tagids, SQL_PARAMS_NAMED);
+            $sql = "SELECT DISTINCT p.* FROM {post} p
+                    JOIN {tag_instance} ti ON ti.itemid = p.id
+                    WHERE ti.component = 'core'
+                    AND ti.itemtype = 'post'
+                    AND ti.tagid $tagsql
+                    AND p.id != :entryid
+                    AND p.publishstate = 'site'
+                    AND p.module = 'blog'
+                    ORDER BY p.created DESC
+                    LIMIT 3";
+            $tagparams['entryid'] = $entryid;
+            $relatedentries = $DB->get_records_sql($sql, $tagparams);
+
+            foreach ($relatedentries as $relentry) {
+                $reluser = $DB->get_record('user', array('id' => $relentry->userid));
+                $relatedposts[] = array(
+                    'id' => $relentry->id,
+                    'subject' => $relentry->subject,
+                    'summary' => shorten_text(strip_tags($relentry->summary), 150),
+                    'created' => userdate($relentry->created, get_string('strftimedatefullshort')),
+                    'timestamp' => $relentry->created,
+                    'author' => fullname($reluser),
+                    'url' => $CFG->wwwroot . '/blog/index.php?entryid=' . $relentry->id
+                );
+            }
+        }
+    }
+
+    // Build response
+    $response = array(
+        'success' => true,
+        'entry' => array(
+            'id' => $entry->id,
+            'subject' => $entry->subject,
+            'content' => $formattedcontent,
+            'summary' => strip_tags($entry->summary),
+            'created' => userdate($entry->created, get_string('strftimedatefullshort')),
+            'timestamp' => $entry->created,
+            'lastmodified' => userdate($entry->lastmodified, get_string('strftimedatefullshort')),
+            'lastmodifiedtimestamp' => $entry->lastmodified,
+            'publishstate' => $entry->publishstate,
+            'featuredimage' => $featuredimage,
+            'author' => array(
+                'id' => $user->id,
+                'fullname' => $userfullname,
+                'profileurl' => $CFG->wwwroot . '/user/profile.php?id=' . $user->id,
+                'pictureurl' => $userpictureurl
+            ),
+            'tags' => array_values($tags),
+            'attachments' => $attachments,
+            'commentscount' => $commentscount,
+            'canEdit' => blog_user_can_edit_entry($entry),
+            'editurl' => $CFG->wwwroot . '/blog/edit.php?action=edit&entryid=' . $entry->id,
+            'deleteurl' => $CFG->wwwroot . '/blog/edit.php?action=delete&entryid=' . $entry->id
+        ),
+        'relatedPosts' => $relatedposts,
+        'siteurl' => $CFG->wwwroot
+    );
+
+    echo json_encode($response, JSON_PRETTY_PRINT);
+
+} catch (Exception $e) {
+    http_response_code(400);
+    echo json_encode(array(
+        'success' => false,
+        'error' => $e->getMessage()
+    ));
+}
